@@ -31,4 +31,4 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 script = ExtResource("2_mqssh")
 
 [node name="Player" parent="." instance=ExtResource("2_6hlv5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0215603, 1.49984, 1.71599)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0215603, 1.49984, 2.45808)
