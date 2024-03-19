@@ -1,0 +1,21 @@
+[gd_scene load_steps=7 format=3 uid="uid://ce5nhimqnsn27"]
+
+[ext_resource type="Texture2D" uid="uid://shegnp7gjxpd" path="res://fridge_gbx_standardSurface1_BaseColor.png" id="1_c7ug4"]
+[ext_resource type="Texture2D" uid="uid://cvviqgu5h7g02" path="res://fridge_gbx_standardSurface1_Metalness.png" id="2_2goe7"]
+[ext_resource type="Texture2D" uid="uid://btxmy6mikk06e" path="res://fridge_gbx_standardSurface1_Normal.png" id="3_g3e21"]
+[ext_resource type="Texture2D" uid="uid://clm0a5osco4yh" path="res://fridge_gbx_standardSurface1_Roughness.png" id="4_3qdh4"]
+[ext_resource type="ArrayMesh" uid="uid://vgy07sa1a63m" path="res://fridge_OB.obj" id="5_rj1m0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uva87"]
+albedo_texture = ExtResource("1_c7ug4")
+metallic = 1.0
+metallic_texture = ExtResource("2_2goe7")
+roughness_texture = ExtResource("4_3qdh4")
+normal_enabled = true
+normal_texture = ExtResource("3_g3e21")
+
+[node name="world" type="Node3D"]
+
+[node name="fridge" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_uva87")
+mesh = ExtResource("5_rj1m0")
