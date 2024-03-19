@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=13 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://cxhj6p3no7nm2" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="PackedScene" uid="uid://dler7c7hdouhe" path="res://player.tscn" id="2_6hlv5"]
@@ -17,6 +17,24 @@ sky = SubResource("Sky_yqi3p")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_n3er8"]
+size = Vector3(0.965332, 0.946777, 1.87016)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ccxov"]
+size = Vector3(1.18872, 0.953613, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pj3q3"]
+size = Vector3(0.987793, 0.944824, 1.55908)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mfhuv"]
+size = Vector3(1.8736, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kyn7k"]
+size = Vector3(0.361816, 1, 0.666473)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b8yro"]
+size = Vector3(1, 1, 0.539551)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -30,5 +48,49 @@ shadow_enabled = true
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 script = ExtResource("2_mqssh")
 
+[node name="Stove" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, 0, 0.224137)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Stove"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017334, -0.0266113, 0.345306)
+shape = SubResource("BoxShape3D_n3er8")
+
+[node name="Front Counter" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.89526)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Front Counter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0140472, -0.0231934, 0)
+shape = SubResource("BoxShape3D_ccxov")
+
+[node name="Cabinets and Sink" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09424, 0, 0.903503)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cabinets and Sink"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, -0.0275879, -0.279541)
+shape = SubResource("BoxShape3D_pj3q3")
+
+[node name="Back Wall" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.570062, -1.3565)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Back Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00570679, 0, 0)
+shape = SubResource("BoxShape3D_mfhuv")
+
+[node name="Side Wall 1" type="StaticBody3D" parent="Root Scene"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09999, 0.563131, -0.514509)
+shape = SubResource("BoxShape3D_kyn7k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16656, 0, -0.771443)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.277752, 0.563, 0.18469)
+shape = SubResource("BoxShape3D_b8yro")
+
 [node name="Player" parent="." instance=ExtResource("2_6hlv5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0215603, 1.49984, 2.45808)
+visible = false
+
+[editable path="Root Scene"]
