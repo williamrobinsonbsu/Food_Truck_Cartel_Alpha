@@ -33,7 +33,7 @@ size = Vector3(1.8736, 1, 1)
 size = Vector3(0.361816, 1, 0.666473)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b8yro"]
-size = Vector3(1, 1, 0.539551)
+size = Vector3(0.328125, 1, 0.539551)
 
 [node name="Node3D" type="Node3D"]
 
@@ -86,7 +86,7 @@ shape = SubResource("BoxShape3D_kyn7k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16656, 0, -0.771443)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.277752, 0.563, 0.18469)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581859, 0.563, 0.18469)
 shape = SubResource("BoxShape3D_b8yro")
 
 [node name="Player" parent="." instance=ExtResource("2_6hlv5")]
