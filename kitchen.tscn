@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=19 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://cxhj6p3no7nm2" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
 [ext_resource type="PackedScene" uid="uid://cywlto4wavxy4" path="res://player.tscn" id="3_6xe6b"]
 [ext_resource type="Script" path="res://Cutting Board.gd" id="3_c282t"]
 [ext_resource type="Script" path="res://Grill.gd" id="4_3mb46"]
+[ext_resource type="Script" path="res://Radio.gd" id="5_1mio2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -42,6 +43,9 @@ size = Vector3(0.226196, 0.0192871, 0.381226)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1irty"]
 size = Vector3(1, 0.0821533, 1.28796)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7uq41"]
+size = Vector3(0.220596, 0.0965576, 0.0756836)
 
 [node name="Node3D" type="Node3D"]
 
@@ -112,6 +116,13 @@ script = ExtResource("4_3mb46")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Grill"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.458923, 0.143982)
 shape = SubResource("BoxShape3D_1irty")
+
+[node name="Radio" type="StaticBody3D" parent="Root Scene"]
+script = ExtResource("5_1mio2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Radio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665546, 0.811423, 1.68593)
+shape = SubResource("BoxShape3D_7uq41")
 
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65347, 1.06501)
