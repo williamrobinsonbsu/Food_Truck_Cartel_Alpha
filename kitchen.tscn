@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://cxhj6p3no7nm2" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
-[ext_resource type="PackedScene" uid="uid://dler7c7hdouhe" path="res://player.tscn" id="2_6hlv5"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
+[ext_resource type="PackedScene" uid="uid://cywlto4wavxy4" path="res://player.tscn" id="3_6xe6b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -89,7 +89,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16656, 0, -0.771443)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581859, 0.563, 0.18469)
 shape = SubResource("BoxShape3D_b8yro")
 
-[node name="Player" parent="." instance=ExtResource("2_6hlv5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0215603, 1.49984, 2.45808)
+[node name="Player" parent="." instance=ExtResource("3_6xe6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65347, 1.06501)
 
 [editable path="Root Scene"]
