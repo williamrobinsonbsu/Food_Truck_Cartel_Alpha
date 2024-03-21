@@ -91,6 +91,5 @@ shape = SubResource("BoxShape3D_b8yro")
 
 [node name="Player" parent="." instance=ExtResource("2_6hlv5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0215603, 1.49984, 2.45808)
-visible = false
 
 [editable path="Root Scene"]
