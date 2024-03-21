@@ -1,11 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=21 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://cxhj6p3no7nm2" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
 [ext_resource type="PackedScene" uid="uid://cywlto4wavxy4" path="res://player.tscn" id="3_6xe6b"]
-[ext_resource type="Script" path="res://Cutting Board.gd" id="3_c282t"]
-[ext_resource type="Script" path="res://Grill.gd" id="4_3mb46"]
-[ext_resource type="Script" path="res://Radio.gd" id="5_1mio2"]
+[ext_resource type="Script" path="res://cutting_board.gd" id="3_c282t"]
+[ext_resource type="Script" path="res://grill.gd" id="4_3mb46"]
+[ext_resource type="Script" path="res://radio.gd" id="5_1mio2"]
+[ext_resource type="Script" path="res://trash_bin.gd" id="6_y6w3h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -46,6 +47,10 @@ size = Vector3(1, 0.0821533, 1.28796)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7uq41"]
 size = Vector3(0.220596, 0.0965576, 0.0756836)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hadr5"]
+height = 0.263514
+radius = 0.129032
 
 [node name="Node3D" type="Node3D"]
 
@@ -123,6 +128,14 @@ script = ExtResource("5_1mio2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Radio"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665546, 0.811423, 1.68593)
 shape = SubResource("BoxShape3D_7uq41")
+
+[node name="Trash Bin" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.787535, -0.140807, -0.433341)
+script = ExtResource("6_y6w3h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Trash Bin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0286197, 0.337251, 0.00602204)
+shape = SubResource("CylinderShape3D_hadr5")
 
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65347, 1.06501)
