@@ -2,8 +2,8 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 
-#@onready var interaction := $Camera3D/Interaction
-#@onready var hand := $Camera3D/Hand
+@onready var interaction := $Camera3D/Interaction
+@onready var hand := $Camera3D/Hand
 #@onready var burger = $/root/World/Burger
 #@onready var patty = $/root/World/Patty
 #@onready var burger_patty = $"/root/World/Burger/Burger Patty"
@@ -18,8 +18,8 @@ const SPEED = 5.0
 #@onready var top_bun = $"/root/World/Top Bun"
 #@onready var burger_bun = $"/root/World/Burger/Top Bun"
 #
-#var picked_object
-#var pull_power = 10
+var picked_object
+var pull_power = 10
 #
 #var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -32,11 +32,13 @@ func _input(event):
 		$Camera3D.rotate_x(deg_to_rad(-event.relative.y) * 0.25)
 		$Camera3D.rotation.x = clamp($Camera3D.rotation.x,deg_to_rad(-60), deg_to_rad(60))
 	
-#	if Input.is_action_just_pressed("left_click"):
-#		var collider = interaction.get_collider()
-#		if picked_object == null:
-#			pick_object()
-#		elif picked_object != null and collider != null and collider is RigidBody3D:
+	if Input.is_action_just_pressed("left_click"):
+		var collider = interaction.get_collider()
+		#if picked_object == null:
+		#	pick_object()
+		if collider is RigidBody3D or collider is StaticBody3D:
+				if collider.has_method("print_use"):
+					collider.print_use()
 #			if picked_object == patty:
 #				if picked_object.cooked_patty == true:
 #					patty.queue_free()
@@ -83,11 +85,11 @@ func _physics_process(_delta):
 
 	move_and_slide()
 
-#func pick_object():
-#	var collider = interaction.get_collider()
-#	if collider != null and collider is RigidBody3D:
-#		picked_object = collider
-#
-#func drop_object():
-#	if picked_object != null:
-#		picked_object = null
+func pick_object():
+	var collider = interaction.get_collider()
+	if collider != null and collider is RigidBody3D:
+		picked_object = collider
+
+func drop_object():
+	if picked_object != null:
+		picked_object = null

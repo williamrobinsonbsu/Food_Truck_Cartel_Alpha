@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=17 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://cxhj6p3no7nm2" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
 [ext_resource type="PackedScene" uid="uid://cywlto4wavxy4" path="res://player.tscn" id="3_6xe6b"]
+[ext_resource type="Script" path="res://Cutting Board.gd" id="3_c282t"]
+[ext_resource type="Script" path="res://Grill.gd" id="4_3mb46"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -34,6 +36,12 @@ size = Vector3(0.361816, 1, 0.666473)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b8yro"]
 size = Vector3(0.328125, 1, 0.539551)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bkuw4"]
+size = Vector3(0.226196, 0.0192871, 0.381226)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1irty"]
+size = Vector3(1, 0.0821533, 1.28796)
 
 [node name="Node3D" type="Node3D"]
 
@@ -82,12 +90,28 @@ shape = SubResource("BoxShape3D_mfhuv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09999, 0.563131, -0.514509)
 shape = SubResource("BoxShape3D_kyn7k")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Root Scene"]
+[node name="Side Wall 2" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16656, 0, -0.771443)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581859, 0.563, 0.18469)
 shape = SubResource("BoxShape3D_b8yro")
+
+[node name="Cutting Board" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398723, 0.772885, 1.10257)
+script = ExtResource("3_c282t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cutting Board"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393947, -0.316076, 0.0870595)
+shape = SubResource("BoxShape3D_bkuw4")
+
+[node name="Grill" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09147, -0.0390852, 0.679443)
+script = ExtResource("4_3mb46")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Grill"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.458923, 0.143982)
+shape = SubResource("BoxShape3D_1irty")
 
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65347, 1.06501)
