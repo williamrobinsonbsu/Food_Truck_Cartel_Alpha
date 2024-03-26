@@ -32,13 +32,13 @@ size = Vector3(1.18872, 0.953613, 1)
 size = Vector3(0.987793, 0.892822, 1.55908)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mfhuv"]
-size = Vector3(1.8736, 1, 1)
+size = Vector3(1.8736, 1.39734, 0.196411)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kyn7k"]
-size = Vector3(0.361816, 1, 0.666473)
+size = Vector3(0.13208, 1.43805, 2.41344)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b8yro"]
-size = Vector3(0.328125, 1, 0.539551)
+size = Vector3(0.0791016, 1.26868, 2.23218)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bkuw4"]
 size = Vector3(0.226196, 0.0192871, 0.381226)
@@ -57,7 +57,7 @@ radius = 0.129032
 size = Vector3(1, 1.44879, 0.365723)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5oxw"]
-size = Vector3(1.93439, 1, 2.59375)
+size = Vector3(1.93439, 0.994476, 2.59375)
 
 [node name="Node3D" type="Node3D"]
 
@@ -97,23 +97,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, -0.0535888, -0.2
 shape = SubResource("BoxShape3D_pj3q3")
 
 [node name="Back Wall" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.570062, -1.3565)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419058, -1.3565)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Back Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00570679, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00570679, 0.198669, 0.401794)
 shape = SubResource("BoxShape3D_mfhuv")
 
 [node name="Side Wall 1" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0153239, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09999, 0.563131, -0.514509)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.985122, 0.601064, 0.358973)
 shape = SubResource("BoxShape3D_kyn7k")
 
 [node name="Side Wall 2" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16656, 0, -0.771443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16082, 0, -0.771443)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581859, 0.563, 0.18469)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182698, 0.697338, 1.031)
 shape = SubResource("BoxShape3D_b8yro")
 
 [node name="Cutting Board" type="StaticBody3D" parent="Root Scene"]
@@ -157,13 +158,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.224396, 0.100342)
 shape = SubResource("BoxShape3D_dfedg")
 
 [node name="Floor" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.438744, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.592228, 0.0061779)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, 0, 0.415039)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, -0.00276184, 0.415039)
 shape = SubResource("BoxShape3D_y5oxw")
 
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65347, 1.06501)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
 
 [editable path="Root Scene"]
