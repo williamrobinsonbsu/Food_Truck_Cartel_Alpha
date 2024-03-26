@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://dde531nv5q7k0"]
+
+[ext_resource type="Script" path="res://ingredients/lettuce.gd" id="1_778t6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lbbcp"]
+albedo_color = Color(0.298039, 0.737255, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_fgk5l"]
+resource_local_to_scene = true
+radius = 0.25
+height = 0.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kwc6k"]
+radius = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k251f"]
+resource_local_to_scene = true
+albedo_color = Color(0.298039, 0.737255, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_17ec1"]
+size = Vector3(0.4, 0.15, 0.4)
+
+[node name="Lettuce" type="RigidBody3D"]
+lock_rotation = true
+script = ExtResource("1_778t6")
+
+[node name="Raw Lettuce" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_lbbcp")
+mesh = SubResource("SphereMesh_fgk5l")
+
+[node name="Lettuce Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_kwc6k")
+
+[node name="Cut Lettuce" type="MeshInstance3D" parent="."]
+visible = false
+material_override = SubResource("StandardMaterial3D_k251f")
+mesh = SubResource("BoxMesh_17ec1")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=23 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://cxhj6p3no7nm2" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -55,9 +55,6 @@ radius = 0.129032
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dfedg"]
 size = Vector3(1, 1.44879, 0.365723)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_y5oxw"]
-size = Vector3(1.93439, 1, 2.59375)
 
 [node name="Node3D" type="Node3D"]
 
@@ -151,13 +148,6 @@ script = ExtResource("7_bcrk3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Fridge"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.224396, 0.100342)
 shape = SubResource("BoxShape3D_dfedg")
-
-[node name="Floor" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.438744, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, 0, 0.415039)
-shape = SubResource("BoxShape3D_y5oxw")
 
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65347, 1.06501)

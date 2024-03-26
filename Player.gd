@@ -34,11 +34,15 @@ func _input(event):
 	
 	if Input.is_action_just_pressed("left_click"):
 		var collider = interaction.get_collider()
-		#if picked_object == null:
-		#	pick_object()
-		if collider is RigidBody3D or collider is StaticBody3D:
+		if collider is RigidBody3D and picked_object == null:
+			pick_object()
+		elif collider is StaticBody3D:
 				if collider.has_method("print_use"):
 					collider.print_use()
+				elif collider.has_method("pick_item"):
+					pick_object()
+				elif collider.has_method("delete_item"):
+					picked_object.queue_free()
 #			if picked_object == patty:
 #				if picked_object.cooked_patty == true:
 #					patty.queue_free()
@@ -61,9 +65,9 @@ func _input(event):
 #				top_bun.queue_free()
 #				burger_bun.show()
 #		
-#	if Input.is_action_just_pressed("right_click"):
-#		if picked_object != null:
-#			drop_object()
+	if Input.is_action_just_pressed("right_click"):
+		if picked_object != null:
+			drop_object()
 #
 func _physics_process(_delta):
 #	if not is_on_floor():
@@ -78,10 +82,10 @@ func _physics_process(_delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
-#	if picked_object != null:
-#		var a = picked_object.global_transform.origin
-#		var b = hand.global_transform.origin
-#		picked_object.set_linear_velocity((b-a) * pull_power)
+	if picked_object != null:
+		var a = picked_object.global_transform.origin
+		var b = hand.global_transform.origin
+		picked_object.set_linear_velocity((b-a) * pull_power)
 
 	move_and_slide()
 
@@ -89,6 +93,9 @@ func pick_object():
 	var collider = interaction.get_collider()
 	if collider != null and collider is RigidBody3D:
 		picked_object = collider
+	elif collider != null and collider is StaticBody3D and collider.has_method("pick_item"):
+		picked_object = collider.pick_item()
+		
 
 func drop_object():
 	if picked_object != null:
