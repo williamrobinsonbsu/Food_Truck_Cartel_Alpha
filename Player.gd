@@ -41,7 +41,7 @@ func _input(event):
 					collider.print_use()
 				elif collider.has_method("pick_item"):
 					pick_object()
-				elif collider.has_method("delete_item"):
+				elif picked_object != null and collider.has_method("delete_item"):
 					picked_object.queue_free()
 #			if picked_object == patty:
 #				if picked_object.cooked_patty == true:
