@@ -72,94 +72,96 @@ shadow_enabled = true
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 script = ExtResource("2_mqssh")
 
-[node name="Stove" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, 0, 0.224137)
+[node name="Player" parent="." instance=ExtResource("3_6xe6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65347, 1.06501)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Stove"]
+[node name="Stove" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3.06162, 0, 0.672411)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stove"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017334, -0.0266113, 0.345306)
 shape = SubResource("BoxShape3D_n3er8")
 
-[node name="Front Counter" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.89526)
+[node name="Front Counter" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 5.68578)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Front Counter"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Front Counter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0140472, -0.0231934, 0)
 shape = SubResource("BoxShape3D_ccxov")
 
-[node name="Cabinets and Sink" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09424, 0, 0.903503)
+[node name="Cabinets and Sink" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.28272, 0, 2.71051)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cabinets and Sink"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cabinets and Sink"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, -0.0275879, -0.279541)
 shape = SubResource("BoxShape3D_pj3q3")
 
-[node name="Back Wall" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.570062, -1.3565)
+[node name="Back Wall" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 1.71019, -4.0695)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Back Wall"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Back Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00570679, 0, 0)
 shape = SubResource("BoxShape3D_mfhuv")
 
-[node name="Side Wall 1" type="StaticBody3D" parent="Root Scene"]
+[node name="Side Wall 1" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Side Wall 1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09999, 0.563131, -0.514509)
 shape = SubResource("BoxShape3D_kyn7k")
 
-[node name="Side Wall 2" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16656, 0, -0.771443)
+[node name="Side Wall 2" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3.49968, 0, -2.31433)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Side Wall 2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581859, 0.563, 0.18469)
 shape = SubResource("BoxShape3D_b8yro")
 
-[node name="Cutting Board" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398723, 0.772885, 1.10257)
+[node name="Cutting Board" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.19617, 2.31866, 3.30771)
 script = ExtResource("3_c282t")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cutting Board"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cutting Board"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393947, -0.316076, 0.0870595)
 shape = SubResource("BoxShape3D_bkuw4")
 
-[node name="Grill" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09147, -0.0390852, 0.679443)
+[node name="Grill" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3.27441, -0.117256, 2.03833)
 script = ExtResource("4_3mb46")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Grill"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grill"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.458923, 0.143982)
 shape = SubResource("BoxShape3D_1irty")
 
-[node name="Radio" type="StaticBody3D" parent="Root Scene"]
+[node name="Radio" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 script = ExtResource("5_1mio2")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Radio"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Radio"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665546, 0.811423, 1.68593)
 shape = SubResource("BoxShape3D_7uq41")
 
-[node name="Trash Bin" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.787535, -0.140807, -0.433341)
+[node name="Trash Bin" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.36261, -0.422421, -1.30002)
 script = ExtResource("6_y6w3h")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Trash Bin"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trash Bin"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0286197, 0.337251, 0.00602204)
 shape = SubResource("CylinderShape3D_hadr5")
 
-[node name="Fridge" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07181, 0, -0.0694752)
+[node name="Fridge" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.21543, 0, -0.208426)
 script = ExtResource("7_bcrk3")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Fridge"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fridge"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.224396, 0.100342)
 shape = SubResource("BoxShape3D_dfedg")
 
-[node name="Floor" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.438744, 0)
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1.31623, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, 0, 0.415039)
 shape = SubResource("BoxShape3D_y5oxw")
-
-[node name="Player" parent="." instance=ExtResource("3_6xe6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65347, 1.06501)
 
 [editable path="Root Scene"]
