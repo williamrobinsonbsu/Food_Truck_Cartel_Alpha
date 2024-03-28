@@ -62,13 +62,12 @@ size = Vector3(1, 0.56543, 0.394043)
 [sub_resource type="GDScript" id="GDScript_ix8bd"]
 script/source = "extends CollisionShape3D
 
-var scene = preload(\"res://ingredients/lettuce_whole.tscn\")
+var scene = preload(\"res://ingredients/lettuce.tscn\")
 
 func pick_item():
 	var lettuce = scene.instantiate()
 	add_child(lettuce)
-	return lettuce
-"
+	return lettuce"
 
 [node name="Node3D" type="Node3D"]
 

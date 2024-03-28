@@ -34,6 +34,8 @@ func _input(event):
 	
 	if Input.is_action_just_pressed("left_click"):
 		var collider = interaction.get_collider()
+		print("Picked Status: " + str(picked_object))
+		print(collider)
 		if collider is RigidBody3D and picked_object == null:
 			pick_object()
 		elif collider is StaticBody3D:
@@ -43,6 +45,7 @@ func _input(event):
 					pick_object()
 				elif picked_object != null and collider.has_method("delete_item"):
 					picked_object.queue_free()
+					picked_object = null
 #			if picked_object == patty:
 #				if picked_object.cooked_patty == true:
 #					patty.queue_free()
@@ -96,7 +99,12 @@ func pick_object():
 	elif collider != null and collider is StaticBody3D and collider.has_method("pick_item"):
 		picked_object = collider.pick_item()
 		
+	if picked_object.has_method("picked"):
+		picked_object.picked(true)
+		
 
 func drop_object():
 	if picked_object != null:
+		if picked_object.has_method("picked"):
+			picked_object.picked(false)
 		picked_object = null
