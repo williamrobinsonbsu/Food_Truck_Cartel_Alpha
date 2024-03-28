@@ -22,9 +22,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.432647, -0.635762, -1.7041
 [node name="tomato" parent="tomato_whole/RootNode/Truck" index="0"]
 transform = Transform3D(0.10967, 0, 0, 0, 0.0718388, 0, 0, 0, 0.106483, -0.154761, -0.101766, 0.00232264)
 
-[node name="pSphere1" parent="tomato_whole/RootNode/Truck/tomato" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_84ib1")
 
