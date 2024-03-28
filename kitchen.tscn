@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=27 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://radio.gd" id="5_1mio2"]
 [ext_resource type="Script" path="res://trash_bin.gd" id="6_y6w3h"]
 [ext_resource type="Script" path="res://lettuce_container.gd" id="7_gu8l3"]
+[ext_resource type="Script" path="res://tomato_container.gd" id="8_qttck"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -29,7 +30,7 @@ size = Vector3(0.988037, 0.946777, 1.9734)
 size = Vector3(1.18872, 0.953613, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pj3q3"]
-size = Vector3(0.987793, 0.892822, 1.55908)
+size = Vector3(0.987793, 0.892822, 1.18237)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mfhuv"]
 size = Vector3(1.8736, 1.39734, 0.196411)
@@ -57,7 +58,7 @@ radius = 0.129032
 size = Vector3(6.5712, 0.994476, 5.59033)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tas1m"]
-size = Vector3(1, 0.56543, 0.394043)
+size = Vector3(1, 0.307495, 0.394043)
 
 [sub_resource type="GDScript" id="GDScript_ix8bd"]
 script/source = "extends CollisionShape3D
@@ -69,6 +70,9 @@ func pick_item():
 	add_child(lettuce)
 	return lettuce
 "
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_biow5"]
+size = Vector3(0.705811, 0.319336, 0.391235)
 
 [node name="Node3D" type="Node3D"]
 
@@ -104,7 +108,7 @@ shape = SubResource("BoxShape3D_ccxov")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09424, 0, 0.903503)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cabinets and Sink"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, -0.0535888, -0.279541)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, -0.0535888, -0.091187)
 shape = SubResource("BoxShape3D_pj3q3")
 
 [node name="Back Wall" type="StaticBody3D" parent="Root Scene"]
@@ -172,9 +176,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11155, 0.00587479, -0.0176
 script = ExtResource("7_gu8l3")
 
 [node name="lettue_container_collider" type="CollisionShape3D" parent="Root Scene/lettuce_container"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217285, 0.0144043)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0883179, 0.0144043)
 shape = SubResource("BoxShape3D_tas1m")
 script = SubResource("GDScript_ix8bd")
+
+[node name="tomato_container" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.815802, 0.914617, 0)
+script = ExtResource("8_qttck")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/tomato_container"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.147095, -0.0473633, 0.0149536)
+shape = SubResource("BoxShape3D_biow5")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Root Scene"]
+transform = Transform3D(0.333333, 0, 0, 0, -1.45705e-08, 0.333333, 0, -0.333333, -1.45705e-08, 0, 1.31369, -0.118066)
 
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
