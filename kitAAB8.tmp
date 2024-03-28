@@ -1,6 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=24 format=3 uid="uid://6xn3th2ud7em"]
 
-[ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
+[ext_resource type="PackedScene" uid="uid://rhs6armouw05" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
 [ext_resource type="PackedScene" uid="uid://cywlto4wavxy4" path="res://player.tscn" id="3_6xe6b"]
 [ext_resource type="Script" path="res://cutting_board.gd" id="3_c282t"]
@@ -23,22 +23,22 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n3er8"]
-size = Vector3(0.988037, 0.946777, 1.9734)
+size = Vector3(0.965332, 0.946777, 1.87016)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ccxov"]
 size = Vector3(1.18872, 0.953613, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pj3q3"]
-size = Vector3(0.987793, 0.892822, 1.55908)
+size = Vector3(0.987793, 0.944824, 1.55908)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mfhuv"]
-size = Vector3(1.8736, 1.39734, 0.196411)
+size = Vector3(1.8736, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kyn7k"]
-size = Vector3(0.13208, 1.43805, 2.41344)
+size = Vector3(0.361816, 1, 0.666473)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b8yro"]
-size = Vector3(0.0791016, 1.26868, 2.23218)
+size = Vector3(0.328125, 1, 0.539551)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bkuw4"]
 size = Vector3(0.226196, 0.0192871, 0.381226)
@@ -50,24 +50,16 @@ size = Vector3(1, 0.0821533, 1.28796)
 size = Vector3(0.220596, 0.0965576, 0.0756836)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hadr5"]
-height = 0.353577
+height = 0.263514
 radius = 0.129032
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dfedg"]
 size = Vector3(1, 1.44879, 0.365723)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5oxw"]
-size = Vector3(1.93439, 0.994476, 2.59375)
+size = Vector3(1.93439, 1, 2.59375)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_r2lbk"]
-size = Vector3(1.1, 0.61, 0.05)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmmjt"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_wrmop"]
-size = Vector3(1.1, 0.61, 0.05)
-
-[node name="World" type="Node3D"]
+[node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2g63l")
@@ -81,17 +73,17 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 script = ExtResource("2_mqssh")
 
 [node name="RootNode" parent="Root Scene" index="0"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.182852, 0)
+transform = Transform3D(0.47678, 0, 0, 0, 0.390509, 0, 0, 0, 0.390509, 0, 0, 0)
 
 [node name="Stove" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.0608195, 0.419192)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, 0, 0.224137)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Stove"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00598145, -0.0266113, 0.293686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017334, -0.0266113, 0.345306)
 shape = SubResource("BoxShape3D_n3er8")
 
 [node name="Front Counter" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0575547, 1.89526)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.89526)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Front Counter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0140472, -0.0231934, 0)
@@ -101,32 +93,31 @@ shape = SubResource("BoxShape3D_ccxov")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09424, 0, 0.903503)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cabinets and Sink"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, -0.0535888, -0.279541)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, -0.0275879, -0.279541)
 shape = SubResource("BoxShape3D_pj3q3")
 
 [node name="Back Wall" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419058, -1.3565)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.570062, -1.3565)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Back Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00570679, 0.198669, 0.401794)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00570679, 0, 0)
 shape = SubResource("BoxShape3D_mfhuv")
 
 [node name="Side Wall 1" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0153239, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.985122, 0.601064, 0.358973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09999, 0.563131, -0.514509)
 shape = SubResource("BoxShape3D_kyn7k")
 
 [node name="Side Wall 2" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16082, 0, -0.771443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16656, 0, -0.771443)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182698, 0.697338, 1.031)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581859, 0.563, 0.18469)
 shape = SubResource("BoxShape3D_b8yro")
 
 [node name="Cutting Board" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398723, 0.708592, 1.10257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398723, 0.772885, 1.10257)
 script = ExtResource("3_c282t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cutting Board"]
@@ -134,7 +125,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393947, -0.316076, 0.08705
 shape = SubResource("BoxShape3D_bkuw4")
 
 [node name="Grill" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09147, -0.0577255, 0.679443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09147, -0.0390852, 0.679443)
 script = ExtResource("4_3mb46")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Grill"]
@@ -142,7 +133,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.458923, 0.143982)
 shape = SubResource("BoxShape3D_1irty")
 
 [node name="Radio" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0158047, 0.0679311, -0.0406093)
 script = ExtResource("5_1mio2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Radio"]
@@ -150,11 +140,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665546, 0.811423, 1.68593)
 shape = SubResource("BoxShape3D_7uq41")
 
 [node name="Trash Bin" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.787535, -0.294214, -0.433341)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.736439, -0.132914, -0.350583)
 script = ExtResource("6_y6w3h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Trash Bin"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0286197, 0.367827, 0.00602207)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0286197, 0.337251, 0.00602204)
 shape = SubResource("CylinderShape3D_hadr5")
 
 [node name="Fridge" type="StaticBody3D" parent="Root Scene"]
@@ -166,28 +156,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.224396, 0.100342)
 shape = SubResource("BoxShape3D_dfedg")
 
 [node name="Floor" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.592228, 0.0061779)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.438744, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, -0.00276184, 0.415039)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, 0, 0.415039)
 shape = SubResource("BoxShape3D_y5oxw")
 
-[node name="ShutterDoor" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.560918, 1.9784)
-visible = false
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/ShutterDoor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.134, -0.239)
-shape = SubResource("BoxShape3D_r2lbk")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Root Scene/ShutterDoor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.133817, -0.23855)
-material_override = SubResource("StandardMaterial3D_nmmjt")
-mesh = SubResource("BoxMesh_wrmop")
-
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
-
-[connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65347, 1.06501)
 
 [editable path="Root Scene"]

@@ -24,10 +24,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 target_position = Vector3(0, 0, -5)
 
 [node name="Hand" type="Marker3D" parent="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.986589, 0, -0.972304)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.423936, 0, -1.30619)
 
-[node name="Label3D" type="Label3D" parent="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8)
+[node name="Control" type="Control" parent="Camera3D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Camera3D/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
 text = "+"
-font_size = 1
-outline_size = 16
