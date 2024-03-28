@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=29 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://trash_bin.gd" id="6_y6w3h"]
 [ext_resource type="Script" path="res://lettuce_container.gd" id="7_gu8l3"]
 [ext_resource type="Script" path="res://tomato_container.gd" id="8_qttck"]
+[ext_resource type="Script" path="res://soda_fridge.gd" id="9_subdr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -73,6 +74,9 @@ func pick_item():
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_biow5"]
 size = Vector3(0.705811, 0.319336, 0.391235)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vott2"]
+size = Vector3(0.950195, 0.623169, 0.463135)
 
 [node name="Node3D" type="Node3D"]
 
@@ -190,6 +194,14 @@ shape = SubResource("BoxShape3D_biow5")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Root Scene"]
 transform = Transform3D(0.333333, 0, 0, 0, -1.45705e-08, 0.333333, 0, -0.333333, -1.45705e-08, 0, 1.31369, -0.118066)
+
+[node name="soda_fridge" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08866, 0.613342, -0.68347)
+script = ExtResource("9_subdr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/soda_fridge"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0249023, 0.104065, 0.218384)
+shape = SubResource("BoxShape3D_vott2")
 
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)

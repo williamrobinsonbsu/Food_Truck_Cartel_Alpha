@@ -28,7 +28,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 target_position = Vector3(0, 0, -3)
 
 [node name="Hand" type="Marker3D" parent="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.423936, -0.0406094, -0.798225)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317083, -0.0406094, -0.535736)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -45,6 +45,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="Control"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 

@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckbh6qrwbb831"]
+[gd_scene load_steps=5 format=3 uid="uid://bvm71p8bujfb4"]
 
-[ext_resource type="PackedScene" uid="uid://5dcxjv1gyv1y" path="res://FBXRaw/WholeLettuce.fbx" id="1_1t170"]
+[ext_resource type="PackedScene" path="res://FBXRaw/WholeLettuce.fbx" id="1_1t170"]
 [ext_resource type="Script" path="res://ingredients/lettuce_whole.gd" id="1_u2eg3"]
-[ext_resource type="PackedScene" uid="uid://cxe1innv7wc2v" path="res://FBXRaw/LettuceSlice.fbx" id="2_royy8"]
+[ext_resource type="PackedScene" path="res://FBXRaw/LettuceSlice.fbx" id="2_royy8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3ogcr"]
 radius = 0.158328
