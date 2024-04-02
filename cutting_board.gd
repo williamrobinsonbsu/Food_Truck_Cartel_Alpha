@@ -1,4 +1,4 @@
 extends StaticBody3D
 
-func print_use():
+func use():
 	print("This is a cutting board, used for cutting!")
