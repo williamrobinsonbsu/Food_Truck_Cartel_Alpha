@@ -5,6 +5,7 @@ func get_ingredient(ingredient):
 	var scene = null
 	if FileAccess.file_exists(path):
 		scene = load(path)
+		print(scene)
 	else:
 		pass
 	return scene
