@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cb8mmfculdhev"]
+[gd_scene load_steps=4 format=3 uid="uid://cb8mmfculdhev"]
 
-[ext_resource type="PackedScene" path="res://FBXRaw/WholeLettuce.fbx" id="1_1t170"]
+[ext_resource type="PackedScene" uid="uid://5dcxjv1gyv1y" path="res://FBXRaw/WholeLettuce.fbx" id="1_1t170"]
 [ext_resource type="Script" path="res://ingredients/lettuce_whole.gd" id="1_u2eg3"]
-[ext_resource type="PackedScene" path="res://FBXRaw/LettuceSlice.fbx" id="2_royy8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3ogcr"]
 radius = 0.158328
@@ -16,14 +15,7 @@ script = ExtResource("1_u2eg3")
 [node name="Lettuce_Head" parent="lettuce_whole/RootNode/Truck" index="0"]
 transform = Transform3D(0.502537, 0, 0, 0, 0.354617, 0, 0, 0, 0.502537, -0.763243, -0.049681, -0.00959245)
 
-[node name="lettuce_slice" parent="." instance=ExtResource("2_royy8")]
-visible = false
-
-[node name="Letteuce" parent="lettuce_slice/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(6.77962, 0, 0, 0, 0.202735, 0, 0, 0, 6.77962, 0.321224, -0.158524, -1.21293)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_3ogcr")
 
 [editable path="lettuce_whole"]
-[editable path="lettuce_slice"]

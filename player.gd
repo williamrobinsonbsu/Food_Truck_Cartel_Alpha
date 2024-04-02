@@ -39,8 +39,10 @@ func _input(event):
 		if collider is RigidBody3D and picked_object == null:
 			pick_object()
 		elif collider is StaticBody3D:
-				if collider.has_method("use"):
-					collider.use()
+				if collider.has_method("use") and picked_object != null:
+					collider.use(picked_object)
+				elif collider.has_method("door_close"):
+					collider.door_close()
 				elif collider.has_method("pick_item"):
 					pick_object()
 				elif picked_object != null and collider.has_method("delete_item"):

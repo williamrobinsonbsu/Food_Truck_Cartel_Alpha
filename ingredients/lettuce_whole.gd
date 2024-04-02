@@ -8,4 +8,6 @@ func cut_lettuce():
 		$lettuce_slice.show()
 		cutted_lettuce = true
 		
+func name():
+	return "lettuce"
 
