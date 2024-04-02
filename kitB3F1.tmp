@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=27 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -7,10 +7,7 @@
 [ext_resource type="Script" path="res://grill.gd" id="4_3mb46"]
 [ext_resource type="Script" path="res://radio.gd" id="5_1mio2"]
 [ext_resource type="Script" path="res://trash_bin.gd" id="6_y6w3h"]
-[ext_resource type="Script" path="res://lettuce_bowl.gd" id="7_8hmxj"]
-[ext_resource type="Script" path="res://tomato_bowl.gd" id="8_4ruwl"]
-[ext_resource type="Script" path="res://potato_bowl.gd" id="8_iq6s6"]
-[ext_resource type="Script" path="res://onion_bowl.gd" id="10_ewxyc"]
+[ext_resource type="Script" path="res://fridge.gd" id="7_bcrk3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -26,13 +23,13 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n3er8"]
-size = Vector3(0.963745, 0.946777, 1.52512)
+size = Vector3(0.988037, 0.946777, 1.9734)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ccxov"]
 size = Vector3(1.18872, 0.953613, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pj3q3"]
-size = Vector3(0.987793, 0.144348, 1.17798)
+size = Vector3(0.987793, 0.892822, 1.55908)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mfhuv"]
 size = Vector3(1.8736, 1.39734, 0.196411)
@@ -70,10 +67,6 @@ size = Vector3(1.1, 0.61, 0.05)
 [sub_resource type="BoxMesh" id="BoxMesh_wrmop"]
 size = Vector3(1.1, 0.61, 0.05)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_x7ngb"]
-height = 0.0833373
-radius = 0.135259
-
 [node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -94,7 +87,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.182852, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.0608195, 0.419192)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Stove"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0181274, -0.0266113, 0.517827)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00598145, -0.0266113, 0.293686)
 shape = SubResource("BoxShape3D_n3er8")
 
 [node name="Front Counter" type="StaticBody3D" parent="Root Scene"]
@@ -108,7 +101,7 @@ shape = SubResource("BoxShape3D_ccxov")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09424, 0, 0.903503)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cabinets and Sink"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, 0.320648, -0.0889899)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, -0.0535888, -0.279541)
 shape = SubResource("BoxShape3D_pj3q3")
 
 [node name="Back Wall" type="StaticBody3D" parent="Root Scene"]
@@ -166,6 +159,7 @@ shape = SubResource("CylinderShape3D_hadr5")
 
 [node name="Fridge" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07181, 0, -0.0694752)
+script = ExtResource("7_bcrk3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Fridge"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.224396, 0.100342)
@@ -190,38 +184,6 @@ shape = SubResource("BoxShape3D_r2lbk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.133817, -0.23855)
 material_override = SubResource("StandardMaterial3D_nmmjt")
 mesh = SubResource("BoxMesh_wrmop")
-
-[node name="lettuce_bowl" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.746527, 0, 1.19666)
-script = ExtResource("7_8hmxj")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/lettuce_bowl"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
-shape = SubResource("CylinderShape3D_x7ngb")
-
-[node name="potato_bowl" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.746527, 0, 0.932612)
-script = ExtResource("8_iq6s6")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/potato_bowl"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
-shape = SubResource("CylinderShape3D_x7ngb")
-
-[node name="tomato_bowl" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.737941, 0, 0.660603)
-script = ExtResource("8_4ruwl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/tomato_bowl"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
-shape = SubResource("CylinderShape3D_x7ngb")
-
-[node name="onion_bowl" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.737941, 0, 0.342356)
-script = ExtResource("10_ewxyc")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/onion_bowl"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
-shape = SubResource("CylinderShape3D_x7ngb")
 
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvm71p8bujfb4"]
+[gd_scene load_steps=5 format=3 uid="uid://cb8mmfculdhev"]
 
 [ext_resource type="PackedScene" path="res://FBXRaw/WholeLettuce.fbx" id="1_1t170"]
 [ext_resource type="Script" path="res://ingredients/lettuce_whole.gd" id="1_u2eg3"]
