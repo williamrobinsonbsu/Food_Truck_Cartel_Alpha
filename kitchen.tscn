@@ -32,16 +32,16 @@ size = Vector3(0.963745, 0.946777, 1.52512)
 size = Vector3(1.18872, 0.953613, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pj3q3"]
-size = Vector3(0.987793, 0.144348, 1.17798)
+size = Vector3(0.987793, 0.144348, 1.4787)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mfhuv"]
 size = Vector3(1.8736, 1.39734, 0.196411)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kyn7k"]
-size = Vector3(0.13208, 1.43805, 2.41344)
+size = Vector3(0.13208, 1.43805, 2.54669)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b8yro"]
-size = Vector3(0.0791016, 1.26868, 2.23218)
+size = Vector3(0.0791016, 1.26868, 2.56128)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bkuw4"]
 size = Vector3(0.226196, 0.0192871, 0.381226)
@@ -108,7 +108,7 @@ shape = SubResource("BoxShape3D_ccxov")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09424, 0, 0.903503)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cabinets and Sink"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, 0.320648, -0.0889899)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, 0.320648, 0.0613706)
 shape = SubResource("BoxShape3D_pj3q3")
 
 [node name="Back Wall" type="StaticBody3D" parent="Root Scene"]
@@ -122,14 +122,14 @@ shape = SubResource("BoxShape3D_mfhuv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0153239, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.985122, 0.601064, 0.358973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.985122, 0.601064, 0.425596)
 shape = SubResource("BoxShape3D_kyn7k")
 
 [node name="Side Wall 2" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16082, 0, -0.771443)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182698, 0.697338, 1.031)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182698, 0.697338, 1.19555)
 shape = SubResource("BoxShape3D_b8yro")
 
 [node name="Cutting Board" type="StaticBody3D" parent="Root Scene"]
