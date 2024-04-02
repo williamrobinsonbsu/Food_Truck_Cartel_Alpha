@@ -26,22 +26,22 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n3er8"]
-size = Vector3(0.988037, 0.946777, 1.9734)
+size = Vector3(0.949097, 0.946777, 1.52899)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ccxov"]
-size = Vector3(1.18872, 0.953613, 1)
+size = Vector3(1.18872, 0.953613, 0.570435)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pj3q3"]
-size = Vector3(0.987793, 0.892822, 1.18237)
+size = Vector3(0.987793, 0.892822, 1.49658)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mfhuv"]
 size = Vector3(1.8736, 1.39734, 0.196411)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kyn7k"]
-size = Vector3(0.13208, 1.43805, 2.41344)
+size = Vector3(0.13208, 1.43805, 2.54644)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b8yro"]
-size = Vector3(0.0791016, 1.26868, 2.23218)
+size = Vector3(0.0791016, 1.26868, 2.56873)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bkuw4"]
 size = Vector3(0.226196, 0.0192871, 0.381226)
@@ -102,21 +102,21 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.182852, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.0608195, 0.419192)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Stove"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00598145, -0.0266113, 0.293686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0254517, -0.0266113, 0.515889)
 shape = SubResource("BoxShape3D_n3er8")
 
 [node name="Front Counter" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0575547, 1.89526)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Front Counter"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0140472, -0.0231934, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0140472, -0.0231934, -0.214783)
 shape = SubResource("BoxShape3D_ccxov")
 
 [node name="Cabinets and Sink" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09424, 0, 0.903503)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cabinets and Sink"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, -0.0535888, -0.091187)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, -0.0535888, 0.0659183)
 shape = SubResource("BoxShape3D_pj3q3")
 
 [node name="Back Wall" type="StaticBody3D" parent="Root Scene"]
@@ -130,14 +130,14 @@ shape = SubResource("BoxShape3D_mfhuv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0153239, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.985122, 0.601064, 0.358973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.985122, 0.601064, 0.425474)
 shape = SubResource("BoxShape3D_kyn7k")
 
 [node name="Side Wall 2" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16082, 0, -0.771443)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182698, 0.697338, 1.031)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182698, 0.697338, 1.19927)
 shape = SubResource("BoxShape3D_b8yro")
 
 [node name="Cutting Board" type="StaticBody3D" parent="Root Scene"]
@@ -149,7 +149,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393947, -0.316076, 0.08705
 shape = SubResource("BoxShape3D_bkuw4")
 
 [node name="Grill" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09147, -0.0577255, 0.679443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09147, -0.109658, 0.679443)
 script = ExtResource("4_3mb46")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Grill"]
