@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=42 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -87,6 +87,21 @@ size = Vector3(0.88855, 0.634521, 0.472054)
 albedo_color = Color(0, 0, 1, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u2tiw"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_4pm26"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="SphereMesh" id="SphereMesh_a2843"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="SphereMesh" id="SphereMesh_x34vp"]
+radius = 0.3
+height = 0.1
+
+[sub_resource type="PrismMesh" id="PrismMesh_1ie5l"]
+size = Vector3(0.75, 0.3, 0.5)
 
 [node name="World" type="Node3D"]
 
@@ -267,21 +282,42 @@ shape = SubResource("BoxShape3D_fdrga")
 transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, 0, 1.22596, 1.06501)
 
 [node name="Police" type="Node3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
-[node name="Policeman" type="MeshInstance3D" parent="Police"]
-transform = Transform3D(0.666667, 0, 0, 0, 0.666667, 0, 0, 0, 0.666667, 0, 0.0770881, 4.96557)
+[node name="PoliceBody" type="Node3D" parent="Police"]
+transform = Transform3D(0.666667, 0, 0, 0, 0.666667, 0, 0, 0, 0.666667, 0, 0, 0)
 visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Police/PoliceBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34159, 8.51336)
 material_override = SubResource("StandardMaterial3D_58ql7")
 mesh = SubResource("CapsuleMesh_u2tiw")
-skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Police/PoliceBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244932, 1.96462, 8.14399)
+mesh = SubResource("SphereMesh_4pm26")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Police/PoliceBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.245, 1.965, 8.144)
+mesh = SubResource("SphereMesh_a2843")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Police/PoliceBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00506803, 1.72128, 8.14399)
+mesh = SubResource("SphereMesh_x34vp")
+skeleton = NodePath("../MeshInstance3D2")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Police/PoliceBody"]
+transform = Transform3D(1, 0, 0, 0, -0.956905, 0.290402, 0, -0.290402, -0.956905, 0, 1.98549, 8.3685)
+mesh = SubResource("PrismMesh_1ie5l")
+skeleton = NodePath("../MeshInstance3D")
 
 [node name="PoliceSpawnTimer" type="Timer" parent="Police"]
 one_shot = true
 autostart = true
 
 [node name="PoliceCatchTimer" type="Timer" parent="Police"]
-wait_time = 3.0
+wait_time = 5.0
 one_shot = true
 autostart = true
 

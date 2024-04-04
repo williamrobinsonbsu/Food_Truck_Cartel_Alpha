@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var police_catch_timer := $"../Police/PoliceCatchTimer"
-@onready var policeman := $"../Police/Policeman"
+@onready var policeman := $"../Police/PoliceBody"
 
 var shutter_door_close = true
 var can_police_catch_player = true
@@ -38,6 +38,13 @@ func door_shutter():
 #police. Using 'can_police_catch_player' var as a placeholder for now.
 
 func _on_police_spawn_timer_timeout():
+	var audio_stream_player := AudioStreamPlayer.new()
+	audio_stream_player.stream = load("res://audio/police_siren.wav")
+	get_parent().add_child(audio_stream_player)
+	audio_stream_player.play()
+	audio_stream_player.finished.connect(func():
+		audio_stream_player.queue_free()
+	)
 	policeman.show()
 	police_catch_timer.start()
 
