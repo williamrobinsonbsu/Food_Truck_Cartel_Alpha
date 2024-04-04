@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgwi6fkbbgv66"]
+
+[ext_resource type="Script" path="res://ingredients/tomato_whole.gd" id="1_7h6kq"]
+[ext_resource type="PackedScene" uid="uid://djduu5ywmn451" path="res://FBXRaw/WholeTomato.fbx" id="1_bv725"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_84ib1"]
+radius = 0.0997865
+height = 0.199573
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_7h6kq")
+
+[node name="tomato_whole" parent="." instance=ExtResource("1_bv725")]
+
+[node name="tomato" parent="tomato_whole/RootNode/Truck" index="0"]
+transform = Transform3D(0.10967, 0, 0, 0, 0.0718388, 0, 0, 0, 0.106483, -0.154761, -0.101766, 0.00232264)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_84ib1")
+
+[editable path="tomato_whole"]

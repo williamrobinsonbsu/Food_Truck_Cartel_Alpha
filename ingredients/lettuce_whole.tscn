@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb8mmfculdhev"]
+
+[ext_resource type="PackedScene" uid="uid://5dcxjv1gyv1y" path="res://FBXRaw/WholeLettuce.fbx" id="1_1t170"]
+[ext_resource type="Script" path="res://ingredients/lettuce_whole.gd" id="1_u2eg3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3ogcr"]
+radius = 0.158328
+height = 0.316656
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_u2eg3")
+
+[node name="lettuce_whole" parent="." instance=ExtResource("1_1t170")]
+
+[node name="Lettuce_Head" parent="lettuce_whole/RootNode/Truck" index="0"]
+transform = Transform3D(0.502537, 0, 0, 0, 0.354617, 0, 0, 0, 0.502537, -0.763243, -0.049681, -0.00959245)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3ogcr")
+
+[editable path="lettuce_whole"]

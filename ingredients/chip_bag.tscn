@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0tatt4m54ydm"]
+
+[ext_resource type="Script" path="res://ingredients/chip_bag.gd" id="1_gu2rg"]
+[ext_resource type="PackedScene" uid="uid://cvsdtf8fxcpi2" path="res://FBXRaw/ChipBag.fbx" id="1_lbikl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8740s"]
+radius = 0.147077
+height = 0.327813
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_gu2rg")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_lbikl")]
+
+[node name="Chips" parent="Root Scene/RootNode" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40961, -0.779372, 0)
+
+[node name="chip_bag1" parent="Root Scene/RootNode/Chips" index="0"]
+transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, -0.378125, 0.507171, 5.87637)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_8740s")
+
+[editable path="Root Scene"]

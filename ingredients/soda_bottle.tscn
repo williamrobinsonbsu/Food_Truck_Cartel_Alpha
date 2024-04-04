@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bquinqrlqbtw2"]
+
+[ext_resource type="PackedScene" uid="uid://diq8qyoqanncm" path="res://FBXRaw/SodaBottle.fbx" id="1_nbdky"]
+[ext_resource type="Script" path="res://ingredients/soda_bottle.gd" id="1_qkfff"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xsyoy"]
+radius = 0.054266
+height = 0.449335
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_qkfff")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_nbdky")]
+
+[node name="Soda" parent="Root Scene/RootNode" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47348, -1.43268, 0.686476)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0490797, 0)
+shape = SubResource("CapsuleShape3D_xsyoy")
+
+[editable path="Root Scene"]

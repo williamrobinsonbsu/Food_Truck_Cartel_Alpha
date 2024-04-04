@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5ogqbaweg1qd"]
+
+[ext_resource type="Script" path="res://ingredients/onion_slice.gd" id="1_ftidh"]
+[ext_resource type="PackedScene" uid="uid://dp5lxp4uvmtbt" path="res://FBXRaw/OnionSlice.fbx" id="1_mrlia"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xrjom"]
+height = 0.0136703
+radius = 0.0713755
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_ftidh")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_mrlia")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0255293, -0.0042626)
+
+[node name="RootNode" parent="Root Scene" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122696, 0.00190533, -0.00140896)
+
+[node name="Onion" parent="Root Scene/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.435367, -0.675664, -1.72948)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_xrjom")
+
+[editable path="Root Scene"]
