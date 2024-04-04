@@ -41,15 +41,21 @@ func _input(event):
 		elif collider is StaticBody3D and picked_object == null:
 			if collider.has_method("pick_item"):
 				pick_object()
-		elif collider.has_method("use") and picked_object != null:
-			collider.use(picked_object)
+		
+		if collider != null:		
+			if collider.has_method("use") and picked_object != null:
+				collider.use(picked_object)
 			
-		if collider.has_method("door_close"):
-			collider.door_close()
+			if collider.has_method("door_close"):
+				collider.door_close()
 				
-		elif picked_object != null and collider.has_method("delete_item"):
+			if collider.has_method("place"):
+				collider.place(picked_object)
+				
+			elif picked_object != null and collider.has_method("delete_item"):
 					picked_object.queue_free()
 					picked_object = null
+					
 #			if picked_object == patty:
 #				if picked_object.cooked_patty == true:
 #					patty.queue_free()

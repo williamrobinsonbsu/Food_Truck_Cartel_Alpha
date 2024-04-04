@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://xjvtluhr2dfn"]
+
+[ext_resource type="Script" path="res://ingredients/cheese_slice.gd" id="1_dwpw8"]
+[ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="1_ntluy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_geejx"]
+size = Vector3(0.160858, 0.0120239, 0.156982)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_dwpw8")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_ntluy")]
+
+[node name="Cheese" parent="Root Scene/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(8.47766, 0, 0, 0, 0.511897, 0, 0, 0, 8.47766, 0.323037, -0.147639, -1.213)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000930786, 0.00460815, -0.000366211)
+shape = SubResource("BoxShape3D_geejx")
+
+[editable path="Root Scene"]

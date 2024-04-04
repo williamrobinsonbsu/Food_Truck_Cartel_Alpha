@@ -1,4 +1,4 @@
 extends PickedIngredient
 
 func name():
-	return "sliced tomatoes"
+	return "cheese slice"

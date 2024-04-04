@@ -5,7 +5,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1xwrc"]
 height = 0.0182778
-radius = 0.148418
+radius = 0.108767
 
 [node name="RigidBody3D" type="RigidBody3D"]
 script = ExtResource("1_rsgt7")

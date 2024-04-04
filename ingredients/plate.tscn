@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://tsbefmiro8lh"]
+
+[ext_resource type="PackedScene" uid="uid://din6t3fv4n6pv" path="res://FBXRaw/PlateSingle.fbx" id="1_52jp6"]
+[ext_resource type="Script" path="res://ingredients/plate.gd" id="2_lbwt3"]
+[ext_resource type="PackedScene" uid="uid://bxxoq0itjjms5" path="res://FBXRaw/BottomBread.fbx" id="3_dfucd"]
+[ext_resource type="PackedScene" uid="uid://cm8dfmol45dx" path="res://FBXRaw/Patty.fbx" id="4_usue2"]
+[ext_resource type="PackedScene" uid="uid://dp5lxp4uvmtbt" path="res://FBXRaw/OnionSlice.fbx" id="5_6nyhf"]
+[ext_resource type="PackedScene" uid="uid://cxe1innv7wc2v" path="res://FBXRaw/LettuceSlice.fbx" id="6_ar07p"]
+[ext_resource type="PackedScene" uid="uid://dmutgofk6xtat" path="res://FBXRaw/TomatoSlice.fbx" id="7_myktt"]
+[ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="8_wmfhp"]
+[ext_resource type="PackedScene" uid="uid://b4gw4orru5cvj" path="res://FBXRaw/TopBread.fbx" id="9_v4ng1"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rf0rk"]
+height = 0.0410744
+radius = 0.136671
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_52jp6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0119846, 0, -0.0112032)
+
+[node name="Plates1" parent="Root Scene/RootNode/Stack" index="0"]
+transform = Transform3D(31.524, 0, 0, 0, 1.0643, 0, 0, 0, 31.524, -3.5425, -2.43644, -12.4178)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("2_lbwt3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CylinderShape3D_rf0rk")
+
+[node name="bottom_bun" parent="." instance=ExtResource("3_dfucd")]
+visible = false
+
+[node name="BreadBot" parent="bottom_bun/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(9.44901, 0, 0, 0, -1.69796, -4.73155e-14, 0, 8.50245e-15, -9.44901, 0.367577, -0.143389, -1.19766)
+
+[node name="patty" parent="." instance=ExtResource("4_usue2")]
+visible = false
+
+[node name="Patty" parent="patty/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(9.10476, 0, 0, 0, 1.85537, 0, 0, 0, 9.42806, 0.365892, -0.138856, -1.19824)
+
+[node name="onions" parent="." instance=ExtResource("5_6nyhf")]
+visible = false
+
+[node name="Truck" parent="onions/RootNode" index="0"]
+transform = Transform3D(1.9899, 0, 0, 0, 2.57641, 0, 0, 0, 1.9899, 0.00358474, -0.00995583, -0.0136705)
+
+[node name="Onion" parent="onions/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38385, -0.617841, -1.71342)
+
+[node name="lettuce" parent="." instance=ExtResource("6_ar07p")]
+transform = Transform3D(0.930422, 0, 0, 0, 1, 0, 0, 0, 0.82989, 0, 0, 0.0168837)
+visible = false
+
+[node name="Letteuce" parent="lettuce/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(6.77962, 0, 0, 0, 0.202736, 0, 0, 0, 6.77962, 0.376407, -0.113795, -1.20373)
+
+[node name="tomatoes" parent="." instance=ExtResource("7_myktt")]
+visible = false
+
+[node name="RootNode" parent="tomatoes" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0528433, -0.0463629, 0.136545)
+
+[node name="Tomato" parent="tomatoes/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.404672, -0.572577, -1.7549)
+
+[node name="cheese" parent="." instance=ExtResource("8_wmfhp")]
+visible = false
+
+[node name="Cheese" parent="cheese/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(7.9664, 0, -2.89953, 0, 0.511897, 0, 2.89953, 0, 7.9664, 0.368372, -0.10444, -1.19994)
+
+[node name="top_bun" parent="." instance=ExtResource("9_v4ng1")]
+visible = false
+
+[node name="BreadTop" parent="top_bun/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(8.47766, 0, 0, 0, 2.20425, 0, 0, 0, 8.47766, 0.367079, -0.0965785, -1.2007)
+
+[editable path="Root Scene"]
+[editable path="bottom_bun"]
+[editable path="patty"]
+[editable path="onions"]
+[editable path="lettuce"]
+[editable path="tomatoes"]
+[editable path="cheese"]
+[editable path="top_bun"]
