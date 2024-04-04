@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-var scene = preload("res://ingredients/lettuce_whole.tscn")
+var scene = preload("res://ingredients/patty_raw.tscn")
 
 func pick_item():
 	var lettuce = scene.instantiate()

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c7euh72m2pkv6"
-path="res://.godot/imported/Base_EnvironmentModel.fbx-99b65f8b996232070a6bf1499369c4fd.scn"
+uid="uid://cvsdtf8fxcpi2"
+path="res://.godot/imported/ChipBag.fbx-84de4c69c2d47f222b65e6a11b65cb5c.scn"
 
 [deps]
 
-source_file="res://FBXRaw/Base_EnvironmentModel.fbx"
-dest_files=["res://.godot/imported/Base_EnvironmentModel.fbx-99b65f8b996232070a6bf1499369c4fd.scn"]
+source_file="res://FBXRaw/ChipBag.fbx"
+dest_files=["res://.godot/imported/ChipBag.fbx-84de4c69c2d47f222b65e6a11b65cb5c.scn"]
 
 [params]
 

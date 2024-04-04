@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c7euh72m2pkv6"
-path="res://.godot/imported/Base_EnvironmentModel.fbx-99b65f8b996232070a6bf1499369c4fd.scn"
+uid="uid://p1ydebraco8t"
+path="res://.godot/imported/WholeOnion.fbx-64dc5337e75d9f93588326d85399bf13.scn"
 
 [deps]
 
-source_file="res://FBXRaw/Base_EnvironmentModel.fbx"
-dest_files=["res://.godot/imported/Base_EnvironmentModel.fbx-99b65f8b996232070a6bf1499369c4fd.scn"]
+source_file="res://FBXRaw/WholeOnion.fbx"
+dest_files=["res://.godot/imported/WholeOnion.fbx-64dc5337e75d9f93588326d85399bf13.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c7euh72m2pkv6"
-path="res://.godot/imported/Base_EnvironmentModel.fbx-99b65f8b996232070a6bf1499369c4fd.scn"
+uid="uid://dp5lxp4uvmtbt"
+path="res://.godot/imported/OnionSlice.fbx-f65077a32ea4800ae81d1a6dfaa2bd40.scn"
 
 [deps]
 
-source_file="res://FBXRaw/Base_EnvironmentModel.fbx"
-dest_files=["res://.godot/imported/Base_EnvironmentModel.fbx-99b65f8b996232070a6bf1499369c4fd.scn"]
+source_file="res://FBXRaw/OnionSlice.fbx"
+dest_files=["res://.godot/imported/OnionSlice.fbx-f65077a32ea4800ae81d1a6dfaa2bd40.scn"]
 
 [params]
 

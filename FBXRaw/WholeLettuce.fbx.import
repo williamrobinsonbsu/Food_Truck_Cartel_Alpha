@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c7euh72m2pkv6"
-path="res://.godot/imported/Base_EnvironmentModel.fbx-99b65f8b996232070a6bf1499369c4fd.scn"
+uid="uid://5dcxjv1gyv1y"
+path="res://.godot/imported/WholeLettuce.fbx-296c40fbe87ca94980d9a9802820221e.scn"
 
 [deps]
 
-source_file="res://FBXRaw/Base_EnvironmentModel.fbx"
-dest_files=["res://.godot/imported/Base_EnvironmentModel.fbx-99b65f8b996232070a6bf1499369c4fd.scn"]
+source_file="res://FBXRaw/WholeLettuce.fbx"
+dest_files=["res://.godot/imported/WholeLettuce.fbx-296c40fbe87ca94980d9a9802820221e.scn"]
 
 [params]
 

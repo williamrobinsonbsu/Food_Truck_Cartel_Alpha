@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c7euh72m2pkv6"
-path="res://.godot/imported/Base_EnvironmentModel.fbx-99b65f8b996232070a6bf1499369c4fd.scn"
+uid="uid://bss6fddgtqox6"
+path="res://.godot/imported/FriesIndiv.fbx-d77dd078f396cdc1fe93e6ea0ea8f452.scn"
 
 [deps]
 
-source_file="res://FBXRaw/Base_EnvironmentModel.fbx"
-dest_files=["res://.godot/imported/Base_EnvironmentModel.fbx-99b65f8b996232070a6bf1499369c4fd.scn"]
+source_file="res://FBXRaw/FriesIndiv.fbx"
+dest_files=["res://.godot/imported/FriesIndiv.fbx-d77dd078f396cdc1fe93e6ea0ea8f452.scn"]
 
 [params]
 
