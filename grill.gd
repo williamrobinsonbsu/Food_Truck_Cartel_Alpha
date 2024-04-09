@@ -1,4 +1,4 @@
 extends StaticBody3D
 
-func use(picked_ingredient):
+func use(_picked_ingredient):
 	print("This is a grill for grilling burgers!")

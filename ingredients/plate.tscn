@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="8_wmfhp"]
 [ext_resource type="PackedScene" uid="uid://b4gw4orru5cvj" path="res://FBXRaw/TopBread.fbx" id="9_v4ng1"]
 [ext_resource type="PackedScene" uid="uid://bw31yrrelid6e" path="res://FBXRaw/FryWBox.fbx" id="10_c2qvc"]
-[ext_resource type="Script" path="res://resetTemp.gd" id="11_6xxt5"]
+[ext_resource type="Script" path="res://ingredients/resetTemp.gd" id="11_efj2f"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rf0rk"]
 height = 0.0410744
@@ -105,7 +105,7 @@ transform = Transform3D(0.114438, 1.86191e-33, 6.93889e-18, -1.86191e-33, 0.1144
 
 [node name="resetTemp" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.302319, 0.110318, 0.0561066)
-script = ExtResource("11_6xxt5")
+script = ExtResource("11_efj2f")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="resetTemp"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699635, -0.0334307, -0.0296969)
@@ -114,6 +114,8 @@ shape = SubResource("BoxShape3D_73yg8")
 [node name="Label3D" type="Label3D" parent="resetTemp"]
 transform = Transform3D(-0.297279, 0, -8.74228e-08, 0, 0.414358, 0, 2.5989e-08, 0, -1, 0.067137, -0.0187684, -0.111984)
 text = "Reset"
+
+[connection signal="reset_ingredients" from="resetTemp" to="StaticBody3D" method="_on_reset_ingredients"]
 
 [editable path="Root Scene"]
 [editable path="bottom_bun"]
