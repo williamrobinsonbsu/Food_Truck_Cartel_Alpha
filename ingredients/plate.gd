@@ -9,8 +9,9 @@ func place(picked_object):
 			$"../bottom_bun".show()
 			bottom_placed = true
 			picked_object.queue_free()
-		elif picked_object.name() == "fries":
-			pass
+		elif picked_object.name() == "boxed fries":
+			$"../fries".show()
+			picked_object.queue_free()
 		elif bottom_placed == true:
 			if picked_object.name() == "patty":
 				$"../patty".show()
@@ -30,3 +31,4 @@ func place(picked_object):
 				$"../top_bun".show()
 	
 			picked_object.queue_free()
+

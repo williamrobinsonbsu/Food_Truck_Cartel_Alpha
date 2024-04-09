@@ -1,4 +1,4 @@
 extends PickedIngredient
-
+	
 func name():
-	return "fries"
+	return "boxed fries"

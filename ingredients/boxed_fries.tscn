@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bayr2kujwugd8"]
+
+[ext_resource type="Script" path="res://ingredients/boxed_fries.gd" id="1_blusn"]
+[ext_resource type="PackedScene" uid="uid://bw31yrrelid6e" path="res://FBXRaw/FryWBox.fbx" id="1_v5vw3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4faga"]
+size = Vector3(0.0942993, 0.287048, 0.170898)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_blusn")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_v5vw3")]
+
+[node name="Fry" parent="Root Scene/RootNode" index="0"]
+transform = Transform3D(0.699816, 0, 0, 0, 0.827508, 0, 0, 0, 0.699816, 0.183031, 0.620197, -0.840698)
+
+[node name="frybox" parent="Root Scene/RootNode/Fry" index="0"]
+transform = Transform3D(0.114438, 8.6854e-24, 0, 0, 0.114438, 0, 0, -1.8198e-23, 0.114438, -0.253089, -0.854243, 1.20416)
+
+[node name="fries" parent="Root Scene/RootNode/Fry" index="1"]
+transform = Transform3D(0.114438, 8.6854e-24, 0, 0, 0.114438, 0, 0, -1.8198e-23, 0.114438, -0.248703, -0.854243, 1.47793)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00112915, 0.14151, -0.00195313)
+shape = SubResource("BoxShape3D_4faga")
+
+[editable path="Root Scene"]

@@ -1,7 +1,7 @@
 extends Node3D
 
 var shutter_door_close = false
-var can_police_catch_player = true
+var can_police_catch_player = false
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):

@@ -52,6 +52,9 @@ func _input(event):
 			if collider.has_method("place"):
 				collider.place(picked_object)
 				
+			if collider.has_method("reset"):
+				collider.reset()
+				
 			elif picked_object != null and collider.has_method("delete_item"):
 					picked_object.queue_free()
 					picked_object = null
