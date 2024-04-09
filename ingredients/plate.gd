@@ -8,6 +8,8 @@ var onion_placed = false
 var cheese_placed = false
 var top_bun_placed = false
 
+signal check_my_order
+
 func place(picked_object):
 	if picked_object != null:
 		if picked_object.name() == "burger":
@@ -42,22 +44,8 @@ func place(picked_object):
 	
 			picked_object.queue_free()
 
-func print_ingredients():
-	if bottom_bun_placed == true and patty_placed == true and top_bun_placed == true:
-		print("This is a burger!")
-		if onion_placed == true:
-			print("With Onions\n")
-		if lettuce_placed == true:
-			print("With Lettuce\n")
-		if cheese_placed == true:
-			print("With Cheese\n")
-		if tomato_placed == true:
-			print("With Tomatoes\n")
-	else:
-		print("This an incomplete burger! :c")
-
 func _on_reset_ingredients():
-	print_ingredients()
+	check_my_order.emit()
 	bottom_bun_placed = false
 	cheese_placed = false
 	lettuce_placed = false
@@ -65,3 +53,4 @@ func _on_reset_ingredients():
 	patty_placed = false
 	tomato_placed = false
 	top_bun_placed = false
+	

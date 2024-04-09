@@ -331,6 +331,7 @@ mesh = SubResource("BoxMesh_b0uk8")
 shape = SubResource("BoxShape3D_ouvfc")
 
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
+[connection signal="check_my_order" from="order_plate/StaticBody3D" to="customer" method="_on_check_my_order"]
 
 [editable path="Root Scene"]
 [editable path="order_plate"]
