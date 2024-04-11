@@ -1,4 +1,4 @@
-[gd_scene load_steps=300 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=297 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -37,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://dyu8g6wp12pvr" path="res://Textures/Stove_standardSurface2_BaseColor.png" id="18_wyyoo"]
 [ext_resource type="Texture2D" uid="uid://de5ow8skqxhdn" path="res://Textures/Stove_standardSurface2_Height.png" id="19_0dpnb"]
 [ext_resource type="Texture2D" uid="uid://dsaprrfm27af1" path="res://Textures/Stove_standardSurface2_Metallic.png" id="20_ay0cw"]
-[ext_resource type="Script" path="res://customer.gd" id="20_vdqhw"]
 [ext_resource type="Texture2D" uid="uid://b7utoc83fpcbv" path="res://Textures/Stove_standardSurface2_Normal.png" id="21_h4v81"]
 [ext_resource type="Texture2D" uid="uid://bpl4a6t363nvo" path="res://Textures/Stove_standardSurface2_Roughness.png" id="22_sx1aw"]
 [ext_resource type="Texture2D" uid="uid://26knam6livxr" path="res://Textures/Walls_extracolor_BaseColor.png" id="23_rg8c5"]
@@ -879,10 +878,6 @@ normal_texture = ExtResource("129_uhwv1")
 heightmap_enabled = true
 heightmap_texture = ExtResource("127_q7tl2")
 
-[sub_resource type="BoxMesh" id="BoxMesh_b0uk8"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ouvfc"]
-
 [node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -898,18 +893,6 @@ script = ExtResource("2_mqssh")
 
 [node name="RootNode" parent="Root Scene" index="0"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.182852, 0)
-
-[node name="Burger" parent="Root Scene/RootNode/Truck" index="31"]
-visible = false
-
-[node name="Fry" parent="Root Scene/RootNode" index="12"]
-visible = false
-
-[node name="Con_Bottlee" parent="Root Scene/RootNode" index="13"]
-visible = false
-
-[node name="Con_Bottlee1" parent="Root Scene/RootNode" index="14"]
-visible = false
 
 [node name="MockFront" parent="Root Scene/RootNode/Truck" index="0"]
 material_override = SubResource("StandardMaterial3D_4l8cx")
@@ -993,6 +976,9 @@ material_override = SubResource("StandardMaterial3D_bhssi")
 
 [node name="Walls" parent="Root Scene/RootNode/Truck" index="30"]
 material_override = SubResource("StandardMaterial3D_xxrp3")
+
+[node name="Burger" parent="Root Scene/RootNode/Truck" index="31"]
+visible = false
 
 [node name="Cheese" parent="Root Scene/RootNode/Truck/Burger" index="0"]
 material_override = SubResource("StandardMaterial3D_2pquq")
@@ -1207,17 +1193,26 @@ material_override = SubResource("StandardMaterial3D_44kl8")
 [node name="Plates33" parent="Root Scene/RootNode/Stack2" index="2"]
 material_override = SubResource("StandardMaterial3D_44kl8")
 
+[node name="Fry" parent="Root Scene/RootNode" index="12"]
+visible = false
+
 [node name="frybox" parent="Root Scene/RootNode/Fry" index="0"]
 material_override = SubResource("StandardMaterial3D_c8blv")
 
 [node name="fries" parent="Root Scene/RootNode/Fry" index="1"]
 material_override = SubResource("StandardMaterial3D_k2kxk")
 
+[node name="Con_Bottlee" parent="Root Scene/RootNode" index="13"]
+visible = false
+
 [node name="condiment_bottle" parent="Root Scene/RootNode/Con_Bottlee" index="0"]
 material_override = SubResource("StandardMaterial3D_6pr0m")
 
 [node name="condiment_top" parent="Root Scene/RootNode/Con_Bottlee" index="1"]
 material_override = SubResource("StandardMaterial3D_0sjq4")
+
+[node name="Con_Bottlee1" parent="Root Scene/RootNode" index="14"]
+visible = false
 
 [node name="condiment_bottle2" parent="Root Scene/RootNode/Con_Bottlee1" index="0"]
 material_override = SubResource("StandardMaterial3D_j3w6x")
@@ -1679,17 +1674,6 @@ material_override = SubResource("StandardMaterial3D_daqk1")
 
 [node name="fries" parent="order_plate/fries/RootNode/Fry" index="1"]
 material_override = SubResource("StandardMaterial3D_reyp0")
-
-[node name="customer" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2063, 6.81431)
-script = ExtResource("20_vdqhw")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="customer"]
-transform = Transform3D(1, 0, 0, 0, 2.56547, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("BoxMesh_b0uk8")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="customer"]
-shape = SubResource("BoxShape3D_ouvfc")
 
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
 [connection signal="reset_ingredients" from="order_plate/resetTemp" to="order_plate/StaticBody3D" method="_on_reset_ingredients"]
