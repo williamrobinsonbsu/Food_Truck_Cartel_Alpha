@@ -1,7 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0girux602x57"]
+[gd_scene load_steps=8 format=3 uid="uid://c0girux602x57"]
 
 [ext_resource type="PackedScene" uid="uid://dmutgofk6xtat" path="res://FBXRaw/TomatoSlice.fbx" id="1_728ar"]
 [ext_resource type="Script" path="res://ingredients/tomato_slice.gd" id="1_ahm71"]
+[ext_resource type="Texture2D" uid="uid://c3yi83fis7vwj" path="res://Textures/TomatoSlices_standardSurface1_BaseColor.png" id="3_njyie"]
+[ext_resource type="Texture2D" uid="uid://cvq2ubqalljm0" path="res://Textures/TomatoSlices_standardSurface1_Metallic.png" id="4_10p70"]
+[ext_resource type="Texture2D" uid="uid://cpuawm67yp705" path="res://Textures/TomatoSlices_standardSurface1_Roughness.png" id="5_ml8yd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lc2m2"]
+albedo_texture = ExtResource("3_njyie")
+metallic = 1.0
+metallic_texture = ExtResource("4_10p70")
+roughness = 0.62
+roughness_texture = ExtResource("5_ml8yd")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_mtm1t"]
 height = 0.029189
@@ -14,6 +24,15 @@ script = ExtResource("1_ahm71")
 
 [node name="Tomato" parent="Root Scene/RootNode/Truck/Burger" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.435843, -0.639426, -1.71299)
+
+[node name="Tomato2" parent="Root Scene/RootNode/Truck/Burger/Tomato" index="0"]
+material_override = SubResource("StandardMaterial3D_lc2m2")
+
+[node name="Tomato1" parent="Root Scene/RootNode/Truck/Burger/Tomato" index="1"]
+material_override = SubResource("StandardMaterial3D_lc2m2")
+
+[node name="Tomato22" parent="Root Scene/RootNode/Truck/Burger/Tomato" index="2"]
+material_override = SubResource("StandardMaterial3D_lc2m2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_mtm1t")
