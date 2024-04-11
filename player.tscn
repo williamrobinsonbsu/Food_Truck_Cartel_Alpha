@@ -51,6 +51,13 @@ offset_top = -458.0
 offset_right = -695.0
 offset_bottom = -435.0
 
+[node name="score" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -877.0
+offset_top = 390.0
+offset_right = -837.0
+offset_bottom = 413.0
+
 [node name="CenterContainer" type="CenterContainer" parent="Control"]
 layout_mode = 0
 offset_right = 40.0

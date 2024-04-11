@@ -44,6 +44,7 @@ func _on_new_customer():
 		score += 100
 	print("Your score is: ")
 	print(score)
+	get_node("/root/World/Player/Control/score").text = "Score: " + str(score)
 	var scene = preload("res://customer.tscn")
 	var customer = scene.instantiate()
 	add_child(customer)
