@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=46 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://cheese_block.gd" id="16_exl5l"]
 [ext_resource type="PackedScene" uid="uid://tsbefmiro8lh" path="res://ingredients/plate.tscn" id="16_i0lgt"]
 [ext_resource type="Script" path="res://frier.gd" id="17_2sw8v"]
+[ext_resource type="PackedScene" uid="uid://cuqr3ppkwg1gj" path="res://customer.tscn" id="20_crur0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -106,27 +107,15 @@ size = Vector3(1.0127, 0.449951, 0.43457)
 environment = SubResource("Environment_2g63l")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Root Scene" parent="." groups=["map"] instance=ExtResource("1_6yk65")]
+[node name="Root Scene" parent="." instance=ExtResource("1_6yk65")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 script = ExtResource("2_mqssh")
 
 [node name="RootNode" parent="Root Scene" index="0"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.182852, 0)
-
-[node name="Burger" parent="Root Scene/RootNode/Truck" index="31"]
-visible = false
-
-[node name="Fry" parent="Root Scene/RootNode" index="12"]
-visible = false
-
-[node name="Con_Bottlee" parent="Root Scene/RootNode" index="13"]
-visible = false
-
-[node name="Con_Bottlee1" parent="Root Scene/RootNode" index="14"]
-visible = false
 
 [node name="Stove" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.0608195, 0.419192)
@@ -317,24 +306,23 @@ shape = SubResource("BoxShape3D_jmo2p")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362507, 0.357653, -0.0359316)
 
-[node name="new_customer" type="Marker3D" parent="Root Scene"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.33154)
-
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
 
-[node name="order_plate" parent="." groups=["plate"] instance=ExtResource("16_i0lgt")]
+[node name="order_plate" parent="." instance=ExtResource("16_i0lgt")]
 transform = Transform3D(1.541, 0, 0, 0, 0.952, 0, 0, 0, 1.5, 0, 1.18726, 4.47593)
 
 [node name="StaticBody3D" parent="order_plate" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00896125, 0, 0)
 
+[node name="customer" parent="." instance=ExtResource("20_crur0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0538294, 1.4271, 6.72113)
+visible = false
+
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
-[connection signal="reset_ingredients" from="order_plate/resetTemp" to="order_plate/StaticBody3D" method="_on_reset_ingredients"]
+[connection signal="reset_ingredients" from="order_plate/resetTemp" to="customer" method=" _on_check_my_order"]
 
 [editable path="Root Scene"]
-[editable path="Player"]
 [editable path="order_plate"]
 [editable path="order_plate/Root Scene"]
 [editable path="order_plate/bottom_bun"]
@@ -345,3 +333,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00896125, 0, 0)
 [editable path="order_plate/cheese"]
 [editable path="order_plate/top_bun"]
 [editable path="order_plate/fries"]
+[editable path="customer"]

@@ -34,8 +34,8 @@ func _input(event):
 	
 	if Input.is_action_just_pressed("left_click"):
 		var collider = interaction.get_collider()
-		print("Picked Status: " + str(picked_object))
-		print(collider)
+		#print("Picked Status: " + str(picked_object))
+		#print(collider)
 		if collider is RigidBody3D and picked_object == null:
 			pick_object()
 		elif collider is StaticBody3D and picked_object == null:

@@ -7,7 +7,7 @@
 height = 0.0461142
 radius = 0.0884379
 
-[node name="RigidBody3D" type="RigidBody3D"]
+[node name="RigidBody3D2" type="RigidBody3D"]
 script = ExtResource("1_1pa7e")
 
 [node name="Root Scene" parent="." instance=ExtResource("1_vu7q0")]

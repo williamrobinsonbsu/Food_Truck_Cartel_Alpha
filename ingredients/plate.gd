@@ -45,7 +45,7 @@ func place(picked_object):
 			picked_object.queue_free()
 
 func _on_reset_ingredients():
-	check_my_order.emit()
+	get_tree().call_group("customer", "_on_check_my_order")
 	bottom_bun_placed = false
 	cheese_placed = false
 	lettuce_placed = false

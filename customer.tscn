@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuqr3ppkwg1gj"]
+
+[ext_resource type="Script" path="res://customer.gd" id="1_u5n8i"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_80lmy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bwu8x"]
+
+[node name="customer" type="StaticBody3D" groups=["customer"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.741381, 0)
+script = ExtResource("1_u5n8i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.523526, 0, 0, 0, 1.52171, 0, 0, 0, 0.490391, 0, 0, 0)
+mesh = SubResource("BoxMesh_80lmy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_bwu8x")
