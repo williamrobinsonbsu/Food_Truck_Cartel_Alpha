@@ -1,4 +1,4 @@
-[gd_scene load_steps=297 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=294 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -24,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://bp44nhgcfbjf" path="res://Textures/Shutter_standardSurface2_Metallic.png" id="10_lvmv3"]
 [ext_resource type="Texture2D" uid="uid://bvdvn0mqkwtlm" path="res://Textures/Shutter_standardSurface2_Normal.png" id="11_lwdia"]
 [ext_resource type="Texture2D" uid="uid://bosnqweuh548c" path="res://Textures/Shutter_standardSurface2_Roughness.png" id="12_qhnw3"]
-[ext_resource type="Texture2D" uid="uid://df2vrgt2aoa3t" path="res://Textures/Floor_extracolor_BaseColor.png" id="13_6v7ja"]
 [ext_resource type="Texture2D" uid="uid://cok6dem2j16lk" path="res://Textures/Floor_extracolor_Height.png" id="14_hom7i"]
 [ext_resource type="Script" path="res://bread_bottom_shelf.gd" id="14_utpjc"]
 [ext_resource type="Texture2D" uid="uid://ccesn5yi3sxs7" path="res://Textures/Floor_extracolor_Metallic.png" id="15_j0nll"]
@@ -47,7 +46,6 @@
 [ext_resource type="Texture2D" uid="uid://d1d2nb5yc0svj" path="res://Textures/Fryer_standardSurface2_BaseColor.png" id="28_iev6d"]
 [ext_resource type="Texture2D" uid="uid://c3iwkej238vqc" path="res://Textures/Fryer_standardSurface2_Height.png" id="29_00b6u"]
 [ext_resource type="Texture2D" uid="uid://dgwtkvyk33d33" path="res://Textures/Fryer_standardSurface2_Metallic.png" id="30_3clvq"]
-[ext_resource type="Texture2D" uid="uid://b8nmxa1gx2204" path="res://Textures/Fryer_standardSurface2_Normal.png" id="31_yd7bl"]
 [ext_resource type="Texture2D" uid="uid://b5356x3y6chjw" path="res://Textures/Fryer_standardSurface2_Roughness.png" id="32_len7p"]
 [ext_resource type="Texture2D" uid="uid://mnx8esa44pl7" path="res://Textures/TrashCan_standardSurface2_BaseColor.png" id="33_ndsur"]
 [ext_resource type="Texture2D" uid="uid://cgqt4drx27j8d" path="res://Textures/TrashCan_standardSurface2_Height.png" id="34_g2ju2"]
@@ -127,7 +125,6 @@
 [ext_resource type="Texture2D" uid="uid://cm4dj6ufj0krc" path="res://Textures/MiniFridge_standardSurface1_Metallic.png" id="108_lwlra"]
 [ext_resource type="Texture2D" uid="uid://b3gmcerjg3hlq" path="res://Textures/MiniFridge_standardSurface1_Normal.png" id="109_eygye"]
 [ext_resource type="Texture2D" uid="uid://b41gkhjyp6ihv" path="res://Textures/MiniFridge_standardSurface1_Roughness.png" id="110_i4yr3"]
-[ext_resource type="Texture2D" uid="uid://d2wiejyy0fbq8" path="res://Textures/Corkboard_standardSurface1_BaseColor.png" id="111_plfaw"]
 [ext_resource type="Texture2D" uid="uid://bj2bll04i8l4u" path="res://Textures/Corkboard_standardSurface1_Height.png" id="112_igmur"]
 [ext_resource type="Texture2D" uid="uid://kljog2my456u" path="res://Textures/Corkboard_standardSurface1_Metallic.png" id="113_4fkef"]
 [ext_resource type="Texture2D" uid="uid://c5w1q7jdg11ux" path="res://Textures/Corkboard_standardSurface1_Normal.png" id="114_d1sn2"]
@@ -219,6 +216,7 @@ heightmap_enabled = true
 heightmap_texture = ExtResource("4_n8rv0")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dy55h"]
+albedo_color = Color(0.0980392, 0.741176, 1, 1)
 albedo_texture = ExtResource("3_a0qhn")
 metallic = 1.0
 metallic_texture = ExtResource("5_yiaew")
@@ -229,6 +227,7 @@ heightmap_enabled = true
 heightmap_texture = ExtResource("4_n8rv0")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7247a"]
+albedo_color = Color(0.168627, 1, 1, 1)
 albedo_texture = ExtResource("8_ak8x6")
 metallic = 1.0
 metallic_texture = ExtResource("10_lvmv3")
@@ -239,13 +238,11 @@ heightmap_enabled = true
 heightmap_texture = ExtResource("9_gyefh")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdv54"]
-albedo_texture = ExtResource("13_6v7ja")
+albedo_color = Color(0.670588, 0.682353, 0.72549, 1)
 metallic = 1.0
 metallic_texture = ExtResource("15_j0nll")
 roughness_texture = ExtResource("17_d6p1w")
-normal_enabled = true
 normal_texture = ExtResource("16_b4xfu")
-heightmap_enabled = true
 heightmap_texture = ExtResource("14_hom7i")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nn88i"]
@@ -267,7 +264,7 @@ albedo_color = Color(0.937255, 0.941176, 0.972549, 1)
 roughness = 0.23
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwu2d"]
-albedo_texture = ExtResource("23_rg8c5")
+albedo_color = Color(0.564706, 0.756863, 0.74902, 1)
 metallic = 1.0
 metallic_texture = ExtResource("25_3yw7x")
 roughness_texture = ExtResource("27_8jxtn")
@@ -277,7 +274,7 @@ heightmap_enabled = true
 heightmap_texture = ExtResource("24_5yffd")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oi2tr"]
-albedo_texture = ExtResource("23_rg8c5")
+albedo_color = Color(0.564706, 0.756863, 0.74902, 1)
 metallic = 1.0
 metallic_texture = ExtResource("25_3yw7x")
 roughness_texture = ExtResource("27_8jxtn")
@@ -292,7 +289,6 @@ metallic = 1.0
 metallic_texture = ExtResource("30_3clvq")
 roughness_texture = ExtResource("32_len7p")
 normal_enabled = true
-normal_texture = ExtResource("31_yd7bl")
 heightmap_enabled = true
 heightmap_texture = ExtResource("29_00b6u")
 
@@ -307,7 +303,6 @@ heightmap_enabled = true
 heightmap_texture = ExtResource("34_g2ju2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rg5ai"]
-albedo_color = Color(0.839216, 0.470588, 0.356863, 1)
 albedo_texture = ExtResource("23_rg8c5")
 metallic = 1.0
 metallic_texture = ExtResource("25_3yw7x")
@@ -318,7 +313,7 @@ heightmap_enabled = true
 heightmap_texture = ExtResource("24_5yffd")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlu62"]
-albedo_color = Color(0.909804, 0.866667, 0.941176, 1)
+albedo_color = Color(0.870588, 0.890196, 0.94902, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_524u3"]
 normal_enabled = true
@@ -336,7 +331,7 @@ metallic = 0.69
 roughness = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xxrp3"]
-albedo_texture = ExtResource("23_rg8c5")
+albedo_color = Color(0.647059, 0.866667, 0.858824, 1)
 metallic = 1.0
 metallic_texture = ExtResource("25_3yw7x")
 roughness_texture = ExtResource("27_8jxtn")
@@ -543,7 +538,7 @@ heightmap_enabled = true
 heightmap_texture = ExtResource("107_ttadi")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_78j6i"]
-albedo_texture = ExtResource("111_plfaw")
+albedo_color = Color(0.909804, 0.709804, 0.513726, 1)
 metallic = 1.0
 metallic_texture = ExtResource("113_4fkef")
 roughness_texture = ExtResource("115_5qmh6")
@@ -553,11 +548,12 @@ heightmap_enabled = true
 heightmap_texture = ExtResource("112_igmur")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5oo1l"]
-albedo_color = Color(0.92549, 0.705882, 0.411765, 1)
+albedo_color = Color(0.890196, 0.713726, 0.537255, 1)
 metallic = 1.0
 roughness = 0.63
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_075jk"]
+albedo_color = Color(0, 0.831373, 0.835294, 1)
 albedo_texture = ExtResource("116_12fk8")
 metallic = 1.0
 metallic_texture = ExtResource("118_5cokb")
@@ -751,6 +747,7 @@ size = Vector3(1.93439, 0.994476, 2.59375)
 size = Vector3(1.1, 0.61, 0.05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmmjt"]
+albedo_color = Color(0.772549, 1, 1, 1)
 albedo_texture = ExtResource("8_ak8x6")
 metallic = 1.0
 metallic_texture = ExtResource("10_lvmv3")

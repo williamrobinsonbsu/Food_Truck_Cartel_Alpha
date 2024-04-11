@@ -1,7 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bayr2kujwugd8"]
+[gd_scene load_steps=7 format=3 uid="uid://bayr2kujwugd8"]
 
 [ext_resource type="Script" path="res://ingredients/boxed_fries.gd" id="1_blusn"]
 [ext_resource type="PackedScene" uid="uid://bw31yrrelid6e" path="res://FBXRaw/FryWBox.fbx" id="1_v5vw3"]
+[ext_resource type="Texture2D" uid="uid://cif4pjwy55jyf" path="res://Textures/friesalone_initialShadingGroup_BaseColor.png" id="3_xw2jc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ffhh"]
+albedo_color = Color(0.713726, 0.25098, 0.211765, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpav6"]
+albedo_texture = ExtResource("3_xw2jc")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4faga"]
 size = Vector3(0.0942993, 0.287048, 0.170898)
@@ -16,9 +23,11 @@ transform = Transform3D(0.699816, 0, 0, 0, 0.827508, 0, 0, 0, 0.699816, 0.183031
 
 [node name="frybox" parent="Root Scene/RootNode/Fry" index="0"]
 transform = Transform3D(0.114438, 8.6854e-24, 0, 0, 0.114438, 0, 0, -1.8198e-23, 0.114438, -0.253089, -0.854243, 1.20416)
+material_override = SubResource("StandardMaterial3D_4ffhh")
 
 [node name="fries" parent="Root Scene/RootNode/Fry" index="1"]
 transform = Transform3D(0.114438, 8.6854e-24, 0, 0, 0.114438, 0, 0, -1.8198e-23, 0.114438, -0.248703, -0.854243, 1.47793)
+material_override = SubResource("StandardMaterial3D_wpav6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00112915, 0.14151, -0.00195313)

@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://b52iunpc2dqg3"]
+[gd_scene load_steps=8 format=3 uid="uid://b52iunpc2dqg3"]
 
 [ext_resource type="Script" path="res://ingredients/potato_whole.gd" id="1_nghds"]
 [ext_resource type="PackedScene" uid="uid://c2f6lg6nkvstb" path="res://FBXRaw/WholePotato.fbx" id="1_pa7wg"]
+[ext_resource type="Texture2D" uid="uid://dljittgudm4oy" path="res://Textures/potato_UV_potatoSG_BaseColor.png" id="3_m4gts"]
+[ext_resource type="Texture2D" uid="uid://btwhair3lvm5f" path="res://Textures/potato_UV_potatoSG_Metallic.png" id="4_mi032"]
+[ext_resource type="Texture2D" uid="uid://cexwxrqm7s3q6" path="res://Textures/potato_UV_potatoSG_Roughness.png" id="5_xd70g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_birr4"]
+albedo_texture = ExtResource("3_m4gts")
+metallic = 1.0
+metallic_texture = ExtResource("4_mi032")
+roughness_texture = ExtResource("5_xd70g")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g1su3"]
 radius = 0.0880228
@@ -13,6 +22,7 @@ script = ExtResource("1_nghds")
 
 [node name="potato1" parent="Root Scene/RootNode/Potato" index="0"]
 transform = Transform3D(13.3488, 0, 0, 0, 13.3488, 0, 0, 0, 13.3488, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_birr4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_g1su3")

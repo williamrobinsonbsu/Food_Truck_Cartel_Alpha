@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bquinqrlqbtw2"]
+[gd_scene load_steps=8 format=3 uid="uid://bquinqrlqbtw2"]
 
 [ext_resource type="PackedScene" uid="uid://diq8qyoqanncm" path="res://FBXRaw/SodaBottle.fbx" id="1_nbdky"]
 [ext_resource type="Script" path="res://ingredients/pickable_ingredient.gd" id="1_xhgp5"]
+[ext_resource type="Texture2D" uid="uid://bcfp818ppxmq0" path="res://Textures/soda_bottle_UV_soda_bottleSG_BaseColor.png" id="3_74ew4"]
+[ext_resource type="Texture2D" uid="uid://dr8c506tsfms3" path="res://Textures/soda_bottle_UV_soda_bottleSG_Metallic.png" id="4_5s4b3"]
+[ext_resource type="Texture2D" uid="uid://cuodd44agjlok" path="res://Textures/soda_bottle_UV_soda_bottleSG_Roughness.png" id="5_wppil"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tj25d"]
+albedo_texture = ExtResource("3_74ew4")
+metallic = 1.0
+metallic_texture = ExtResource("4_5s4b3")
+roughness_texture = ExtResource("5_wppil")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xsyoy"]
 radius = 0.054266
@@ -14,6 +23,9 @@ script = ExtResource("1_xhgp5")
 
 [node name="Soda" parent="Root Scene/RootNode" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47348, -1.43268, 0.686476)
+
+[node name="soda_bottle" parent="Root Scene/RootNode/Soda" index="0"]
+material_override = SubResource("StandardMaterial3D_tj25d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0490797, 0)
