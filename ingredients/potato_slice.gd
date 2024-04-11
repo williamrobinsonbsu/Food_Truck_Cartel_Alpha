@@ -1,4 +1,4 @@
 extends PickedIngredient
 
-func name():
+func slice_name():
 	return "fries"

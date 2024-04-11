@@ -26,19 +26,19 @@ func place(picked_object):
 				picked_object.queue_free()
 				
 		if patty_placed == true:
-			if picked_object.name() == "sliced onions":
+			if picked_object.slice_name() == "sliced onions":
 				$"../onions".show()
 				onion_placed = true
-			elif picked_object.name() == "sliced lettuce":
+			elif picked_object.slice_name() == "sliced lettuce":
 				$"../lettuce".show()
 				lettuce_placed = true
-			elif picked_object.name() == "sliced tomatoes":
+			elif picked_object.slice_name() == "sliced tomatoes":
 				$"../tomatoes".show()
 				tomato_placed = true
-			elif picked_object.name() == "cheese slice":
+			elif picked_object.slice_name() == "cheese slice":
 				$"../cheese".show()
 				cheese_placed = true
-			elif picked_object.name() == "top bun":
+			elif picked_object.slice_name() == "top bun":
 				$"../top_bun".show()
 				top_bun_placed = true
 	

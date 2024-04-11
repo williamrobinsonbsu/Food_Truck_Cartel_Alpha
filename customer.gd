@@ -12,7 +12,7 @@ signal new_customer
 
 func _ready():
 	print("I would like a burger!")
-	get_node("/root/World/Player/Control/current_order").text += "Current Order:\n Burger with "
+	get_node("/root/World/Player/Control/current_order").text = "Current Order:\n Burger with "
 	if randf() <= .50:
 		i_want_lettuce = true
 		counter += 1
