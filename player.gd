@@ -4,9 +4,24 @@ const SPEED = 5.0
 
 @onready var interaction := $Camera3D/Interaction
 @onready var hand := $Camera3D/Hand
-
+#@onready var burger = $/root/World/Burger
+#@onready var patty = $/root/World/Patty
+#@onready var burger_patty = $"/root/World/Burger/Burger Patty"
+#@onready var lettuce = $"/root/World/Lettuce"
+#@onready var cut_lettuce = $"/root/World/Burger/Cut Lettuce"
+#@onready var tomato = $"/root/World/Tomato"
+#@onready var cut_tomato = $"/root/World/Burger/Cut Tomato"
+#@onready var cheese = $"/root/World/Cheese"
+#@onready var cut_cheese = $"/root/World/Burger/Cut Cheese"
+#@onready var ketchup_bottle = $"/root/World/Ketchup Bottle"
+#@onready var ketchup = $"/root/World/Burger/Ketchup"
+#@onready var top_bun = $"/root/World/Top Bun"
+#@onready var burger_bun = $"/root/World/Burger/Top Bun"
+#
 var picked_object
 var pull_power = 10
+#
+#var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -19,26 +34,63 @@ func _input(event):
 	
 	if Input.is_action_just_pressed("left_click"):
 		var collider = interaction.get_collider()
-		print("Picked Status: " + str(picked_object))
-		print(collider)
+		#print("Picked Status: " + str(picked_object))
+		#print(collider)
 		if collider is RigidBody3D and picked_object == null:
 			pick_object()
 		elif collider is StaticBody3D and picked_object == null:
-				if collider.has_method("use") and picked_object != null:
-					collider.use(picked_object)
-				elif collider.has_method("door_close"):
-					collider.door_close()
-				elif collider.has_method("pick_item"):
-					pick_object()
-				elif picked_object != null and collider.has_method("delete_item"):
+			if collider.has_method("pick_item"):
+				pick_object()
+				if picked_object.has_method("audio_play"):
+					picked_object.audio_play()
+		
+		if collider != null:		
+			if collider.has_method("use") and picked_object != null:
+				collider.use(picked_object)
+			
+			if collider.has_method("door_close"):
+				collider.door_close()
+				
+			if collider.has_method("place"):
+				collider.place(picked_object)
+				
+			if collider.has_method("reset"):
+				collider.reset()
+				
+			elif picked_object != null and collider.has_method("delete_item"):
 					picked_object.queue_free()
 					picked_object = null
-			
+					
+#			if picked_object == patty:
+#				if picked_object.cooked_patty == true:
+#					patty.queue_free()
+#					burger_patty.show()
+#			if picked_object == lettuce:
+#				if picked_object.cutted_lettuce == true:
+#					lettuce.queue_free()
+#					cut_lettuce.show()
+#			if picked_object == tomato:
+#				if picked_object.cutted_tomato == true:
+#					tomato.queue_free()
+#					cut_tomato.show()
+#			if picked_object == cheese:
+#				if picked_object.cutted_cheese == true:
+#					cheese.queue_free()
+#					cut_cheese.show()
+#			if picked_object == ketchup_bottle:
+#				ketchup.show()
+#			if picked_object == top_bun:
+#				top_bun.queue_free()
+#				burger_bun.show()
+#		
 	if Input.is_action_just_pressed("right_click"):
 		if picked_object != null:
 			drop_object()
-
+#
 func _physics_process(_delta):
+#	if not is_on_floor():
+#		velocity.y -= gravity * delta
+#
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:

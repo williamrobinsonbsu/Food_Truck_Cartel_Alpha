@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://2t2ltjdh0uvx"]
+
+[ext_resource type="Script" path="res://ingredients/top_bun.gd" id="1_1pa7e"]
+[ext_resource type="PackedScene" uid="uid://b4gw4orru5cvj" path="res://FBXRaw/TopBread.fbx" id="1_vu7q0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d22ov"]
+albedo_color = Color(0.866667, 0.580392, 0.317647, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5tvh4"]
+height = 0.0461142
+radius = 0.0884379
+
+[node name="RigidBody3D2" type="RigidBody3D"]
+script = ExtResource("1_1pa7e")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_vu7q0")]
+
+[node name="BreadTop" parent="Root Scene/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(8.47766, 0, 0, 0, 2.20425, 0, 0, 0, 8.47766, 0.322502, -0.154671, -1.21252)
+material_override = SubResource("StandardMaterial3D_d22ov")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00144745, 0)
+shape = SubResource("CylinderShape3D_5tvh4")
+
+[editable path="Root Scene"]

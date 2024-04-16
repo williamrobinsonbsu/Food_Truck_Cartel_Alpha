@@ -1,0 +1,336 @@
+[gd_scene load_steps=46 format=3 uid="uid://6xn3th2ud7em"]
+
+[ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
+[ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
+[ext_resource type="PackedScene" uid="uid://cywlto4wavxy4" path="res://player.tscn" id="3_6xe6b"]
+[ext_resource type="Script" path="res://cuttingBoard.gd" id="3_c282t"]
+[ext_resource type="Script" path="res://grill.gd" id="4_3mb46"]
+[ext_resource type="Script" path="res://radio.gd" id="5_1mio2"]
+[ext_resource type="Script" path="res://trash_bin.gd" id="6_y6w3h"]
+[ext_resource type="Script" path="res://lettuce_bowl.gd" id="7_8hmxj"]
+[ext_resource type="Script" path="res://patty_fridge.gd" id="7_bq0wa"]
+[ext_resource type="Script" path="res://tomato_bowl.gd" id="8_4ruwl"]
+[ext_resource type="Script" path="res://potato_bowl.gd" id="8_iq6s6"]
+[ext_resource type="Script" path="res://soda_fridge.gd" id="9_subdr"]
+[ext_resource type="Script" path="res://chip_shelf.gd" id="10_ar2k1"]
+[ext_resource type="Script" path="res://onion_bowl.gd" id="10_ewxyc"]
+[ext_resource type="Script" path="res://bread_bottom_shelf.gd" id="14_utpjc"]
+[ext_resource type="Script" path="res://top_bun_shelf.gd" id="15_j72jl"]
+[ext_resource type="Script" path="res://cheese_block.gd" id="16_exl5l"]
+[ext_resource type="PackedScene" uid="uid://tsbefmiro8lh" path="res://ingredients/plate.tscn" id="16_i0lgt"]
+[ext_resource type="Script" path="res://frier.gd" id="17_2sw8v"]
+[ext_resource type="PackedScene" uid="uid://cuqr3ppkwg1gj" path="res://customer.tscn" id="20_crur0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_yqi3p"]
+sky_material = SubResource("ProceduralSkyMaterial_nvr2w")
+
+[sub_resource type="Environment" id="Environment_2g63l"]
+background_mode = 2
+sky = SubResource("Sky_yqi3p")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n3er8"]
+size = Vector3(0.963745, 0.946777, 1.52512)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ccxov"]
+size = Vector3(1.18872, 0.953613, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pj3q3"]
+size = Vector3(0.987793, 0.144348, 1.4787)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mfhuv"]
+size = Vector3(1.8736, 1.39734, 0.196411)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kyn7k"]
+size = Vector3(0.13208, 1.43805, 2.54669)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b8yro"]
+size = Vector3(0.0791016, 1.26868, 2.56128)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bkuw4"]
+size = Vector3(0.226196, 0.0192871, 0.381226)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1irty"]
+size = Vector3(1, 0.0821533, 1.28796)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7uq41"]
+size = Vector3(0.220596, 0.0965576, 0.0756836)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hadr5"]
+height = 0.353577
+radius = 0.129032
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dfedg"]
+size = Vector3(0.963989, 0.277046, 0.365723)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y5oxw"]
+size = Vector3(1.93439, 0.994476, 2.59375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r2lbk"]
+size = Vector3(1.1, 0.61, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmmjt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wrmop"]
+size = Vector3(1.1, 0.61, 0.05)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x7ngb"]
+height = 0.0833373
+radius = 0.135259
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fsf1v"]
+size = Vector3(1, 0.486206, 0.597168)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fdrga"]
+size = Vector3(0.88855, 0.634521, 0.472054)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lb7kd"]
+size = Vector3(0.308594, 0.338989, 0.327972)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xaik4"]
+size = Vector3(0.981323, 0.333008, 0.319824)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3vp0x"]
+size = Vector3(0.202377, 0.124756, 0.0993652)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jmo2p"]
+size = Vector3(1.0127, 0.449951, 0.43457)
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2g63l")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Root Scene" parent="." instance=ExtResource("1_6yk65")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+script = ExtResource("2_mqssh")
+
+[node name="RootNode" parent="Root Scene" index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.182852, 0)
+
+[node name="Stove" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.0608195, 0.419192)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Stove"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0181274, -0.0266113, 0.517827)
+shape = SubResource("BoxShape3D_n3er8")
+
+[node name="Front Counter" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0575547, 1.89526)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Front Counter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0140472, -0.0231934, 0)
+shape = SubResource("BoxShape3D_ccxov")
+
+[node name="Cabinets and Sink" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09424, 0, 0.903503)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Cabinets and Sink"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, 0.320648, 0.0613706)
+shape = SubResource("BoxShape3D_pj3q3")
+
+[node name="Back Wall" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419058, -1.3565)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Back Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00570679, 0.198669, 0.401794)
+shape = SubResource("BoxShape3D_mfhuv")
+
+[node name="Side Wall 1" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0153239, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.985122, 0.601064, 0.425596)
+shape = SubResource("BoxShape3D_kyn7k")
+
+[node name="Side Wall 2" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16082, 0, -0.771443)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Side Wall 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182698, 0.697338, 1.19555)
+shape = SubResource("BoxShape3D_b8yro")
+
+[node name="cuttingBoard" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398723, 0.708592, 1.10257)
+script = ExtResource("3_c282t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/cuttingBoard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393947, -0.316076, 0.0870595)
+shape = SubResource("BoxShape3D_bkuw4")
+
+[node name="CuttingBoardMarker" type="Marker3D" parent="Root Scene/cuttingBoard"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398838, -0.277534, 0.0964434)
+
+[node name="Grill" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09147, -0.0577255, 0.679443)
+script = ExtResource("4_3mb46")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Grill"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.458923, 0.143982)
+shape = SubResource("BoxShape3D_1irty")
+
+[node name="Radio" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0158047, 0.0679311, -0.0406093)
+script = ExtResource("5_1mio2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Radio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665546, 0.811423, 1.68593)
+shape = SubResource("BoxShape3D_7uq41")
+
+[node name="Trash Bin" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.787535, -0.294214, -0.433341)
+script = ExtResource("6_y6w3h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Trash Bin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0286197, 0.367827, 0.00602207)
+shape = SubResource("CylinderShape3D_hadr5")
+
+[node name="patty_fridge" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07181, 0.738282, -0.0762001)
+script = ExtResource("7_bq0wa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/patty_fridge"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0180054, 0.0978896, 0.100342)
+shape = SubResource("BoxShape3D_dfedg")
+
+[node name="Floor" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.592228, 0.0061779)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, -0.00276184, 0.415039)
+shape = SubResource("BoxShape3D_y5oxw")
+
+[node name="ShutterDoor" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.560918, 1.9784)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/ShutterDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.134, -0.239)
+shape = SubResource("BoxShape3D_r2lbk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Root Scene/ShutterDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.133817, -0.23855)
+material_override = SubResource("StandardMaterial3D_nmmjt")
+mesh = SubResource("BoxMesh_wrmop")
+
+[node name="lettuce_bowl" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.746527, 0, 1.19666)
+script = ExtResource("7_8hmxj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/lettuce_bowl"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
+shape = SubResource("CylinderShape3D_x7ngb")
+
+[node name="potato_bowl" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.746527, 0, 0.932612)
+script = ExtResource("8_iq6s6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/potato_bowl"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
+shape = SubResource("CylinderShape3D_x7ngb")
+
+[node name="tomato_bowl" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.737941, 0, 0.660603)
+script = ExtResource("8_4ruwl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/tomato_bowl"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
+shape = SubResource("CylinderShape3D_x7ngb")
+
+[node name="onion_bowl" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.737941, 0, 0.342356)
+script = ExtResource("10_ewxyc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/onion_bowl"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
+shape = SubResource("CylinderShape3D_x7ngb")
+
+[node name="chip_shelf" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08367, 0, -0.681595)
+script = ExtResource("10_ar2k1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/chip_shelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.151794, 0.201416)
+shape = SubResource("BoxShape3D_fsf1v")
+
+[node name="soda_fridge" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03159, 0.713809, -0.472105)
+script = ExtResource("9_subdr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/soda_fridge"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0557251, 0.00231934, 0.00615311)
+shape = SubResource("BoxShape3D_fdrga")
+
+[node name="bread_bottom_shelf" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11496, 0, 0)
+script = ExtResource("14_utpjc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/bread_bottom_shelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.345703, 0.11676, 0.020462)
+shape = SubResource("BoxShape3D_lb7kd")
+
+[node name="top_bun_shelf" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12232, 0.791708, 0)
+script = ExtResource("15_j72jl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/top_bun_shelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00933838, -0.333496, 0.013916)
+shape = SubResource("BoxShape3D_xaik4")
+
+[node name="cheese_block" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.759624, 0.385259, 0.808025)
+script = ExtResource("16_exl5l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/cheese_block"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0200272, 0.0618897, 0.0531006)
+shape = SubResource("BoxShape3D_3vp0x")
+
+[node name="frier" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06907, 0, 0)
+script = ExtResource("17_2sw8v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/frier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00634766, 0.119263, -0.0444336)
+shape = SubResource("BoxShape3D_jmo2p")
+
+[node name="friesPosition" type="Marker3D" parent="Root Scene/frier"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362507, 0.357653, -0.0359316)
+
+[node name="Player" parent="." instance=ExtResource("3_6xe6b")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
+
+[node name="order_plate" parent="." instance=ExtResource("16_i0lgt")]
+transform = Transform3D(1.541, 0, 0, 0, 0.952, 0, 0, 0, 1.5, 0, 1.18726, 4.47593)
+
+[node name="StaticBody3D" parent="order_plate" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00896125, 0, 0)
+
+[node name="customer" parent="." instance=ExtResource("20_crur0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0538294, 1.4271, 6.72113)
+visible = false
+
+[connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
+[connection signal="reset_ingredients" from="order_plate/resetTemp" to="customer" method=" _on_check_my_order"]
+
+[editable path="Root Scene"]
+[editable path="order_plate"]
+[editable path="order_plate/Root Scene"]
+[editable path="order_plate/bottom_bun"]
+[editable path="order_plate/patty"]
+[editable path="order_plate/onions"]
+[editable path="order_plate/lettuce"]
+[editable path="order_plate/tomatoes"]
+[editable path="order_plate/cheese"]
+[editable path="order_plate/top_bun"]
+[editable path="order_plate/fries"]
+[editable path="customer"]

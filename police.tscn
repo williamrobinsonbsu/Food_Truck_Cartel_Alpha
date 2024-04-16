@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://pnmtvik1oalr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h25pv"]
+albedo_color = Color(0, 0.368627, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_okqy5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10o8c"]
+size = Vector3(0.490479, 0.816895, 0.389038)
+
+[node name="police" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_h25pv")
+mesh = SubResource("BoxMesh_okqy5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_10o8c")
+
+[node name="police_catch_timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
