@@ -1481,15 +1481,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16082, 0, -0.771443)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.182698, 0.697338, 1.19555)
 shape = SubResource("BoxShape3D_b8yro")
 
-[node name="cuttingBoard" type="StaticBody3D" parent="Root Scene"]
+[node name="cutting_board" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398723, 0.708592, 1.10257)
 script = ExtResource("3_c282t")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/cuttingBoard"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/cutting_board"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393947, -0.316076, 0.0870595)
 shape = SubResource("BoxShape3D_bkuw4")
 
-[node name="CuttingBoardMarker" type="Marker3D" parent="Root Scene/cuttingBoard"]
+[node name="CuttingBoardMarker" type="Marker3D" parent="Root Scene/cutting_board"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398838, -0.277534, 0.0964434)
 

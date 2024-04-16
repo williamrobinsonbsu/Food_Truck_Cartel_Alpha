@@ -1,8 +1,13 @@
 extends StaticBody3D
 
+var path
+var scene
+
 func get_ingredient(ingredient): 
-	var path = "res://ingredients/" + ingredient + "_slice.tscn"
-	var scene = null
+	path = "res://ingredients/" + ingredient + "_slice.tscn"
+	scene = null
+	print(path)
+	print(FileAccess.file_exists(path))
 	if FileAccess.file_exists(path):
 		scene = load(path)
 		print(scene)
@@ -12,13 +17,15 @@ func get_ingredient(ingredient):
 	
 
 func use(ingredient):
+	print("Clicked!")
+	print(ingredient)
 	var count = 0
 	if ingredient.has_method("name"):
+		print("Slice!")
 		var scene = get_ingredient(ingredient.name())
 		if scene == null:
 				return
 		while count != 3:
-			
 			var sliced_ingredient = scene.instantiate()
 			add_child(sliced_ingredient)
 			sliced_ingredient.position = %CuttingBoardMarker.position

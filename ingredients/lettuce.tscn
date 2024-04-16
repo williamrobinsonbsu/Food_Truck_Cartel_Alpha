@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cqedtltkffngr"]
 
-[ext_resource type="Script" path="res://ingredients/lettuce.gd" id="1_778t6"]
+[ext_resource type="Script" path="res://ingredients/lettuce_whole.gd" id="1_778t6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lbbcp"]
 albedo_color = Color(0.298039, 0.737255, 0, 1)
