@@ -740,7 +740,7 @@ height = 0.353577
 radius = 0.129032
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dfedg"]
-size = Vector3(0.963989, 0.277046, 0.365723)
+size = Vector3(0.963989, 0.0735816, 0.365723)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5oxw"]
 size = Vector3(1.93439, 0.994476, 2.59375)
@@ -1518,11 +1518,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0286197, 0.367827, 0.00602
 shape = SubResource("CylinderShape3D_hadr5")
 
 [node name="patty_fridge" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07181, 0.738282, -0.0762001)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.59826, 0.494442, 0.749041)
 script = ExtResource("7_bq0wa")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/patty_fridge"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0180054, 0.0978896, 0.100342)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0180055, -0.00384268, 0.100342)
 shape = SubResource("BoxShape3D_dfedg")
 
 [node name="Floor" type="StaticBody3D" parent="Root Scene"]
