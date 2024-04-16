@@ -13,7 +13,7 @@ func get_ingredient(ingredient):
 		scene = tomato_scene
 	elif ingredient == "lettuce":
 		scene = lettuce_scene
-	elif ingredient == "fries":
+	elif ingredient == "potato":
 		scene = fries_scene
 	elif ingredient == "onion":
 		scene = onion_scene
