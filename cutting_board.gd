@@ -1,28 +1,32 @@
 extends StaticBody3D
 
-var path
 var scene
 
+var tomato_scene = preload("res://ingredients/tomato_slice.tscn")
+var lettuce_scene = preload("res://ingredients/lettuce_slice.tscn")
+var fries_scene = preload("res://ingredients/potato_slice.tscn")
+var onion_scene = preload("res://ingredients/onion_slice.tscn")
+
 func get_ingredient(ingredient): 
-	path = "res://ingredients/" + ingredient + "_slice.tscn"
-	scene = null
-	print(path)
-	print(FileAccess.file_exists(path))
-	if FileAccess.file_exists(path):
-		scene = load(path)
-		print(scene)
-		return scene
+	print(ingredient)
+	if ingredient == "tomato":
+		scene = tomato_scene
+	elif ingredient == "lettuce":
+		scene = lettuce_scene
+	elif ingredient == "fries":
+		scene = fries_scene
+	elif ingredient == "onion":
+		scene = onion_scene
 	else:
-		pass
+		scene = null
+	return scene
+	
 	
 
 func use(ingredient):
-	print("Clicked!")
-	print(ingredient)
 	var count = 0
 	if ingredient.has_method("name"):
-		print("Slice!")
-		var scene = get_ingredient(ingredient.name())
+		scene = get_ingredient(ingredient.name())
 		if scene == null:
 				return
 		while count != 3:
