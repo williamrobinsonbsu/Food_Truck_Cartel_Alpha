@@ -30,7 +30,7 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x) * 0.25)
 		$Camera3D.rotate_x(deg_to_rad(-event.relative.y) * 0.25)
-		$Camera3D.rotation.x = clamp($Camera3D.rotation.x,deg_to_rad(-60), deg_to_rad(60))
+		$Camera3D.rotation.x = clamp($Camera3D.rotation.x,deg_to_rad(-90), deg_to_rad(90))
 	
 	if Input.is_action_just_pressed("left_click"):
 		var collider = interaction.get_collider()
@@ -41,6 +41,8 @@ func _input(event):
 		elif collider is StaticBody3D and picked_object == null:
 			if collider.has_method("pick_item"):
 				pick_object()
+				if picked_object.has_method("audio_play"):
+					picked_object.audio_play()
 		
 		if collider != null:		
 			if collider.has_method("use") and picked_object != null:

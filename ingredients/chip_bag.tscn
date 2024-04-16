@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://60sb8bahmo0o"]
 
+[ext_resource type="Script" path="res://ingredients/chip_bag.gd" id="1_h478u"]
 [ext_resource type="PackedScene" uid="uid://cvsdtf8fxcpi2" path="res://FBXRaw/ChipBag.fbx" id="1_lbikl"]
-[ext_resource type="Script" path="res://ingredients/pickable_ingredient.gd" id="1_pxy1b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o12we"]
 albedo_color = Color(0.839216, 0.129412, 0.239216, 1)
@@ -11,7 +11,7 @@ radius = 0.147077
 height = 0.327813
 
 [node name="RigidBody3D2" type="RigidBody3D"]
-script = ExtResource("1_pxy1b")
+script = ExtResource("1_h478u")
 
 [node name="Root Scene" parent="." instance=ExtResource("1_lbikl")]
 

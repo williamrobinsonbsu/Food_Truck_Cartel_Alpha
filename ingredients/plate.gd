@@ -20,6 +20,12 @@ func place(picked_object):
 			elif picked_object.name() == "boxed fries":
 				$"../fries".show()
 				picked_object.queue_free()
+			elif picked_object.name() == "soda":
+				$"../soda".show()
+				picked_object.queue_free()
+			elif picked_object.name() == "chips":
+				$"../chips".show()
+				picked_object.queue_free()	
 			elif bottom_bun_placed == true:
 				if picked_object.name() == "patty":
 					$"../patty".show()

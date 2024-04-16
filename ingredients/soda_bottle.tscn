@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bquinqrlqbtw2"]
 
+[ext_resource type="Script" path="res://ingredients/soda_bottle.gd" id="1_a42rx"]
 [ext_resource type="PackedScene" uid="uid://diq8qyoqanncm" path="res://FBXRaw/SodaBottle.fbx" id="1_nbdky"]
-[ext_resource type="Script" path="res://ingredients/pickable_ingredient.gd" id="1_xhgp5"]
 [ext_resource type="Texture2D" uid="uid://bcfp818ppxmq0" path="res://Textures/soda_bottle_UV_soda_bottleSG_BaseColor.png" id="3_74ew4"]
 [ext_resource type="Texture2D" uid="uid://dr8c506tsfms3" path="res://Textures/soda_bottle_UV_soda_bottleSG_Metallic.png" id="4_5s4b3"]
 [ext_resource type="Texture2D" uid="uid://cuodd44agjlok" path="res://Textures/soda_bottle_UV_soda_bottleSG_Roughness.png" id="5_wppil"]
@@ -17,7 +17,7 @@ radius = 0.054266
 height = 0.449335
 
 [node name="RigidBody3D" type="RigidBody3D"]
-script = ExtResource("1_xhgp5")
+script = ExtResource("1_a42rx")
 
 [node name="Root Scene" parent="." instance=ExtResource("1_nbdky")]
 
