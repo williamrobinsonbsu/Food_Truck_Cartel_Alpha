@@ -1,5 +1,9 @@
 extends Node3D
 
+@onready var policeman := $police
+@onready var customer_or_cop_timer := $customer_or_police_spawn_timer
+@onready var cop_catch_timer := $police/police_catch_timer
+
 var shutter_door_close = false
 var can_police_catch_player = false
 var score = 0
@@ -8,7 +12,7 @@ var starting_counter = 0
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
-		
+
 func shutter_door_control():
 	if shutter_door_close == false:
 		$ShutterDoor.hide()
@@ -24,8 +28,6 @@ func shutter_door_control():
 		shutter_door_close = false
 		door_shutter()
 		can_police_catch_player = false
-	
-	print(shutter_door_close)
 
 func door_status():
 	return shutter_door_close
@@ -38,18 +40,47 @@ func door_shutter():
 	audio_stream_player.finished.connect(func():
 		audio_stream_player.queue_free()
 	)
-#this allows us to code in a system where we can press a button to open or close
-#the shutter door. Once we have the customer system fully working, we can add 
-#in the police system and tweak this code to allow the player to be found by the
-#police. Using 'can_police_catch_player' var as a placeholder for now.
 
-func _on_new_customer():
+func _spawn_new_customer_or_cop():
+	customer_or_cop_timer.start()
+
+func _on_customer_or_police_spawn_timer_timeout():
+	_customer_or_cop()
+
+func _customer_or_cop():
 	if starting_counter != 0:
 		score += 100
+	if randf() <= .3:
+		_on_police()
+	else:
+		_on_new_customer()
+
+func _on_new_customer():
 	print("Your score is: ")
 	print(score)
 	get_node("/root/World/Player/Control/score").text = "Score: " + str(score)
 	var scene = preload("res://customer.tscn")
 	var customer = scene.instantiate()
 	add_child(customer)
-	customer.position = %new_customer.position
+	customer.position = %customer_or_cop.position
+	
+func _on_police():
+	var audio_stream_player := AudioStreamPlayer.new()
+	audio_stream_player.stream = load("res://audio/police_siren.wav")
+	get_parent().add_child(audio_stream_player)
+	audio_stream_player.play()
+	audio_stream_player.finished.connect(func():
+		audio_stream_player.queue_free()
+	)
+	policeman.show()
+	cop_catch_timer.start()
+
+func _on_police_catch_timer_timeout():
+	if can_police_catch_player == true:
+		print('\nYou got caught')
+		print("Your score is: ")
+		print(score)
+		get_tree().quit()
+	elif can_police_catch_player == false:
+		policeman.hide()
+		_spawn_new_customer_or_cop()

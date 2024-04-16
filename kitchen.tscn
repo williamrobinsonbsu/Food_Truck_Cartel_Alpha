@@ -1,4 +1,4 @@
-[gd_scene load_steps=298 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=299 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -192,6 +192,7 @@
 [ext_resource type="Texture2D" uid="uid://c5s3vcoiqp7p4" path="res://Textures/beach_background.png" id="176_rjjax"]
 [ext_resource type="Texture2D" uid="uid://csrthuern42gq" path="res://Textures/beach_ground_plane.png" id="177_pwit6"]
 [ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="189_1wdlc"]
+[ext_resource type="PackedScene" uid="uid://pnmtvik1oalr" path="res://police.tscn" id="191_v1ani"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -1654,7 +1655,7 @@ shape = SubResource("BoxShape3D_jmo2p")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362507, 0.357653, -0.0359316)
 
-[node name="new_customer" type="Marker3D" parent="Root Scene"]
+[node name="customer_or_cop" type="Marker3D" parent="Root Scene"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.253959, 2.33154)
 
@@ -1671,6 +1672,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.762585, 0, 1.80074)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/front2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0127945, 0.547913, -0.0596924)
 shape = SubResource("BoxShape3D_e0u46")
+
+[node name="police" parent="Root Scene" instance=ExtResource("191_v1ani")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425485, 2.41866)
+visible = false
+
+[node name="MeshInstance3D" parent="Root Scene/police" index="0"]
+transform = Transform3D(0.497062, 0, 0, 0, 1, 0, 0, 0, 0.382666, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Root Scene/police" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0228271, 0.0915527, 0.0123901)
+
+[node name="police_catch_timer" parent="Root Scene/police" index="2"]
+autostart = false
+
+[node name="customer_or_police_spawn_timer" type="Timer" parent="Root Scene"]
+wait_time = 3.0
+one_shot = true
 
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
@@ -1724,6 +1742,8 @@ material_override = SubResource("StandardMaterial3D_daqk1")
 material_override = SubResource("StandardMaterial3D_reyp0")
 
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
+[connection signal="timeout" from="Root Scene/police/police_catch_timer" to="Root Scene" method="_on_police_catch_timer_timeout"]
+[connection signal="timeout" from="Root Scene/customer_or_police_spawn_timer" to="Root Scene" method="_on_customer_or_police_spawn_timer_timeout"]
 [connection signal="reset_ingredients" from="order_plate/resetTemp" to="order_plate/StaticBody3D" method="_on_reset_ingredients"]
 
 [editable path="Root Scene"]
@@ -1731,6 +1751,7 @@ material_override = SubResource("StandardMaterial3D_reyp0")
 [editable path="Root Scene/cheese_block/cheese2"]
 [editable path="Root Scene/cheese_block/cheese3"]
 [editable path="Root Scene/cheese_block/cheese4"]
+[editable path="Root Scene/police"]
 [editable path="Player"]
 [editable path="order_plate"]
 [editable path="order_plate/Root Scene"]
