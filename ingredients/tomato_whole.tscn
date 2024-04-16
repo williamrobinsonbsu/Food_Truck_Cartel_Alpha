@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgwi6fkbbgv66"]
+
+[ext_resource type="Script" path="res://ingredients/tomato_whole.gd" id="1_7h6kq"]
+[ext_resource type="PackedScene" uid="uid://djduu5ywmn451" path="res://FBXRaw/WholeTomato.fbx" id="1_bv725"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1tdb"]
+albedo_color = Color(0.941176, 0.266667, 0.278431, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ofg8"]
+albedo_color = Color(0.152941, 0.447059, 0.215686, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_84ib1"]
+radius = 0.0997865
+height = 0.199573
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_7h6kq")
+
+[node name="tomato_whole" parent="." instance=ExtResource("1_bv725")]
+
+[node name="tomato" parent="tomato_whole/RootNode/Truck" index="0"]
+transform = Transform3D(0.10967, 0, 0, 0, 0.0718388, 0, 0, 0, 0.106483, -0.154761, -0.101766, 0.00232264)
+
+[node name="pSphere1" parent="tomato_whole/RootNode/Truck/tomato" index="0"]
+material_override = SubResource("StandardMaterial3D_s1tdb")
+
+[node name="pCube21" parent="tomato_whole/RootNode/Truck/tomato" index="1"]
+material_override = SubResource("StandardMaterial3D_6ofg8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_84ib1")
+
+[editable path="tomato_whole"]

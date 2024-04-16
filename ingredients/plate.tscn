@@ -1,0 +1,126 @@
+[gd_scene load_steps=14 format=3 uid="uid://tsbefmiro8lh"]
+
+[ext_resource type="PackedScene" uid="uid://din6t3fv4n6pv" path="res://FBXRaw/PlateSingle.fbx" id="1_52jp6"]
+[ext_resource type="Script" path="res://ingredients/plate.gd" id="2_lbwt3"]
+[ext_resource type="PackedScene" uid="uid://bxxoq0itjjms5" path="res://FBXRaw/BottomBread.fbx" id="3_dfucd"]
+[ext_resource type="PackedScene" uid="uid://cm8dfmol45dx" path="res://FBXRaw/Patty.fbx" id="4_usue2"]
+[ext_resource type="PackedScene" uid="uid://dp5lxp4uvmtbt" path="res://FBXRaw/OnionSlice.fbx" id="5_6nyhf"]
+[ext_resource type="PackedScene" uid="uid://cxe1innv7wc2v" path="res://FBXRaw/LettuceSlice.fbx" id="6_ar07p"]
+[ext_resource type="PackedScene" uid="uid://dmutgofk6xtat" path="res://FBXRaw/TomatoSlice.fbx" id="7_myktt"]
+[ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="8_wmfhp"]
+[ext_resource type="PackedScene" uid="uid://b4gw4orru5cvj" path="res://FBXRaw/TopBread.fbx" id="9_v4ng1"]
+[ext_resource type="PackedScene" uid="uid://bw31yrrelid6e" path="res://FBXRaw/FryWBox.fbx" id="10_c2qvc"]
+[ext_resource type="Script" path="res://ingredients/reset_temp.gd" id="11_efj2f"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rf0rk"]
+height = 0.0410744
+radius = 0.136671
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_73yg8"]
+size = Vector3(0.166275, 0.12442, 0.1604)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_52jp6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0119846, 0, -0.0112032)
+
+[node name="Plates1" parent="Root Scene/RootNode/Stack" index="0"]
+transform = Transform3D(31.524, 0, 0, 0, 1.0643, 0, 0, 0, 31.524, -3.5425, -2.43644, -12.4178)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("2_lbwt3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CylinderShape3D_rf0rk")
+
+[node name="bottom_bun" parent="." instance=ExtResource("3_dfucd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00298288, 0, 0.0182021)
+visible = false
+
+[node name="BreadBot" parent="bottom_bun/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(9.44901, 0, 0, 0, -1.69796, -4.73155e-14, 0, 8.50245e-15, -9.44901, 0.367577, -0.143389, -1.19766)
+
+[node name="patty" parent="." instance=ExtResource("4_usue2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00298288, 0, 0.0182021)
+visible = false
+
+[node name="Patty" parent="patty/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(9.10476, 0, 0, 0, 1.85537, 0, 0, 0, 9.42806, 0.365892, -0.138856, -1.19824)
+
+[node name="onions" parent="." instance=ExtResource("5_6nyhf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00298288, 0, 0.0182021)
+visible = false
+
+[node name="Truck" parent="onions/RootNode" index="0"]
+transform = Transform3D(1.9899, 0, 0, 0, 2.57641, 0, 0, 0, 1.9899, 0.00358474, -0.00995583, -0.0136705)
+
+[node name="Onion" parent="onions/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38385, -0.617841, -1.71342)
+
+[node name="lettuce" parent="." instance=ExtResource("6_ar07p")]
+transform = Transform3D(0.930422, 0, 0, 0, 1, 0, 0, 0, 0.82989, 0.00298288, 0, 0.0350858)
+visible = false
+
+[node name="Letteuce" parent="lettuce/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(6.77962, 0, 0, 0, 0.202736, 0, 0, 0, 6.77962, 0.376407, -0.113795, -1.20373)
+
+[node name="tomatoes" parent="." instance=ExtResource("7_myktt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0172161, 0, 0.000599876)
+visible = false
+
+[node name="RootNode" parent="tomatoes" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0528433, -0.0463629, 0.136545)
+
+[node name="Tomato" parent="tomatoes/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.404672, -0.572577, -1.7549)
+
+[node name="cheese" parent="." instance=ExtResource("8_wmfhp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00298288, 0, 0.0182021)
+visible = false
+
+[node name="Cheese" parent="cheese/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(7.9664, 0, -2.89953, 0, 0.511897, 0, 2.89953, 0, 7.9664, 0.368372, -0.10444, -1.19994)
+
+[node name="top_bun" parent="." instance=ExtResource("9_v4ng1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00298288, 0, 0.0182021)
+visible = false
+
+[node name="BreadTop" parent="top_bun/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(8.47766, 0, 0, 0, 2.20425, 0, 0, 0, 8.47766, 0.367079, -0.0965785, -1.2007)
+
+[node name="fries" parent="." instance=ExtResource("10_c2qvc")]
+visible = false
+
+[node name="RootNode" parent="fries" index="0"]
+transform = Transform3D(0.408698, 0, 0.602452, 0, 0.833521, 0, -0.563144, 0, 0.437225, -0.0459211, -0.101961, 0.0590598)
+
+[node name="Fry" parent="fries/RootNode" index="0"]
+transform = Transform3D(0.699816, 0, 0, 0, 0.827508, 0, 0, 0, 0.699816, 2.12482, 0.620197, -0.840698)
+
+[node name="frybox" parent="fries/RootNode/Fry" index="0"]
+transform = Transform3D(0.114438, 1.86191e-33, 6.93889e-18, -1.86191e-33, 0.114438, -2.25712e-33, -6.93889e-18, 2.25712e-33, 0.114438, -3.01207, -0.705311, 1.1175)
+
+[node name="fries" parent="fries/RootNode/Fry" index="1"]
+transform = Transform3D(0.114438, 1.86191e-33, 6.93889e-18, -1.86191e-33, 0.114438, -2.25712e-33, -6.93889e-18, 2.25712e-33, 0.114438, -3.00768, -0.725736, 1.39128)
+
+[node name="resetTemp" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.302319, 0.110318, 0.0561066)
+script = ExtResource("11_efj2f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="resetTemp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699635, -0.0334307, -0.0296969)
+shape = SubResource("BoxShape3D_73yg8")
+
+[node name="Label3D" type="Label3D" parent="resetTemp"]
+transform = Transform3D(-0.297279, 0, -8.74228e-08, 0, 0.414358, 0, 2.5989e-08, 0, -1, 0.067137, -0.0187684, -0.111984)
+text = "Reset"
+
+[editable path="Root Scene"]
+[editable path="bottom_bun"]
+[editable path="patty"]
+[editable path="onions"]
+[editable path="lettuce"]
+[editable path="tomatoes"]
+[editable path="cheese"]
+[editable path="top_bun"]
+[editable path="fries"]

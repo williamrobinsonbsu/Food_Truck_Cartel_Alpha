@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5ogqbaweg1qd"]
+
+[ext_resource type="Script" path="res://ingredients/onion_slice.gd" id="1_ftidh"]
+[ext_resource type="PackedScene" uid="uid://dp5lxp4uvmtbt" path="res://FBXRaw/OnionSlice.fbx" id="1_mrlia"]
+[ext_resource type="Texture2D" uid="uid://tixofggcvxmb" path="res://Textures/OnionSlice_standardSurface1_BaseColor.png" id="3_h0kan"]
+[ext_resource type="Texture2D" uid="uid://e52ochsqswru" path="res://Textures/OnionSlice_standardSurface1_Metallic.png" id="4_fb0lr"]
+[ext_resource type="Texture2D" uid="uid://cd6op5xlvgsho" path="res://Textures/OnionSlice_standardSurface1_Roughness.png" id="5_onl5x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cuy41"]
+albedo_texture = ExtResource("3_h0kan")
+metallic = 1.0
+metallic_texture = ExtResource("4_fb0lr")
+roughness_texture = ExtResource("5_onl5x")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xrjom"]
+height = 0.0136703
+radius = 0.0713755
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_ftidh")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_mrlia")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0255293, -0.0042626)
+
+[node name="RootNode" parent="Root Scene" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122696, 0.00190533, -0.00140896)
+
+[node name="Onion" parent="Root Scene/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.435367, -0.675664, -1.72948)
+
+[node name="Onion2" parent="Root Scene/RootNode/Truck/Burger/Onion" index="0"]
+material_override = SubResource("StandardMaterial3D_cuy41")
+
+[node name="Onion3" parent="Root Scene/RootNode/Truck/Burger/Onion" index="1"]
+material_override = SubResource("StandardMaterial3D_cuy41")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_xrjom")
+
+[editable path="Root Scene"]

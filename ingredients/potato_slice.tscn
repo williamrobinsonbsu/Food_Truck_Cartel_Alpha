@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://uv8u6iqcrfxh"]
+
+[ext_resource type="Script" path="res://ingredients/potato_slice.gd" id="1_5p4mh"]
+[ext_resource type="PackedScene" uid="uid://bss6fddgtqox6" path="res://FBXRaw/FriesIndiv.fbx" id="2_yhabb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pi7je"]
+albedo_color = Color(0.878431, 0.737255, 0.552941, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_30u76"]
+size = Vector3(0.108154, 0.235443, 0.167633)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_5p4mh")
+
+[node name="Root Scene" parent="." instance=ExtResource("2_yhabb")]
+
+[node name="fries" parent="Root Scene/RootNode/Fry" index="0"]
+transform = Transform3D(0.107294, 1.44757e-23, 0.0398001, -1.87408e-25, 0.114438, -1.65436e-24, -0.0398001, -2.31611e-23, 0.107294, 2.52937, -1.06787, -1.9072)
+material_override = SubResource("StandardMaterial3D_pi7je")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0106201, 0.00721741, 0.00706482)
+shape = SubResource("BoxShape3D_30u76")
+
+[editable path="Root Scene"]

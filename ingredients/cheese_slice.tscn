@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=3 uid="uid://xjvtluhr2dfn"]
+
+[ext_resource type="Script" path="res://ingredients/cheese_slice.gd" id="1_dwpw8"]
+[ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="1_ntluy"]
+[ext_resource type="Texture2D" uid="uid://dpy4kxal4k2n" path="res://Textures/CheeseSlice_standardSurface1_BaseColor.png" id="3_wthap"]
+[ext_resource type="Texture2D" uid="uid://ldfy2v7gdopr" path="res://Textures/CheeseSlice_standardSurface1_Metallic.png" id="4_6n881"]
+[ext_resource type="Texture2D" uid="uid://bprhv7ph15hjx" path="res://Textures/CheeseSlice_standardSurface1_Roughness.png" id="5_wokbc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0h8v3"]
+albedo_texture = ExtResource("3_wthap")
+metallic = 1.0
+metallic_texture = ExtResource("4_6n881")
+roughness_texture = ExtResource("5_wokbc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_geejx"]
+size = Vector3(0.160858, 0.0120239, 0.156982)
+
+[node name="RigidBody3D2" type="RigidBody3D"]
+script = ExtResource("1_dwpw8")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_ntluy")]
+
+[node name="Cheese" parent="Root Scene/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(8.47766, 0, 0, 0, 0.511897, 0, 0, 0, 8.47766, 0.323037, -0.147639, -1.213)
+material_override = SubResource("StandardMaterial3D_0h8v3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000930786, 0.00460815, -0.000366211)
+shape = SubResource("BoxShape3D_geejx")
+
+[editable path="Root Scene"]
