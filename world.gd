@@ -18,13 +18,18 @@ func shutter_door_control():
 		if starting_counter == 0:
 			_on_new_customer()
 			starting_counter += 1
-		can_police_catch_player = false
+		can_police_catch_player = true
 	
 	elif shutter_door_close == true:
 		$ShutterDoor.show()
 		shutter_door_close = false
 		door_shutter()
-		can_police_catch_player = true
+		can_police_catch_player = false
+	
+	print(shutter_door_close)
+
+func door_status():
+	return shutter_door_close
 
 func door_shutter():
 	var audio_stream_player := AudioStreamPlayer.new()

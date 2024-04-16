@@ -1,4 +1,4 @@
-[gd_scene load_steps=294 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=298 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -191,6 +191,7 @@
 [ext_resource type="Texture2D" uid="uid://cexwxrqm7s3q6" path="res://Textures/potato_UV_potatoSG_Roughness.png" id="175_7bhg1"]
 [ext_resource type="Texture2D" uid="uid://c5s3vcoiqp7p4" path="res://Textures/beach_background.png" id="176_rjjax"]
 [ext_resource type="Texture2D" uid="uid://csrthuern42gq" path="res://Textures/beach_ground_plane.png" id="177_pwit6"]
+[ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="189_1wdlc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -776,11 +777,20 @@ size = Vector3(0.308594, 0.338989, 0.327972)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xaik4"]
 size = Vector3(0.981323, 0.333008, 0.319824)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mtio"]
+albedo_texture = ExtResource("39_7pobt")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_3vp0x"]
-size = Vector3(0.202377, 0.124756, 0.0993652)
+size = Vector3(0.13134, 0.0350343, 0.117554)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jmo2p"]
 size = Vector3(1.0127, 0.449951, 0.43457)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_feimu"]
+size = Vector3(0.457031, 1.80621, 0.0938416)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e0u46"]
+size = Vector3(0.448746, 1.40442, 0.0744629)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6vd14"]
 albedo_texture = ExtResource("121_mlwyw")
@@ -1450,7 +1460,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610352, 0.320648, 0.0613
 shape = SubResource("BoxShape3D_pj3q3")
 
 [node name="Back Wall" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419058, -1.3565)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.367596, -1.3565)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Back Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00570679, 0.198669, 0.401794)
@@ -1601,8 +1611,35 @@ shape = SubResource("BoxShape3D_xaik4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.759624, 0.385259, 0.808025)
 script = ExtResource("16_exl5l")
 
+[node name="cheese" parent="Root Scene/cheese_block" instance=ExtResource("189_1wdlc")]
+
+[node name="Cheese" parent="Root Scene/cheese_block/cheese/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(4.54025, 0, -0.0795903, 0, 0.341916, 0, 0.0868603, 0, 4.16025, 0.316754, -0.152032, -1.17688)
+material_override = SubResource("StandardMaterial3D_2mtio")
+
+[node name="cheese2" parent="Root Scene/cheese_block" instance=ExtResource("189_1wdlc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00624719, 0)
+
+[node name="Cheese" parent="Root Scene/cheese_block/cheese2/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(4.54025, 0, -0.0795903, 0, 0.341916, 0, 0.0868603, 0, 4.16025, 0.316754, -0.152032, -1.17688)
+material_override = SubResource("StandardMaterial3D_2mtio")
+
+[node name="cheese3" parent="Root Scene/cheese_block" instance=ExtResource("189_1wdlc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0132776, 0)
+
+[node name="Cheese" parent="Root Scene/cheese_block/cheese3/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(4.54025, 0, -0.0795903, 0, 0.341916, 0, 0.0868603, 0, 4.16025, 0.316754, -0.152032, -1.17688)
+material_override = SubResource("StandardMaterial3D_2mtio")
+
+[node name="cheese4" parent="Root Scene/cheese_block" instance=ExtResource("189_1wdlc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0233251, 0)
+
+[node name="Cheese" parent="Root Scene/cheese_block/cheese4/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(4.54025, 0, -0.0795903, 0, 0.341916, 0, 0.0868603, 0, 4.16025, 0.316754, -0.152032, -1.17688)
+material_override = SubResource("StandardMaterial3D_2mtio")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/cheese_block"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0200272, 0.0618897, 0.0531006)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0154914, 0.0170288, 0.0621948)
 shape = SubResource("BoxShape3D_3vp0x")
 
 [node name="frier" type="StaticBody3D" parent="Root Scene"]
@@ -1619,7 +1656,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362507, 0.357653, -0.03593
 
 [node name="new_customer" type="Marker3D" parent="Root Scene"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.33154)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.253959, 2.33154)
+
+[node name="front1" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02869, 0, 1.57523)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/front1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.271484, 0.403107, 0.157364)
+shape = SubResource("BoxShape3D_feimu")
+
+[node name="front2" type="StaticBody3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.762585, 0, 1.80074)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/front2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0127945, 0.547913, -0.0596924)
+shape = SubResource("BoxShape3D_e0u46")
 
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
@@ -1676,6 +1727,10 @@ material_override = SubResource("StandardMaterial3D_reyp0")
 [connection signal="reset_ingredients" from="order_plate/resetTemp" to="order_plate/StaticBody3D" method="_on_reset_ingredients"]
 
 [editable path="Root Scene"]
+[editable path="Root Scene/cheese_block/cheese"]
+[editable path="Root Scene/cheese_block/cheese2"]
+[editable path="Root Scene/cheese_block/cheese3"]
+[editable path="Root Scene/cheese_block/cheese4"]
 [editable path="Player"]
 [editable path="order_plate"]
 [editable path="order_plate/Root Scene"]
