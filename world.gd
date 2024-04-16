@@ -8,8 +8,7 @@ var starting_counter = 0
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
-
-#this happens when the radio is clicked on. 
+		
 func shutter_door_control():
 	if shutter_door_close == false:
 		$ShutterDoor.hide()
