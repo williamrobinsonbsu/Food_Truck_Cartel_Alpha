@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf73tg3lorrm3"
-path.s3tc="res://.godot/imported/OutsideCounter_standardSurface2_BaseColor.png-de55f89f274ee726bd04f1951b3bf798.s3tc.ctex"
+uid="uid://dauwxgqfruutk"
+path.s3tc="res://.godot/imported/bell_lambert3SG_Metallic.png-3507973a809a9b4c5c5c2df1a34e180f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/OutsideCounter_standardSurface2_BaseColor.png"
-dest_files=["res://.godot/imported/OutsideCounter_standardSurface2_BaseColor.png-de55f89f274ee726bd04f1951b3bf798.s3tc.ctex"]
+source_file="res://bell_lambert3SG_Metallic.png"
+dest_files=["res://.godot/imported/bell_lambert3SG_Metallic.png-3507973a809a9b4c5c5c2df1a34e180f.s3tc.ctex"]
 
 [params]
 

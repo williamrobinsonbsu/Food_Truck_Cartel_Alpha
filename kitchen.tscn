@@ -1,4 +1,4 @@
-[gd_scene load_steps=299 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=303 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -134,11 +134,6 @@
 [ext_resource type="Texture2D" uid="uid://bnhu6akb3h10g" path="res://Textures/Vent_standardSurface1_Metallic.png" id="118_5cokb"]
 [ext_resource type="Texture2D" uid="uid://dyua3a8u5o5a7" path="res://Textures/Vent_standardSurface1_Normal.png" id="119_oal6x"]
 [ext_resource type="Texture2D" uid="uid://bs6jarhxv2adg" path="res://Textures/Vent_standardSurface1_Roughness.png" id="120_jru16"]
-[ext_resource type="Texture2D" uid="uid://catc017pjk1xa" path="res://Textures/Plate_standardSurface1_BaseColor.png" id="121_mlwyw"]
-[ext_resource type="Texture2D" uid="uid://bb1sst520vk8n" path="res://Textures/Plate_standardSurface1_Height.png" id="122_uiass"]
-[ext_resource type="Texture2D" uid="uid://sed5sx6mopnv" path="res://Textures/Plate_standardSurface1_Metallic.png" id="123_yxm4g"]
-[ext_resource type="Texture2D" uid="uid://687lxgovyljm" path="res://Textures/Plate_standardSurface1_Normal.png" id="124_b0l1t"]
-[ext_resource type="Texture2D" uid="uid://ghe117v606xl" path="res://Textures/Plate_standardSurface1_Roughness.png" id="125_p6vd5"]
 [ext_resource type="Texture2D" uid="uid://cif4pjwy55jyf" path="res://Textures/friesalone_initialShadingGroup_BaseColor.png" id="126_7koha"]
 [ext_resource type="Texture2D" uid="uid://bcycuv74y6n1x" path="res://Textures/friesalone_initialShadingGroup_Height.png" id="127_q7tl2"]
 [ext_resource type="Texture2D" uid="uid://dtjdt6wvc1n8a" path="res://Textures/friesalone_initialShadingGroup_Metallic.png" id="128_245f1"]
@@ -190,9 +185,14 @@
 [ext_resource type="Texture2D" uid="uid://da8pspb6raji6" path="res://Textures/potato_UV_potatoSG_Normal.png" id="174_0ekrq"]
 [ext_resource type="Texture2D" uid="uid://cexwxrqm7s3q6" path="res://Textures/potato_UV_potatoSG_Roughness.png" id="175_7bhg1"]
 [ext_resource type="Texture2D" uid="uid://c5s3vcoiqp7p4" path="res://Textures/beach_background.png" id="176_rjjax"]
-[ext_resource type="Texture2D" uid="uid://csrthuern42gq" path="res://Textures/beach_ground_plane.png" id="177_pwit6"]
+[ext_resource type="Texture2D" uid="uid://dfgulhcothr7" path="res://bell_lambert3SG_BaseColor.png" id="188_r583k"]
 [ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="189_1wdlc"]
+[ext_resource type="Texture2D" uid="uid://cnujrvksl2lpm" path="res://bell_lambert3SG_Height.png" id="189_ckedq"]
+[ext_resource type="Texture2D" uid="uid://dauwxgqfruutk" path="res://bell_lambert3SG_Metallic.png" id="190_he3ex"]
+[ext_resource type="Texture2D" uid="uid://ip7poleugxx6" path="res://bell_lambert3SG_Normal.png" id="191_nfqie"]
 [ext_resource type="PackedScene" uid="uid://pnmtvik1oalr" path="res://police.tscn" id="191_v1ani"]
+[ext_resource type="Texture2D" uid="uid://ccmejuvmad50d" path="res://bell_lambert3SG_Roughness.png" id="192_3imvy"]
+[ext_resource type="ArrayMesh" uid="uid://by1txa5gg2vl0" path="res://bell.obj" id="193_xxmtm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nvr2w"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -259,11 +259,16 @@ heightmap_texture = ExtResource("19_0dpnb")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6rrr"]
 albedo_color = Color(0.737255, 0.737255, 0.737255, 1)
-metallic = 0.71
+metallic = 1.0
+metallic_specular = 0.72
+roughness = 0.75
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_46vbb"]
 albedo_color = Color(0.937255, 0.941176, 0.972549, 1)
-roughness = 0.23
+roughness = 0.06
+rim_enabled = true
+rim = 0.6
+rim_tint = 0.51
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwu2d"]
 albedo_color = Color(0.564706, 0.756863, 0.74902, 1)
@@ -310,7 +315,7 @@ metallic = 1.0
 metallic_texture = ExtResource("25_3yw7x")
 roughness_texture = ExtResource("27_8jxtn")
 normal_enabled = true
-normal_texture = ExtResource("26_fkkfe")
+normal_texture = ExtResource("164_mhbqg")
 heightmap_enabled = true
 heightmap_texture = ExtResource("24_5yffd")
 
@@ -565,15 +570,8 @@ normal_texture = ExtResource("119_oal6x")
 heightmap_enabled = true
 heightmap_texture = ExtResource("117_k7p84")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44kl8"]
-albedo_texture = ExtResource("121_mlwyw")
-metallic = 1.0
-metallic_texture = ExtResource("123_yxm4g")
-roughness_texture = ExtResource("125_p6vd5")
-normal_enabled = true
-normal_texture = ExtResource("124_b0l1t")
-heightmap_enabled = true
-heightmap_texture = ExtResource("122_uiass")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ghn6"]
+roughness = 0.25
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8blv"]
 albedo_color = Color(1, 0.392157, 0.219608, 1)
@@ -703,10 +701,19 @@ albedo_texture = ExtResource("176_rjjax")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_khivl"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06tv6"]
-albedo_texture = ExtResource("177_pwit6")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yilnv"]
+albedo_color = Color(0.678356, 0.607676, 0.431004, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hkud4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06tv6"]
+albedo_color = Color(0.678431, 0.607843, 0.431373, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7xvrj"]
+albedo_color = Color(0.364706, 0.521569, 0.764706, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2b6y1"]
+albedo_color = Color(0.647059, 0.847059, 0.917647, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n3er8"]
 size = Vector3(0.963745, 0.946777, 1.52512)
@@ -793,15 +800,17 @@ size = Vector3(0.457031, 1.80621, 0.0938416)
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0u46"]
 size = Vector3(0.448746, 1.40442, 0.0744629)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6vd14"]
-albedo_texture = ExtResource("121_mlwyw")
-metallic = 1.0
-metallic_texture = ExtResource("123_yxm4g")
-roughness_texture = ExtResource("125_p6vd5")
-normal_enabled = true
-normal_texture = ExtResource("124_b0l1t")
-heightmap_enabled = true
-heightmap_texture = ExtResource("122_uiass")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ayktc"]
+bg_color = Color(0.869374, 0.734336, 0.484461, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.235986, 0.142588, 0.111742, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+shadow_color = Color(0.370576, 0.284457, 0.258682, 0.6)
+shadow_size = 3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_usyyl"]
 albedo_texture = ExtResource("49_yvs3j")
@@ -885,6 +894,15 @@ normal_enabled = true
 normal_texture = ExtResource("129_uhwv1")
 heightmap_enabled = true
 heightmap_texture = ExtResource("127_q7tl2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1e6qw"]
+albedo_texture = ExtResource("188_r583k")
+metallic_texture = ExtResource("190_he3ex")
+roughness_texture = ExtResource("192_3imvy")
+normal_enabled = true
+normal_texture = ExtResource("191_nfqie")
+heightmap_enabled = true
+heightmap_texture = ExtResource("189_ckedq")
 
 [node name="World" type="Node3D"]
 
@@ -1175,31 +1193,31 @@ material_override = SubResource("StandardMaterial3D_075jk")
 material_override = SubResource("StandardMaterial3D_075jk")
 
 [node name="Plates1" parent="Root Scene/RootNode/Stack" index="0"]
-material_override = SubResource("StandardMaterial3D_44kl8")
+material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="Plates2" parent="Root Scene/RootNode/Stack" index="1"]
-material_override = SubResource("StandardMaterial3D_44kl8")
+material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="Plates3" parent="Root Scene/RootNode/Stack" index="2"]
-material_override = SubResource("StandardMaterial3D_44kl8")
+material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="Plates12" parent="Root Scene/RootNode/Stack1" index="0"]
-material_override = SubResource("StandardMaterial3D_44kl8")
+material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="Plates22" parent="Root Scene/RootNode/Stack1" index="1"]
-material_override = SubResource("StandardMaterial3D_44kl8")
+material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="Plates32" parent="Root Scene/RootNode/Stack1" index="2"]
-material_override = SubResource("StandardMaterial3D_44kl8")
+material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="Plates13" parent="Root Scene/RootNode/Stack2" index="0"]
-material_override = SubResource("StandardMaterial3D_44kl8")
+material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="Plates23" parent="Root Scene/RootNode/Stack2" index="1"]
-material_override = SubResource("StandardMaterial3D_44kl8")
+material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="Plates33" parent="Root Scene/RootNode/Stack2" index="2"]
-material_override = SubResource("StandardMaterial3D_44kl8")
+material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="Fry" parent="Root Scene/RootNode" index="12"]
 visible = false
@@ -1394,6 +1412,7 @@ material_override = SubResource("StandardMaterial3D_v3wov")
 material_override = SubResource("StandardMaterial3D_v3wov")
 
 [node name="chip_bag8" parent="Root Scene/RootNode/Chips" index="7"]
+transform = Transform3D(0.5, -0.866025, 0, 0.866025, 0.5, 0, 0, 0, 1, -1.26237, 0.588532, 5.26339)
 material_override = SubResource("StandardMaterial3D_v3wov")
 
 [node name="potato" parent="Root Scene/RootNode" index="21"]
@@ -1406,29 +1425,79 @@ material_override = SubResource("StandardMaterial3D_3x7x1")
 material_override = SubResource("StandardMaterial3D_3x7x1")
 
 [node name="background" type="MeshInstance3D" parent="Root Scene/RootNode" index="23"]
-transform = Transform3D(-4.41765, 3.31695e-08, 0, -6.74017e-09, -0.0066217, -1.81701, -3.86145e-07, -0.379358, 0.0317159, 0.399448, 1.51197, 6.1743)
+transform = Transform3D(-4.41615, -0.00987745, 0.000825798, -6.69731e-09, -0.0066217, -1.81701, 0.115024, -0.379229, 0.0317052, 0.661776, 1.57964, 8.9487)
 material_override = SubResource("StandardMaterial3D_uxhyl")
 mesh = SubResource("PlaneMesh_khivl")
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Root Scene/RootNode/background"]
+transform = Transform3D(0.15091, -2.88187e-10, 9.20322e-11, -2.10001e-09, -0.56841, 1.66261, -5.90513e-10, -0.347122, -0.118673, 0.125299, 15.5377, -0.206017)
+light_color = Color(1, 1, 0.815686, 1)
+light_energy = 2.939
+light_indirect_energy = 6.495
+light_volumetric_fog_energy = 0.96
+spot_range = 5.065
+
 [node name="bottomplane" type="MeshInstance3D" parent="Root Scene/RootNode" index="24"]
-transform = Transform3D(11.2143, -1.09371e-06, -2.12903e-06, 5.87832e-07, 7.28293, 0.425026, 9.70271e-07, -0.127124, 24.3496, 0, -0.349805, 5.15999)
-material_override = SubResource("StandardMaterial3D_06tv6")
+transform = Transform3D(11.9506, -1.16552e-06, -2.26882e-06, 6.26428e-07, 7.76111, 0.452932, 1.03398e-06, -0.135471, 25.9483, 0, -0.349805, 5.15999)
+material_override = SubResource("StandardMaterial3D_yilnv")
 mesh = SubResource("PlaneMesh_hkud4")
 skeleton = NodePath("../background")
 
 [node name="bottomplane2" type="MeshInstance3D" parent="Root Scene/RootNode" index="25"]
-transform = Transform3D(0.107992, 7.44746, 0.0923252, -6.37821, 0.126096, 0.00156366, 5.51929e-07, -0.130015, 5.29004, -3.85001, -0.349805, 5.15999)
+transform = Transform3D(0.0360547, 7.53144, 0.0923434, -2.12946, 0.127518, 0.00156397, 1.8427e-07, -0.131481, 5.29108, -9.27212, -0.349805, 5.15999)
 material_override = SubResource("StandardMaterial3D_06tv6")
 mesh = SubResource("PlaneMesh_hkud4")
 skeleton = NodePath("../background")
 
 [node name="bottomplane3" type="MeshInstance3D" parent="Root Scene/RootNode" index="26"]
-transform = Transform3D(-0.111331, -7.44853, -4.62541e-07, -6.37815, 0.130014, 0, 9.73286e-09, 6.51171e-07, -5.29085, 4.65267, -0.349805, 5.15999)
+transform = Transform3D(-0.0371702, -7.53514, -4.62541e-07, -2.12948, 0.131526, 0, 3.24952e-09, 6.58742e-07, -5.29085, 11.0132, -0.0912225, 5.17532)
 material_override = SubResource("StandardMaterial3D_06tv6")
 mesh = SubResource("PlaneMesh_hkud4")
 skeleton = NodePath("../background")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Root Scene/RootNode" index="27"]
+[node name="bottomplane4" type="MeshInstance3D" parent="Root Scene/RootNode" index="27"]
+transform = Transform3D(-0.0221175, -4.48366, 4.25226, -2.12948, 0.131526, 2.13751e-09, -0.0298737, -6.056, -3.14823, 8.01245, -0.277349, 6.47827)
+material_override = SubResource("StandardMaterial3D_06tv6")
+mesh = SubResource("PlaneMesh_hkud4")
+skeleton = NodePath("../background")
+
+[node name="bottomplane5" type="MeshInstance3D" parent="Root Scene/RootNode" index="28"]
+transform = Transform3D(0.0250812, 5.08446, 3.90482, -2.12948, 0.131526, -2.28192e-09, -0.0274328, -5.56117, 3.57009, -6.3484, -0.31688, 6.6917)
+material_override = SubResource("StandardMaterial3D_06tv6")
+mesh = SubResource("PlaneMesh_hkud4")
+skeleton = NodePath("../background")
+
+[node name="bottomplane6" type="MeshInstance3D" parent="Root Scene/RootNode" index="29"]
+transform = Transform3D(0.00796449, 5.14502, 3.90482, -0.676212, 0.133093, -2.28192e-09, -0.00871122, -5.62741, 3.57009, -6.3484, 2.04177, 6.6917)
+material_override = SubResource("StandardMaterial3D_7xvrj")
+mesh = SubResource("PlaneMesh_hkud4")
+skeleton = NodePath("../background")
+
+[node name="bottomplane7" type="MeshInstance3D" parent="Root Scene/RootNode" index="30"]
+transform = Transform3D(-0.00446716, -4.44667, 4.31128, -0.441503, 0.133899, -8.98207e-09, -0.00627964, -6.25083, -3.06692, 6.48129, 2.27187, 7.66349)
+material_override = SubResource("StandardMaterial3D_7xvrj")
+mesh = SubResource("PlaneMesh_hkud4")
+skeleton = NodePath("../background")
+
+[node name="bottomplane8" type="MeshInstance3D" parent="Root Scene/RootNode" index="31"]
+transform = Transform3D(-0.0234482, -4.24486, 4.33094, -2.33709, -0.196643, -0.163503, 0.0924536, -6.04742, -3.03469, 6.52236, 3.20194, 7.69049)
+material_override = SubResource("StandardMaterial3D_2b6y1")
+mesh = SubResource("PlaneMesh_hkud4")
+skeleton = NodePath("../background")
+
+[node name="bottomplane9" type="MeshInstance3D" parent="Root Scene/RootNode" index="32"]
+transform = Transform3D(-0.105341, 4.21372, 4.14809, -2.49377, -0.0565151, -0.239627, -0.0527401, -5.74411, 3.04528, -6.17749, 3.02406, 7.29224)
+material_override = SubResource("StandardMaterial3D_2b6y1")
+mesh = SubResource("PlaneMesh_hkud4")
+skeleton = NodePath("../background")
+
+[node name="bottomplane10" type="MeshInstance3D" parent="Root Scene/RootNode" index="33"]
+transform = Transform3D(0.0732524, -0.19887, 4.74901, -1.77152, 0.123261, 0.199164, -0.0353876, -6.58215, -0.139754, 0.910798, 3.41669, 9.03667)
+material_override = SubResource("StandardMaterial3D_2b6y1")
+mesh = SubResource("PlaneMesh_hkud4")
+skeleton = NodePath("../background")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Root Scene/RootNode" index="34"]
 transform = Transform3D(0.666664, 0.00191752, 0.000373822, -0.00190367, 0.666277, -0.0227116, -0.000438928, 0.0227105, 0.66628, 0, 1.97304, 5.62076)
 light_color = Color(1, 0.878431, 0.721569, 1)
 light_indirect_energy = 1.701
@@ -1693,11 +1762,28 @@ one_shot = true
 [node name="Player" parent="." instance=ExtResource("3_6xe6b")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
 
+[node name="current_order" parent="Player/Control" index="0"]
+offset_left = -768.0
+offset_top = -442.0
+offset_right = -529.0
+offset_bottom = -102.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ayktc")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="score" parent="Player/Control" index="1"]
+offset_left = 586.0
+offset_top = -294.0
+offset_right = 801.0
+offset_bottom = -206.0
+
 [node name="order_plate" parent="." groups=["plate"] instance=ExtResource("16_i0lgt")]
 transform = Transform3D(1.541, 0, 0, 0, 0.952, 0, 0, 0, 1.5, 0, 1.18726, 4.47593)
 
 [node name="Plates1" parent="order_plate/Root Scene/RootNode/Stack" index="0"]
-material_override = SubResource("StandardMaterial3D_6vd14")
+material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="StaticBody3D" parent="order_plate" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00896125, 0, 0)
@@ -1740,6 +1826,11 @@ material_override = SubResource("StandardMaterial3D_daqk1")
 
 [node name="fries" parent="order_plate/fries/RootNode/Fry" index="1"]
 material_override = SubResource("StandardMaterial3D_reyp0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.018292, 1.28813e-09, 0, -1.59914e-09, 0.0147345, 0, 0, 0, -0.0183799, -0.373042, 1.16552, 4.52439)
+material_override = SubResource("StandardMaterial3D_1e6qw")
+mesh = ExtResource("193_xxmtm")
 
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
 [connection signal="timeout" from="Root Scene/police/police_catch_timer" to="Root Scene" method="_on_police_catch_timer_timeout"]
