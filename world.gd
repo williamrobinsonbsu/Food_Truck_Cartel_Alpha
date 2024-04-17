@@ -35,6 +35,7 @@ func door_status():
 func door_shutter():
 	var audio_stream_player := AudioStreamPlayer.new()
 	audio_stream_player.stream = load("res://audio/shutter_open_close.wav")
+	audio_stream_player.volume_db = linear_to_db(.1)
 	get_parent().add_child(audio_stream_player)
 	audio_stream_player.play()
 	audio_stream_player.finished.connect(func():
@@ -48,17 +49,18 @@ func _on_customer_or_police_spawn_timer_timeout():
 	_customer_or_cop()
 
 func _customer_or_cop():
-	if starting_counter != 0:
-		score += 100
 	if randf() <= .3:
 		_on_police()
 	else:
+		if starting_counter != 0:
+			score += 10
 		_on_new_customer()
 
 func _on_new_customer():
 	print("Your score is: ")
 	print(score)
-	get_node("/root/World/Player/Control/score").text = "Score: " + str(score)
+	get_node("/root/World/Player/Control/score").text = "Score: $" + str(score)
+	get_node("/root/World/Root Scene/register/score").text = "$" + str(score)
 	var scene = preload("res://customer.tscn")
 	var customer = scene.instantiate()
 	add_child(customer)
@@ -67,6 +69,7 @@ func _on_new_customer():
 func _on_police():
 	var audio_stream_player := AudioStreamPlayer.new()
 	audio_stream_player.stream = load("res://audio/police_siren.wav")
+	audio_stream_player.volume_db = linear_to_db(0.1)
 	get_parent().add_child(audio_stream_player)
 	audio_stream_player.play()
 	audio_stream_player.finished.connect(func():

@@ -3,6 +3,7 @@ extends PickedIngredient
 func audio_play():
 	var audio_stream_player := AudioStreamPlayer.new()
 	audio_stream_player.stream = load("res://audio/chip_bag.wav")
+	audio_stream_player.volume_db = linear_to_db(.1)
 	get_parent().add_child(audio_stream_player)
 	audio_stream_player.play()
 	audio_stream_player.finished.connect(func():

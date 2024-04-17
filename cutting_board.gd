@@ -39,6 +39,7 @@ func use(ingredient):
 		get_parent().add_child(audio_stream_player)
 		for i in 3:
 			audio_stream_player.stream = load("res://audio/chopping_sound.wav")
+			audio_stream_player.volume_db = linear_to_db(.1)
 			audio_stream_player.play()
 			await audio_stream_player.finished
 		audio_stream_player.queue_free()
