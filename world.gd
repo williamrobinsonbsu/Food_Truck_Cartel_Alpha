@@ -49,12 +49,18 @@ func _on_customer_or_police_spawn_timer_timeout():
 	_customer_or_cop()
 
 func _customer_or_cop():
-	if randf() <= .3:
+	if starting_counter % 2 == 1:
 		_on_police()
-	else:
-		if starting_counter != 0:
-			score += 10
+	elif starting_counter % 2 == 0:
+		score += 10
 		_on_new_customer()
+	starting_counter += 1
+	#if randf() <= .3:
+	#	_on_police()
+	#else:
+	#	if starting_counter != 0:
+	#		score += 10
+	#	_on_new_customer()
 
 func _on_new_customer():
 	print("Your score is: ")
@@ -69,7 +75,7 @@ func _on_new_customer():
 func _on_police():
 	var audio_stream_player := AudioStreamPlayer.new()
 	audio_stream_player.stream = load("res://audio/police_siren.wav")
-	audio_stream_player.volume_db = linear_to_db(0.1)
+	audio_stream_player.volume_db = linear_to_db(0.3)
 	get_parent().add_child(audio_stream_player)
 	audio_stream_player.play()
 	audio_stream_player.finished.connect(func():
