@@ -109,9 +109,10 @@ func _on_check_my_order():
 	if get_node("/root/World/order_plate/chips").visible == true and i_want_chips != true:
 		print("Chips is incorrect")
 	
-	get_node("/root/World/Player/Control/current_order").text = ""
+	
 	
 	if order_counter == counter:
+		get_node("/root/World/Player/Control/current_order").text = ""
 		get_tree().call_group("map", "_spawn_new_customer_or_cop")
 		$".".queue_free()
 		
