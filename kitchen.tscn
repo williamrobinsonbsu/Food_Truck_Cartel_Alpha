@@ -1913,6 +1913,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0228271, 0.0915527, 0.01239
 [node name="police_catch_timer" parent="Root Scene/police" index="2"]
 autostart = false
 
+[node name="cop" type="Label3D" parent="Root Scene/police"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.33758, -0.211331)
+text = "Cop"
+
 [node name="customer_or_police_spawn_timer" type="Timer" parent="Root Scene"]
 wait_time = 3.0
 one_shot = true
