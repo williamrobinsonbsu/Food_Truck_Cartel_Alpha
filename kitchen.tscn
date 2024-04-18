@@ -1,4 +1,4 @@
-[gd_scene load_steps=307 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=310 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_6yk65"]
 [ext_resource type="Script" path="res://world.gd" id="2_mqssh"]
@@ -187,6 +187,7 @@
 [ext_resource type="Texture2D" uid="uid://da8pspb6raji6" path="res://Textures/potato_UV_potatoSG_Normal.png" id="174_0ekrq"]
 [ext_resource type="Texture2D" uid="uid://cexwxrqm7s3q6" path="res://Textures/potato_UV_potatoSG_Roughness.png" id="175_7bhg1"]
 [ext_resource type="Texture2D" uid="uid://c5s3vcoiqp7p4" path="res://Textures/beach_background.png" id="176_rjjax"]
+[ext_resource type="Texture2D" uid="uid://be3etywcfdt44" path="res://Textures/police_hat.png" id="188_g1k77"]
 [ext_resource type="Texture2D" uid="uid://dfgulhcothr7" path="res://bell_lambert3SG_BaseColor.png" id="188_r583k"]
 [ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="189_1wdlc"]
 [ext_resource type="Texture2D" uid="uid://cnujrvksl2lpm" path="res://bell_lambert3SG_Height.png" id="189_ckedq"]
@@ -804,6 +805,12 @@ size = Vector3(0.457031, 1.80621, 0.0938416)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0u46"]
 size = Vector3(0.448746, 1.40442, 0.0744629)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8uqyk"]
+transparency = 1
+albedo_texture = ExtResource("188_g1k77")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gcvxp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5bl88"]
 size = Vector3(0.177307, 0.130676, 0.266495)
@@ -1901,7 +1908,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0127945, 0.547913, -0.05969
 shape = SubResource("BoxShape3D_e0u46")
 
 [node name="police" parent="Root Scene" instance=ExtResource("191_v1ani")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425485, 2.41866)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29703, 2.41866)
 visible = false
 
 [node name="MeshInstance3D" parent="Root Scene/police" index="0"]
@@ -1913,9 +1920,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0228271, 0.0915527, 0.01239
 [node name="police_catch_timer" parent="Root Scene/police" index="2"]
 autostart = false
 
-[node name="cop" type="Label3D" parent="Root Scene/police"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.33758, -0.211331)
-text = "Cop"
+[node name="hat" type="MeshInstance3D" parent="Root Scene/police"]
+transform = Transform3D(-0.77397, -8.51324e-08, 2.52208e-15, 0, -4.25662e-08, -0.659993, 6.76626e-08, -0.973802, 2.88492e-08, 0.045027, 0.433833, -0.196697)
+material_override = SubResource("StandardMaterial3D_8uqyk")
+mesh = SubResource("PlaneMesh_gcvxp")
 
 [node name="customer_or_police_spawn_timer" type="Timer" parent="Root Scene"]
 wait_time = 3.0
