@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu02ww716qbw2"
-path.s3tc="res://.godot/imported/BreadTopp_standardSurface1_BaseColor.png-82212b2eaf4ecc2aa85916794eabef3e.s3tc.ctex"
+path.s3tc="res://.godot/imported/BreadTopp_standardSurface1_BaseColor.png-f22e3d0cb5e110878869437de740cb07.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/BreadTopp_standardSurface1_BaseColor.png"
-dest_files=["res://.godot/imported/BreadTopp_standardSurface1_BaseColor.png-82212b2eaf4ecc2aa85916794eabef3e.s3tc.ctex"]
+source_file="res://Textures/BreadTopp_standardSurface1_BaseColor.png"
+dest_files=["res://.godot/imported/BreadTopp_standardSurface1_BaseColor.png-f22e3d0cb5e110878869437de740cb07.s3tc.ctex"]
 
 [params]
 

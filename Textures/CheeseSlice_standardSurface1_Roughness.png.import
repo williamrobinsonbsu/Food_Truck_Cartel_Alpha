@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bprhv7ph15hjx"
-path.s3tc="res://.godot/imported/CheeseSlice_standardSurface1_Roughness.png-095986552b405d11f8c4d10feb1f3eec.s3tc.ctex"
+path.s3tc="res://.godot/imported/CheeseSlice_standardSurface1_Roughness.png-df023eaaf911631ba917d2b49bbc93d3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/CheeseSlice_standardSurface1_Roughness.png"
-dest_files=["res://.godot/imported/CheeseSlice_standardSurface1_Roughness.png-095986552b405d11f8c4d10feb1f3eec.s3tc.ctex"]
+source_file="res://Textures/CheeseSlice_standardSurface1_Roughness.png"
+dest_files=["res://.godot/imported/CheeseSlice_standardSurface1_Roughness.png-df023eaaf911631ba917d2b49bbc93d3.s3tc.ctex"]
 
 [params]
 
