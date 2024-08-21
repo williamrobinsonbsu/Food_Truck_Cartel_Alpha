@@ -68,3 +68,16 @@ layout_mode = 2
 text = "+"
 label_settings = SubResource("LabelSettings_3dcpl")
 horizontal_alignment = 1
+
+[node name="GameOverText" type="CenterContainer" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = -252.0
+offset_top = -194.0
+offset_right = -160.0
+offset_bottom = -154.0
+scale = Vector2(5.9598, 5.67549)
+
+[node name="GameOver" type="Label" parent="Control/GameOverText"]
+layout_mode = 2
+text = "Game Over!"
