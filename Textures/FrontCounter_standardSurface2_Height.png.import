@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bj4q1g1lushbu"
-path.s3tc="res://.godot/imported/FrontCounter_standardSurface2_Height.png-ca6cc5f643400826165aae9c8e1f701a.s3tc.ctex"
+path.s3tc="res://.godot/imported/FrontCounter_standardSurface2_Height.png-c49f23c3aca0347641ce5798d394d366.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/FrontCounter_standardSurface2_Height.png"
-dest_files=["res://.godot/imported/FrontCounter_standardSurface2_Height.png-ca6cc5f643400826165aae9c8e1f701a.s3tc.ctex"]
+source_file="res://textures/FrontCounter_standardSurface2_Height.png"
+dest_files=["res://.godot/imported/FrontCounter_standardSurface2_Height.png-c49f23c3aca0347641ce5798d394d366.s3tc.ctex"]
 
 [params]
 

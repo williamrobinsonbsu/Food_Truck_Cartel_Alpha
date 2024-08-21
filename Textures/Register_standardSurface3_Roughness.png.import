@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcjduvwcf0mlg"
-path="res://.godot/imported/Register_standardSurface3_Roughness.png-b12ed7f1e44e4c9978ac5d6883412a70.ctex"
+path="res://.godot/imported/Register_standardSurface3_Roughness.png-457b9b04ab9843c28716288f875809d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Register_standardSurface3_Roughness.png"
-dest_files=["res://.godot/imported/Register_standardSurface3_Roughness.png-b12ed7f1e44e4c9978ac5d6883412a70.ctex"]
+source_file="res://textures/Register_standardSurface3_Roughness.png"
+dest_files=["res://.godot/imported/Register_standardSurface3_Roughness.png-457b9b04ab9843c28716288f875809d7.ctex"]
 
 [params]
 

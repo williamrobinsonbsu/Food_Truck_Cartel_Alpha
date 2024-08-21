@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cuqr3ppkwg1gj"]
 
-[ext_resource type="Script" path="res://customer.gd" id="1_u5n8i"]
+[ext_resource type="Script" path="res://customer/customer.gd" id="1_u5n8i"]
 [ext_resource type="Texture2D" uid="uid://x1s1d2uf70m5" path="res://FBXRaw/blondie_NPC.png" id="2_0t37t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o55be"]

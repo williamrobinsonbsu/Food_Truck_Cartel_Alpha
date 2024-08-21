@@ -67,10 +67,10 @@ func _on_new_customer():
 	print(score)
 	get_node("/root/World/Player/Control/score").text = "Score: $" + str(score)
 	get_node("/root/World/Root Scene/register/score").text = "$" + str(score)
-	var scene = preload("res://customer.tscn")
+	var scene = preload("res://customer/customer.tscn")
 	var customer = scene.instantiate()
 	add_child(customer)
-	customer.position = %customer_or_cop.position
+	customer.position = %customer_or_cop.position		
 	
 func _on_police():
 	var audio_stream_player := AudioStreamPlayer.new()

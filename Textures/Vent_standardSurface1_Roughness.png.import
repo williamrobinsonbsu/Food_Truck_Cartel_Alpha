@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs6jarhxv2adg"
-path.s3tc="res://.godot/imported/Vent_standardSurface1_Roughness.png-ba5356bb6a7b34ef0904c9f124fbc75d.s3tc.ctex"
+path.s3tc="res://.godot/imported/Vent_standardSurface1_Roughness.png-116f2e8fb4619d59d839346fd88128d1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Vent_standardSurface1_Roughness.png"
-dest_files=["res://.godot/imported/Vent_standardSurface1_Roughness.png-ba5356bb6a7b34ef0904c9f124fbc75d.s3tc.ctex"]
+source_file="res://textures/Vent_standardSurface1_Roughness.png"
+dest_files=["res://.godot/imported/Vent_standardSurface1_Roughness.png-116f2e8fb4619d59d839346fd88128d1.s3tc.ctex"]
 
 [params]
 

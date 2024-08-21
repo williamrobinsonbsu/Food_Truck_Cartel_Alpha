@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://5dcxjv1gyv1y" path="res://FBXRaw/WholeLettuce.fbx" id="1_1t170"]
 [ext_resource type="Script" path="res://ingredients/lettuce_whole.gd" id="1_u2eg3"]
-[ext_resource type="Texture2D" uid="uid://dhg5k8nw1davo" path="res://Textures/LettuceHead_standardSurface1_BaseColor.png" id="3_j27d8"]
-[ext_resource type="Texture2D" uid="uid://cf274lyib0d5" path="res://Textures/LettuceHead_standardSurface1_Metallic.png" id="4_td0gy"]
-[ext_resource type="Texture2D" uid="uid://crl1gk8m6hcir" path="res://Textures/LettuceHead_standardSurface1_Roughness.png" id="5_5hb16"]
+[ext_resource type="Texture2D" uid="uid://dhg5k8nw1davo" path="res://textures/LettuceHead_standardSurface1_BaseColor.png" id="3_j27d8"]
+[ext_resource type="Texture2D" uid="uid://cf274lyib0d5" path="res://textures/LettuceHead_standardSurface1_Metallic.png" id="4_td0gy"]
+[ext_resource type="Texture2D" uid="uid://crl1gk8m6hcir" path="res://textures/LettuceHead_standardSurface1_Roughness.png" id="5_5hb16"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_isoou"]
 albedo_texture = ExtResource("3_j27d8")

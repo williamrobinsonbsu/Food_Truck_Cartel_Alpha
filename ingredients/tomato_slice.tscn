@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://dmutgofk6xtat" path="res://FBXRaw/TomatoSlice.fbx" id="1_728ar"]
 [ext_resource type="Script" path="res://ingredients/tomato_slice.gd" id="1_ahm71"]
-[ext_resource type="Texture2D" uid="uid://c3yi83fis7vwj" path="res://Textures/TomatoSlices_standardSurface1_BaseColor.png" id="3_njyie"]
-[ext_resource type="Texture2D" uid="uid://cvq2ubqalljm0" path="res://Textures/TomatoSlices_standardSurface1_Metallic.png" id="4_10p70"]
-[ext_resource type="Texture2D" uid="uid://cpuawm67yp705" path="res://Textures/TomatoSlices_standardSurface1_Roughness.png" id="5_ml8yd"]
+[ext_resource type="Texture2D" uid="uid://c3yi83fis7vwj" path="res://textures/TomatoSlices_standardSurface1_BaseColor.png" id="3_njyie"]
+[ext_resource type="Texture2D" uid="uid://cvq2ubqalljm0" path="res://textures/TomatoSlices_standardSurface1_Metallic.png" id="4_10p70"]
+[ext_resource type="Texture2D" uid="uid://cpuawm67yp705" path="res://textures/TomatoSlices_standardSurface1_Roughness.png" id="5_ml8yd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lc2m2"]
 albedo_texture = ExtResource("3_njyie")

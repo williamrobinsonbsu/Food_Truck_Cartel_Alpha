@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cm8dfmol45dx" path="res://FBXRaw/Patty.fbx" id="1_6x3gy"]
 [ext_resource type="Script" path="res://ingredients/patty_raw.gd" id="1_aiku7"]
-[ext_resource type="Texture2D" uid="uid://17gdxa4pusuf" path="res://Textures/Pattie_standardSurface1_BaseColor.png" id="3_20lpe"]
-[ext_resource type="Texture2D" uid="uid://dyxo2uo770r7r" path="res://Textures/Pattie_standardSurface1_Metallic.png" id="4_415sc"]
-[ext_resource type="Texture2D" uid="uid://btecmm0julsyh" path="res://Textures/Pattie_standardSurface1_Roughness.png" id="5_o1u4s"]
+[ext_resource type="Texture2D" uid="uid://17gdxa4pusuf" path="res://textures/Pattie_standardSurface1_BaseColor.png" id="3_20lpe"]
+[ext_resource type="Texture2D" uid="uid://dyxo2uo770r7r" path="res://textures/Pattie_standardSurface1_Metallic.png" id="4_415sc"]
+[ext_resource type="Texture2D" uid="uid://btecmm0julsyh" path="res://textures/Pattie_standardSurface1_Roughness.png" id="5_o1u4s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kb7w3"]
 albedo_texture = ExtResource("3_20lpe")

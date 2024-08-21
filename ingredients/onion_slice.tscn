@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://ingredients/onion_slice.gd" id="1_ftidh"]
 [ext_resource type="PackedScene" uid="uid://dp5lxp4uvmtbt" path="res://FBXRaw/OnionSlice.fbx" id="1_mrlia"]
-[ext_resource type="Texture2D" uid="uid://tixofggcvxmb" path="res://Textures/OnionSlice_standardSurface1_BaseColor.png" id="3_h0kan"]
-[ext_resource type="Texture2D" uid="uid://e52ochsqswru" path="res://Textures/OnionSlice_standardSurface1_Metallic.png" id="4_fb0lr"]
-[ext_resource type="Texture2D" uid="uid://cd6op5xlvgsho" path="res://Textures/OnionSlice_standardSurface1_Roughness.png" id="5_onl5x"]
+[ext_resource type="Texture2D" uid="uid://tixofggcvxmb" path="res://textures/OnionSlice_standardSurface1_BaseColor.png" id="3_h0kan"]
+[ext_resource type="Texture2D" uid="uid://e52ochsqswru" path="res://textures/OnionSlice_standardSurface1_Metallic.png" id="4_fb0lr"]
+[ext_resource type="Texture2D" uid="uid://cd6op5xlvgsho" path="res://textures/OnionSlice_standardSurface1_Roughness.png" id="5_onl5x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cuy41"]
 albedo_texture = ExtResource("3_h0kan")
