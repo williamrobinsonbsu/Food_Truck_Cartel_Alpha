@@ -90,6 +90,8 @@ func _on_police_catch_timer_timeout():
 		print("Your score is: ")
 		print(score)
 		$"../Player/Control/GameOverText".show()
+		await get_tree().create_timer(5.0).timeout
+		get_tree().reload_current_scene()
 		#get_tree().quit()
 	elif can_police_catch_player == false:
 		policeman.hide()
