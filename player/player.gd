@@ -1,12 +1,19 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+const  speed = 5
 
 @onready var interaction := $Camera3D/Interaction
 @onready var hand := $Camera3D/Hand
 
 var picked_object
 var pull_power = 10
+
+var crouch_speed = 20
+
+var default_height = 1.5
+var crouch_height = .5
+var isCrouching = false
+
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -51,15 +58,22 @@ func _input(event):
 			drop_object()
 #
 func _physics_process(_delta):
+	
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
+		
+	if Input.is_action_just_pressed("crouch"):
+		if isCrouching == false:
+			movementStateChange("crouch")
+		elif isCrouching == true:
+			movementStateChange("uncrouch")
+		
 	if picked_object != null:
 		var a = picked_object.global_transform.origin
 		var b = hand.global_transform.origin
@@ -83,3 +97,12 @@ func drop_object():
 		if picked_object.has_method("picked"):
 			picked_object.picked(false)
 		picked_object = null
+
+func movementStateChange(changeType):
+	match changeType:
+		"crouch":
+			isCrouching = true
+			
+			
+		"uncrouch":
+			isCrouching = false
