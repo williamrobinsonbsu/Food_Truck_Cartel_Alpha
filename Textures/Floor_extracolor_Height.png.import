@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cok6dem2j16lk"
-path.s3tc="res://.godot/imported/Floor_extracolor_Height.png-d510de4c50bfd433769c889983f98ab1.s3tc.ctex"
+path.s3tc="res://.godot/imported/Floor_extracolor_Height.png-4a81b94bf34168b617d80407f622f884.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Floor_extracolor_Height.png"
-dest_files=["res://.godot/imported/Floor_extracolor_Height.png-d510de4c50bfd433769c889983f98ab1.s3tc.ctex"]
+source_file="res://textures/Floor_extracolor_Height.png"
+dest_files=["res://.godot/imported/Floor_extracolor_Height.png-4a81b94bf34168b617d80407f622f884.s3tc.ctex"]
 
 [params]
 

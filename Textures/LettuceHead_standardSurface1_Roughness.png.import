@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crl1gk8m6hcir"
-path.s3tc="res://.godot/imported/LettuceHead_standardSurface1_Roughness.png-25fa9b288893ac38b5264e7ba1f191bd.s3tc.ctex"
+path.s3tc="res://.godot/imported/LettuceHead_standardSurface1_Roughness.png-c91d18fb4ea737cc7011c1916279dd37.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/LettuceHead_standardSurface1_Roughness.png"
-dest_files=["res://.godot/imported/LettuceHead_standardSurface1_Roughness.png-25fa9b288893ac38b5264e7ba1f191bd.s3tc.ctex"]
+source_file="res://textures/LettuceHead_standardSurface1_Roughness.png"
+dest_files=["res://.godot/imported/LettuceHead_standardSurface1_Roughness.png-c91d18fb4ea737cc7011c1916279dd37.s3tc.ctex"]
 
 [params]
 

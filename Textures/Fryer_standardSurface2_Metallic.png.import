@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgwtkvyk33d33"
-path.s3tc="res://.godot/imported/Fryer_standardSurface2_Metallic.png-bc188a9792a53b0a03086bbf05a64bb9.s3tc.ctex"
+path.s3tc="res://.godot/imported/Fryer_standardSurface2_Metallic.png-3b9a1cfac0e0608d7cd090f2f8e3a06d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Fryer_standardSurface2_Metallic.png"
-dest_files=["res://.godot/imported/Fryer_standardSurface2_Metallic.png-bc188a9792a53b0a03086bbf05a64bb9.s3tc.ctex"]
+source_file="res://textures/Fryer_standardSurface2_Metallic.png"
+dest_files=["res://.godot/imported/Fryer_standardSurface2_Metallic.png-3b9a1cfac0e0608d7cd090f2f8e3a06d.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckprtphbls27y"
-path.s3tc="res://.godot/imported/Ceiling_extracolor_Roughness.png-7a7a4fd5793ea5acb5c26afb44f27af3.s3tc.ctex"
+path.s3tc="res://.godot/imported/Ceiling_extracolor_Roughness.png-05f44871dae40bf2eeb21fa31eb2150c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Ceiling_extracolor_Roughness.png"
-dest_files=["res://.godot/imported/Ceiling_extracolor_Roughness.png-7a7a4fd5793ea5acb5c26afb44f27af3.s3tc.ctex"]
+source_file="res://textures/Ceiling_extracolor_Roughness.png"
+dest_files=["res://.godot/imported/Ceiling_extracolor_Roughness.png-05f44871dae40bf2eeb21fa31eb2150c.s3tc.ctex"]
 
 [params]
 

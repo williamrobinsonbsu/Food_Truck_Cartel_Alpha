@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://olqqxef430e1"
-path.s3tc="res://.godot/imported/Shutter_standardSurface2_Height.png-c765ab43c8c1496cb257e5d43ea13cbf.s3tc.ctex"
+path.s3tc="res://.godot/imported/Shutter_standardSurface2_Height.png-1890d64f794305635e14709d67865fb3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Shutter_standardSurface2_Height.png"
-dest_files=["res://.godot/imported/Shutter_standardSurface2_Height.png-c765ab43c8c1496cb257e5d43ea13cbf.s3tc.ctex"]
+source_file="res://textures/Shutter_standardSurface2_Height.png"
+dest_files=["res://.godot/imported/Shutter_standardSurface2_Height.png-1890d64f794305635e14709d67865fb3.s3tc.ctex"]
 
 [params]
 

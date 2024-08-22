@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccvtnubpnosn7"
-path.s3tc="res://.godot/imported/CheeseSlice_standardSurface1_Height.png-d1e8d24d20edf967cd016666e278c205.s3tc.ctex"
+path.s3tc="res://.godot/imported/CheeseSlice_standardSurface1_Height.png-5d8f2c2a634ea8b72368cbf6d4675a43.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/CheeseSlice_standardSurface1_Height.png"
-dest_files=["res://.godot/imported/CheeseSlice_standardSurface1_Height.png-d1e8d24d20edf967cd016666e278c205.s3tc.ctex"]
+source_file="res://textures/CheeseSlice_standardSurface1_Height.png"
+dest_files=["res://.godot/imported/CheeseSlice_standardSurface1_Height.png-5d8f2c2a634ea8b72368cbf6d4675a43.s3tc.ctex"]
 
 [params]
 
