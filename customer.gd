@@ -9,47 +9,54 @@ var i_want_chips = false
 var i_want_soda = false
 
 var counter = 0
-
 signal new_customer
 
 func _ready():
 	print("I would like a burger!")
-	get_node("/root/World/Player/Control/current_order").text = "-=+Current Order+=-\nBurger with: "
+	#get_node("/root/World/Player/Control/current_order").text = "-=+Current Order+=-\nBurger with: "
+	get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Label").text = "-=+Current Order+=-\nBurger with: "
 	if randf() <= .50:
 		i_want_lettuce = true
 		counter += 1
 		print("With lettuce")
-		get_node("/root/World/Player/Control/current_order").text += "\nLettuce"
+		#get_node("/root/World/Player/Control/current_order").text += "\nLettuce"
+		get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Label").text += "\nLettuce"
 	if randf() <= .10:
 		i_want_tomato = true
 		counter += 1
 		print("With tomato")
-		get_node("/root/World/Player/Control/current_order").text += "\nTomato"
+		#get_node("/root/World/Player/Control/current_order").text += "\nTomato"
+		get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Label").text += "\nTomato"
 	if randf() <= .75:
 		i_want_cheese = true
 		counter += 1
 		print("With cheese")
-		get_node("/root/World/Player/Control/current_order").text += "\nCheese"
+		#get_node("/root/World/Player/Control/current_order").text += "\nCheese"
+		get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Label").text += "\nCheese"
 	if randf() <= .45:
 		i_want_onion = true
 		counter += 1
 		print("With onion")
-		get_node("/root/World/Player/Control/current_order").text += "\nOnion"
+		#get_node("/root/World/Player/Control/current_order").text += "\nOnion"
+		get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Label").text += "\nOnion"
 	if randf() <= .6:
 		i_want_fries = true
 		counter += 1
 		print("With an order of fries!")
-		get_node("/root/World/Player/Control/current_order").text += "\nAn order of fries"
+		#get_node("/root/World/Player/Control/current_order").text += "\nAn order of fries"
+		get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Label").text += "\nAn order of fries"
 	if randf() <= .1:
 		i_want_chips = true
 		counter += 1
 		print("With chips!")
-		get_node("/root/World/Player/Control/current_order").text += "\nWith chips"
+		#get_node("/root/World/Player/Control/current_order").text += "\nWith chips"
+		get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Label").text += "\nWith chips"
 	if randf() <= .9:
 		i_want_soda = true
 		counter += 1
 		print("With soda!")
-		get_node("/root/World/Player/Control/current_order").text += "\nWith soda"
+		#get_node("/root/World/Player/Control/current_order").text += "\nWith soda"
+		get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Label").text += "\nWith soda"
 	
 func _on_check_my_order():
 	var order_counter = 0

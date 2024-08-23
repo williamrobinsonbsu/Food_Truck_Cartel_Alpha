@@ -1943,10 +1943,10 @@ transform = Transform3D(-0.287683, 0, -8.74228e-08, 0, 0.256601, 0, 2.515e-08, 0
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
 
 [node name="current_order" parent="Player/Control" index="0"]
-offset_left = -768.0
-offset_top = -442.0
-offset_right = -529.0
-offset_bottom = -102.0
+offset_left = -271.0
+offset_top = -205.0
+offset_right = -32.0
+offset_bottom = 135.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_ayktc")
 horizontal_alignment = 1

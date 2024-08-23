@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cywlto4wavxy4"]
+[gd_scene load_steps=6 format=3 uid="uid://cywlto4wavxy4"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_sh6bp"]
+[ext_resource type="PackedScene" uid="uid://b8yxn18pjs4qq" path="res://hud.tscn" id="2_tbwh0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6w4jn"]
 
@@ -30,6 +31,15 @@ target_position = Vector3(0, 0, -3)
 [node name="Hand" type="Marker3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317083, -0.0406094, -0.535736)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Hud" parent="CanvasLayer/HBoxContainer" instance=ExtResource("2_tbwh0")]
+layout_mode = 2
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 8
@@ -45,6 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="current_order" type="Label" parent="Control"]
+visible = false
 layout_mode = 2
 offset_left = -782.0
 offset_top = -458.0
@@ -52,6 +63,7 @@ offset_right = -695.0
 offset_bottom = -435.0
 
 [node name="score" type="Label" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = -877.0
 offset_top = 390.0

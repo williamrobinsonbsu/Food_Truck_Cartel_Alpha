@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8yxn18pjs4qq"]
+
+[ext_resource type="Script" path="res://Hud.gd" id="1_y2pr2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ed15l"]
+bg_color = Color(0.869374, 0.734336, 0.484461, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.235986, 0.142588, 0.111742, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+shadow_color = Color(0.370576, 0.284457, 0.258682, 0.6)
+shadow_size = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_djky8"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_y2pr2")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 2.0
+offset_right = 239.0
+offset_bottom = 342.0
+scale = Vector2(0.664982, 0.759999)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ed15l")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1008.0
+offset_top = 6.0
+offset_right = 1099.0
+offset_bottom = 29.0
+grow_horizontal = 0
+scale = Vector2(1.51697, 3.44254)
+text = "Score: "
+label_settings = SubResource("LabelSettings_djky8")

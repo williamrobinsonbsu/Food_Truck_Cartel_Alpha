@@ -50,9 +50,15 @@ func _on_customer_or_police_spawn_timer_timeout():
 
 func _customer_or_cop():
 	if starting_counter % 2 == 1:
+		score += 10
+		get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Score").text = "Score: $" + str(score)
+		#get_node("/root/World/Player/Control/score").text = "Score: $" + str(score)
+		get_node("/root/World/Root Scene/register/score").text = "$" + str(score)
 		_on_police()
 	elif starting_counter % 2 == 0:
-		score += 10
+		get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Score").text = "Score: $" + str(score)
+		#get_node("/root/World/Player/Control/score").text = "Score: $" + str(score)
+		get_node("/root/World/Root Scene/register/score").text = "$" + str(score)
 		_on_new_customer()
 	starting_counter += 1
 	#if randf() <= .3:
@@ -65,7 +71,7 @@ func _customer_or_cop():
 func _on_new_customer():
 	print("Your score is: ")
 	print(score)
-	get_node("/root/World/Player/Control/score").text = "Score: $" + str(score)
+	get_node("/root/World/Player/CanvasLayer/HBoxContainer/Hud/Score").text = "Score: $" + str(score)
 	get_node("/root/World/Root Scene/register/score").text = "$" + str(score)
 	var scene = preload("res://customer.tscn")
 	var customer = scene.instantiate()

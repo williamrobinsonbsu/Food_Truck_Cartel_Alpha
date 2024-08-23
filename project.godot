@@ -18,6 +18,9 @@ config/icon="res://icon.svg"
 [display]
 
 window/size/mode=3
+window/size/initial_position=Vector2i(0, 1)
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [editor]
 
