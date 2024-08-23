@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqhtrsu8vo4vt"
-path.s3tc="res://.godot/imported/spatula_UV_spatula_handleSG_BaseColor.png-55c9d10701949fd0a3c5feb1a085dada.s3tc.ctex"
+path.s3tc="res://.godot/imported/spatula_UV_spatula_handleSG_BaseColor.png-dfc2f613fdb582e9f88b7a787c1529a2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/spatula_UV_spatula_handleSG_BaseColor.png"
-dest_files=["res://.godot/imported/spatula_UV_spatula_handleSG_BaseColor.png-55c9d10701949fd0a3c5feb1a085dada.s3tc.ctex"]
+source_file="res://Textures/spatula_UV_spatula_handleSG_BaseColor.png"
+dest_files=["res://.godot/imported/spatula_UV_spatula_handleSG_BaseColor.png-dfc2f613fdb582e9f88b7a787c1529a2.s3tc.ctex"]
 
 [params]
 

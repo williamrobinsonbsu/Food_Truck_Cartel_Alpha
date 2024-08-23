@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvt7i5cloe8tt"
-path.s3tc="res://.godot/imported/Walls_extracolor_Height.png-8161aaa12d47aa2e3e6d72047eb31a93.s3tc.ctex"
+path.s3tc="res://.godot/imported/Walls_extracolor_Height.png-841713f1e8f1cb15042b09f7bfafd486.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/Walls_extracolor_Height.png"
-dest_files=["res://.godot/imported/Walls_extracolor_Height.png-8161aaa12d47aa2e3e6d72047eb31a93.s3tc.ctex"]
+source_file="res://Textures/Walls_extracolor_Height.png"
+dest_files=["res://.godot/imported/Walls_extracolor_Height.png-841713f1e8f1cb15042b09f7bfafd486.s3tc.ctex"]
 
 [params]
 

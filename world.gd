@@ -9,6 +9,11 @@ var can_police_catch_player = false
 var score = 0
 var starting_counter = 0
 
+var laneProgressionCounter = 0
+var poRate = 0
+var spotSpawn = 0
+var awareMeter = 0
+
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
@@ -49,18 +54,17 @@ func _on_customer_or_police_spawn_timer_timeout():
 	_customer_or_cop()
 
 func _customer_or_cop():
-	if starting_counter % 2 == 1:
-		_on_police()
-	elif starting_counter % 2 == 0:
+	if starting_counter == 0:
+		score += 0
+	else:
 		score += 10
-		_on_new_customer()
+	_on_new_customer()
 	starting_counter += 1
-	#if randf() <= .3:
-	#	_on_police()
-	#else:
-	#	if starting_counter != 0:
-	#		score += 10
-	#	_on_new_customer()
+	poRate = policeRate()
+	if poRate != 0:
+		_on_police()
+		print(poRate)
+	
 
 func _on_new_customer():
 	print("Your score is: ")
@@ -70,20 +74,34 @@ func _on_new_customer():
 	var scene = preload("res://customer/customer.tscn")
 	var customer = scene.instantiate()
 	add_child(customer)
-	customer.position = %customer_or_cop.position		
+	customer.position = %customer.position		
 	
 func _on_police():
-	var audio_stream_player := AudioStreamPlayer.new()
-	audio_stream_player.stream = load("res://audio/police_siren.wav")
-	audio_stream_player.volume_db = linear_to_db(0.3)
-	get_parent().add_child(audio_stream_player)
-	audio_stream_player.play()
-	audio_stream_player.finished.connect(func():
-		audio_stream_player.queue_free()
-	)
-	policeman.show()
-	cop_catch_timer.start()
+	#var audio_stream_player := AudioStreamPlayer.new()
+	#audio_stream_player.stream = load("res://audio/police_siren.wav")
+	#audio_stream_player.volume_db = linear_to_db(0.3)
+	#get_parent().add_child(audio_stream_player)
+	#audio_stream_player.play()
+	#audio_stream_player.finished.connect(func():
+	#	audio_stream_player.queue_free()
+	#)
+	var scene = preload("res://police/police.tscn")
+	var police = scene.instantiate()
+	add_child(police)
+	if laneProgressionCounter == 1:
+		police.position = $Far1.position
+	elif laneProgressionCounter == 2:
+		police.position = $Mid1.position
+	elif laneProgressionCounter == 3:
+		police.position = $Close1.position
+		cop_catch_timer.start()
 
+func policeRate():
+	#if randf() <= .3:
+	if laneProgressionCounter < 3:
+		laneProgressionCounter += 1
+	return laneProgressionCounter
+		
 func _on_police_catch_timer_timeout():
 	if can_police_catch_player == true:
 		print('\nYou got caught')

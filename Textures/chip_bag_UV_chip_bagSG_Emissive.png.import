@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://curqo2hntfx0l"
-path="res://.godot/imported/chip_bag_UV_chip_bagSG_Emissive.png-f224835eb006e5fd4de8670350c820ac.ctex"
+path="res://.godot/imported/chip_bag_UV_chip_bagSG_Emissive.png-dd965c5afc21363975bde5486d63df05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/chip_bag_UV_chip_bagSG_Emissive.png"
-dest_files=["res://.godot/imported/chip_bag_UV_chip_bagSG_Emissive.png-f224835eb006e5fd4de8670350c820ac.ctex"]
+source_file="res://Textures/chip_bag_UV_chip_bagSG_Emissive.png"
+dest_files=["res://.godot/imported/chip_bag_UV_chip_bagSG_Emissive.png-dd965c5afc21363975bde5486d63df05.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfjtlhvg74w6v"
-path.s3tc="res://.godot/imported/spatula_UV_spatula_handleSG_Normal.png-059386056da4240dbd891b9bddfd7329.s3tc.ctex"
+path.s3tc="res://.godot/imported/spatula_UV_spatula_handleSG_Normal.png-cc9156eb8e3dd67003d8afa481c8e97a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/spatula_UV_spatula_handleSG_Normal.png"
-dest_files=["res://.godot/imported/spatula_UV_spatula_handleSG_Normal.png-059386056da4240dbd891b9bddfd7329.s3tc.ctex"]
+source_file="res://Textures/spatula_UV_spatula_handleSG_Normal.png"
+dest_files=["res://.godot/imported/spatula_UV_spatula_handleSG_Normal.png-cc9156eb8e3dd67003d8afa481c8e97a.s3tc.ctex"]
 
 [params]
 

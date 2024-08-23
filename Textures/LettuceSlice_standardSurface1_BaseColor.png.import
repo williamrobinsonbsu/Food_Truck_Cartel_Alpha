@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c10q1usi4u3y3"
-path.s3tc="res://.godot/imported/LettuceSlice_standardSurface1_BaseColor.png-a0703e7742ef7e223820064befab33eb.s3tc.ctex"
+path.s3tc="res://.godot/imported/LettuceSlice_standardSurface1_BaseColor.png-16da44ad8906cd669429a2ac7fff360f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/LettuceSlice_standardSurface1_BaseColor.png"
-dest_files=["res://.godot/imported/LettuceSlice_standardSurface1_BaseColor.png-a0703e7742ef7e223820064befab33eb.s3tc.ctex"]
+source_file="res://Textures/LettuceSlice_standardSurface1_BaseColor.png"
+dest_files=["res://.godot/imported/LettuceSlice_standardSurface1_BaseColor.png-16da44ad8906cd669429a2ac7fff360f.s3tc.ctex"]
 
 [params]
 

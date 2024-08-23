@@ -1889,7 +1889,7 @@ shape = SubResource("BoxShape3D_jmo2p")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362507, 0.357653, -0.0359316)
 
-[node name="customer_or_cop" type="Marker3D" parent="Root Scene"]
+[node name="customer" type="Marker3D" parent="Root Scene"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.253959, 2.33154)
 
@@ -1937,7 +1937,42 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.176422, 0.305634, 0.0992661
 shape = SubResource("BoxShape3D_5bl88")
 
 [node name="score" type="Label3D" parent="Root Scene/register"]
-transform = Transform3D(-0.287683, 0, -8.74228e-08, 0, 0.256601, 0, 2.515e-08, 0, -1, 0.17438, 0.274469, -0.0266727)
+transform = Transform3D(-0.287683, 0, -8.74228e-08, 0, 0.256601, 0, 2.515e-08, 0, -1, 0.174429, 0.27251, -0.0265557)
+
+[node name="Far1" type="Marker3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33496, 0, 4.33875)
+
+[node name="Mid1" type="Marker3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67055, 0, 3.33392)
+
+[node name="Close1" type="Marker3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.666629, 0, 2.36535)
+
+[node name="PoliceLocations" type="Node3D" parent="Root Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.52364)
+
+[node name="Far" type="Node3D" parent="Root Scene/PoliceLocations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.707963)
+
+[node name="Far2" type="Marker3D" parent="Root Scene/PoliceLocations/Far"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.102381)
+
+[node name="Far3" type="Marker3D" parent="Root Scene/PoliceLocations/Far"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01767, 0, 0.102162)
+
+[node name="Mid" type="Node3D" parent="Root Scene/PoliceLocations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18972)
+
+[node name="Mid2" type="Marker3D" parent="Root Scene/PoliceLocations/Mid"]
+
+[node name="Mid3" type="Marker3D" parent="Root Scene/PoliceLocations/Mid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3334, 0, 0)
+
+[node name="Close" type="Node3D" parent="Root Scene/PoliceLocations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.15829)
+
+[node name="Close2" type="Marker3D" parent="Root Scene/PoliceLocations/Close"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665255, 0, 0)
 
 [node name="Player" parent="." instance=ExtResource("189_grvwk")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)

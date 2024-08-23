@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db8b00r5cf2l1"
-path.s3tc="res://.godot/imported/friesalone_initialShadingGroup_Roughness.png-600d6b4893414c4435d8af82e0241965.s3tc.ctex"
+path.s3tc="res://.godot/imported/friesalone_initialShadingGroup_Roughness.png-4d1565de78fb755232d0bc1a4dcfd727.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/friesalone_initialShadingGroup_Roughness.png"
-dest_files=["res://.godot/imported/friesalone_initialShadingGroup_Roughness.png-600d6b4893414c4435d8af82e0241965.s3tc.ctex"]
+source_file="res://Textures/friesalone_initialShadingGroup_Roughness.png"
+dest_files=["res://.godot/imported/friesalone_initialShadingGroup_Roughness.png-4d1565de78fb755232d0bc1a4dcfd727.s3tc.ctex"]
 
 [params]
 

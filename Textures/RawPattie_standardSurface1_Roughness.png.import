@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccxyx4tc41d62"
-path="res://.godot/imported/RawPattie_standardSurface1_Roughness.png-9cbe5b44c213f95e43ff2c29b32cad8b.ctex"
+path="res://.godot/imported/RawPattie_standardSurface1_Roughness.png-cf76768a63e3dac65bb0bcaf529c1a79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/RawPattie_standardSurface1_Roughness.png"
-dest_files=["res://.godot/imported/RawPattie_standardSurface1_Roughness.png-9cbe5b44c213f95e43ff2c29b32cad8b.ctex"]
+source_file="res://Textures/RawPattie_standardSurface1_Roughness.png"
+dest_files=["res://.godot/imported/RawPattie_standardSurface1_Roughness.png-cf76768a63e3dac65bb0bcaf529c1a79.ctex"]
 
 [params]
 

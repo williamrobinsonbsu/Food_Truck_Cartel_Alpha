@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv86yw1jx87kw"
-path.s3tc="res://.godot/imported/condiment_bottle_UV_condiment_bottleSG_BaseColor.png-d3196a4f586d63d2d785a7f4cc7eba81.s3tc.ctex"
+path.s3tc="res://.godot/imported/condiment_bottle_UV_condiment_bottleSG_BaseColor.png-59cb54eeec488a86fea83fdc5416fc1a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/condiment_bottle_UV_condiment_bottleSG_BaseColor.png"
-dest_files=["res://.godot/imported/condiment_bottle_UV_condiment_bottleSG_BaseColor.png-d3196a4f586d63d2d785a7f4cc7eba81.s3tc.ctex"]
+source_file="res://Textures/condiment_bottle_UV_condiment_bottleSG_BaseColor.png"
+dest_files=["res://.godot/imported/condiment_bottle_UV_condiment_bottleSG_BaseColor.png-59cb54eeec488a86fea83fdc5416fc1a.s3tc.ctex"]
 
 [params]
 

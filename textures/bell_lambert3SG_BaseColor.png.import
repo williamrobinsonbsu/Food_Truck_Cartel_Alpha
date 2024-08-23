@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfgulhcothr7"
-path.s3tc="res://.godot/imported/bell_lambert3SG_BaseColor.png-515beadac10eb0579eb7658e292555a0.s3tc.ctex"
+path.s3tc="res://.godot/imported/bell_lambert3SG_BaseColor.png-165dc2b439577c6ed5dcb4d29347156a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/bell_lambert3SG_BaseColor.png"
-dest_files=["res://.godot/imported/bell_lambert3SG_BaseColor.png-515beadac10eb0579eb7658e292555a0.s3tc.ctex"]
+source_file="res://Textures/bell_lambert3SG_BaseColor.png"
+dest_files=["res://.godot/imported/bell_lambert3SG_BaseColor.png-165dc2b439577c6ed5dcb4d29347156a.s3tc.ctex"]
 
 [params]
 

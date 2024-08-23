@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://pnmtvik1oalr"]
+[gd_scene load_steps=5 format=3 uid="uid://pnmtvik1oalr"]
+
+[ext_resource type="Script" path="res://police/police.gd" id="1_fmxpy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h25pv"]
 albedo_color = Color(0, 0.368627, 1, 1)
@@ -8,7 +10,9 @@ albedo_color = Color(0, 0.368627, 1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_10o8c"]
 size = Vector3(0.490479, 0.816895, 0.389038)
 
-[node name="police" type="StaticBody3D"]
+[node name="police" type="StaticBody3D" groups=["police"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500198, 0)
+script = ExtResource("1_fmxpy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_h25pv")

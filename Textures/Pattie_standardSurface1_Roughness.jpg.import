@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbdfwavdwoiuv"
-path.s3tc="res://.godot/imported/Pattie_standardSurface1_Roughness.jpg-a63acb620c4c166f617b96a360b3dd12.s3tc.ctex"
+path.s3tc="res://.godot/imported/Pattie_standardSurface1_Roughness.jpg-ea22760821a8e813ad5b24c1f5a6238f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/Pattie_standardSurface1_Roughness.jpg"
-dest_files=["res://.godot/imported/Pattie_standardSurface1_Roughness.jpg-a63acb620c4c166f617b96a360b3dd12.s3tc.ctex"]
+source_file="res://Textures/Pattie_standardSurface1_Roughness.jpg"
+dest_files=["res://.godot/imported/Pattie_standardSurface1_Roughness.jpg-ea22760821a8e813ad5b24c1f5a6238f.s3tc.ctex"]
 
 [params]
 

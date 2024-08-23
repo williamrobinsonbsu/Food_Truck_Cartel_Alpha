@@ -114,5 +114,6 @@ func _on_check_my_order():
 	if order_counter == counter:
 		get_node("/root/World/Player/Control/current_order").text = ""
 		get_tree().call_group("map", "_spawn_new_customer_or_cop")
+		get_tree().call_group("police", "despawn")
 		$".".queue_free()
 		
