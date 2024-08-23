@@ -101,8 +101,9 @@ func drop_object():
 func movementStateChange(changeType):
 	match changeType:
 		"crouch":
+			$AnimationPlayer.play("crouch")
 			isCrouching = true
 			
-			
 		"uncrouch":
+			$AnimationPlayer.play_backwards("crouch")
 			isCrouching = false
