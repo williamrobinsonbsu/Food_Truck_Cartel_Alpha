@@ -81,3 +81,10 @@ scale = Vector2(2.10843, 2.28571)
 [node name="GameOverText" type="Label" parent="Control/GameOver"]
 layout_mode = 2
 text = "Game Over"
+
+[node name="CatchMeter" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -453.0
+offset_top = 170.0
+offset_right = -413.0
+offset_bottom = 193.0

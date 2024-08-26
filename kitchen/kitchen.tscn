@@ -1,4 +1,4 @@
-[gd_scene load_steps=310 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=306 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -186,8 +186,6 @@
 [ext_resource type="Script" path="res://kitchen/cheese_block.gd" id="184_51sgb"]
 [ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="185_qdfto"]
 [ext_resource type="Script" path="res://kitchen/frier.gd" id="186_yv3i3"]
-[ext_resource type="PackedScene" uid="uid://pnmtvik1oalr" path="res://police/police.tscn" id="187_uct8p"]
-[ext_resource type="Texture2D" uid="uid://be3etywcfdt44" path="res://Textures/police_hat.png" id="188_akvho"]
 [ext_resource type="PackedScene" uid="uid://cywlto4wavxy4" path="res://player/player.tscn" id="189_grvwk"]
 [ext_resource type="PackedScene" uid="uid://tsbefmiro8lh" path="res://ingredients/plate.tscn" id="190_a410o"]
 [ext_resource type="Texture2D" uid="uid://dfgulhcothr7" path="res://Textures/bell_lambert3SG_BaseColor.png" id="191_i34n2"]
@@ -805,12 +803,6 @@ size = Vector3(0.457031, 1.80621, 0.0938416)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0u46"]
 size = Vector3(0.448746, 1.40442, 0.0744629)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8uqyk"]
-transparency = 1
-albedo_texture = ExtResource("188_akvho")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_gcvxp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5bl88"]
 size = Vector3(0.177307, 0.130676, 0.266495)
@@ -1907,24 +1899,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.762585, 0, 1.80074)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0127945, 0.547913, -0.0596924)
 shape = SubResource("BoxShape3D_e0u46")
 
-[node name="police" parent="Root Scene" instance=ExtResource("187_uct8p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29703, 2.41866)
-visible = false
-
-[node name="MeshInstance3D" parent="Root Scene/police" index="0"]
-transform = Transform3D(0.497062, 0, 0, 0, 1, 0, 0, 0, 0.382666, 0, 0, 0)
-
-[node name="CollisionShape3D" parent="Root Scene/police" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0228271, 0.0915527, 0.0123901)
-
-[node name="police_catch_timer" parent="Root Scene/police" index="2"]
-autostart = false
-
-[node name="hat" type="MeshInstance3D" parent="Root Scene/police"]
-transform = Transform3D(-0.77397, -8.51324e-08, 2.52208e-15, 0, -4.25662e-08, -0.659993, 6.76626e-08, -0.973802, 2.88492e-08, 0.045027, 0.433833, -0.196697)
-material_override = SubResource("StandardMaterial3D_8uqyk")
-mesh = SubResource("PlaneMesh_gcvxp")
-
 [node name="customer_or_police_spawn_timer" type="Timer" parent="Root Scene"]
 wait_time = 3.0
 one_shot = true
@@ -1962,6 +1936,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.666629, 0, 2.36535)
 
 [node name="Close2" type="Marker3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665255, 0, 2.36535)
+
+[node name="cop_catch_timer" type="Timer" parent="Root Scene"]
+wait_time = 5.0
+one_shot = true
 
 [node name="Player" parent="." instance=ExtResource("189_grvwk")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
@@ -2037,8 +2015,8 @@ material_override = SubResource("StandardMaterial3D_1e6qw")
 mesh = ExtResource("196_ywmwj")
 
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
-[connection signal="timeout" from="Root Scene/police/police_catch_timer" to="Root Scene" method="_on_police_catch_timer_timeout"]
 [connection signal="timeout" from="Root Scene/customer_or_police_spawn_timer" to="Root Scene" method="_on_customer_or_police_spawn_timer_timeout"]
+[connection signal="timeout" from="Root Scene/cop_catch_timer" to="Root Scene" method="_on_police_catch_timer_timeout"]
 [connection signal="reset_ingredients" from="order_plate/resetTemp" to="order_plate/StaticBody3D" method="_on_reset_ingredients"]
 
 [editable path="Root Scene"]
@@ -2067,7 +2045,6 @@ mesh = ExtResource("196_ywmwj")
 [editable path="Root Scene/cheese_block/cheese2"]
 [editable path="Root Scene/cheese_block/cheese3"]
 [editable path="Root Scene/cheese_block/cheese4"]
-[editable path="Root Scene/police"]
 [editable path="Player"]
 [editable path="order_plate"]
 [editable path="order_plate/Root Scene"]

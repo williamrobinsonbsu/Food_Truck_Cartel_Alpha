@@ -1,8 +1,7 @@
 extends Node3D
 
-@onready var policeman := $police
 @onready var customer_or_cop_timer := $customer_or_police_spawn_timer
-@onready var cop_catch_timer := $police/police_catch_timer
+@onready var cop_catch_timer := $cop_catch_timer
 
 var shutter_door_close = false
 var can_police_catch_player = false
@@ -11,9 +10,6 @@ var starting_counter = 0
 
 var laneProgressionCounter = 0
 var poRate = 0
-var spotSpawn = 0
-var awareMeter = 0
-var rng = RandomNumberGenerator.new()
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):
@@ -89,27 +85,44 @@ func _on_police():
 	var scene = preload("res://police/police.tscn")
 	var police = scene.instantiate()
 	var i = 0
+	var j = 0
 	add_child(police)
 	if laneProgressionCounter == 1:
-		i = rng.randf_range(1,3)
-		if i == 1:
+		i = randi()%2
+		if i == 0:
 			police.position = $Far1.position
-		elif i == 2:
+		elif i == 1:
 			police.position = $Far2.position
 		else:
 			police.position = $Far3.position
 	elif laneProgressionCounter == 2:
-		i = rng.randf_range(1,3)
-		police.position = $Mid1.position
-	elif laneProgressionCounter == 3:
-		i = rng.randf_range(1,2)
-		police.position = $Close1.position
+		i = randi()%2
+		if i == 0:
+			police.position = $Mid1.position
+		elif i == 1:
+			police.position = $Mid2.position
+		else:
+			police.position = $Mid3.position
+	else:
+		i = randi()%1
+		if i == 0:
+			police.position = $Close1.position
+		elif i == 1:
+			police.position = $Close2.position
 		cop_catch_timer.start()
+		while j < 5:
+			if can_police_catch_player == false:
+				break
+			get_node("/root/World/Player/Control/CatchMeter").text += "-"
+			await get_tree().create_timer(1.0).timeout
+			j += 1
 
 func policeRate():
 	#if randf() <= .3:
 	if laneProgressionCounter < 3:
 		laneProgressionCounter += 1
+	else:
+		laneProgressionCounter = 0
 	return laneProgressionCounter
 		
 func _on_police_catch_timer_timeout():
@@ -122,5 +135,5 @@ func _on_police_catch_timer_timeout():
 		get_tree().reload_current_scene()
 		#get_tree().quit()
 	elif can_police_catch_player == false:
-		policeman.hide()
-		_spawn_new_customer_or_cop()
+		get_node("/root/World/Player/Control/CatchMeter").text = ""
+		get_tree().call_group("police", "despawn")
