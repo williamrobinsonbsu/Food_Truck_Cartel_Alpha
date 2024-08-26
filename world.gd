@@ -13,6 +13,7 @@ var laneProgressionCounter = 0
 var poRate = 0
 var spotSpawn = 0
 var awareMeter = 0
+var rng = RandomNumberGenerator.new()
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):
@@ -87,12 +88,21 @@ func _on_police():
 	#)
 	var scene = preload("res://police/police.tscn")
 	var police = scene.instantiate()
+	var i = 0
 	add_child(police)
 	if laneProgressionCounter == 1:
-		police.position = $Far1.position
+		i = rng.randf_range(1,3)
+		if i == 1:
+			police.position = $Far1.position
+		elif i == 2:
+			police.position = $Far2.position
+		else:
+			police.position = $Far3.position
 	elif laneProgressionCounter == 2:
+		i = rng.randf_range(1,3)
 		police.position = $Mid1.position
 	elif laneProgressionCounter == 3:
+		i = rng.randf_range(1,2)
 		police.position = $Close1.position
 		cop_catch_timer.start()
 
