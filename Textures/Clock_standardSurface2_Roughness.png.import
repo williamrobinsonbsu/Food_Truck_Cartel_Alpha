@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0r78y3s2j62e"
-path="res://.godot/imported/Clock_standardSurface2_Roughness.png-794e3575c5f95545293a63156977ccbd.ctex"
+path="res://.godot/imported/Clock_standardSurface2_Roughness.png-30cf0c64db1c37e18472a383365c7012.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Clock_standardSurface2_Roughness.png"
-dest_files=["res://.godot/imported/Clock_standardSurface2_Roughness.png-794e3575c5f95545293a63156977ccbd.ctex"]
+source_file="res://textures/Clock_standardSurface2_Roughness.png"
+dest_files=["res://.godot/imported/Clock_standardSurface2_Roughness.png-30cf0c64db1c37e18472a383365c7012.ctex"]
 
 [params]
 

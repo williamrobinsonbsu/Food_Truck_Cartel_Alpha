@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgur1wbnyq3pi"
-path.s3tc="res://.godot/imported/Light_standardSurface1_BaseColor.png-9a47dc9b602bece729ef1bc4a1d733b3.s3tc.ctex"
+path.s3tc="res://.godot/imported/Light_standardSurface1_BaseColor.png-15aaadcc7bcbaac22fea4effd94e68f5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Light_standardSurface1_BaseColor.png"
-dest_files=["res://.godot/imported/Light_standardSurface1_BaseColor.png-9a47dc9b602bece729ef1bc4a1d733b3.s3tc.ctex"]
+source_file="res://textures/Light_standardSurface1_BaseColor.png"
+dest_files=["res://.godot/imported/Light_standardSurface1_BaseColor.png-15aaadcc7bcbaac22fea4effd94e68f5.s3tc.ctex"]
 
 [params]
 

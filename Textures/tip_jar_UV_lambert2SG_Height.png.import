@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciuot1dm1hkhm"
-path="res://.godot/imported/tip_jar_UV_lambert2SG_Height.png-2e5703ffe96de6f63fd41f167b7a14bc.ctex"
+path="res://.godot/imported/tip_jar_UV_lambert2SG_Height.png-6e35e9d554eb3aa79807b5aed1841178.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/tip_jar_UV_lambert2SG_Height.png"
-dest_files=["res://.godot/imported/tip_jar_UV_lambert2SG_Height.png-2e5703ffe96de6f63fd41f167b7a14bc.ctex"]
+source_file="res://textures/tip_jar_UV_lambert2SG_Height.png"
+dest_files=["res://.godot/imported/tip_jar_UV_lambert2SG_Height.png-6e35e9d554eb3aa79807b5aed1841178.ctex"]
 
 [params]
 

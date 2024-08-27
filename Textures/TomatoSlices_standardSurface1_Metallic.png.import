@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvq2ubqalljm0"
-path.s3tc="res://.godot/imported/TomatoSlices_standardSurface1_Metallic.png-362f40ca0f27b0b8c10ba2e0e237e891.s3tc.ctex"
+path.s3tc="res://.godot/imported/TomatoSlices_standardSurface1_Metallic.png-947e22092d0b857c1bc5237cf33c6aac.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/TomatoSlices_standardSurface1_Metallic.png"
-dest_files=["res://.godot/imported/TomatoSlices_standardSurface1_Metallic.png-362f40ca0f27b0b8c10ba2e0e237e891.s3tc.ctex"]
+source_file="res://textures/TomatoSlices_standardSurface1_Metallic.png"
+dest_files=["res://.godot/imported/TomatoSlices_standardSurface1_Metallic.png-947e22092d0b857c1bc5237cf33c6aac.s3tc.ctex"]
 
 [params]
 

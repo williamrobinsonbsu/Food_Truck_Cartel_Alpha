@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://scg7jwptahlk"
-path.s3tc="res://.godot/imported/FrontCounter_standardSurface2_Roughness.png-b866bedc5a62fe8d17909b1642f00505.s3tc.ctex"
+path.s3tc="res://.godot/imported/FrontCounter_standardSurface2_Roughness.png-c75847ae0073c8b0c29675c96d7364e7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/FrontCounter_standardSurface2_Roughness.png"
-dest_files=["res://.godot/imported/FrontCounter_standardSurface2_Roughness.png-b866bedc5a62fe8d17909b1642f00505.s3tc.ctex"]
+source_file="res://textures/FrontCounter_standardSurface2_Roughness.png"
+dest_files=["res://.godot/imported/FrontCounter_standardSurface2_Roughness.png-c75847ae0073c8b0c29675c96d7364e7.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4etta15wgj42"
-path="res://.godot/imported/standardSurface1_Height.png-ad01bcc3ad6e0b6e31f1778f8d266afc.ctex"
+path="res://.godot/imported/standardSurface1_Height.png-2b0165544b00eb3bbc7f1d9582cbd021.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/standardSurface1_Height.png"
-dest_files=["res://.godot/imported/standardSurface1_Height.png-ad01bcc3ad6e0b6e31f1778f8d266afc.ctex"]
+source_file="res://textures/standardSurface1_Height.png"
+dest_files=["res://.godot/imported/standardSurface1_Height.png-2b0165544b00eb3bbc7f1d9582cbd021.ctex"]
 
 [params]
 
