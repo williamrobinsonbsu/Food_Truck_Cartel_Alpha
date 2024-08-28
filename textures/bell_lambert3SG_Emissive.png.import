@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i0c75mmwbl74"
-path="res://.godot/imported/bell_lambert3SG_Emissive.png-a520d86c19d72120e15f1de5691cc7fe.ctex"
+path="res://.godot/imported/bell_lambert3SG_Emissive.png-608fab7b6b4996aa3a6d3dc16757181e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/bell_lambert3SG_Emissive.png"
-dest_files=["res://.godot/imported/bell_lambert3SG_Emissive.png-a520d86c19d72120e15f1de5691cc7fe.ctex"]
+source_file="res://Textures/bell_lambert3SG_Emissive.png"
+dest_files=["res://.godot/imported/bell_lambert3SG_Emissive.png-608fab7b6b4996aa3a6d3dc16757181e.ctex"]
 
 [params]
 

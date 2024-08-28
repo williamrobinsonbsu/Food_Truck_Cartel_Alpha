@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbat2cx5h0r3c"
-path.s3tc="res://.godot/imported/friesalone_initialShadingGroup_Emissive.png-d85e8a1d55cb3232f055ade778056b4d.s3tc.ctex"
+path.s3tc="res://.godot/imported/friesalone_initialShadingGroup_Emissive.png-3b42ec37bc702b4eb325a7d43bc96c8c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/friesalone_initialShadingGroup_Emissive.png"
-dest_files=["res://.godot/imported/friesalone_initialShadingGroup_Emissive.png-d85e8a1d55cb3232f055ade778056b4d.s3tc.ctex"]
+source_file="res://Textures/friesalone_initialShadingGroup_Emissive.png"
+dest_files=["res://.godot/imported/friesalone_initialShadingGroup_Emissive.png-3b42ec37bc702b4eb325a7d43bc96c8c.s3tc.ctex"]
 
 [params]
 

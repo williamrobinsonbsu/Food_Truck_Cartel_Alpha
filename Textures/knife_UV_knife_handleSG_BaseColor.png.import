@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://viguh4ve6d6r"
-path.s3tc="res://.godot/imported/knife_UV_knife_handleSG_BaseColor.png-1e161d6e912373662a94200367860353.s3tc.ctex"
+path.s3tc="res://.godot/imported/knife_UV_knife_handleSG_BaseColor.png-f6867dfae7591766e5c273ce8b74edb1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/knife_UV_knife_handleSG_BaseColor.png"
-dest_files=["res://.godot/imported/knife_UV_knife_handleSG_BaseColor.png-1e161d6e912373662a94200367860353.s3tc.ctex"]
+source_file="res://Textures/knife_UV_knife_handleSG_BaseColor.png"
+dest_files=["res://.godot/imported/knife_UV_knife_handleSG_BaseColor.png-f6867dfae7591766e5c273ce8b74edb1.s3tc.ctex"]
 
 [params]
 

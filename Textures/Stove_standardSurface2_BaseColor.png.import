@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyu8g6wp12pvr"
-path.s3tc="res://.godot/imported/Stove_standardSurface2_BaseColor.png-b28f6be0da23c85d17366b70abc2240b.s3tc.ctex"
+path.s3tc="res://.godot/imported/Stove_standardSurface2_BaseColor.png-105902b2cd932f14957dec274da072d0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/Stove_standardSurface2_BaseColor.png"
-dest_files=["res://.godot/imported/Stove_standardSurface2_BaseColor.png-b28f6be0da23c85d17366b70abc2240b.s3tc.ctex"]
+source_file="res://Textures/Stove_standardSurface2_BaseColor.png"
+dest_files=["res://.godot/imported/Stove_standardSurface2_BaseColor.png-105902b2cd932f14957dec274da072d0.s3tc.ctex"]
 
 [params]
 
