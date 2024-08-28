@@ -14,42 +14,43 @@ signal new_customer
 
 func _ready():
 	print("I would like a burger!")
-	get_node("/root/World/Player/Control/current_order").text = "-=+Current Order+=-\nBurger with: "
+	get_node("/root/World/Root Scene/OrderLabel").text = "-=+Current Order+=-\n- Burger with: "
 	if randf() <= .50:
 		i_want_lettuce = true
 		counter += 1
 		print("With lettuce")
-		get_node("/root/World/Player/Control/current_order").text += "\nLettuce"
+		get_node("/root/World/Root Scene/OrderLabel").text += "\nLettuce"
 	if randf() <= .10:
 		i_want_tomato = true
 		counter += 1
 		print("With tomato")
-		get_node("/root/World/Player/Control/current_order").text += "\nTomato"
+		get_node("/root/World/Root Scene/OrderLabel").text += "\nTomato"
 	if randf() <= .75:
 		i_want_cheese = true
 		counter += 1
 		print("With cheese")
-		get_node("/root/World/Player/Control/current_order").text += "\nCheese"
+		get_node("/root/World/Root Scene/OrderLabel").text += "\nCheese"
 	if randf() <= .45:
 		i_want_onion = true
 		counter += 1
 		print("With onion")
-		get_node("/root/World/Player/Control/current_order").text += "\nOnion"
+		get_node("/root/World/Root Scene/OrderLabel").text += "\nOnion"
+	get_node("/root/World/Root Scene/OrderLabel").text += "\n"
 	if randf() <= .6:
 		i_want_fries = true
 		counter += 1
 		print("With an order of fries!")
-		get_node("/root/World/Player/Control/current_order").text += "\nAn order of fries"
+		get_node("/root/World/Root Scene/OrderLabel").text += "\n- Order of Fries"
 	if randf() <= .1:
 		i_want_chips = true
 		counter += 1
 		print("With chips!")
-		get_node("/root/World/Player/Control/current_order").text += "\nWith chips"
+		get_node("/root/World/Root Scene/OrderLabel").text += "\n- Bag of Chips"
 	if randf() <= .9:
 		i_want_soda = true
 		counter += 1
 		print("With soda!")
-		get_node("/root/World/Player/Control/current_order").text += "\nWith soda"
+		get_node("/root/World/Root Scene/OrderLabel").text += "\n- Bottle of Soda"
 	
 func _on_check_my_order():
 	var order_counter = 0
@@ -112,7 +113,7 @@ func _on_check_my_order():
 	
 	
 	if order_counter == counter:
-		get_node("/root/World/Player/Control/current_order").text = ""
+		#TODO add order update in environment
 		get_tree().call_group("map", "_spawn_new_customer_or_cop")
 		get_tree().call_group("police", "despawn")
 		$".".queue_free()

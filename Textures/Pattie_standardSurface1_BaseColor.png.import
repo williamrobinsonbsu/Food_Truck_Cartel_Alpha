@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://17gdxa4pusuf"
-path.s3tc="res://.godot/imported/Pattie_standardSurface1_BaseColor.png-7bafa9267980ae697a4a68b4aa84e591.s3tc.ctex"
+path.s3tc="res://.godot/imported/Pattie_standardSurface1_BaseColor.png-4a73461127f9f8ed1fdda664000c8ce5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/Pattie_standardSurface1_BaseColor.png"
-dest_files=["res://.godot/imported/Pattie_standardSurface1_BaseColor.png-7bafa9267980ae697a4a68b4aa84e591.s3tc.ctex"]
+source_file="res://Textures/Pattie_standardSurface1_BaseColor.png"
+dest_files=["res://.godot/imported/Pattie_standardSurface1_BaseColor.png-4a73461127f9f8ed1fdda664000c8ce5.s3tc.ctex"]
 
 [params]
 

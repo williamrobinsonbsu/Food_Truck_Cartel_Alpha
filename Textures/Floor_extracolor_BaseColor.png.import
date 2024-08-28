@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://df2vrgt2aoa3t"
-path.s3tc="res://.godot/imported/Floor_extracolor_BaseColor.png-f82a1112d96af0e927350d1d7df20279.s3tc.ctex"
+path.s3tc="res://.godot/imported/Floor_extracolor_BaseColor.png-38eb5ae1a5d8cf5471585838c9600509.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/Floor_extracolor_BaseColor.png"
-dest_files=["res://.godot/imported/Floor_extracolor_BaseColor.png-f82a1112d96af0e927350d1d7df20279.s3tc.ctex"]
+source_file="res://Textures/Floor_extracolor_BaseColor.png"
+dest_files=["res://.godot/imported/Floor_extracolor_BaseColor.png-38eb5ae1a5d8cf5471585838c9600509.s3tc.ctex"]
 
 [params]
 

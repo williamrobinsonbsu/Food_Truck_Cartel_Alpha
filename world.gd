@@ -66,7 +66,6 @@ func _customer_or_cop():
 func _on_new_customer():
 	print("Your score is: ")
 	print(score)
-	get_node("/root/World/Player/Control/score").text = "Score: $" + str(score)
 	get_node("/root/World/Root Scene/register/score").text = "$" + str(score)
 	var scene = preload("res://customer/customer.tscn")
 	var customer = scene.instantiate()

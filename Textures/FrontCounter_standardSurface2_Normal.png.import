@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxqx8vsimr4vf"
-path.s3tc="res://.godot/imported/FrontCounter_standardSurface2_Normal.png-0aa9a4c9c81ac3f04be7a9013040748c.s3tc.ctex"
+path.s3tc="res://.godot/imported/FrontCounter_standardSurface2_Normal.png-d7d276ea9321d1826722491c097f1245.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/FrontCounter_standardSurface2_Normal.png"
-dest_files=["res://.godot/imported/FrontCounter_standardSurface2_Normal.png-0aa9a4c9c81ac3f04be7a9013040748c.s3tc.ctex"]
+source_file="res://Textures/FrontCounter_standardSurface2_Normal.png"
+dest_files=["res://.godot/imported/FrontCounter_standardSurface2_Normal.png-d7d276ea9321d1826722491c097f1245.s3tc.ctex"]
 
 [params]
 

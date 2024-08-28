@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tixofggcvxmb"
-path.s3tc="res://.godot/imported/OnionSlice_standardSurface1_BaseColor.png-164ec0fcb6ccae952c76bd9fe267b991.s3tc.ctex"
+path.s3tc="res://.godot/imported/OnionSlice_standardSurface1_BaseColor.png-3e4a856a55b0b440cbed510795155291.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/OnionSlice_standardSurface1_BaseColor.png"
-dest_files=["res://.godot/imported/OnionSlice_standardSurface1_BaseColor.png-164ec0fcb6ccae952c76bd9fe267b991.s3tc.ctex"]
+source_file="res://Textures/OnionSlice_standardSurface1_BaseColor.png"
+dest_files=["res://.godot/imported/OnionSlice_standardSurface1_BaseColor.png-3e4a856a55b0b440cbed510795155291.s3tc.ctex"]
 
 [params]
 
