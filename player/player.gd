@@ -8,6 +8,10 @@ const SPEED = 5.0
 var picked_object
 var pull_power = 10
 
+
+var trueSpeed = SPEED
+var isCrouching = false
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -64,8 +68,22 @@ func _physics_process(_delta):
 		var a = picked_object.global_transform.origin
 		var b = hand.global_transform.origin
 		picked_object.set_linear_velocity((b-a) * pull_power)
-
+	if Input.is_action_just_pressed("crouch"):
+		if isCrouching == false:
+			movementStateChange("crouch")
+		elif isCrouching == true:
+			movementStateChange("uncrouch")
+			
 	move_and_slide()
+	
+func movementStateChange(changeType):
+	match changeType:
+		"crouch":
+			$AnimationPlayer.play("crouch_animation")
+			isCrouching = true
+		"uncrouch":
+			$AnimationPlayer.play_backwards("crouch_animation")
+			isCrouching = false
 
 func pick_object():
 	var collider = interaction.get_collider()
