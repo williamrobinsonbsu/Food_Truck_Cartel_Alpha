@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2iyjwnjavmb6"
-path.s3tc="res://.godot/imported/Onion_lambert2_Normal.png-bd84185e5f3c5fd2970859b25b10d210.s3tc.ctex"
+path.s3tc="res://.godot/imported/Onion_lambert2_Normal.png-bc8a5eb294193df00fb764a98aa363a7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Onion_lambert2_Normal.png"
-dest_files=["res://.godot/imported/Onion_lambert2_Normal.png-bd84185e5f3c5fd2970859b25b10d210.s3tc.ctex"]
+source_file="res://textures/Onion_lambert2_Normal.png"
+dest_files=["res://.godot/imported/Onion_lambert2_Normal.png-bc8a5eb294193df00fb764a98aa363a7.s3tc.ctex"]
 
 [params]
 

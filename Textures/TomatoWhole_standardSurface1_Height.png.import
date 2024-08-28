@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jnvimilvfjsg"
-path.s3tc="res://.godot/imported/TomatoWhole_standardSurface1_Height.png-3a17f479883fe4ccb301d845a2bc0a29.s3tc.ctex"
+path.s3tc="res://.godot/imported/TomatoWhole_standardSurface1_Height.png-caab7ca4b883533b93baae198b4d95ca.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/TomatoWhole_standardSurface1_Height.png"
-dest_files=["res://.godot/imported/TomatoWhole_standardSurface1_Height.png-3a17f479883fe4ccb301d845a2bc0a29.s3tc.ctex"]
+source_file="res://textures/TomatoWhole_standardSurface1_Height.png"
+dest_files=["res://.godot/imported/TomatoWhole_standardSurface1_Height.png-caab7ca4b883533b93baae198b4d95ca.s3tc.ctex"]
 
 [params]
 

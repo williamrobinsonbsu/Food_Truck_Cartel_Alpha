@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch56buuo40hjt"
-path.s3tc="res://.godot/imported/knife_UV_knife_bladeSG_Metallic.png-43868b3492e22d12cbe26a128a2c08e2.s3tc.ctex"
+path.s3tc="res://.godot/imported/knife_UV_knife_bladeSG_Metallic.png-51fff499f5b6cedd4811123ff2236031.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/knife_UV_knife_bladeSG_Metallic.png"
-dest_files=["res://.godot/imported/knife_UV_knife_bladeSG_Metallic.png-43868b3492e22d12cbe26a128a2c08e2.s3tc.ctex"]
+source_file="res://textures/knife_UV_knife_bladeSG_Metallic.png"
+dest_files=["res://.godot/imported/knife_UV_knife_bladeSG_Metallic.png-51fff499f5b6cedd4811123ff2236031.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdac0jyrrh2fc"
-path.s3tc="res://.godot/imported/chip_bag_UV_chip_bagSG_Metallic.png-946255470df72c817225d07c056e5299.s3tc.ctex"
+path.s3tc="res://.godot/imported/chip_bag_UV_chip_bagSG_Metallic.png-39567130336a6f5395c71c51e37a7fa1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/chip_bag_UV_chip_bagSG_Metallic.png"
-dest_files=["res://.godot/imported/chip_bag_UV_chip_bagSG_Metallic.png-946255470df72c817225d07c056e5299.s3tc.ctex"]
+source_file="res://textures/chip_bag_UV_chip_bagSG_Metallic.png"
+dest_files=["res://.godot/imported/chip_bag_UV_chip_bagSG_Metallic.png-39567130336a6f5395c71c51e37a7fa1.s3tc.ctex"]
 
 [params]
 

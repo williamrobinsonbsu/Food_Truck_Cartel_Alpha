@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpg5e0dd4eknp"
-path="res://.godot/imported/soda_bottle_UV_soda_bottleSG_Emissive.png-dfdbfc42b1ae80d5e546c216fc1cb3ba.ctex"
+path="res://.godot/imported/soda_bottle_UV_soda_bottleSG_Emissive.png-9c337ed10ac58e0f97bbd7364ae239d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/soda_bottle_UV_soda_bottleSG_Emissive.png"
-dest_files=["res://.godot/imported/soda_bottle_UV_soda_bottleSG_Emissive.png-dfdbfc42b1ae80d5e546c216fc1cb3ba.ctex"]
+source_file="res://textures/soda_bottle_UV_soda_bottleSG_Emissive.png"
+dest_files=["res://.godot/imported/soda_bottle_UV_soda_bottleSG_Emissive.png-9c337ed10ac58e0f97bbd7364ae239d4.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csjr01weucmlo"
-path.s3tc="res://.godot/imported/spatula_UV_spatula_headSG_Height.png-8111846cee96bbe86597ab1af0ed29a6.s3tc.ctex"
+path.s3tc="res://.godot/imported/spatula_UV_spatula_headSG_Height.png-f849ddc5a5b06eaebc688d7a480a0390.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/spatula_UV_spatula_headSG_Height.png"
-dest_files=["res://.godot/imported/spatula_UV_spatula_headSG_Height.png-8111846cee96bbe86597ab1af0ed29a6.s3tc.ctex"]
+source_file="res://textures/spatula_UV_spatula_headSG_Height.png"
+dest_files=["res://.godot/imported/spatula_UV_spatula_headSG_Height.png-f849ddc5a5b06eaebc688d7a480a0390.s3tc.ctex"]
 
 [params]
 

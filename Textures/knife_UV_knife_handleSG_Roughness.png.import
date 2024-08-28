@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co4jotc7ugjfx"
-path.s3tc="res://.godot/imported/knife_UV_knife_handleSG_Roughness.png-46dc2f96d57ada89ba1cdcb42a37ca4b.s3tc.ctex"
+path.s3tc="res://.godot/imported/knife_UV_knife_handleSG_Roughness.png-26e9d5f671913b2d75ec204a3855629b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/knife_UV_knife_handleSG_Roughness.png"
-dest_files=["res://.godot/imported/knife_UV_knife_handleSG_Roughness.png-46dc2f96d57ada89ba1cdcb42a37ca4b.s3tc.ctex"]
+source_file="res://textures/knife_UV_knife_handleSG_Roughness.png"
+dest_files=["res://.godot/imported/knife_UV_knife_handleSG_Roughness.png-26e9d5f671913b2d75ec204a3855629b.s3tc.ctex"]
 
 [params]
 
