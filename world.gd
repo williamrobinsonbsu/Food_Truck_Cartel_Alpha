@@ -11,6 +11,11 @@ var starting_counter = 0
 var laneProgressionCounter = 0
 var poRate = 0
 
+func _ready():
+	get_node("/root/World/Player/Control/CatchMeter").value = 0	
+	var value = get_node("/root/World/Player/Control/CatchMeter").value
+	print(value)
+
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
@@ -109,11 +114,12 @@ func _on_police():
 		elif i == 1:
 			police.position = $Close2.position
 		cop_catch_timer.start()
-		while j < 5:
+		while j < 50:
 			if can_police_catch_player == false:
 				break
-			get_node("/root/World/Player/Control/CatchMeter").text += "-"
-			await get_tree().create_timer(1.0).timeout
+			#get_node("/root/World/Player/Control/CatchMeter").text += "-"
+			get_node("/root/World/Player/Control/CatchMeter").value += 2
+			await get_tree().create_timer(.1).timeout
 			j += 1
 
 func policeRate():
@@ -134,5 +140,5 @@ func _on_police_catch_timer_timeout():
 		get_tree().reload_current_scene()
 		#get_tree().quit()
 	elif can_police_catch_player == false:
-		get_node("/root/World/Player/Control/CatchMeter").text = ""
+		get_node("/root/World/Player/Control/CatchMeter").value = 0	
 		get_tree().call_group("police", "despawn")

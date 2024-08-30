@@ -12,9 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://bw31yrrelid6e" path="res://FBXRaw/FryWBox.fbx" id="10_c2qvc"]
 [ext_resource type="Script" path="res://ingredients/reset_temp.gd" id="11_efj2f"]
 [ext_resource type="PackedScene" uid="uid://diq8qyoqanncm" path="res://FBXRaw/SodaBottle.fbx" id="12_xihcy"]
-[ext_resource type="Texture2D" uid="uid://bcfp818ppxmq0" path="res://textures/soda_bottle_UV_soda_bottleSG_BaseColor.png" id="13_3f51r"]
+[ext_resource type="Texture2D" uid="uid://bcfp818ppxmq0" path="res://Textures/soda_bottle_UV_soda_bottleSG_BaseColor.png" id="13_3f51r"]
 [ext_resource type="PackedScene" uid="uid://cvsdtf8fxcpi2" path="res://FBXRaw/ChipBag.fbx" id="14_qrakg"]
-[ext_resource type="Texture2D" uid="uid://bc25c4c42njj0" path="res://textures/chip_bag_UV_chip_bagSG_BaseColor.png" id="15_3jt35"]
+[ext_resource type="Texture2D" uid="uid://bc25c4c42njj0" path="res://Textures/chip_bag_UV_chip_bagSG_BaseColor.png" id="15_3jt35"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rf0rk"]
 height = 0.0410744

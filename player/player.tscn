@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cywlto4wavxy4"]
+[gd_scene load_steps=7 format=3 uid="uid://cywlto4wavxy4"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sh6bp"]
 
@@ -9,9 +9,6 @@ radius = 0.254774
 
 [sub_resource type="LabelSettings" id="LabelSettings_3dcpl"]
 font_size = 32
-
-[sub_resource type="LabelSettings" id="LabelSettings_ni5v1"]
-font_size = 250
 
 [sub_resource type="Animation" id="Animation_vjo18"]
 resource_name = "crouch_animation"
@@ -101,19 +98,15 @@ scale = Vector2(2.10843, 2.28571)
 layout_mode = 2
 text = "Game Over"
 
-[node name="CatchMeter" type="Label" parent="Control"]
+[node name="CatchMeter" type="ProgressBar" parent="Control"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -86.5
-offset_right = 233.5
-offset_bottom = 342.0
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 27.0
 grow_horizontal = 2
-scale = Vector2(0.560001, 0.32)
-label_settings = SubResource("LabelSettings_ni5v1")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
