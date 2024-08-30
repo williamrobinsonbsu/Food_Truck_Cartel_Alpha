@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cta5r1ganr1fo"
-path.s3tc="res://.godot/imported/Light_standardSurface1_Roughness.png-9abb7a49ab04929acc80f3746b1ab218.s3tc.ctex"
+path.s3tc="res://.godot/imported/Light_standardSurface1_Roughness.png-881b8c2301d17aaa095562d34f1f61b3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/Light_standardSurface1_Roughness.png"
-dest_files=["res://.godot/imported/Light_standardSurface1_Roughness.png-9abb7a49ab04929acc80f3746b1ab218.s3tc.ctex"]
+source_file="res://Textures/Light_standardSurface1_Roughness.png"
+dest_files=["res://.godot/imported/Light_standardSurface1_Roughness.png-881b8c2301d17aaa095562d34f1f61b3.s3tc.ctex"]
 
 [params]
 

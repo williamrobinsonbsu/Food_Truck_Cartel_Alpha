@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx5qok0yrnjhk"
-path="res://.godot/imported/potato_UV_potatoSG_Emissive.png-ba04fabad0439d581521ed061d273e15.ctex"
+path="res://.godot/imported/potato_UV_potatoSG_Emissive.png-6c9a4452ac7d2ed6975c34c9f7e1f0f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/potato_UV_potatoSG_Emissive.png"
-dest_files=["res://.godot/imported/potato_UV_potatoSG_Emissive.png-ba04fabad0439d581521ed061d273e15.ctex"]
+source_file="res://Textures/potato_UV_potatoSG_Emissive.png"
+dest_files=["res://.godot/imported/potato_UV_potatoSG_Emissive.png-6c9a4452ac7d2ed6975c34c9f7e1f0f4.ctex"]
 
 [params]
 

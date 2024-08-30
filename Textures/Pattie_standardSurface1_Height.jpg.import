@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kjw62r5kw03x"
-path.s3tc="res://.godot/imported/Pattie_standardSurface1_Height.jpg-5e3d036b925fe4eb3ec6883bdad5d850.s3tc.ctex"
+path.s3tc="res://.godot/imported/Pattie_standardSurface1_Height.jpg-1add9978a9f3a6e941d1cee3e2cc051d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/Pattie_standardSurface1_Height.jpg"
-dest_files=["res://.godot/imported/Pattie_standardSurface1_Height.jpg-5e3d036b925fe4eb3ec6883bdad5d850.s3tc.ctex"]
+source_file="res://Textures/Pattie_standardSurface1_Height.jpg"
+dest_files=["res://.godot/imported/Pattie_standardSurface1_Height.jpg-1add9978a9f3a6e941d1cee3e2cc051d.s3tc.ctex"]
 
 [params]
 

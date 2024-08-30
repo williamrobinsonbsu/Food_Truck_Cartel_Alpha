@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb1sst520vk8n"
-path.s3tc="res://.godot/imported/Plate_standardSurface1_Height.png-f13d62c051e76f83191db84fa5163771.s3tc.ctex"
+path.s3tc="res://.godot/imported/Plate_standardSurface1_Height.png-f68bdef5cc6292e6869b7180ee9faabe.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/Plate_standardSurface1_Height.png"
-dest_files=["res://.godot/imported/Plate_standardSurface1_Height.png-f13d62c051e76f83191db84fa5163771.s3tc.ctex"]
+source_file="res://Textures/Plate_standardSurface1_Height.png"
+dest_files=["res://.godot/imported/Plate_standardSurface1_Height.png-f68bdef5cc6292e6869b7180ee9faabe.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmbdroax28fq4"
-path="res://.godot/imported/spatula_UV_spatula_headSG_Emissive.png-7852bd6c77b23bff5610cc8f567b3444.ctex"
+path="res://.godot/imported/spatula_UV_spatula_headSG_Emissive.png-0c26e99b56af38f3617423371e2203ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/spatula_UV_spatula_headSG_Emissive.png"
-dest_files=["res://.godot/imported/spatula_UV_spatula_headSG_Emissive.png-7852bd6c77b23bff5610cc8f567b3444.ctex"]
+source_file="res://Textures/spatula_UV_spatula_headSG_Emissive.png"
+dest_files=["res://.godot/imported/spatula_UV_spatula_headSG_Emissive.png-0c26e99b56af38f3617423371e2203ae.ctex"]
 
 [params]
 
