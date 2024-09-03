@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u4mamo6t1ri1"
-path.s3tc="res://.godot/imported/Light_standardSurface1_Height.png-6db46db896e38f9d3672b7c54ce8b89e.s3tc.ctex"
+path.s3tc="res://.godot/imported/Light_standardSurface1_Height.png-5237c8c45eb9c8f1698ac5501e57e7a0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Light_standardSurface1_Height.png"
-dest_files=["res://.godot/imported/Light_standardSurface1_Height.png-6db46db896e38f9d3672b7c54ce8b89e.s3tc.ctex"]
+source_file="res://textures/Light_standardSurface1_Height.png"
+dest_files=["res://.godot/imported/Light_standardSurface1_Height.png-5237c8c45eb9c8f1698ac5501e57e7a0.s3tc.ctex"]
 
 [params]
 

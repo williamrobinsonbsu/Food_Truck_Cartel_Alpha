@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://08kmt3wjnudn"
-path.s3tc="res://.godot/imported/MiniFridge_standardSurface2_Normal.png-d37136e778e6872fc8be513274619bde.s3tc.ctex"
+path.s3tc="res://.godot/imported/MiniFridge_standardSurface2_Normal.png-b332df54a6c6d63401b8d3cd7cbdd0c0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/MiniFridge_standardSurface2_Normal.png"
-dest_files=["res://.godot/imported/MiniFridge_standardSurface2_Normal.png-d37136e778e6872fc8be513274619bde.s3tc.ctex"]
+source_file="res://textures/MiniFridge_standardSurface2_Normal.png"
+dest_files=["res://.godot/imported/MiniFridge_standardSurface2_Normal.png-b332df54a6c6d63401b8d3cd7cbdd0c0.s3tc.ctex"]
 
 [params]
 

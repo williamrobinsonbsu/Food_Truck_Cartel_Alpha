@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccmejuvmad50d"
-path.s3tc="res://.godot/imported/bell_lambert3SG_Roughness.png-36624cac55f8626453b0bbbaa96487e5.s3tc.ctex"
+path.s3tc="res://.godot/imported/bell_lambert3SG_Roughness.png-cab86ef8c4003cfa91b94e6d26a5f956.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/bell_lambert3SG_Roughness.png"
-dest_files=["res://.godot/imported/bell_lambert3SG_Roughness.png-36624cac55f8626453b0bbbaa96487e5.s3tc.ctex"]
+source_file="res://textures/bell_lambert3SG_Roughness.png"
+dest_files=["res://.godot/imported/bell_lambert3SG_Roughness.png-cab86ef8c4003cfa91b94e6d26a5f956.s3tc.ctex"]
 
 [params]
 

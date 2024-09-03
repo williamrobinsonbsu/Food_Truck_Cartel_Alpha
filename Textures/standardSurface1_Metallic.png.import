@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg4vott78xy4g"
-path="res://.godot/imported/standardSurface1_Metallic.png-e35dd3bb5e1d79bab699be051367ee99.ctex"
+path="res://.godot/imported/standardSurface1_Metallic.png-bd34e326bf98e75b0c3c705f4d0885d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/standardSurface1_Metallic.png"
-dest_files=["res://.godot/imported/standardSurface1_Metallic.png-e35dd3bb5e1d79bab699be051367ee99.ctex"]
+source_file="res://textures/standardSurface1_Metallic.png"
+dest_files=["res://.godot/imported/standardSurface1_Metallic.png-bd34e326bf98e75b0c3c705f4d0885d6.ctex"]
 
 [params]
 

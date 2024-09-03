@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csvueo54d5qf1"
-path.s3tc="res://.godot/imported/spatula_UV_spatula_headSG_Metallic.png-e062cba97e1849a505773b2d66c67e5d.s3tc.ctex"
+path.s3tc="res://.godot/imported/spatula_UV_spatula_headSG_Metallic.png-4ab350f906eff2c1aadda1f36db6c377.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/spatula_UV_spatula_headSG_Metallic.png"
-dest_files=["res://.godot/imported/spatula_UV_spatula_headSG_Metallic.png-e062cba97e1849a505773b2d66c67e5d.s3tc.ctex"]
+source_file="res://textures/spatula_UV_spatula_headSG_Metallic.png"
+dest_files=["res://.godot/imported/spatula_UV_spatula_headSG_Metallic.png-4ab350f906eff2c1aadda1f36db6c377.s3tc.ctex"]
 
 [params]
 
