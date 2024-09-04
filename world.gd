@@ -8,7 +8,7 @@ var can_police_catch_player = false
 @export var score = 0
 @export var starting_counter = 0
 
-var laneProgressionCounter = 0
+@export var laneProgressionCounter = 0
 var poRate = 0
 
 func _ready():
@@ -110,8 +110,6 @@ func _on_police():
 			police.position = $Close2.position
 		cop_catch_timer.start()
 		while j < 10:
-			if can_police_catch_player == false:
-				break
 			#get_node("/root/World/Player/Control/CatchMeter").text += "-"
 			get_node("/root/World/Player/Control/CatchMeter").value += 10
 			await get_tree().create_timer(.5).timeout
@@ -128,12 +126,6 @@ func policeRate():
 func _on_police_catch_timer_timeout():
 	if can_police_catch_player == true:
 		get_tree().change_scene_to_file("res://menus/caught_scene.tscn")
-		#print('\nYou got caught')
-		#print("Your score is: ")
-		#print(score)
-		#$"../Player/Control/GameOver".show()
-		#await get_tree().create_timer(5.0).timeout
-		#get_tree().reload_current_scene()
 		
 	elif can_police_catch_player == false:
 		get_node("/root/World/Player/Control/CatchMeter").value = 0	
