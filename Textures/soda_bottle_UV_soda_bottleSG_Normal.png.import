@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dts44o204fst7"
-path.s3tc="res://.godot/imported/soda_bottle_UV_soda_bottleSG_Normal.png-c83f1c6166ea8947b8b255d296a7478d.s3tc.ctex"
+path.s3tc="res://.godot/imported/soda_bottle_UV_soda_bottleSG_Normal.png-0f74fc4290a14413a147ac05be880184.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/soda_bottle_UV_soda_bottleSG_Normal.png"
-dest_files=["res://.godot/imported/soda_bottle_UV_soda_bottleSG_Normal.png-c83f1c6166ea8947b8b255d296a7478d.s3tc.ctex"]
+source_file="res://textures/soda_bottle_UV_soda_bottleSG_Normal.png"
+dest_files=["res://.godot/imported/soda_bottle_UV_soda_bottleSG_Normal.png-0f74fc4290a14413a147ac05be880184.s3tc.ctex"]
 
 [params]
 

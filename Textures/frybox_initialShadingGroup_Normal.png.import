@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3qbyienynh0g"
-path="res://.godot/imported/frybox_initialShadingGroup_Normal.png-ce513366faf90434a8e992ddeeb5b57c.ctex"
+path="res://.godot/imported/frybox_initialShadingGroup_Normal.png-63b334179bd28398ed5052e4b3fc1187.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/frybox_initialShadingGroup_Normal.png"
-dest_files=["res://.godot/imported/frybox_initialShadingGroup_Normal.png-ce513366faf90434a8e992ddeeb5b57c.ctex"]
+source_file="res://textures/frybox_initialShadingGroup_Normal.png"
+dest_files=["res://.godot/imported/frybox_initialShadingGroup_Normal.png-63b334179bd28398ed5052e4b3fc1187.ctex"]
 
 [params]
 

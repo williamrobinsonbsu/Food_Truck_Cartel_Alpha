@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kljog2my456u"
-path.s3tc="res://.godot/imported/Corkboard_standardSurface1_Metallic.png-5ff6d8458e37d226328913659d805dac.s3tc.ctex"
+path.s3tc="res://.godot/imported/Corkboard_standardSurface1_Metallic.png-448153721f30bb61bafb552bf4af5871.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Corkboard_standardSurface1_Metallic.png"
-dest_files=["res://.godot/imported/Corkboard_standardSurface1_Metallic.png-5ff6d8458e37d226328913659d805dac.s3tc.ctex"]
+source_file="res://textures/Corkboard_standardSurface1_Metallic.png"
+dest_files=["res://.godot/imported/Corkboard_standardSurface1_Metallic.png-448153721f30bb61bafb552bf4af5871.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b815c7sh236be"
-path.s3tc="res://.godot/imported/Walls_extracolor_Normal.png-fadb9c224c3bf8694d592d01d4b2fd64.s3tc.ctex"
+path.s3tc="res://.godot/imported/Walls_extracolor_Normal.png-0aced6a81ead280f376b9615cf1f9bce.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Walls_extracolor_Normal.png"
-dest_files=["res://.godot/imported/Walls_extracolor_Normal.png-fadb9c224c3bf8694d592d01d4b2fd64.s3tc.ctex"]
+source_file="res://textures/Walls_extracolor_Normal.png"
+dest_files=["res://.godot/imported/Walls_extracolor_Normal.png-0aced6a81ead280f376b9615cf1f9bce.s3tc.ctex"]
 
 [params]
 

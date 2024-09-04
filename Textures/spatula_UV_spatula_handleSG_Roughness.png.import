@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddawp6u7vg88c"
-path.s3tc="res://.godot/imported/spatula_UV_spatula_handleSG_Roughness.png-d77e4f76bc67abc272ca330b17e51b40.s3tc.ctex"
+path.s3tc="res://.godot/imported/spatula_UV_spatula_handleSG_Roughness.png-b1985665efafe9b053c5d14d33788437.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/spatula_UV_spatula_handleSG_Roughness.png"
-dest_files=["res://.godot/imported/spatula_UV_spatula_handleSG_Roughness.png-d77e4f76bc67abc272ca330b17e51b40.s3tc.ctex"]
+source_file="res://textures/spatula_UV_spatula_handleSG_Roughness.png"
+dest_files=["res://.godot/imported/spatula_UV_spatula_handleSG_Roughness.png-b1985665efafe9b053c5d14d33788437.s3tc.ctex"]
 
 [params]
 

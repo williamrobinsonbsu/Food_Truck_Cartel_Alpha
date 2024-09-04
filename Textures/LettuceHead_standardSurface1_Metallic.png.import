@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf274lyib0d5"
-path.s3tc="res://.godot/imported/LettuceHead_standardSurface1_Metallic.png-8fc476d873e2524a7df6f40a2ab4264e.s3tc.ctex"
+path.s3tc="res://.godot/imported/LettuceHead_standardSurface1_Metallic.png-c17510bf645b1971d160ee50db8101cf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/LettuceHead_standardSurface1_Metallic.png"
-dest_files=["res://.godot/imported/LettuceHead_standardSurface1_Metallic.png-8fc476d873e2524a7df6f40a2ab4264e.s3tc.ctex"]
+source_file="res://textures/LettuceHead_standardSurface1_Metallic.png"
+dest_files=["res://.godot/imported/LettuceHead_standardSurface1_Metallic.png-c17510bf645b1971d160ee50db8101cf.s3tc.ctex"]
 
 [params]
 
