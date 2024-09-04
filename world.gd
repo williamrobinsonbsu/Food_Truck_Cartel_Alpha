@@ -109,12 +109,12 @@ func _on_police():
 		elif i == 1:
 			police.position = $Close2.position
 		cop_catch_timer.start()
-		while j < 50:
+		while j < 10:
 			if can_police_catch_player == false:
 				break
 			#get_node("/root/World/Player/Control/CatchMeter").text += "-"
-			get_node("/root/World/Player/Control/CatchMeter").value += 2
-			await get_tree().create_timer(.1).timeout
+			get_node("/root/World/Player/Control/CatchMeter").value += 10
+			await get_tree().create_timer(.5).timeout
 			j += 1
 
 func policeRate():

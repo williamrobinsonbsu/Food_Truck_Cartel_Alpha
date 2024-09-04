@@ -1926,7 +1926,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.666629, 0, 2.36535)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665255, 0, 2.36535)
 
 [node name="cop_catch_timer" type="Timer" parent="Root Scene"]
-wait_time = 5.0
+wait_time = 5.5
 one_shot = true
 
 [node name="OrderLabel" type="Label3D" parent="Root Scene"]
