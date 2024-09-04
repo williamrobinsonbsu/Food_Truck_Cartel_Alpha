@@ -132,13 +132,14 @@ func policeRate():
 		
 func _on_police_catch_timer_timeout():
 	if can_police_catch_player == true:
-		print('\nYou got caught')
-		print("Your score is: ")
-		print(score)
-		$"../Player/Control/GameOver".show()
-		await get_tree().create_timer(5.0).timeout
-		get_tree().reload_current_scene()
-		#get_tree().quit()
+		get_tree().change_scene_to_file("res://menus/caught_scene.tscn")
+		#print('\nYou got caught')
+		#print("Your score is: ")
+		#print(score)
+		#$"../Player/Control/GameOver".show()
+		#await get_tree().create_timer(5.0).timeout
+		#get_tree().reload_current_scene()
+		
 	elif can_police_catch_player == false:
 		get_node("/root/World/Player/Control/CatchMeter").value = 0	
 		get_tree().call_group("police", "despawn")
