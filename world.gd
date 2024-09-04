@@ -5,8 +5,8 @@ extends Node3D
 
 var shutter_door_close = false
 var can_police_catch_player = false
-var score = 0
-var starting_counter = 0
+@export var score = 0
+@export var starting_counter = 0
 
 var laneProgressionCounter = 0
 var poRate = 0
@@ -56,10 +56,6 @@ func _on_customer_or_police_spawn_timer_timeout():
 	_customer_or_cop()
 
 func _customer_or_cop():
-	if starting_counter == 0:
-		score += 0
-	else:
-		score += 10
 	_on_new_customer()
 	starting_counter += 1
 	poRate = policeRate()
@@ -69,9 +65,8 @@ func _customer_or_cop():
 	
 
 func _on_new_customer():
-	print("Your score is: ")
-	print(score)
-	get_node("/root/World/Root Scene/register/score").text = "$" + str(score)
+	#print("Your score is: ")
+	#print(score)
 	var scene = preload("res://customer/customer.tscn")
 	var customer = scene.instantiate()
 	add_child(customer)

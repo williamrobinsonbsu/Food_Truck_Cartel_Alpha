@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0lbwnn62gu86"
-path="res://.godot/imported/FryerBasket_standardSurface1_Normal.png-dcad23f76a3741e02a287ae74144c0b9.ctex"
+path="res://.godot/imported/FryerBasket_standardSurface1_Normal.png-cedc9cdafe3f6781c96a597ea524f34c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/FryerBasket_standardSurface1_Normal.png"
-dest_files=["res://.godot/imported/FryerBasket_standardSurface1_Normal.png-dcad23f76a3741e02a287ae74144c0b9.ctex"]
+source_file="res://Textures/FryerBasket_standardSurface1_Normal.png"
+dest_files=["res://.godot/imported/FryerBasket_standardSurface1_Normal.png-cedc9cdafe3f6781c96a597ea524f34c.ctex"]
 
 [params]
 

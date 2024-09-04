@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwv6y6vle6yss"
-path.s3tc="res://.godot/imported/BreadBottom_standardSurface1_Normal.png-b486b5fcdfd28bd0a37159364d0d5def.s3tc.ctex"
+path.s3tc="res://.godot/imported/BreadBottom_standardSurface1_Normal.png-d601fbc14440b5f3d6ba5689bde612ed.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/BreadBottom_standardSurface1_Normal.png"
-dest_files=["res://.godot/imported/BreadBottom_standardSurface1_Normal.png-b486b5fcdfd28bd0a37159364d0d5def.s3tc.ctex"]
+source_file="res://Textures/BreadBottom_standardSurface1_Normal.png"
+dest_files=["res://.godot/imported/BreadBottom_standardSurface1_Normal.png-d601fbc14440b5f3d6ba5689bde612ed.s3tc.ctex"]
 
 [params]
 

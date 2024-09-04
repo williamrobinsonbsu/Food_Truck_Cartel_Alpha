@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw8prdejri6d2"
-path="res://.godot/imported/OutsideCounter_standardSurface2_Metallic.png-f0c507c95dead89086333a97d7c00d4a.ctex"
+path="res://.godot/imported/OutsideCounter_standardSurface2_Metallic.png-0e6290809a30d09da783ddfba9ca1e71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/OutsideCounter_standardSurface2_Metallic.png"
-dest_files=["res://.godot/imported/OutsideCounter_standardSurface2_Metallic.png-f0c507c95dead89086333a97d7c00d4a.ctex"]
+source_file="res://Textures/OutsideCounter_standardSurface2_Metallic.png"
+dest_files=["res://.godot/imported/OutsideCounter_standardSurface2_Metallic.png-0e6290809a30d09da783ddfba9ca1e71.ctex"]
 
 [params]
 

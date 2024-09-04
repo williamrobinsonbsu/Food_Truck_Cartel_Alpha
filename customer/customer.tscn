@@ -1,13 +1,27 @@
-[gd_scene load_steps=9 format=3 uid="uid://cuqr3ppkwg1gj"]
+[gd_scene load_steps=15 format=3 uid="uid://cuqr3ppkwg1gj"]
 
 [ext_resource type="Script" path="res://customer/customer.gd" id="1_u5n8i"]
 [ext_resource type="Texture2D" uid="uid://x1s1d2uf70m5" path="res://FBXRaw/blondie_NPC.png" id="2_0t37t"]
+[ext_resource type="Texture2D" uid="uid://bdvlm858rlndj" path="res://FBXRaw/surfer_NPC_default.png" id="3_k7heg"]
+[ext_resource type="Texture2D" uid="uid://dsseh5b38qw4q" path="res://FBXRaw/lifeguard.png" id="3_mb1fg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o55be"]
 transparency = 1
 albedo_texture = ExtResource("2_0t37t")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_usg1x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e4bii"]
+transparency = 1
+albedo_texture = ExtResource("3_mb1fg")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jqdha"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_anuer"]
+transparency = 1
+albedo_texture = ExtResource("3_k7heg")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yjiv7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bwu8x"]
 
@@ -51,10 +65,23 @@ _data = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.741381, 0)
 script = ExtResource("1_u5n8i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.530792, -1.34879e-07, 2.42989e-15, 0, -6.74393e-08, -0.63587, 4.64033e-08, -1.54283, 2.77947e-08, 0, 0, 0)
+[node name="NPCBlondie" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.530792, -1.34879e-07, 2.42989e-15, 0, -6.74393e-08, -0.63587, 4.64033e-08, -1.54283, 2.77947e-08, 0, 0.215044, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_o55be")
 mesh = SubResource("PlaneMesh_usg1x")
+
+[node name="NPCLifeguard" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.419205, 1.34893e-07, -2.25004e-15, 0, -6.74467e-08, -0.588804, -3.66481e-08, -1.543, 2.57374e-08, 0, 0.226208, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_e4bii")
+mesh = SubResource("PlaneMesh_jqdha")
+
+[node name="NPCSurfer" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.531, 2.32987e-07, -4.19775e-15, 0, -6.74467e-08, -0.636, -8.01788e-08, -1.543, 2.78004e-08, 0, 0.20402, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_anuer")
+mesh = SubResource("PlaneMesh_yjiv7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_bwu8x")
@@ -63,3 +90,10 @@ shape = SubResource("BoxShape3D_bwu8x")
 libraries = {
 "": SubResource("AnimationLibrary_dtejj")
 }
+
+[node name="AssemblyTimer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="AssemblyTimer" to="." method="_on_assembly_timer_timeout"]

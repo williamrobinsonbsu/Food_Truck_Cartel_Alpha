@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlfxxrpl8dfo5"
-path.s3tc="res://.godot/imported/Ceiling_extracolor_BaseColor.png-718452426da81754b0bde226ffed1785.s3tc.ctex"
+path.s3tc="res://.godot/imported/Ceiling_extracolor_BaseColor.png-dfcf27e0d6d79e7dea70c96e3259fbcd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/Ceiling_extracolor_BaseColor.png"
-dest_files=["res://.godot/imported/Ceiling_extracolor_BaseColor.png-718452426da81754b0bde226ffed1785.s3tc.ctex"]
+source_file="res://Textures/Ceiling_extracolor_BaseColor.png"
+dest_files=["res://.godot/imported/Ceiling_extracolor_BaseColor.png-dfcf27e0d6d79e7dea70c96e3259fbcd.s3tc.ctex"]
 
 [params]
 

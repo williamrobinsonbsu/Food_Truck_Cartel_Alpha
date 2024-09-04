@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2t6jb2argx7j"
-path="res://.godot/imported/tip_jar_UV_lambert2SG_Metallic.png-674f4cfd09ce9296a3ab07e0cd3ff176.ctex"
+path="res://.godot/imported/tip_jar_UV_lambert2SG_Metallic.png-1bd7de411bd62f30854502b4f37323b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/tip_jar_UV_lambert2SG_Metallic.png"
-dest_files=["res://.godot/imported/tip_jar_UV_lambert2SG_Metallic.png-674f4cfd09ce9296a3ab07e0cd3ff176.ctex"]
+source_file="res://Textures/tip_jar_UV_lambert2SG_Metallic.png"
+dest_files=["res://.godot/imported/tip_jar_UV_lambert2SG_Metallic.png-1bd7de411bd62f30854502b4f37323b1.ctex"]
 
 [params]
 

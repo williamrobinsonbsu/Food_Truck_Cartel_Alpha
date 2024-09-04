@@ -9,10 +9,21 @@ var i_want_chips = false
 var i_want_soda = false
 
 var counter = 0
-
+@onready var world = get_node("/root/World/Root Scene")
 signal new_customer
 
 func _ready():
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var npc = rng.randi_range(0, 2)
+	print(npc)
+	if npc == 0:
+		$NPCBlondie.show()
+	elif npc == 1:
+		$NPCLifeguard.show()
+	elif npc == 2: 
+		$NPCSurfer.show()
+	
 	print("I would like a burger!")
 	get_node("/root/World/Root Scene/OrderLabel").text = "-=+Current Order+=-\n- Burger with: "
 	if randf() <= .50:
@@ -112,9 +123,27 @@ func _on_check_my_order():
 	
 	
 	
-	if order_counter == counter:
-		#TODO add order update in environment
-		get_tree().call_group("map", "_spawn_new_customer_or_cop")
-		get_tree().call_group("police", "despawn")
-		$".".queue_free()
+	if world.starting_counter == 0:
+		world.score += 0
+	elif order_counter == counter:
+		world.score += 10 + counter
+	elif order_counter == 0:
+		world.score += 1
+	else:
+		world.score += 5
 		
+	get_node("/root/World/Root Scene/register/score").text = "$" + str(world.score)
+	
+		
+	
+	get_tree().call_group("map", "_spawn_new_customer_or_cop")
+	get_tree().call_group("police", "despawn")
+	$".".queue_free()
+		
+
+
+func _on_assembly_timer_timeout():
+	world.score += 0
+	get_tree().call_group("map", "_spawn_new_customer_or_cop")
+	get_tree().call_group("police", "despawn")
+	$".".queue_free()
