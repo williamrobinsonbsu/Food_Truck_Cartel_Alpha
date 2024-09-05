@@ -154,7 +154,7 @@ func _on_assembly_timer_timeout():
 	get_tree().call_group("police", "despawn")
 	$".".queue_free()
 
-func _get_npc(npc):
+func _get_npc(npc):   #update for every new npc
 	if npc == 0:
 		$NPCBlondie.show()
 		return "NPCBlondie/NPCBlondie"
