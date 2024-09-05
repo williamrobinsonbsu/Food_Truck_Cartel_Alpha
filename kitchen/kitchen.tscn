@@ -1871,7 +1871,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362507, 0.357653, -0.03593
 
 [node name="customer" type="Marker3D" parent="Root Scene"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.719483, 0.253959, 2.33154)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.254, 2.332)
 
 [node name="front1" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02869, 0, 1.57523)

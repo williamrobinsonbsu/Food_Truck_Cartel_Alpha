@@ -7,6 +7,7 @@ var i_want_tomato = false
 var i_want_fries = false
 var i_want_chips = false
 var i_want_soda = false
+var npc_name
 
 var counter = 0
 @onready var world = get_node("/root/World/Root Scene")
@@ -17,12 +18,8 @@ func _ready():
 	rng.randomize()
 	var npc = rng.randi_range(0, 2)
 	print(npc)
-	if npc == 0:
-		$NPCBlondie.show()
-	elif npc == 1:
-		$NPCLifeguard.show()
-	elif npc == 2: 
-		$NPCSurfer.show()
+	npc_name = _get_npc(npc)
+	
 	
 	print("I would like a burger!")
 	get_node("/root/World/Root Scene/OrderLabel").text = "-=+Current Order+=-\n- Burger with: "
@@ -127,13 +124,21 @@ func _on_check_my_order():
 		world.score += 0
 	elif order_counter == counter:
 		world.score += 10 + counter
+		npc_name += "Happy"
+		get_node(npc_name).show()
 	elif order_counter == 0:
 		world.score += 1
+		npc_name += "Angry"
+		get_node(npc_name).show()
 	else:
 		world.score += 5
+		npc_name += "Angry"
+		get_node(npc_name).show()
 		
 	get_node("/root/World/Root Scene/register/score").text = "$" + str(world.score)
-	
+	get_node("/root/World/order_plate/resetTemp").set_collision_layer_value(1, false)
+	await get_tree().create_timer(3).timeout
+	get_node("/root/World/order_plate/resetTemp").set_collision_layer_value(1, true)
 		
 	
 	get_tree().call_group("map", "_spawn_new_customer_or_cop")
@@ -148,3 +153,14 @@ func _on_assembly_timer_timeout():
 	get_tree().call_group("map", "_spawn_new_customer_or_cop")
 	get_tree().call_group("police", "despawn")
 	$".".queue_free()
+
+func _get_npc(npc):
+	if npc == 0:
+		$NPCBlondie.show()
+		return "NPCBlondie/NPCBlondie"
+	elif npc == 1:
+		$NPCLifeguard.show()
+		return "NPCLifeguard/NPCLifeguard"
+	elif npc == 2: 
+		$NPCSurfer.show()
+		return "NPCSurfer/NPCSurfer"

@@ -1,9 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://cuqr3ppkwg1gj"]
+[gd_scene load_steps=27 format=3 uid="uid://cuqr3ppkwg1gj"]
 
 [ext_resource type="Script" path="res://customer/customer.gd" id="1_u5n8i"]
 [ext_resource type="Texture2D" uid="uid://x1s1d2uf70m5" path="res://FBXRaw/blondie_NPC.png" id="2_0t37t"]
 [ext_resource type="Texture2D" uid="uid://bdvlm858rlndj" path="res://FBXRaw/surfer_NPC_default.png" id="3_k7heg"]
 [ext_resource type="Texture2D" uid="uid://dsseh5b38qw4q" path="res://FBXRaw/lifeguard.png" id="3_mb1fg"]
+[ext_resource type="Texture2D" uid="uid://op66468s8eni" path="res://Textures/npcs/lifeguard_happy.png" id="4_qgdhx"]
+[ext_resource type="Texture2D" uid="uid://bbwnqutv6gi0f" path="res://Textures/npcs/lifeguard_mad.png" id="5_aibr6"]
+[ext_resource type="Texture2D" uid="uid://dy8ltvy3fi88j" path="res://Textures/npcs/surfer_NPC_pleased.png" id="7_8nlnr"]
+[ext_resource type="Texture2D" uid="uid://dj6nha0ymff3b" path="res://Textures/npcs/surfer_NPC_upset.png" id="8_pvw0i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o55be"]
 transparency = 1
@@ -17,11 +21,35 @@ albedo_texture = ExtResource("3_mb1fg")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jqdha"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66i8x"]
+transparency = 1
+albedo_texture = ExtResource("4_qgdhx")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ujy6o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2vik"]
+transparency = 1
+albedo_texture = ExtResource("5_aibr6")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_afm51"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_anuer"]
 transparency = 1
 albedo_texture = ExtResource("3_k7heg")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_yjiv7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nym6c"]
+transparency = 1
+albedo_texture = ExtResource("7_8nlnr")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ww2lr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wbb1d"]
+transparency = 1
+albedo_texture = ExtResource("8_pvw0i")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cebuo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bwu8x"]
 
@@ -65,23 +93,70 @@ _data = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.741381, 0)
 script = ExtResource("1_u5n8i")
 
-[node name="NPCBlondie" type="MeshInstance3D" parent="."]
+[node name="NPCBlondie" type="Node3D" parent="."]
+visible = false
+
+[node name="NPCBlondieNorm" type="MeshInstance3D" parent="NPCBlondie"]
+transform = Transform3D(-0.530792, -1.34879e-07, 2.42989e-15, 0, -6.74393e-08, -0.63587, 4.64033e-08, -1.54283, 2.77947e-08, 0, 0.215044, 0)
+material_override = SubResource("StandardMaterial3D_o55be")
+mesh = SubResource("PlaneMesh_usg1x")
+skeleton = NodePath("../..")
+
+[node name="NPCBlondieHappy" type="MeshInstance3D" parent="NPCBlondie"]
 transform = Transform3D(-0.530792, -1.34879e-07, 2.42989e-15, 0, -6.74393e-08, -0.63587, 4.64033e-08, -1.54283, 2.77947e-08, 0, 0.215044, 0)
 visible = false
 material_override = SubResource("StandardMaterial3D_o55be")
 mesh = SubResource("PlaneMesh_usg1x")
+skeleton = NodePath("../..")
 
-[node name="NPCLifeguard" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.419205, 1.34893e-07, -2.25004e-15, 0, -6.74467e-08, -0.588804, -3.66481e-08, -1.543, 2.57374e-08, 0, 0.226208, 0)
+[node name="NPCBlondieAngry" type="MeshInstance3D" parent="NPCBlondie"]
+transform = Transform3D(-0.530792, -1.34879e-07, 2.42989e-15, 0, -6.74393e-08, -0.63587, 4.64033e-08, -1.54283, 2.77947e-08, 0, 0.215044, 0)
 visible = false
+material_override = SubResource("StandardMaterial3D_o55be")
+mesh = SubResource("PlaneMesh_usg1x")
+skeleton = NodePath("../..")
+
+[node name="NPCLifeguard" type="Node3D" parent="."]
+visible = false
+
+[node name="NPCLifeguardNorm" type="MeshInstance3D" parent="NPCLifeguard"]
+transform = Transform3D(-0.419205, 1.34893e-07, -2.25004e-15, 0, -6.74467e-08, -0.588804, -3.66481e-08, -1.543, 2.57374e-08, 0, 0.226208, 0)
 material_override = SubResource("StandardMaterial3D_e4bii")
 mesh = SubResource("PlaneMesh_jqdha")
+skeleton = NodePath("../..")
 
-[node name="NPCSurfer" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.531, 2.32987e-07, -4.19775e-15, 0, -6.74467e-08, -0.636, -8.01788e-08, -1.543, 2.78004e-08, 0, 0.20402, 0)
+[node name="NPCLifeguardHappy" type="MeshInstance3D" parent="NPCLifeguard"]
+transform = Transform3D(-0.419, 1.34893e-07, -2.25079e-15, 0, -6.74467e-08, -0.589, -3.66301e-08, -1.543, 2.5746e-08, 0, 0.226, -0.0194949)
 visible = false
+material_override = SubResource("StandardMaterial3D_66i8x")
+mesh = SubResource("PlaneMesh_ujy6o")
+
+[node name="NPCLifeguardAngry" type="MeshInstance3D" parent="NPCLifeguard"]
+transform = Transform3D(-0.419, 1.34893e-07, -2.25079e-15, 0, -6.74467e-08, -0.589, -3.66301e-08, -1.543, 2.5746e-08, 0, 0.226, -0.0104256)
+visible = false
+material_override = SubResource("StandardMaterial3D_d2vik")
+mesh = SubResource("PlaneMesh_afm51")
+
+[node name="NPCSurfer" type="Node3D" parent="."]
+visible = false
+
+[node name="NPCSurferNorm" type="MeshInstance3D" parent="NPCSurfer"]
+transform = Transform3D(-0.531, 2.32987e-07, -4.19775e-15, 0, -6.74467e-08, -0.636, -8.01788e-08, -1.543, 2.78004e-08, 0, 0.20402, 0)
 material_override = SubResource("StandardMaterial3D_anuer")
 mesh = SubResource("PlaneMesh_yjiv7")
+skeleton = NodePath("../..")
+
+[node name="NPCSurferHappy" type="MeshInstance3D" parent="NPCSurfer"]
+transform = Transform3D(-0.531, 1.34893e-07, -2.43039e-15, 0, -6.74467e-08, -0.636, -4.64215e-08, -1.543, 2.78004e-08, 0, 0.204, -0.00814712)
+visible = false
+material_override = SubResource("StandardMaterial3D_nym6c")
+mesh = SubResource("PlaneMesh_ww2lr")
+
+[node name="NPCSurferAngry" type="MeshInstance3D" parent="NPCSurfer"]
+transform = Transform3D(-0.531, 1.34893e-07, -2.43039e-15, 0, -6.74467e-08, -0.636, -4.64215e-08, -1.543, 2.78004e-08, 0, 0.204, -0.00959492)
+visible = false
+material_override = SubResource("StandardMaterial3D_wbb1d")
+mesh = SubResource("PlaneMesh_cebuo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_bwu8x")
