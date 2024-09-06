@@ -1824,13 +1824,16 @@ material_override = SubResource("StandardMaterial3D_1e6qw")
 mesh = ExtResource("196_ywmwj")
 
 [node name="Grill" parent="." instance=ExtResource("192_qqxpb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.24697, 0.675363, 1.02967)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2743, 0.675363, 1.02967)
 
 [node name="Grill2" parent="." instance=ExtResource("192_qqxpb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23583, 0.680532, 2.03402)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26316, 0.680532, 2.03402)
 
 [node name="Grill3" parent="." instance=ExtResource("192_qqxpb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23279, 0.681824, 3.03748)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26012, 0.681824, 3.03748)
+
+[node name="Grill4" parent="." instance=ExtResource("192_qqxpb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26012, 0.681824, 4.03106)
 
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
 [connection signal="timeout" from="Root Scene/customer_or_police_spawn_timer" to="Root Scene" method="_on_customer_or_police_spawn_timer_timeout"]
