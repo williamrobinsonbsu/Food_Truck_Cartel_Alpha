@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://42jgpbvyneu0"]
+
+[ext_resource type="Script" path="res://audio/options/options.gd" id="1_6upfk"]
+[ext_resource type="PackedScene" uid="uid://sbv71811bwel" path="res://audio/options/volume_slider.tscn" id="2_7bccu"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6upfk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="music setting" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Music slider
+"
+
+[node name="music_Slider" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_7bccu")]
+layout_mode = 2
+bus_name = "Music"
+
+[node name="sound_effect" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sound Effect
+"
+
+[node name="volume_Slider" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_7bccu")]
+layout_mode = 2
+bus_name = "Sound"
+
+[node name="mute_toggle" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Mute Toggle
+"
+
+[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="winder" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Screen Setting"
+
+[node name="Resolutions" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "full_screen(default)"
+popup/item_0/id = 0
+popup/item_1/text = "windowed"
+popup/item_1/id = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Window Size (only works for window view)"
+
+[node name="WindowSize" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "1152X648"
+popup/item_0/id = 0
+popup/item_1/text = "1980X1080"
+popup/item_1/id = 1
+popup/item_2/text = "1200X300"
+popup/item_2/id = 2
+
+[connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/WindowSize" to="." method="_on_window_size_item_selected"]
