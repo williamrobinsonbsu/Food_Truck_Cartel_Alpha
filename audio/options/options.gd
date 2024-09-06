@@ -8,9 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	pass
-
-
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
 func _on_mute_toggled(toggled_on):
