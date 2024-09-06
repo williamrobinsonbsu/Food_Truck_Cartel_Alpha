@@ -94,6 +94,7 @@ func _on_police():
 			police.position = $Far2.position
 		else:
 			police.position = $Far3.position
+			police.scale.x *= -1
 	elif laneProgressionCounter == 2:
 		i = randi()%2
 		if i == 0:
@@ -102,12 +103,14 @@ func _on_police():
 			police.position = $Mid2.position
 		else:
 			police.position = $Mid3.position
+			police.scale.x *= -1
 	else:
 		i = randi()%1
 		if i == 0:
 			police.position = $Close1.position
 		elif i == 1:
 			police.position = $Close2.position
+		police.catch()
 		cop_catch_timer.start()
 		while j < 10:
 			#get_node("/root/World/Player/Control/CatchMeter").text += "-"

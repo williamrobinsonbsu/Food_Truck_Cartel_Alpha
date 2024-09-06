@@ -1902,13 +1902,13 @@ shape = SubResource("BoxShape3D_5bl88")
 transform = Transform3D(-0.287683, 0, -8.74228e-08, 0, 0.256601, 0, 2.515e-08, 0, -1, 0.174429, 0.27251, -0.0265557)
 
 [node name="Far1" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33496, 0, 4.33875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.825, 0, 4.33875)
 
 [node name="Far2" type="Marker3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.33398)
 
 [node name="Far3" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01767, 0, 4.33377)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33239, 0, 4.33377)
 
 [node name="Mid1" type="Marker3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67055, 0, 3.33392)
@@ -1920,10 +1920,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.33392)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3334, 0, 3.33392)
 
 [node name="Close1" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.666629, 0, 2.36535)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.666629, 0, 1.9972)
 
 [node name="Close2" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665255, 0, 2.36535)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665255, 0, 1.99621)
 
 [node name="cop_catch_timer" type="Timer" parent="Root Scene"]
 wait_time = 5.5

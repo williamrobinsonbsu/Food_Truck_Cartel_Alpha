@@ -1,11 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://pnmtvik1oalr"]
+[gd_scene load_steps=9 format=3 uid="uid://pnmtvik1oalr"]
 
 [ext_resource type="Script" path="res://police/police.gd" id="1_fmxpy"]
+[ext_resource type="Texture2D" uid="uid://c11p3t0v7suk2" path="res://Textures/npcs/cop_front.png" id="2_qm85p"]
+[ext_resource type="Texture2D" uid="uid://cs2ms50e21x1w" path="res://Textures/npcs/cop_side.png" id="3_m200k"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h25pv"]
-albedo_color = Color(0, 0.368627, 1, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqq7k"]
+transparency = 1
+albedo_texture = ExtResource("2_qm85p")
 
-[sub_resource type="BoxMesh" id="BoxMesh_okqy5"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_0v2t2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e88h4"]
+transparency = 1
+albedo_texture = ExtResource("3_m200k")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tqr7w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_10o8c"]
 size = Vector3(0.490479, 0.816895, 0.389038)
@@ -14,9 +23,16 @@ size = Vector3(0.490479, 0.816895, 0.389038)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500198, 0)
 script = ExtResource("1_fmxpy")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_h25pv")
-mesh = SubResource("BoxMesh_okqy5")
+[node name="PoliceFront" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0.502, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_jqq7k")
+mesh = SubResource("PlaneMesh_0v2t2")
+
+[node name="PoliceSide" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.890662, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.34486e-07, -1, 4.37114e-08, 0, 0.50168, 0)
+material_override = SubResource("StandardMaterial3D_e88h4")
+mesh = SubResource("PlaneMesh_tqr7w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_10o8c")
