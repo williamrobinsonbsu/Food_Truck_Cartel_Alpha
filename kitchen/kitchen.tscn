@@ -1,4 +1,4 @@
-[gd_scene load_steps=305 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=301 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -168,10 +168,7 @@
 [ext_resource type="Texture2D" uid="uid://da8pspb6raji6" path="res://Textures/potato_UV_potatoSG_Normal.png" id="166_4hk3a"]
 [ext_resource type="Texture2D" uid="uid://cexwxrqm7s3q6" path="res://Textures/potato_UV_potatoSG_Roughness.png" id="167_x1gtu"]
 [ext_resource type="Texture2D" uid="uid://c5s3vcoiqp7p4" path="res://Textures/beach_background.png" id="168_jtt7p"]
-[ext_resource type="PackedScene" uid="uid://cm8dfmol45dx" path="res://FBXRaw/Patty.fbx" id="169_attwq"]
-[ext_resource type="Texture2D" uid="uid://17gdxa4pusuf" path="res://Textures/Pattie_standardSurface1_BaseColor.png" id="170_ghdpd"]
 [ext_resource type="Script" path="res://kitchen/cutting_board.gd" id="171_l7qsn"]
-[ext_resource type="Script" path="res://kitchen/grill.gd" id="172_0ithd"]
 [ext_resource type="Script" path="res://kitchen/radio.gd" id="173_csr8x"]
 [ext_resource type="Script" path="res://kitchen/trash_bin.gd" id="174_yp6dd"]
 [ext_resource type="Script" path="res://kitchen/patty_fridge.gd" id="175_w3hs7"]
@@ -190,6 +187,7 @@
 [ext_resource type="PackedScene" uid="uid://tsbefmiro8lh" path="res://ingredients/plate.tscn" id="190_a410o"]
 [ext_resource type="Texture2D" uid="uid://dfgulhcothr7" path="res://Textures/bell_lambert3SG_BaseColor.png" id="191_i34n2"]
 [ext_resource type="Texture2D" uid="uid://cnujrvksl2lpm" path="res://Textures/bell_lambert3SG_Height.png" id="192_8lx4u"]
+[ext_resource type="PackedScene" uid="uid://bgl48vx5udmve" path="res://kitchen/grill.tscn" id="192_qqxpb"]
 [ext_resource type="Texture2D" uid="uid://dauwxgqfruutk" path="res://Textures/bell_lambert3SG_Metallic.png" id="193_qcjbp"]
 [ext_resource type="Texture2D" uid="uid://ip7poleugxx6" path="res://Textures/bell_lambert3SG_Normal.png" id="194_evn56"]
 [ext_resource type="Texture2D" uid="uid://ccmejuvmad50d" path="res://Textures/bell_lambert3SG_Roughness.png" id="195_jley4"]
@@ -716,9 +714,6 @@ albedo_color = Color(0.364706, 0.521569, 0.764706, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2b6y1"]
 albedo_color = Color(0.647059, 0.847059, 0.917647, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f8k6p"]
-albedo_texture = ExtResource("170_ghdpd")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_n3er8"]
 size = Vector3(0.963745, 0.946777, 1.52512)
 
@@ -740,9 +735,6 @@ size = Vector3(0.0791016, 1.26868, 2.56128)
 [sub_resource type="BoxShape3D" id="BoxShape3D_bkuw4"]
 size = Vector3(0.226196, 0.0192871, 0.381226)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1irty"]
-size = Vector3(1, 0.0821533, 1.28796)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_7uq41"]
 size = Vector3(0.220596, 0.0965576, 0.0756836)
 
@@ -751,7 +743,7 @@ height = 0.353577
 radius = 0.129032
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dfedg"]
-size = Vector3(1.23813, 0.0735816, 0.365723)
+size = Vector3(0.37229, 0.323815, 0.301514)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5oxw"]
 size = Vector3(1.93439, 0.994476, 2.59375)
@@ -1504,157 +1496,8 @@ sky_mode = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.41955)
 light_color = Color(0.976471, 0.827451, 0.596078, 1)
 
-[node name="patties" type="Node3D" parent="Root Scene"]
-
-[node name="patty" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.892742, 0.379454, 0.239876)
-
-[node name="Patty" parent="Root Scene/patties/patty/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty2" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.786004, 0.379454, 0.239876)
-
-[node name="Patty" parent="Root Scene/patties/patty2/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty3" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.673719, 0.379454, 0.239876)
-
-[node name="Patty" parent="Root Scene/patties/patty3/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty4" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.892742, 0.379454, 0.36676)
-
-[node name="Patty" parent="Root Scene/patties/patty4/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty5" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.786004, 0.379454, 0.36676)
-
-[node name="Patty" parent="Root Scene/patties/patty5/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty6" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.673719, 0.379454, 0.36676)
-
-[node name="Patty" parent="Root Scene/patties/patty6/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty7" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.892742, 0.379454, 0.520691)
-
-[node name="Patty" parent="Root Scene/patties/patty7/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty8" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.786004, 0.379454, 0.520691)
-
-[node name="Patty" parent="Root Scene/patties/patty8/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty9" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.673719, 0.379454, 0.520691)
-
-[node name="Patty" parent="Root Scene/patties/patty9/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty10" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.892742, 0.379454, 0.693196)
-
-[node name="Patty" parent="Root Scene/patties/patty10/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty11" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.786004, 0.379454, 0.693196)
-
-[node name="Patty" parent="Root Scene/patties/patty11/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty12" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.673719, 0.379454, 0.693196)
-
-[node name="Patty" parent="Root Scene/patties/patty12/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty13" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.892742, 0.379454, 0.862417)
-
-[node name="Patty" parent="Root Scene/patties/patty13/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty14" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.786004, 0.379454, 0.862417)
-
-[node name="Patty" parent="Root Scene/patties/patty14/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty15" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.673719, 0.379454, 0.862417)
-
-[node name="Patty" parent="Root Scene/patties/patty15/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty16" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.892742, 0.379454, 1.05495)
-
-[node name="Patty" parent="Root Scene/patties/patty16/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty17" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.786004, 0.379454, 1.05495)
-
-[node name="Patty" parent="Root Scene/patties/patty17/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty18" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.673719, 0.379454, 1.05495)
-
-[node name="Patty" parent="Root Scene/patties/patty18/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty19" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.892742, 0.379454, 1.22346)
-
-[node name="Patty" parent="Root Scene/patties/patty19/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty20" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.786004, 0.379454, 1.22346)
-
-[node name="Patty" parent="Root Scene/patties/patty20/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
-[node name="patty21" parent="Root Scene/patties" instance=ExtResource("169_attwq")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.673719, 0.379454, 1.22346)
-
-[node name="Patty" parent="Root Scene/patties/patty21/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.324601, -0.163684, -1.21338)
-material_override = SubResource("StandardMaterial3D_f8k6p")
-
 [node name="Stove" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.0608195, 0.419192)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.152867, 0.419192)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Stove"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0181274, -0.0266113, 0.517827)
@@ -1707,14 +1550,6 @@ shape = SubResource("BoxShape3D_bkuw4")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398838, -0.277534, 0.0964434)
 
-[node name="Grill" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09147, 1.40025, 0.679443)
-script = ExtResource("172_0ithd")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Grill"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.458923, 0.143982)
-shape = SubResource("BoxShape3D_1irty")
-
 [node name="Radio" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0158047, 0.0679311, -0.0406093)
 script = ExtResource("173_csr8x")
@@ -1732,11 +1567,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0286197, 0.367827, 0.00602
 shape = SubResource("CylinderShape3D_hadr5")
 
 [node name="patty_fridge" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.662097, 0.358636, 0.745966)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0518179, 0.358636, 0.173055)
 script = ExtResource("175_w3hs7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/patty_fridge"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0480807, -0.00384262, 0.100342)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.154964, 0.489262, -0.72838)
 shape = SubResource("BoxShape3D_dfedg")
 
 [node name="Floor" type="StaticBody3D" parent="Root Scene"]
@@ -1988,33 +1823,15 @@ transform = Transform3D(0.018292, 1.28813e-09, 0, -1.59914e-09, 0.0147345, 0, 0,
 material_override = SubResource("StandardMaterial3D_1e6qw")
 mesh = ExtResource("196_ywmwj")
 
+[node name="Grill" parent="." instance=ExtResource("192_qqxpb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.24697, 0.675363, 1.02967)
+
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
 [connection signal="timeout" from="Root Scene/customer_or_police_spawn_timer" to="Root Scene" method="_on_customer_or_police_spawn_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cop_catch_timer" to="Root Scene" method="_on_police_catch_timer_timeout"]
 [connection signal="reset_ingredients" from="order_plate/resetTemp" to="order_plate/StaticBody3D" method="_on_reset_ingredients"]
 
 [editable path="Root Scene"]
-[editable path="Root Scene/patties/patty"]
-[editable path="Root Scene/patties/patty2"]
-[editable path="Root Scene/patties/patty3"]
-[editable path="Root Scene/patties/patty4"]
-[editable path="Root Scene/patties/patty5"]
-[editable path="Root Scene/patties/patty6"]
-[editable path="Root Scene/patties/patty7"]
-[editable path="Root Scene/patties/patty8"]
-[editable path="Root Scene/patties/patty9"]
-[editable path="Root Scene/patties/patty10"]
-[editable path="Root Scene/patties/patty11"]
-[editable path="Root Scene/patties/patty12"]
-[editable path="Root Scene/patties/patty13"]
-[editable path="Root Scene/patties/patty14"]
-[editable path="Root Scene/patties/patty15"]
-[editable path="Root Scene/patties/patty16"]
-[editable path="Root Scene/patties/patty17"]
-[editable path="Root Scene/patties/patty18"]
-[editable path="Root Scene/patties/patty19"]
-[editable path="Root Scene/patties/patty20"]
-[editable path="Root Scene/patties/patty21"]
 [editable path="Root Scene/cheese_block/cheese"]
 [editable path="Root Scene/cheese_block/cheese2"]
 [editable path="Root Scene/cheese_block/cheese3"]
