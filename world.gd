@@ -10,6 +10,8 @@ var can_police_catch_player = false
 
 @export var laneProgressionCounter = 0
 var poRate = 0
+var goal_score = 150
+signal timer
 
 func _ready():
 	get_node("/root/World/Player/Control/CatchMeter").value = 0	
@@ -27,6 +29,8 @@ func shutter_door_control():
 		door_shutter()
 		if starting_counter == 0:
 			_on_new_customer()
+			$LevelTimer.start()
+			timer.emit()
 			starting_counter += 1
 		can_police_catch_player = true
 	
@@ -133,3 +137,17 @@ func _on_police_catch_timer_timeout():
 	elif can_police_catch_player == false:
 		get_node("/root/World/Player/Control/CatchMeter").value = 0	
 		get_tree().call_group("police", "despawn")
+
+
+func _on_level_timer_timeout():
+	$"../Player/Control/LevelTimerLabel".text = "Final score: $" + str(score)
+	print(score)
+	if score == goal_score or score > goal_score:
+		$"../Player/Control/LevelTimerLabel".text += """
+		Good Job!"""
+	elif score < goal_score:
+		$"../Player/Control/LevelTimerLabel".text += """
+		Uh oh..."""
+	await get_tree().create_timer(5).timeout
+	get_tree().change_scene_to_file("res://menus/caught_scene.tscn")
+	

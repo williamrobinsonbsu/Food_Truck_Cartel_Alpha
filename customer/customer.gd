@@ -11,6 +11,7 @@ var npc_name
 
 var counter = 0
 @onready var world = get_node("/root/World/Root Scene")
+@onready var dialogue = get_node("/root/World/NPCDialogue")
 signal new_customer
 
 func _ready():
@@ -18,6 +19,7 @@ func _ready():
 	rng.randomize()
 	var npc = rng.randi_range(0, 2)
 	print(npc)
+	npc_name = ""
 	npc_name = _get_npc(npc)
 	
 	
@@ -125,14 +127,15 @@ func _on_check_my_order():
 	elif order_counter == counter:
 		world.score += 10 + counter
 		npc_name += "Happy"
+		dialogue.text = "Thanks!"
 		get_node(npc_name).show()
 	elif order_counter == 0:
 		world.score += 1
-		npc_name += "Angry"
-		get_node(npc_name).show()
+		dialogue.text = "Seriously?"
 	else:
 		world.score += 5
 		npc_name += "Angry"
+		dialogue.text = "..."
 		get_node(npc_name).show()
 		
 	get_node("/root/World/Root Scene/register/score").text = "$" + str(world.score)
@@ -155,12 +158,16 @@ func _on_assembly_timer_timeout():
 	$".".queue_free()
 
 func _get_npc(npc):   #update for every new npc
+	var npcName
 	if npc == 0:
 		$NPCBlondie.show()
-		return "NPCBlondie/NPCBlondie"
+		npcName = "NPCBlondie/NPCBlondie"
 	elif npc == 1:
 		$NPCLifeguard.show()
-		return "NPCLifeguard/NPCLifeguard"
+		npcName = "NPCLifeguard/NPCLifeguard"
 	elif npc == 2: 
 		$NPCSurfer.show()
-		return "NPCSurfer/NPCSurfer"
+		npcName = "NPCSurfer/NPCSurfer"
+	
+	dialogue.text = "Hi! Here's my order."
+	return npcName
