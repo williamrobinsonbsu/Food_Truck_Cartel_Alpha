@@ -17,11 +17,12 @@ func _ready():
 	get_node("/root/World/Player/Control/CatchMeter").value = 0	
 	var value = get_node("/root/World/Player/Control/CatchMeter").value
 	print(value)
+	
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
-
+	
 func shutter_door_control():
 	if shutter_door_close == false:
 		$ShutterDoor.hide()
