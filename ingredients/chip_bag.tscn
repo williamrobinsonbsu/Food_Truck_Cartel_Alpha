@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://60sb8bahmo0o"]
+[gd_scene load_steps=6 format=3 uid="uid://60sb8bahmo0o"]
 
 [ext_resource type="Script" path="res://ingredients/chip_bag.gd" id="1_h478u"]
 [ext_resource type="PackedScene" uid="uid://cvsdtf8fxcpi2" path="res://FBXRaw/ChipBag.fbx" id="1_lbikl"]
+[ext_resource type="Texture2D" uid="uid://ckta3svl1gefc" path="res://Textures/ChipBag_standardSurface1_BaseColor.png" id="3_asjb5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o12we"]
-albedo_color = Color(0.839216, 0.129412, 0.239216, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dpwuq"]
+albedo_texture = ExtResource("3_asjb5")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8740s"]
 radius = 0.147077
@@ -15,12 +16,12 @@ script = ExtResource("1_h478u")
 
 [node name="Root Scene" parent="." instance=ExtResource("1_lbikl")]
 
-[node name="Chips" parent="Root Scene/RootNode" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40961, -0.779372, 0)
+[node name="RootNode" parent="Root Scene" index="0"]
+transform = Transform3D(0.982031, 0.188718, 0, -0.188718, 0.982031, 0, 0, 0, 1, 0, -0.165553, 0.00661764)
 
 [node name="chip_bag1" parent="Root Scene/RootNode/Chips" index="0"]
-transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, -0.378125, 0.507171, 5.87637)
-material_override = SubResource("StandardMaterial3D_o12we")
+transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 0, -0.0993248, 5.85479)
+material_override = SubResource("StandardMaterial3D_dpwuq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_8740s")

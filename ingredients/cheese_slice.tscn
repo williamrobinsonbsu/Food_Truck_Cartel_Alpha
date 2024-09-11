@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://ingredients/cheese_slice.gd" id="1_dwpw8"]
 [ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="1_ntluy"]
-[ext_resource type="Texture2D" uid="uid://dpy4kxal4k2n" path="res://textures/CheeseSlice_standardSurface1_BaseColor.png" id="3_wthap"]
-[ext_resource type="Texture2D" uid="uid://ldfy2v7gdopr" path="res://textures/CheeseSlice_standardSurface1_Metallic.png" id="4_6n881"]
-[ext_resource type="Texture2D" uid="uid://bprhv7ph15hjx" path="res://textures/CheeseSlice_standardSurface1_Roughness.png" id="5_wokbc"]
+[ext_resource type="Texture2D" uid="uid://dpy4kxal4k2n" path="res://Textures/CheeseSlice_standardSurface1_BaseColor.png" id="3_wthap"]
+[ext_resource type="Texture2D" uid="uid://ldfy2v7gdopr" path="res://Textures/CheeseSlice_standardSurface1_Metallic.png" id="4_6n881"]
+[ext_resource type="Texture2D" uid="uid://bprhv7ph15hjx" path="res://Textures/CheeseSlice_standardSurface1_Roughness.png" id="5_wokbc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0h8v3"]
 albedo_texture = ExtResource("3_wthap")

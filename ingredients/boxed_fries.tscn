@@ -1,36 +1,38 @@
-[gd_scene load_steps=7 format=3 uid="uid://bayr2kujwugd8"]
+[gd_scene load_steps=8 format=3 uid="uid://bayr2kujwugd8"]
 
 [ext_resource type="Script" path="res://ingredients/boxed_fries.gd" id="1_blusn"]
 [ext_resource type="PackedScene" uid="uid://bw31yrrelid6e" path="res://FBXRaw/FryWBox.fbx" id="1_v5vw3"]
-[ext_resource type="Texture2D" uid="uid://cif4pjwy55jyf" path="res://textures/friesalone_initialShadingGroup_BaseColor.png" id="3_xw2jc"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ffhh"]
-albedo_color = Color(0.713726, 0.25098, 0.211765, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpav6"]
-albedo_texture = ExtResource("3_xw2jc")
+[ext_resource type="Texture2D" uid="uid://caj18fs5bqc0w" path="res://Textures/FryWBox_standardSurface1_BaseColor.png" id="3_f1nv6"]
+[ext_resource type="Texture2D" uid="uid://cvylco8mll464" path="res://Textures/FriesIndiv_standardSurface1_BaseColor.png" id="4_8chco"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4faga"]
 size = Vector3(0.0942993, 0.287048, 0.170898)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtvoe"]
+albedo_texture = ExtResource("3_f1nv6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4a6aq"]
+albedo_color = Color(0.929412, 0.682353, 0.25098, 1)
+albedo_texture = ExtResource("4_8chco")
+
 [node name="RigidBody3D" type="RigidBody3D"]
 script = ExtResource("1_blusn")
-
-[node name="Root Scene" parent="." instance=ExtResource("1_v5vw3")]
-
-[node name="Fry" parent="Root Scene/RootNode" index="0"]
-transform = Transform3D(0.699816, 0, 0, 0, 0.827508, 0, 0, 0, 0.699816, 0.183031, 0.620197, -0.840698)
-
-[node name="frybox" parent="Root Scene/RootNode/Fry" index="0"]
-transform = Transform3D(0.114438, 8.6854e-24, 0, 0, 0.114438, 0, 0, -1.8198e-23, 0.114438, -0.253089, -0.854243, 1.20416)
-material_override = SubResource("StandardMaterial3D_4ffhh")
-
-[node name="fries" parent="Root Scene/RootNode/Fry" index="1"]
-transform = Transform3D(0.114438, 8.6854e-24, 0, 0, 0.114438, 0, 0, -1.8198e-23, 0.114438, -0.248703, -0.854243, 1.47793)
-material_override = SubResource("StandardMaterial3D_wpav6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00112915, 0.14151, -0.00195313)
 shape = SubResource("BoxShape3D_4faga")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_v5vw3")]
+
+[node name="Fry" parent="Root Scene/RootNode" index="0"]
+transform = Transform3D(-0.657612, 6.668e-17, 0.239351, 8.05343e-17, 0.827508, 5.63907e-17, -0.239351, 9.52289e-17, -0.657612, 0, 0, 0)
+
+[node name="frybox" parent="Root Scene/RootNode/Fry" index="0"]
+transform = Transform3D(0.107837, -1.96781e-18, 0.0383038, 3.25261e-18, 0.114438, -3.27797e-18, -0.0383038, 4.17757e-18, 0.107837, 0.00175732, -0.101544, 0.00482818)
+material_override = SubResource("StandardMaterial3D_qtvoe")
+
+[node name="fries" parent="Root Scene/RootNode/Fry" index="1"]
+transform = Transform3D(0.107739, -1.97699e-18, 0.0385784, 3.28086e-18, 0.114438, -3.29802e-18, -0.0385784, 4.21096e-18, 0.107739, 0.100122, -0.173421, 0.275084)
+material_override = SubResource("StandardMaterial3D_4a6aq")
 
 [editable path="Root Scene"]

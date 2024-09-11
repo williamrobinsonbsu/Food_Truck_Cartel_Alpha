@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4yjclqj3p8f"]
+[gd_scene load_steps=6 format=3 uid="uid://d4yjclqj3p8f"]
 
 [ext_resource type="Script" path="res://ingredients/bottom_bun.gd" id="1_6psfg"]
-[ext_resource type="PackedScene" uid="uid://bxxoq0itjjms5" path="res://FBXRaw/BottomBread.fbx" id="1_26ogg"]
+[ext_resource type="PackedScene" uid="uid://h0fccvfrm8gl" path="res://FBXRaw/BreadBottom.fbx" id="2_42oa7"]
+[ext_resource type="Texture2D" uid="uid://co6hlmfrqbcxo" path="res://Textures/BreadBottom_standardSurface1_BaseColor.png" id="3_fr81k"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhl7c"]
-albedo_color = Color(0.819608, 0.564706, 0.301961, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qvmy"]
+albedo_texture = ExtResource("3_fr81k")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6yafv"]
 height = 0.0251091
@@ -13,14 +14,14 @@ radius = 0.0966295
 [node name="RigidBody3D" type="RigidBody3D"]
 script = ExtResource("1_6psfg")
 
-[node name="Root Scene" parent="." instance=ExtResource("1_26ogg")]
+[node name="Root Scene" parent="." instance=ExtResource("2_42oa7")]
 
-[node name="RootNode" parent="Root Scene" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00978518, 0, 0.0154385)
+[node name="Burger" parent="Root Scene/RootNode/Truck" index="0"]
+transform = Transform3D(0.91124, 0, 0, 0, 0.7038, 0, 0, 0, 0.91124, 0, 0, 0)
 
 [node name="BreadBot" parent="Root Scene/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(9.44901, 0, 0, 0, -1.69796, -4.73154e-14, 0, 8.50245e-15, -9.44901, 0.319013, -0.157396, -1.22112)
-material_override = SubResource("StandardMaterial3D_xhl7c")
+transform = Transform3D(9.44901, 0, 0, 0, -1.69796, -4.73154e-14, 0, 8.50245e-15, -9.44901, 0, -0.00591028, 0)
+material_override = SubResource("StandardMaterial3D_7qvmy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00690142, 0)
