@@ -1,12 +1,8 @@
-[gd_scene load_steps=302 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=298 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
-[ext_resource type="Texture2D" uid="uid://cy1hor5yrg18t" path="res://Textures/FrontCounter_standardSurface2_BaseColor.png" id="3_lpc3u"]
-[ext_resource type="Texture2D" uid="uid://bj4q1g1lushbu" path="res://Textures/FrontCounter_standardSurface2_Height.png" id="4_aol58"]
-[ext_resource type="Texture2D" uid="uid://dv3i16v7e7xg8" path="res://Textures/FrontCounter_standardSurface2_Metallic.png" id="5_rirxg"]
-[ext_resource type="Texture2D" uid="uid://cxqx8vsimr4vf" path="res://Textures/FrontCounter_standardSurface2_Normal.png" id="6_rmbkw"]
-[ext_resource type="Texture2D" uid="uid://scg7jwptahlk" path="res://Textures/FrontCounter_standardSurface2_Roughness.png" id="7_20vt0"]
+[ext_resource type="Texture2D" uid="uid://ina41yjak2ar" path="res://Textures/FrontCounter_standardSurface1_BaseColor.png" id="3_bm3f8"]
 [ext_resource type="Texture2D" uid="uid://rhybm7fxsg07" path="res://Textures/Shutter_standardSurface2_BaseColor.png" id="8_t5eiq"]
 [ext_resource type="Texture2D" uid="uid://olqqxef430e1" path="res://Textures/Shutter_standardSurface2_Height.png" id="9_0ap1w"]
 [ext_resource type="Texture2D" uid="uid://bp44nhgcfbjf" path="res://Textures/Shutter_standardSurface2_Metallic.png" id="10_x4iyl"]
@@ -208,25 +204,16 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l8cx"]
-albedo_texture = ExtResource("3_lpc3u")
 metallic = 1.0
-metallic_texture = ExtResource("5_rirxg")
-roughness_texture = ExtResource("7_20vt0")
 normal_enabled = true
-normal_texture = ExtResource("6_rmbkw")
 heightmap_enabled = true
-heightmap_texture = ExtResource("4_aol58")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dy55h"]
 albedo_color = Color(0.0980392, 0.741176, 1, 1)
-albedo_texture = ExtResource("3_lpc3u")
+albedo_texture = ExtResource("3_bm3f8")
 metallic = 1.0
-metallic_texture = ExtResource("5_rirxg")
-roughness_texture = ExtResource("7_20vt0")
 normal_enabled = true
-normal_texture = ExtResource("6_rmbkw")
 heightmap_enabled = true
-heightmap_texture = ExtResource("4_aol58")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7247a"]
 albedo_color = Color(0.168627, 1, 1, 1)
