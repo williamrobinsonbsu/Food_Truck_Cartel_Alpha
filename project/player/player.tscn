@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cywlto4wavxy4"]
+[gd_scene load_steps=8 format=3 uid="uid://cywlto4wavxy4"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sh6bp"]
+[ext_resource type="PackedScene" uid="uid://cwe7cgxl38fm2" path="res://menus/pasue_menu.tscn" id="2_72sml"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6w4jn"]
 
@@ -121,3 +122,5 @@ libraries = {
 "": SubResource("AnimationLibrary_hdk8n")
 }
 speed_scale = 0.5
+
+[node name="PasueMenu" parent="." instance=ExtResource("2_72sml")]

@@ -76,6 +76,10 @@ func _physics_process(_delta):
 			
 	move_and_slide()
 	
+	if Input.is_action_just_pressed("pause"):
+		get_tree().paused = true
+		get_node("PasueMenu/CanvasLayer").show()
+	
 func movementStateChange(changeType):
 	match changeType:
 		"crouch":

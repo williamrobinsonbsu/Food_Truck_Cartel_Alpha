@@ -8,14 +8,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _on_resume_pressed():
 	hide()
 
 
 func _on_options_pressed():
-	hide()
+	get_node("Options").show()
 
 
 func _on_quit_pressed():
