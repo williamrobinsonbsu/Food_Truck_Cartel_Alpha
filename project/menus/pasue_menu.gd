@@ -10,6 +10,9 @@ func _ready():
 func _process(delta):
 	if get_tree().paused == true:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		
 
 func _on_resume_pressed():
 	get_node("CanvasLayer").hide()
