@@ -1853,6 +1853,6 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.777
 [editable path="order_plate/tomatoes"]
 [editable path="order_plate/cheese"]
 [editable path="order_plate/top_bun"]
-[editable path="order_plate/fries"]
 [editable path="order_plate/soda"]
 [editable path="order_plate/chips"]
+[editable path="order_plate/fries"]

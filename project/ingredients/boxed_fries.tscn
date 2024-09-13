@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cvylco8mll464" path="res://Textures/FriesIndiv_standardSurface1_BaseColor.png" id="4_8chco"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4faga"]
-size = Vector3(0.0942993, 0.287048, 0.170898)
+size = Vector3(0.102818, 0.219241, 0.157107)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtvoe"]
 albedo_texture = ExtResource("3_f1nv6")
@@ -19,7 +19,7 @@ albedo_texture = ExtResource("4_8chco")
 script = ExtResource("1_blusn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00112915, 0.14151, -0.00195313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00119972, 0.115385, -0.00238184)
 shape = SubResource("BoxShape3D_4faga")
 
 [node name="Root Scene" parent="." instance=ExtResource("1_v5vw3")]

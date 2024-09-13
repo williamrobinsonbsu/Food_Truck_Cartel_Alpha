@@ -1,10 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://uv8u6iqcrfxh"]
+[gd_scene load_steps=6 format=3 uid="uid://uv8u6iqcrfxh"]
 
 [ext_resource type="Script" path="res://ingredients/potato_slice.gd" id="1_5p4mh"]
 [ext_resource type="PackedScene" uid="uid://bss6fddgtqox6" path="res://FBXRaw/FriesIndiv.fbx" id="2_yhabb"]
+[ext_resource type="Texture2D" uid="uid://cvylco8mll464" path="res://Textures/FriesIndiv_standardSurface1_BaseColor.png" id="3_oxqup"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pi7je"]
-albedo_color = Color(0.878431, 0.737255, 0.552941, 1)
+albedo_color = Color(0.94902, 0.87451, 0.780392, 1)
+albedo_texture = ExtResource("3_oxqup")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_30u76"]
 size = Vector3(0.108154, 0.235443, 0.167633)

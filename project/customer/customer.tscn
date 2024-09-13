@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cuqr3ppkwg1gj"]
+[gd_scene load_steps=27 format=3 uid="uid://cuqr3ppkwg1gj"]
 
 [ext_resource type="Script" path="res://customer/customer.gd" id="1_u5n8i"]
 [ext_resource type="Texture2D" uid="uid://x1s1d2uf70m5" path="res://FBXRaw/blondie_NPC.png" id="2_0t37t"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bbwnqutv6gi0f" path="res://Textures/npcs/lifeguard_mad.png" id="5_aibr6"]
 [ext_resource type="Texture2D" uid="uid://dy8ltvy3fi88j" path="res://Textures/npcs/surfer_NPC_pleased.png" id="7_8nlnr"]
 [ext_resource type="Texture2D" uid="uid://dj6nha0ymff3b" path="res://Textures/npcs/surfer_NPC_upset.png" id="8_pvw0i"]
-[ext_resource type="PackedScene" path="res://audio/ACVoicebox.tscn" id="9_4qxul"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o55be"]
 transparency = 1
@@ -171,8 +170,5 @@ libraries = {
 wait_time = 60.0
 one_shot = true
 autostart = true
-
-[node name="ACVoicebox" parent="." instance=ExtResource("9_4qxul")]
-base_pitch = 2.5
 
 [connection signal="timeout" from="AssemblyTimer" to="." method="_on_assembly_timer_timeout"]
