@@ -8,14 +8,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if get_tree().paused == true:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _on_resume_pressed():
-	hide()
+	get_node("CanvasLayer").hide()
+	get_tree().paused = false
 
 
 func _on_options_pressed():
 	get_node("Options").show()
+	get_node("CanvasLayer").hide()
 
 
 func _on_quit_pressed():
