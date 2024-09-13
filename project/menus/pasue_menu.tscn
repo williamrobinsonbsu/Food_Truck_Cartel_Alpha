@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwe7cgxl38fm2"]
+
+[ext_resource type="Script" path="res://menus/pasue_menu.gd" id="1_nprtc"]
+[ext_resource type="Texture2D" uid="uid://c4k5k8qxoi77a" path="res://menus/Pause_Menu_UnClick.webp" id="2_rgnq2"]
+
+[node name="PasueMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nprtc")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Resume" type="Button" parent="CanvasLayer"]
+offset_left = 464.0
+offset_top = 197.0
+offset_right = 653.0
+offset_bottom = 257.0
+text = "Resume"
+
+[node name="Options" type="Button" parent="CanvasLayer"]
+offset_left = 447.0
+offset_top = 286.0
+offset_right = 653.0
+offset_bottom = 348.0
+text = "Options"
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+offset_left = 447.0
+offset_top = 371.0
+offset_right = 634.0
+offset_bottom = 439.0
+text = "Quit"
+
+[node name="PauseNote" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(576, 324)
+texture = ExtResource("2_rgnq2")
+
+[connection signal="pressed" from="CanvasLayer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
