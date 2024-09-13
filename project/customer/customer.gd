@@ -9,9 +9,12 @@ var i_want_chips = false
 var i_want_soda = false
 var npc_name
 
+
+
 var counter = 0
 @onready var world = get_node("/root/World/Root Scene")
 @onready var dialogue = get_node("/root/World/NPCDialogue")
+@onready var voice : ACVoiceBox = $ACVoicebox
 signal new_customer
 
 func _ready():
@@ -21,6 +24,8 @@ func _ready():
 	print(npc)
 	npc_name = ""
 	npc_name = _get_npc(npc)
+	voice.connect("characters_sounded", _on_voicebox_characters_sounded)
+	
 	
 	
 	print("I would like a burger!")
@@ -127,15 +132,21 @@ func _on_check_my_order():
 	elif order_counter == counter:
 		world.score += 10 + counter
 		npc_name += "Happy"
-		dialogue.text = "Thanks!"
+		dialogue.text=""
+		$ACVoicebox.play_string("Thanks!")
+		#dialogue.text = "Thanks!"
 		get_node(npc_name).show()
 	elif order_counter == 0:
 		world.score += 1
-		dialogue.text = "Seriously?"
+		dialogue.text=""
+		$ACVoicebox.play_string("Seriously")
+		#dialogue.text = "Seriously?"
 	else:
 		world.score += 5
 		npc_name += "Angry"
-		dialogue.text = "..."
+		dialogue.text=""
+		$ACVoicebox.play_string("...")
+		#dialogue.text = "..."
 		get_node(npc_name).show()
 		
 	get_node("/root/World/Root Scene/register/score").text = "$" + str(world.score)
@@ -157,6 +168,9 @@ func _on_assembly_timer_timeout():
 	get_tree().call_group("police", "despawn")
 	$".".queue_free()
 
+func _on_voicebox_characters_sounded(characters: String):
+	dialogue.text += characters
+
 func _get_npc(npc):   #update for every new npc
 	var npcName
 	if npc == 0:
@@ -168,6 +182,7 @@ func _get_npc(npc):   #update for every new npc
 	elif npc == 2: 
 		$NPCSurfer.show()
 		npcName = "NPCSurfer/NPCSurfer"
-	
-	dialogue.text = "Hi! Here's my order."
+	dialogue.text=""
+	$ACVoicebox.play_string("HHi! Here's my order")
+	#dialogue.text = "Hi! Here's my order."
 	return npcName
