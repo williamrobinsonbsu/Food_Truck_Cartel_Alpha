@@ -334,8 +334,6 @@ func _copy_dialogue_balloon() -> void:
 		file_contents = file.get_as_text()
 		if is_dotnet:
 			file_contents = file_contents.replace("class ExampleBalloon", "class DialogueBalloon")
-		else:
-			file_contents = file_contents.replace("class_name DialogueManagerExampleBalloon ", "")
 		file = FileAccess.open(balloon_script_path, FileAccess.WRITE)
 		file.store_string(file_contents)
 		file.close()
@@ -363,4 +361,3 @@ func _on_file_removed(file: String) -> void:
 	update_import_paths(file, "")
 	if is_instance_valid(main_view):
 		main_view.close_file(file)
-	_update_localization()

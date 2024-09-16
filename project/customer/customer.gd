@@ -12,9 +12,10 @@ var npc_name
 
 
 var counter = 0
+@onready var texture: Sprite3D = $Sprite3D
 @onready var world = get_node("/root/World/Root Scene")
 @onready var dialogue = get_node("/root/World/NPCDialogue")
-@onready var voice : ACVoiceBox = $ACVoicebox
+#@onready var voice : ACVoiceBox = $ACVoicebox
 signal new_customer
 
 func _ready():
@@ -24,6 +25,7 @@ func _ready():
 	print(npc)
 	npc_name = ""
 	npc_name = _get_npc(npc)
+	DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name)
 	#voice.connect("characters_sounded", _on_voicebox_characters_sounded)
 	
 	
@@ -69,6 +71,7 @@ func _ready():
 	
 func _on_check_my_order():
 	var order_counter = 0
+	var path
 	if get_node("/root/World/order_plate/patty").visible != true:
 		print("Patty is missing")
 	if get_node("/root/World/order_plate/bottom_bun").visible != true:
@@ -130,24 +133,23 @@ func _on_check_my_order():
 	if world.starting_counter == 0:
 		world.score += 0
 	elif order_counter == counter:
+		path = "res://Textures/npcs/" + npc_name + "/happy.png"
+		var new_texture = load(path)
+		texture.texture = new_texture
+		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_happy")
 		world.score += 10 + counter
-		npc_name += "Happy"
-		dialogue.text=""
-		#$ACVoicebox.play_string("Thanks!")
-		dialogue.text = "Thanks!"
-		get_node(npc_name).show()
 	elif order_counter == 0:
-		world.score += 1
-		dialogue.text=""
-		#$ACVoicebox.play_string("Seriously")
-		dialogue.text = "Seriously?"
+		path = "res://Textures/npcs/" + npc_name + "/mad.png"
+		var new_texture = load(path)
+		texture.texture = new_texture
+		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_angry")
+		world.score += 0
 	else:
+		path = "res://Textures/npcs/" + npc_name + "/mad.png"
+		var new_texture = load(path)
+		texture.texture = new_texture
+		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_angry")
 		world.score += 5
-		npc_name += "Angry"
-		dialogue.text=""
-		$ACVoicebox.play_string("...")
-		#dialogue.text = "..."
-		get_node(npc_name).show()
 		
 	get_node("/root/World/Root Scene/register/score").text = "$" + str(world.score)
 	get_node("/root/World/order_plate/resetTemp").set_collision_layer_value(1, false)
@@ -173,16 +175,21 @@ func _on_voicebox_characters_sounded(characters: String):
 
 func _get_npc(npc):   #update for every new npc
 	var npcName
+	var path
 	if npc == 0:
-		$NPCBlondie.show()
-		npcName = "NPCBlondie/NPCBlondie"
+		npcName = "blondie"
 	elif npc == 1:
-		$NPCLifeguard.show()
-		npcName = "NPCLifeguard/NPCLifeguard"
+		npcName = "lifeguard"
 	elif npc == 2: 
-		$NPCSurfer.show()
-		npcName = "NPCSurfer/NPCSurfer"
+		npcName = "surfer"
 	dialogue.text=""
+	
+	path = "res://Textures/npcs/" + npcName + "/normal.png"
+	var new_texture = load(path)
+	
+	texture.texture = new_texture
+	
+	texture.texture = new_texture
 	#$ACVoicebox.play_string("HHi! Here's my order")
-	dialogue.text = "Hi! Here's my order."
+	#dialogue.text = "Hi! Here's my order."
 	return npcName

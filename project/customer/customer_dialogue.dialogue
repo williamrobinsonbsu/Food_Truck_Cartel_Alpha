@@ -1,0 +1,70 @@
+~ start
+
+Customer: Yo.
+
+=> END
+
+
+#Blondie
+~ blondie
+
+Blondie: Here's my order!
+
+=> END
+
+~ blondie_angry
+
+Blondie: Seriously?
+
+=> END
+
+~ blondie_happy
+
+Blondie: Thanks!
+
+=> END
+
+
+
+
+
+#Lifeguard
+~ lifeguard
+
+Lifeguard: Hello!
+
+=> END
+
+~ lifeguard_angry
+
+Lifeguard: Seriously?
+
+=> END
+
+~ lifeguard_happy
+
+Lifeguard: Thanks!
+
+=> END
+
+
+
+
+#surfer
+~ surfer
+
+Surfer: Yooooo!
+
+=> END
+
+~ surfer_angry
+
+Surfer: Seriously?
+
+=> END
+
+~ surfer_happy
+
+Surfer: Thanks!
+
+=> END
