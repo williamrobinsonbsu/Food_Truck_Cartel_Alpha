@@ -34,3 +34,6 @@ func _on_window_size_item_selected(index):
 		2:
 			DisplayServer.window_set_size(Vector2i(1200,300))
 
+func _on_back_button_pressed():
+	get_node("MarginContainer").hide()
+	
