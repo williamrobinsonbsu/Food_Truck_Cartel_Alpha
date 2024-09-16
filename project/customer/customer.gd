@@ -24,7 +24,7 @@ func _ready():
 	print(npc)
 	npc_name = ""
 	npc_name = _get_npc(npc)
-	voice.connect("characters_sounded", _on_voicebox_characters_sounded)
+	#voice.connect("characters_sounded", _on_voicebox_characters_sounded)
 	
 	
 	
@@ -133,14 +133,14 @@ func _on_check_my_order():
 		world.score += 10 + counter
 		npc_name += "Happy"
 		dialogue.text=""
-		$ACVoicebox.play_string("Thanks!")
-		#dialogue.text = "Thanks!"
+		#$ACVoicebox.play_string("Thanks!")
+		dialogue.text = "Thanks!"
 		get_node(npc_name).show()
 	elif order_counter == 0:
 		world.score += 1
 		dialogue.text=""
-		$ACVoicebox.play_string("Seriously")
-		#dialogue.text = "Seriously?"
+		#$ACVoicebox.play_string("Seriously")
+		dialogue.text = "Seriously?"
 	else:
 		world.score += 5
 		npc_name += "Angry"
@@ -183,6 +183,6 @@ func _get_npc(npc):   #update for every new npc
 		$NPCSurfer.show()
 		npcName = "NPCSurfer/NPCSurfer"
 	dialogue.text=""
-	$ACVoicebox.play_string("HHi! Here's my order")
-	#dialogue.text = "Hi! Here's my order."
+	#$ACVoicebox.play_string("HHi! Here's my order")
+	dialogue.text = "Hi! Here's my order."
 	return npcName
