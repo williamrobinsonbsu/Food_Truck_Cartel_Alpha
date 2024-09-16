@@ -123,4 +123,4 @@ libraries = {
 }
 speed_scale = 0.5
 
-[node name="PasueMenu" parent="." instance=ExtResource("2_xfury")]
+[node name="PauseMenu" parent="." instance=ExtResource("2_xfury")]
