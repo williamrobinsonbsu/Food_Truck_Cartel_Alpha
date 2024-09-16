@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwe7cgxl38fm2"]
+[gd_scene load_steps=6 format=3 uid="uid://cwe7cgxl38fm2"]
 
-[ext_resource type="Script" path="res://menus/pasue_menu.gd" id="1_nprtc"]
-[ext_resource type="Texture2D" uid="uid://c4k5k8qxoi77a" path="res://menus/Pause_Menu_UnClick.webp" id="2_rgnq2"]
-[ext_resource type="PackedScene" uid="uid://42jgpbvyneu0" path="res://menus/options/options.tscn" id="3_i2ioj"]
+[ext_resource type="Script" path="res://menus/pause_menu.gd" id="1_82swi"]
+[ext_resource type="Texture2D" uid="uid://c4k5k8qxoi77a" path="res://menus/Pause_Menu_UnClick.webp" id="2_2j8ff"]
+[ext_resource type="Shader" path="res://menus/pause_menu.gdshader" id="2_r8srx"]
+[ext_resource type="PackedScene" uid="uid://42jgpbvyneu0" path="res://menus/options/options.tscn" id="3_alftw"]
 
-[node name="PasueMenu" type="Control"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kvutn"]
+shader = ExtResource("2_r8srx")
+shader_parameter/amount = 3.0
+
+[node name="PauseMenu" type="Control"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 8
@@ -14,12 +19,17 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_nprtc")
+script = ExtResource("1_82swi")
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_kvutn")
+offset_right = 1152.0
+offset_bottom = 652.0
 
 [node name="Resume" type="Button" parent="CanvasLayer"]
 offset_left = 464.0
@@ -44,9 +54,9 @@ text = "Quit"
 
 [node name="PauseNote" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(576, 324)
-texture = ExtResource("2_rgnq2")
+texture = ExtResource("2_2j8ff")
 
-[node name="Options" parent="." instance=ExtResource("3_i2ioj")]
+[node name="Options" parent="." instance=ExtResource("3_alftw")]
 layout_mode = 1
 
 [connection signal="pressed" from="CanvasLayer/Resume" to="." method="_on_resume_pressed"]

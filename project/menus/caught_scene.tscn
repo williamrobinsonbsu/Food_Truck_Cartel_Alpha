@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ux1x5uvl7lsm"]
+[gd_scene load_steps=3 format=3 uid="uid://ux1x5uvl7lsm"]
 
 [ext_resource type="Script" path="res://menus/caught_scene.gd" id="1_ujr7k"]
+[ext_resource type="Texture2D" uid="uid://dghqord6huqqm" path="res://menus/Food_Truck_End_Game.webp" id="2_7qixl"]
 
 [node name="CaughtScene" type="Control"]
 layout_mode = 3
@@ -11,15 +12,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ujr7k")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.5, 324)
+scale = Vector2(1.16263, 0.925714)
+texture = ExtResource("2_7qixl")
+
 [node name="Retry" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 525.0
-offset_top = 285.0
-offset_right = -577.0
-offset_bottom = -332.0
+offset_left = 684.0
+offset_top = 236.0
+offset_right = -339.0
+offset_bottom = -324.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Retry"
@@ -29,14 +35,24 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 143.0
-offset_top = 374.0
-offset_right = -967.0
-offset_bottom = -243.0
+offset_left = 684.0
+offset_top = 446.0
+offset_right = -339.0
+offset_bottom = -123.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Quit
 "
 
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 342.0
+offset_right = 813.0
+offset_bottom = 427.0
+text = "Main Menu
+"
+
 [connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]

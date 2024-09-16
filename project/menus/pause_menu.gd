@@ -22,6 +22,7 @@ func _on_resume_pressed():
 func _on_options_pressed():
 	get_node("Options").show()
 	get_node("CanvasLayer").hide()
+	
 
 
 func _on_quit_pressed():
