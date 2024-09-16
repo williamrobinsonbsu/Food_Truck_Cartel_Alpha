@@ -45,6 +45,7 @@ shape = SubResource("CapsuleShape3D_nm54x")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+current = true
 
 [node name="Interaction" type="RayCast3D" parent="Camera3D"]
 target_position = Vector3(0, 0, -3)
