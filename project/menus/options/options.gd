@@ -1,6 +1,6 @@
 extends Control
 
-
+signal closed
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -11,6 +11,7 @@ func _process(_delta):
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
+
 
 
 func _on_mute_toggled(toggled_on):
@@ -35,6 +36,6 @@ func _on_window_size_item_selected(index):
 			DisplayServer.window_set_size(Vector2i(1200,300))
 
 func _on_back_button_pressed():
-	get_node("MarginContainer").hide()
-	
+	$CanvasLayer.hide()
+	closed.emit()
 	

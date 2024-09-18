@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cywlto4wavxy4"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sh6bp"]
-[ext_resource type="PackedScene" path="res://menus/pause_menu.tscn" id="2_xfury"]
+[ext_resource type="PackedScene" uid="uid://cwe7cgxl38fm2" path="res://menus/pause_menu.tscn" id="2_xfury"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6w4jn"]
 
@@ -86,19 +86,6 @@ layout_mode = 2
 text = "+"
 label_settings = SubResource("LabelSettings_3dcpl")
 horizontal_alignment = 1
-
-[node name="GameOver" type="CenterContainer" parent="Control"]
-visible = false
-layout_mode = 0
-offset_left = -69.0
-offset_top = -85.0
-offset_right = 18.0
-offset_bottom = -45.0
-scale = Vector2(2.10843, 2.28571)
-
-[node name="GameOverText" type="Label" parent="Control/GameOver"]
-layout_mode = 2
-text = "Game Over"
 
 [node name="CatchMeter" type="ProgressBar" parent="Control"]
 layout_mode = 1
