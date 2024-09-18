@@ -93,6 +93,7 @@ func _on_police():
 	add_child(police)
 	if laneProgressionCounter == 1:
 		i = randi()%2
+		police.scale = Vector3(0.1, 0.1, 0.1)
 		if i == 0:
 			police.position = $Far1.position
 		elif i == 1:
@@ -102,6 +103,7 @@ func _on_police():
 			police.scale.x *= -1
 	elif laneProgressionCounter == 2:
 		i = randi()%2
+		police.scale = Vector3(0.5, 0.5, 0.5)
 		if i == 0:
 			police.position = $Mid1.position
 		elif i == 1:
@@ -111,6 +113,7 @@ func _on_police():
 			police.scale.x *= -1
 	else:
 		i = randi()%1
+		police.scale = Vector3(1, 1, 1)
 		if i == 0:
 			police.position = $Close1.position
 		elif i == 1:

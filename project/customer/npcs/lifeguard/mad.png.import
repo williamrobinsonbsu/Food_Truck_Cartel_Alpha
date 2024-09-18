@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd5mksv3rmd88"
-path="res://.godot/imported/mad.png-e8d1edb611d2667db3d3e3dcd6ceeaa9.ctex"
+uid="uid://b6kp8es12xa6q"
+path="res://.godot/imported/mad.png-047a6068091d4de228ef4fce8b4679f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/npcs/surfer/mad.png"
-dest_files=["res://.godot/imported/mad.png-e8d1edb611d2667db3d3e3dcd6ceeaa9.ctex"]
+source_file="res://customer/npcs/lifeguard/mad.png"
+dest_files=["res://.godot/imported/mad.png-047a6068091d4de228ef4fce8b4679f4.ctex"]
 
 [params]
 

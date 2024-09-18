@@ -31,19 +31,19 @@ Blondie: Thanks!
 #Lifeguard
 ~ lifeguard
 
-Lifeguard: Hello!
+Lifeguard: I’m beat! Shark sightings have been more common than ever.
 
 => END
 
 ~ lifeguard_angry
 
-Lifeguard: Seriously?
+Lifeguard: This took forever. I would rather be swimming!
 
 => END
 
 ~ lifeguard_happy
 
-Lifeguard: Thanks!
+Lifeguard: This definitely hits the spot. Best secret burger ever!
 
 => END
 
@@ -53,7 +53,7 @@ Lifeguard: Thanks!
 #surfer
 ~ surfer
 
-Surfer: Yooooo!
+Surfer: Ever swam with sharks? I have! Accidentally took my leg off though, Ha!
 
 => END
 
@@ -65,6 +65,22 @@ Surfer: Seriously?
 
 ~ surfer_happy
 
-Surfer: Thanks!
+Surfer: This food is radical, dude!
 
 => END
+
+
+
+#dude
+~ dude
+
+=> END
+
+~ dude_angry
+
+=> END 
+
+~ dude_happy
+
+=> END 
+

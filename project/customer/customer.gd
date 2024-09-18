@@ -133,19 +133,19 @@ func _on_check_my_order():
 	if world.starting_counter == 0:
 		world.score += 0
 	elif order_counter == counter:
-		path = "res://Textures/npcs/" + npc_name + "/happy.png"
+		path = "res://customer/npcs/" + npc_name + "/happy.png"
 		var new_texture = load(path)
 		texture.texture = new_texture
 		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_happy")
 		world.score += 10 + counter
 	elif order_counter == 0:
-		path = "res://Textures/npcs/" + npc_name + "/mad.png"
+		path = "res://customer/npcs/" + npc_name + "/mad.png"
 		var new_texture = load(path)
 		texture.texture = new_texture
 		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_angry")
 		world.score += 0
 	else:
-		path = "res://Textures/npcs/" + npc_name + "/mad.png"
+		path = "res://customer/npcs/" + npc_name + "/mad.png"
 		var new_texture = load(path)
 		texture.texture = new_texture
 		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_angry")
@@ -174,17 +174,17 @@ func _on_voicebox_characters_sounded(characters: String):
 	dialogue.text += characters
 
 func _get_npc(npc):   #update for every new npc
-	var npcName
+	var npc_name
 	var path
 	if npc == 0:
-		npcName = "blondie"
+		npc_name = "blondie"
 	elif npc == 1:
-		npcName = "lifeguard"
+		npc_name = "lifeguard"
 	elif npc == 2: 
-		npcName = "surfer"
+		npc_name = "surfer"
 	dialogue.text=""
 	
-	path = "res://Textures/npcs/" + npcName + "/normal.png"
+	path = "res://customer/npcs/" + npc_name + "/normal.png"
 	var new_texture = load(path)
 	
 	texture.texture = new_texture
@@ -192,4 +192,4 @@ func _get_npc(npc):   #update for every new npc
 	texture.texture = new_texture
 	#$ACVoicebox.play_string("HHi! Here's my order")
 	#dialogue.text = "Hi! Here's my order."
-	return npcName
+	return npc_name
