@@ -1021,33 +1021,43 @@ material_override = SubResource("StandardMaterial3D_lf5hw")
 material_override = SubResource("StandardMaterial3D_lf5hw")
 
 [node name="polySurface4" parent="Root Scene/RootNode/Truck/fryer" index="0"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="polySurface5" parent="Root Scene/RootNode/Truck/fryer" index="1"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="pCube28" parent="Root Scene/RootNode/Truck/fryer" index="2"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="pCylinder7" parent="Root Scene/RootNode/Truck/fryer" index="3"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="pTorus1" parent="Root Scene/RootNode/Truck/fryer" index="4"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="pTorus2" parent="Root Scene/RootNode/Truck/fryer" index="5"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="pTorus3" parent="Root Scene/RootNode/Truck/fryer" index="6"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="pTorus4" parent="Root Scene/RootNode/Truck/fryer" index="7"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="pTorus5" parent="Root Scene/RootNode/Truck/fryer" index="8"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="pTorus6" parent="Root Scene/RootNode/Truck/fryer" index="9"]
+visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="Onion4" parent="Root Scene/RootNode/Truck" index="34"]
