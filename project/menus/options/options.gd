@@ -36,6 +36,6 @@ func _on_window_size_item_selected(index):
 			DisplayServer.window_set_size(Vector2i(1200,300))
 
 func _on_back_button_pressed():
-	visible = false
+	$CanvasLayer.hide()
 	closed.emit()
 	
