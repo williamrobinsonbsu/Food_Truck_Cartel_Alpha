@@ -32,10 +32,11 @@ func _on_options_pressed():
 	$CanvasLayer.show()
 	
 	
-
-
 func _on_quit_pressed():
 	get_tree().quit()
 
+func _on_resume_mouse_entered():
+	$CanvasLayer/PauseNote.texture = load("res://menus/Pause_Menu_Resume_Click.webp")
 
-
+func _on_resume_mouse_exited():
+	$CanvasLayer/PauseNote.texture = load("res://menus/Pause_Menu_UnClick.webp")
