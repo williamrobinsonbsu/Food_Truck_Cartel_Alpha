@@ -174,7 +174,6 @@ func _on_voicebox_characters_sounded(characters: String):
 	dialogue.text += characters
 
 func _get_npc(npc):   #update for every new npc
-	var npc_name
 	var path
 	if npc == 0:
 		npc_name = "blondie"

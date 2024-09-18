@@ -127,11 +127,12 @@ func _on_police():
 			j += 1
 
 func policeRate():
-	#if randf() <= .3:
-	if laneProgressionCounter < 3:
-		laneProgressionCounter += 1
-	else:
-		laneProgressionCounter = 0
+	if randf() <= .3:
+		if laneProgressionCounter < 3:
+			laneProgressionCounter += 1
+		else:
+			laneProgressionCounter = 0
+	
 	return laneProgressionCounter
 		
 func _on_police_catch_timer_timeout():
