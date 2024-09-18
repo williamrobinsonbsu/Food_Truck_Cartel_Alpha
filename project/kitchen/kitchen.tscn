@@ -1764,9 +1764,6 @@ script = ExtResource("184_phgmx")
 [node name="Player" parent="." instance=ExtResource("189_grvwk")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
 
-[node name="Camera3D" parent="Player" index="2"]
-current = true
-
 [node name="order_plate" parent="." groups=["plate"] instance=ExtResource("190_a410o")]
 transform = Transform3D(1.541, 0, 0, 0, 0.952, 0, 0, 0, 1.5, 0, 1.18726, 4.47593)
 

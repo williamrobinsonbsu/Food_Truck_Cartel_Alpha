@@ -78,7 +78,9 @@ func _physics_process(_delta):
 	
 	if Input.is_action_just_pressed("pause"):
 		get_tree().paused = true
-		get_node("PauseMenu/CanvasLayer").show()
+		$PauseMenu.show_pause_menu()
+		await $PauseMenu.dismissed
+		get_tree().paused = false
 	
 func movementStateChange(changeType):
 	match changeType:
