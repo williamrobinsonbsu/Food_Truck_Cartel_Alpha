@@ -30,6 +30,8 @@ func shutter_door_control():
 		door_shutter()
 		if starting_counter == 0:
 			_on_new_customer()
+			get_node("/root/World/Player/Control/DayIcon").show()
+			get_node("/root/World/Player/DayTimer").start()
 			$LevelTimer.start()
 			timer.emit()
 			starting_counter += 1

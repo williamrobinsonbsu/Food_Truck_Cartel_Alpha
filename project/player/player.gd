@@ -4,7 +4,8 @@ const SPEED = 5.0
 
 @onready var interaction := $Camera3D/Interaction
 @onready var hand := $Camera3D/Hand
-
+var index = 1
+var tex_array = [load("res://player/Day_Beginning.png"),load("res://player/Day_Mid.png"),load("res://player/Day_Late.png"),load("res://player/Day_End.png")]
 var picked_object
 var pull_power = 10
 
@@ -14,6 +15,7 @@ var isCrouching = false
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -107,3 +109,8 @@ func drop_object():
 		if picked_object.has_method("picked"):
 			picked_object.picked(false)
 		picked_object = null
+
+
+func _on_day_timer_timeout():
+	$Control/DayIcon.set_texture(tex_array[index])
+	index += 1
