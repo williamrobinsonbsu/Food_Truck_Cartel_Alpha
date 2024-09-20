@@ -200,12 +200,10 @@ func _get_npc(npc):   #update for every new npc
 	elif npc == 6:
 		npc_name = "skater"
 		voice.base_pitch = 2
-	dialogue.text=""
+	dialogue.text = ""
 	
 	path = "res://customer/npcs/" + npc_name + "/normal.png"
 	var new_texture = load(path)
-	
-	texture.texture = new_texture
 	
 	texture.texture = new_texture
 	#$ACVoicebox.play_string("HHi! Here's my order")
