@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://cj1qcw81lh2l5"]
 
-[ext_resource path="res://ACVoicebox.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://ACVoicebox.gd" id="1"]
 
 [node name="ACVoicebox" type="AudioStreamPlayer"]
-script = ExtResource( 1 )
+script = ExtResource("1")

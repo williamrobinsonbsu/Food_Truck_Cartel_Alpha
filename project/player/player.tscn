@@ -121,6 +121,6 @@ speed_scale = 0.5
 [node name="PauseMenu" parent="." instance=ExtResource("2_xfury")]
 
 [node name="DayTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 75.0
 
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]

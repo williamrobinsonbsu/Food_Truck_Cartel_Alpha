@@ -23,6 +23,10 @@ buses/default_bus_layout="res://audio/default_bus_layout.tres"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
+[dialogue_manager]
+
+general/states=["AcVoicebox"]
+
 [display]
 
 window/size/mode=3
