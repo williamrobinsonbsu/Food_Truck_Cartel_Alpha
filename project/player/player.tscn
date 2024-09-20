@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sh6bp"]
 [ext_resource type="Texture2D" uid="uid://ddwecisrh30hl" path="res://player/Day_Beginning.png" id="2_05itk"]
-[ext_resource type="PackedScene" path="res://menus/pause_menu.tscn" id="2_xfury"]
+[ext_resource type="PackedScene" uid="uid://4qjr6s5daym" path="res://menus/pause_menu.tscn" id="2_xfury"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6w4jn"]
 

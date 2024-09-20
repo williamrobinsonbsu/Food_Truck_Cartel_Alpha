@@ -92,11 +92,29 @@ popup/item_1/id = 1
 popup/item_2/text = "1200X300"
 popup/item_2/id = 2
 
+[node name="BrightLabel" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "dims the game"
+
+[node name="brightness" type="HSlider" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 0.7
+step = 0.001
+
 [node name="BackButton" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Back"
 
+[node name="brightness" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="brightness"]
+offset_right = 1153.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
 [connection signal="toggled" from="CanvasLayer/MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
 [connection signal="item_selected" from="CanvasLayer/MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
 [connection signal="item_selected" from="CanvasLayer/MarginContainer/VBoxContainer/WindowSize" to="." method="_on_window_size_item_selected"]
+[connection signal="value_changed" from="CanvasLayer/MarginContainer/VBoxContainer/brightness" to="." method="_on_brightness_value_changed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
