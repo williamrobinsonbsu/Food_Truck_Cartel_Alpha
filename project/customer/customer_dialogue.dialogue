@@ -131,3 +131,25 @@ Business Woman: I hope you get fired.
 Business Woman: Call me if you ever need a real job.
 
 => END 
+
+
+
+
+#skater
+~ skater
+
+Skater: My buddy got a broken arm from skating off a roof. It was kinda sick looking with the bone out.
+
+=> END 
+
+~ skater_angry
+
+Skater: This food is bad luck man.
+
+=> END 
+
+~ skater_happy
+
+Skater: This food is gnarly dude. Thanks!
+
+=> END 
