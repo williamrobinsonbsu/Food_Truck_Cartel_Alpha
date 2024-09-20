@@ -21,7 +21,7 @@ signal new_customer
 func _ready():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	var npc = rng.randi_range(0, 2)
+	var npc = rng.randi_range(0, 5)
 	print(npc)
 	npc_name = ""
 	npc_name = _get_npc(npc)
@@ -188,6 +188,15 @@ func _get_npc(npc):   #update for every new npc
 	elif npc == 2: 
 		npc_name = "surfer"
 		voice.base_pitch = 2
+	elif npc == 3:
+		npc_name = "dude"
+		voice.base_pitch = 1
+	elif npc == 4:
+		npc_name = "goth"
+		voice.base_pitch = 3
+	elif npc == 5:
+		npc_name = "business_woman"
+		voice.base_pitch = 5
 	dialogue.text=""
 	
 	path = "res://customer/npcs/" + npc_name + "/normal.png"

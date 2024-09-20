@@ -74,13 +74,60 @@ Surfer: This food is radical, dude!
 #dude
 ~ dude
 
+Dude: bruh
+
 => END
 
 ~ dude_angry
+
+Dude: bruh
 
 => END 
 
 ~ dude_happy
 
+Dude: bruh
+
 => END 
 
+
+
+#goth person
+~ goth
+
+Goth: The sun’s very bright today. I don’t like it.
+
+=> END 
+
+~ goth_angry
+
+Goth: Thanks alot, I guess.…
+
+=> END 
+
+~ goth_happy
+
+Goth: Metal.
+
+=> END 
+
+
+
+#business woman
+~ business_woman
+
+Business Woman: I’m a busy person so don’t make me wait long.
+
+=> END 
+
+~ business_woman_angry
+
+Business Woman: I hope you get fired.
+
+=> END 
+
+~ business_woman_happy
+
+Business Woman: Call me if you ever need a real job.
+
+=> END 

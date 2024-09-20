@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1r862jehp6wx"
-path="res://.godot/imported/happy.png-5003f878f9f8c93a03abd60920ce5049.ctex"
+uid="uid://p15e4pgj0sfb"
+path="res://.godot/imported/happy.png-51aa1ee9ce81b6b13b9a12bb0b4c7747.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://customer/npcs/blondie/happy.png"
-dest_files=["res://.godot/imported/happy.png-5003f878f9f8c93a03abd60920ce5049.ctex"]
+source_file="res://customer/npcs/dude/happy.png"
+dest_files=["res://.godot/imported/happy.png-51aa1ee9ce81b6b13b9a12bb0b4c7747.ctex"]
 
 [params]
 

@@ -1,12 +1,97 @@
-[gd_scene load_steps=2 format=3 uid="uid://dt1fa1cm8pnh6"]
+[gd_scene load_steps=11 format=3 uid="uid://dt1fa1cm8pnh6"]
 
 [ext_resource type="PackedScene" uid="uid://bag7mejrwpe4g" path="res://FBXRaw/FRYERBASKET.fbx" id="1_nupf7"]
+[ext_resource type="Script" path="res://kitchen/fryer_basket.gd" id="1_up7du"]
+[ext_resource type="PackedScene" uid="uid://bss6fddgtqox6" path="res://FBXRaw/FriesIndiv.fbx" id="2_shc3p"]
+[ext_resource type="Texture2D" uid="uid://cvylco8mll464" path="res://Textures/FriesIndiv_standardSurface1_BaseColor.png" id="3_verin"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2cfc2"]
+albedo_texture = ExtResource("3_verin")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s5p1c"]
+size = Vector3(0.486084, 0.228546, 0.254395)
+
+[sub_resource type="Animation" id="Animation_j7fid"]
+resource_name = "in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.116676, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rd7f7"]
+resource_name = "out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.116676, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_moe4y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bdcsx"]
+_data = {
+"RESET": SubResource("Animation_moe4y"),
+"in": SubResource("Animation_j7fid"),
+"out": SubResource("Animation_rd7f7")
+}
 
 [node name="FryerBasket" type="Node3D"]
 
-[node name="Root Scene" parent="." instance=ExtResource("1_nupf7")]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_up7du")
 
-[node name="fryer_basket" parent="Root Scene/RootNode" index="0"]
+[node name="Fries" parent="StaticBody3D" instance=ExtResource("2_shc3p")]
+visible = false
+
+[node name="fries" parent="StaticBody3D/Fries/RootNode/Fry" index="0"]
+transform = Transform3D(0.114438, 1.44757e-23, 0, 0, 0.114438, 0, 0, -2.31611e-23, 0.114438, 2.38642, -1.01055, -1.84635)
+material_override = SubResource("StandardMaterial3D_2cfc2")
+
+[node name="Basket" parent="StaticBody3D" instance=ExtResource("1_nupf7")]
+
+[node name="fryer_basket" parent="StaticBody3D/Basket/RootNode" index="0"]
 transform = Transform3D(25, 0, 0, 0, -5.96046e-06, 25, 0, -25, -5.96046e-06, 0, 0.185757, -0.130139)
 
-[editable path="Root Scene"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0435791, 0.0406036, -0.0144043)
+shape = SubResource("BoxShape3D_s5p1c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_bdcsx")
+}
+
+[node name="Marker3D" type="Marker3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16275, 0)
+
+[editable path="StaticBody3D/Fries"]
+[editable path="StaticBody3D/Basket"]

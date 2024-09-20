@@ -1,4 +1,4 @@
-[gd_scene load_steps=299 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=300 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -173,6 +173,7 @@
 [ext_resource type="Script" path="res://kitchen/tomato_bowl.gd" id="178_twd0r"]
 [ext_resource type="Script" path="res://kitchen/onion_bowl.gd" id="179_cxam2"]
 [ext_resource type="Script" path="res://kitchen/chip_shelf.gd" id="180_mewoh"]
+[ext_resource type="PackedScene" uid="uid://dt1fa1cm8pnh6" path="res://kitchen/fryer_basket.tscn" id="181_jeug3"]
 [ext_resource type="Script" path="res://kitchen/soda_fridge.gd" id="181_qrijm"]
 [ext_resource type="Script" path="res://kitchen/bread_bottom_shelf.gd" id="182_7m4oo"]
 [ext_resource type="Script" path="res://kitchen/top_bun_shelf.gd" id="183_8a653"]
@@ -777,7 +778,7 @@ albedo_texture = ExtResource("38_0bfbp")
 size = Vector3(0.13134, 0.0350343, 0.117554)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jmo2p"]
-size = Vector3(1.0127, 0.449951, 0.43457)
+size = Vector3(1.0127, 0.14685, 0.43457)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_feimu"]
 size = Vector3(0.457031, 1.80621, 0.0938416)
@@ -1697,7 +1698,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06907, 0, 0)
 script = ExtResource("186_yv3i3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/frier"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00634766, 0.119263, -0.0444336)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00634766, -0.0322873, -0.0444336)
 shape = SubResource("BoxShape3D_jmo2p")
 
 [node name="friesPosition" type="Marker3D" parent="Root Scene/frier"]
@@ -1771,6 +1772,9 @@ transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 
 wait_time = 300.0
 one_shot = true
 script = ExtResource("184_phgmx")
+
+[node name="FryerBasket" parent="Root Scene" instance=ExtResource("181_jeug3")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.686268, 0.327242, 0.0613606)
 
 [node name="Player" parent="." instance=ExtResource("189_grvwk")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
