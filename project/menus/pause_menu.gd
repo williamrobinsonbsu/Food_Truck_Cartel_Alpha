@@ -47,10 +47,8 @@ func _on_options_mouse_entered():
 func _on_options_mouse_exited():
 	$CanvasLayer/PauseNote.texture = load("res://menus/Pause_Menu_UnClick.webp")
 
-
 func _on_quit_mouse_entered():
 	$CanvasLayer/PauseNote.texture = load("res://menus/Pause_Menu_Quit_Click.webp")
-
 
 func _on_quit_mouse_exited():
 	$CanvasLayer/PauseNote.texture = load("res://menus/Pause_Menu_UnClick.webp")
