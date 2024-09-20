@@ -8,7 +8,7 @@ var can_police_catch_player = false
 @export var score = 0
 @export var starting_counter = 0
 
-@export var laneProgressionCounter = 0
+@export var lane_progression_counter = 0
 var poRate = 0
 var goal_score = 150
 signal timer
@@ -93,7 +93,7 @@ func _on_police():
 	var i = 0
 	var j = 0
 	add_child(police)
-	if laneProgressionCounter == 1:
+	if lane_progression_counter == 1:
 		i = randi()%2
 		police.scale = Vector3(0.1, 0.1, 0.1)
 		if i == 0:
@@ -103,7 +103,7 @@ func _on_police():
 		else:
 			police.position = $Far3.position
 			police.scale.x *= -1
-	elif laneProgressionCounter == 2:
+	elif lane_progression_counter == 2:
 		i = randi()%2
 		police.scale = Vector3(0.5, 0.5, 0.5)
 		if i == 0:
@@ -130,12 +130,12 @@ func _on_police():
 
 func policeRate():
 	if randf() <= .3:
-		if laneProgressionCounter < 3:
-			laneProgressionCounter += 1
+		if lane_progression_counter < 3:
+			lane_progression_counter += 1
 		else:
-			laneProgressionCounter = 0
+			lane_progression_counter = 0
 	
-	return laneProgressionCounter
+	return lane_progression_counter
 		
 func _on_police_catch_timer_timeout():
 	if can_police_catch_player == true:
