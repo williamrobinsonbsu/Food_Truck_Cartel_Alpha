@@ -156,9 +156,9 @@ func _on_check_my_order():
 		world.score += 5
 		
 	get_node("/root/World/Root Scene/register/score").text = "$" + str(world.score)
-	get_node("/root/World/order_plate/resetTemp").set_collision_layer_value(1, false)
+	get_node("/root/World/order_plate/resetTemp").set_collision_mask_value(1, false)
 	await get_tree().create_timer(3).timeout
-	get_node("/root/World/order_plate/resetTemp").set_collision_layer_value(1, true)
+	get_node("/root/World/order_plate/resetTemp").set_collision_mask_value(1, true)
 		
 	
 	get_tree().call_group("map", "_spawn_new_customer_or_cop")
