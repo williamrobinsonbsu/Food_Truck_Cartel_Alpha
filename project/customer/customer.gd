@@ -70,6 +70,8 @@ func _ready():
 		print("With soda!")
 		get_node("/root/World/Root Scene/OrderLabel").text += "\n- Bottle of Soda"
 	
+		
+	
 func _on_check_my_order():
 	var order_counter = 0
 	var path

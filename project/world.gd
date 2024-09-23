@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var customer_or_cop_timer := $customer_or_police_spawn_timer
 @onready var cop_catch_timer := $cop_catch_timer
+@onready var order_time: Label = get_node("/root/World/Player/Control/OrderTimerLabel")
 
 var shutter_door_close = false
 var can_police_catch_player = false
@@ -11,6 +12,7 @@ var can_police_catch_player = false
 @export var lane_progression_counter = 0
 var poRate = 0
 var goal_score = 150
+var j := 60
 signal timer
 
 func _ready():
@@ -58,11 +60,13 @@ func door_shutter():
 
 func _spawn_new_customer_or_cop():
 	customer_or_cop_timer.start()
+	
 
 func _on_customer_or_police_spawn_timer_timeout():
 	_customer_or_cop()
 
 func _customer_or_cop():
+	j = 0
 	_on_new_customer()
 	starting_counter += 1
 	poRate = policeRate()
@@ -77,7 +81,15 @@ func _on_new_customer():
 	var scene = preload("res://customer/customer.tscn")
 	var customer = scene.instantiate()
 	add_child(customer)
-	customer.position = %customer.position		
+	customer.position = %customer.position
+	
+	j = 60
+	order_time.text = str(j)
+	while j != 0:
+		j -= 1
+		order_time.text = str(j)
+		await get_tree().create_timer(1).timeout
+		
 	
 func _on_police():
 	#var audio_stream_player := AudioStreamPlayer.new()
