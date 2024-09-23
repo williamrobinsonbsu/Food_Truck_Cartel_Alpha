@@ -11,6 +11,21 @@ albedo_texture = ExtResource("3_verin")
 [sub_resource type="BoxShape3D" id="BoxShape3D_s5p1c"]
 size = Vector3(0.486084, 0.228546, 0.254395)
 
+[sub_resource type="Animation" id="Animation_moe4y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_j7fid"]
 resource_name = "in"
 tracks/0/type = "value"
@@ -39,21 +54,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, -0.116676, 0), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_moe4y"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bdcsx"]

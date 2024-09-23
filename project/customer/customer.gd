@@ -162,7 +162,7 @@ func _on_check_my_order():
 		
 	
 	get_tree().call_group("map", "_spawn_new_customer_or_cop")
-	if world.laneProgressionCounter != 3:
+	if world.lane_progression_counter != 3:
 		get_tree().call_group("police", "despawn")
 	$".".queue_free()
 		
