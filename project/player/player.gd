@@ -58,6 +58,7 @@ func _input(event):
 			drop_object()
 #
 func _physics_process(_delta):
+	self.position.y = 1.226
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:

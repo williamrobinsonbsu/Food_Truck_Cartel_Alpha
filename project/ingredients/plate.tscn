@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cvylco8mll464" path="res://Textures/FriesIndiv_standardSurface1_BaseColor.png" id="17_ggfmk"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rf0rk"]
-height = 0.0410744
+height = 0.183494
 radius = 0.136671
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynu4e"]
@@ -55,6 +55,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0119846, 0, -0.0112032)
 transform = Transform3D(31.524, 0, 0, 0, 1.0643, 0, 0, 0, 31.524, -3.5425, -2.43644, -12.4178)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00946522, 0.0879455, 0)
 script = ExtResource("2_lbwt3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
