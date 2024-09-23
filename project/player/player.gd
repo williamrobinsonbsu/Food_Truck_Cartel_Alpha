@@ -4,6 +4,7 @@ const SPEED = 5.0
 
 @onready var interaction := $Camera3D/Interaction
 @onready var hand := $Camera3D/Hand
+
 var index = 1
 var tex_array = [load("res://player/Day_Beginning.png"),load("res://player/Day_Mid.png"),load("res://player/Day_Late.png"),load("res://player/Day_End.png")]
 var picked_object
