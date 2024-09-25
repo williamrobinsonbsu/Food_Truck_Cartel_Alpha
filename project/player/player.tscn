@@ -106,14 +106,6 @@ offset_right = 81.0
 offset_bottom = 225.0
 text = "300"
 
-[node name="OrderTimerLabel" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 41.0
-offset_top = 225.0
-offset_right = 81.0
-offset_bottom = 248.0
-text = "60"
-
 [node name="DayIcon" type="Sprite2D" parent="Control"]
 visible = false
 position = Vector2(1089, 41)

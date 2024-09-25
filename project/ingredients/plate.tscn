@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cvylco8mll464" path="res://Textures/FriesIndiv_standardSurface1_BaseColor.png" id="17_ggfmk"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rf0rk"]
-height = 0.183494
+height = 0.233957
 radius = 0.136671
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynu4e"]
@@ -31,7 +31,7 @@ albedo_texture = ExtResource("4_233gv")
 albedo_texture = ExtResource("11_id26x")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_73yg8"]
-size = Vector3(0.166275, 0.12442, 0.1604)
+size = Vector3(0.166275, 0.221512, 0.1604)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubcov"]
 albedo_texture = ExtResource("13_3f51r")
@@ -123,11 +123,11 @@ transform = Transform3D(8.47766, 0, 0, 0, 2.20425, 0, 0, 0, 8.47766, 0.0423815, 
 material_override = SubResource("StandardMaterial3D_5tq15")
 
 [node name="resetTemp" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.302319, 0.110318, 0.0561066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.760155, 0.110318, 0.0561066)
 script = ExtResource("11_efj2f")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="resetTemp"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699635, -0.0334307, -0.0296969)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699635, 0.0151152, -0.0296969)
 shape = SubResource("BoxShape3D_73yg8")
 
 [node name="Label3D" type="Label3D" parent="resetTemp"]

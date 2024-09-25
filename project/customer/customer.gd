@@ -69,8 +69,11 @@ func _ready():
 		counter += 1
 		print("With soda!")
 		get_node("/root/World/Root Scene/OrderLabel").text += "\n- Bottle of Soda"
-	
-		
+
+
+func _process(delta) -> void:
+	$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
+
 	
 func _on_check_my_order():
 	var order_counter = 0

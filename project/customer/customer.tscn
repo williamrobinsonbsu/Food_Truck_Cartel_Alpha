@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cuqr3ppkwg1gj"]
+[gd_scene load_steps=10 format=3 uid="uid://cuqr3ppkwg1gj"]
 
 [ext_resource type="Script" path="res://customer/customer.gd" id="1_u5n8i"]
 [ext_resource type="PackedScene" uid="uid://cj1qcw81lh2l5" path="res://audio/ACVoicebox.tscn" id="2_ve2d7"]
+[ext_resource type="Texture2D" uid="uid://cs5xsv7dvgmo0" path="res://customer/npcs/skater/normal.png" id="2_yhjua"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vifeq"]
 transparency = 1
@@ -71,7 +72,13 @@ autostart = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.0896936, 0, 0, 0, 0.0884921, 0, 0, 0, 0.1, 0, 0.187185, 0)
+texture = ExtResource("2_yhjua")
 
 [node name="ACVoicebox" parent="." instance=ExtResource("2_ve2d7")]
+
+[node name="OrderTimer" type="Label3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.371326, 0.595465, -0.197498)
+text = "
+"
 
 [connection signal="timeout" from="AssemblyTimer" to="." method="_on_assembly_timer_timeout"]
