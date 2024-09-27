@@ -1,5 +1,6 @@
-[gd_scene load_steps=440 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=441 format=3 uid="uid://6xn3th2ud7em"]
 
+[ext_resource type="AudioStream" uid="uid://carck6u43g0qq" path="res://audio/beach_ambience.wav" id="1_a06wj"]
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
 [ext_resource type="Texture2D" uid="uid://ina41yjak2ar" path="res://Textures/FrontCounter_standardSurface1_BaseColor.png" id="3_bm3f8"]
@@ -657,7 +658,6 @@ heightmap_texture = ExtResource("101_sp27o")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6ltx"]
 resource_name = "standardSurface3"
-albedo_color = Color(1, 1, 1, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_f84n6"]
@@ -1124,7 +1124,6 @@ heightmap_texture = ExtResource("83_fj85l")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ance5"]
 resource_name = "standardSurface18"
-albedo_color = Color(1, 1, 1, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_j10xe"]
@@ -1227,7 +1226,6 @@ heightmap_texture = ExtResource("96_8qd2u")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_361q4"]
 resource_name = "standardSurface1"
-albedo_color = Color(1, 1, 1, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_wmx1i"]
@@ -1285,7 +1283,6 @@ heightmap_texture = ExtResource("261_c35j2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6rrnq"]
 resource_name = "standardSurface2"
-albedo_color = Color(1, 1, 1, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_iaryd"]
@@ -1362,7 +1359,6 @@ heightmap_texture = ExtResource("284_iel1c")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2by25"]
 resource_name = "standardSurface15"
-albedo_color = Color(1, 1, 1, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_kx50x"]
@@ -1404,7 +1400,6 @@ albedo_texture = ExtResource("289_g2roh")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hofbx"]
 resource_name = "standardSurface1"
-albedo_color = Color(1, 1, 1, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mj62j"]
@@ -1453,7 +1448,6 @@ heightmap_texture = ExtResource("292_deusa")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3pb2"]
 resource_name = "standardSurface14"
-albedo_color = Color(1, 1, 1, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_iwkvk"]
@@ -1494,6 +1488,11 @@ shadow_mesh = SubResource("ArrayMesh_iwkvk")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2g63l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_a06wj")
+autoplay = true
+bus = &"Music"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
@@ -2613,9 +2612,6 @@ material_override = SubResource("StandardMaterial3D_r0tfo")
 
 [node name="register" parent="." instance=ExtResource("228_djagy")]
 transform = Transform3D(1.48394, 0, 0, 0, 1.03274, 0, 0, 0, 1.45986, -0.631172, -0.0101246, 3.63709)
-
-[node name="RootNode" parent="register" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Register_001" parent="register/RootNode" index="0"]
 transform = Transform3D(1.0586, 0, 0, 0, 1.12435, 0, 0, 0, 1, 0.0303794, -0.122378, 0)

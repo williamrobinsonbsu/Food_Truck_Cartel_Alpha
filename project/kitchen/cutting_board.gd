@@ -36,6 +36,7 @@ func use(ingredient):
 			count += 1
 		ingredient.queue_free()
 		var audio_stream_player := AudioStreamPlayer.new()
+		audio_stream_player.bus = "Sound"
 		get_parent().add_child(audio_stream_player)
 		for i in 3:
 			audio_stream_player.stream = load("res://audio/chopping_sound.wav")
