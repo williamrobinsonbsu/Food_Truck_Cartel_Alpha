@@ -7,6 +7,7 @@ var shutter_door_close = false
 var can_police_catch_player = false
 @export var score = 0
 @export var starting_counter = 0
+var level: String
 
 @export var lane_progression_counter = 0
 var poRate = 0
@@ -14,13 +15,14 @@ var goal_score = 150
 signal timer
 
 func _ready():
-	get_node("/root/World/Player/Control/CatchMeter").value = 0	
-	var value = get_node("/root/World/Player/Control/CatchMeter").value
+	level = str(get_parent().get_parent().name)
+	get_node("/root/Beach/Kitchen/Player/Control/CatchMeter").value = 0	
+	var value = get_node("/root/Beach/Kitchen/Player/Control/CatchMeter").value
 	print(value)
 	
 
 func _physics_process(_delta: float) -> void:
-	if Input.is_action_pressed("ui_cancel"):
+	if Input.is_action_pressed("exit"):
 		get_tree().quit()
 	
 func shutter_door_control():
@@ -30,8 +32,8 @@ func shutter_door_control():
 		door_shutter()
 		if starting_counter == 0:
 			_on_new_customer()
-			get_node("/root/World/Player/Control/DayIcon").show()
-			get_node("/root/World/Player/DayTimer").start()
+			get_node("/root/Beach/Kitchen/Player/Control/DayIcon").show()
+			get_node("/root/Beach/Kitchen/Player/DayTimer").start()
 			$LevelTimer.start()
 			timer.emit()
 			starting_counter += 1
@@ -77,6 +79,7 @@ func _on_new_customer():
 	#print(score)
 	var scene = preload("res://customer/customer.tscn")
 	var customer = scene.instantiate()
+	customer.level = level
 	add_child(customer)
 	customer.position = %customer.position
 		
@@ -126,7 +129,7 @@ func _on_police():
 		cop_catch_timer.start()
 		while j < 10:
 			#get_node("/root/World/Player/Control/CatchMeter").text += "-"
-			get_node("/root/World/Player/Control/CatchMeter").value += 10
+			get_node("/root/Beach/Kitchen/Player/Control/CatchMeter").value += 10
 			await get_tree().create_timer(.5).timeout
 			j += 1
 
@@ -144,7 +147,7 @@ func _on_police_catch_timer_timeout():
 		get_tree().change_scene_to_file("res://menus/caught_scene.tscn")
 		
 	elif can_police_catch_player == false:
-		get_node("/root/World/Player/Control/CatchMeter").value = 0	
+		get_node("/root/Beach/Kitchen/Player/Control/CatchMeter").value = 0	
 		get_tree().call_group("police", "despawn")
 
 

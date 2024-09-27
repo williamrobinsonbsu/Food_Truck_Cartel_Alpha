@@ -3,7 +3,7 @@ extends StaticBody3D
 signal reset_ingredients
 
 func reset():
-	if get_node("/root/World/Root Scene").door_status() == true:
+	if get_node("/root/Beach/Kitchen/Root Scene").door_status() == true:
 		reset_ingredients.emit()
 		$"../bottom_bun".hide()
 		$"../patty".hide()

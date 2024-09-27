@@ -11,7 +11,7 @@ var top_bun_placed = false
 signal check_my_order
 
 func place(picked_object):
-	if picked_object != null and get_node("/root/World/Root Scene").door_status() == true:
+	if picked_object != null and get_node("/root/Beach/Kitchen/Root Scene").door_status() == true:
 		if picked_object.has_method("name"):
 			if picked_object.name() == "burger":
 				$"../bottom_bun".show()

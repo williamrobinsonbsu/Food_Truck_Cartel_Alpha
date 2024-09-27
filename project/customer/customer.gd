@@ -9,13 +9,25 @@ var i_want_chips = false
 var i_want_soda = false
 var npc_name
 
-
+@export var level: String
 
 var counter = 0
 @onready var texture: Sprite3D = $Sprite3D
-@onready var world = get_node("/root/World/Root Scene")
-@onready var dialogue = get_node("/root/World/NPCDialogue")
+@onready var world = get_node("/root/" + level +"/Kitchen/Root Scene")
+@onready var dialogue = get_node("/root/" + level + "/Kitchen/NPCDialogue")
+@onready var order_label: Label3D = get_node("/root/" + level + "/Kitchen/Root Scene/OrderLabel")
 @onready var voice : ACVoiceBox = $ACVoicebox
+@onready var patty = get_node("/root/" + level + "/Kitchen/order_plate/patty")
+@onready var bottom_bun = get_node("/root/" + level + "/Kitchen/order_plate/bottom_bun")
+@onready var top_bun = get_node("/root/" + level + "/Kitchen/order_plate/top_bun")
+@onready var cheese = get_node("/root/" + level + "/Kitchen/order_plate/cheese")
+@onready var tomato = get_node("/root/" + level + "/Kitchen/order_plate/tomatoes")
+@onready var lettuce = get_node("/root/" + level + "/Kitchen/order_plate/lettuce")
+@onready var onion = get_node("/root/" + level + "/Kitchen/order_plate/onions")
+@onready var fries = get_node("/root/" + level + "/Kitchen/order_plate/fries")
+@onready var soda = get_node("/root/" + level + "/Kitchen/order_plate/soda")
+@onready var chips = get_node("/root/" + level + "/Kitchen/order_plate/chips")
+
 signal new_customer
 
 func _ready():
@@ -32,43 +44,43 @@ func _ready():
 	
 	
 	print("I would like a burger!")
-	get_node("/root/World/Root Scene/OrderLabel").text = "-=+Current Order+=-\n- Burger with: "
+	order_label.text = "-=+Current Order+=-\n- Burger with: "
 	if randf() <= .50:
 		i_want_lettuce = true
 		counter += 1
 		print("With lettuce")
-		get_node("/root/World/Root Scene/OrderLabel").text += "\nLettuce"
+		order_label.text += "\nLettuce"
 	if randf() <= .10:
 		i_want_tomato = true
 		counter += 1
 		print("With tomato")
-		get_node("/root/World/Root Scene/OrderLabel").text += "\nTomato"
+		order_label.text += "\nTomato"
 	if randf() <= .75:
 		i_want_cheese = true
 		counter += 1
 		print("With cheese")
-		get_node("/root/World/Root Scene/OrderLabel").text += "\nCheese"
+		order_label.text += "\nCheese"
 	if randf() <= .45:
 		i_want_onion = true
 		counter += 1
 		print("With onion")
-		get_node("/root/World/Root Scene/OrderLabel").text += "\nOnion"
-	get_node("/root/World/Root Scene/OrderLabel").text += "\n"
+		order_label.text += "\nOnion"
+	order_label.text += "\n"
 	if randf() <= .6:
 		i_want_fries = true
 		counter += 1
 		print("With an order of fries!")
-		get_node("/root/World/Root Scene/OrderLabel").text += "\n- Order of Fries"
+		order_label.text += "\n- Order of Fries"
 	if randf() <= .1:
 		i_want_chips = true
 		counter += 1
 		print("With chips!")
-		get_node("/root/World/Root Scene/OrderLabel").text += "\n- Bag of Chips"
+		order_label.text += "\n- Bag of Chips"
 	if randf() <= .9:
 		i_want_soda = true
 		counter += 1
 		print("With soda!")
-		get_node("/root/World/Root Scene/OrderLabel").text += "\n- Bottle of Soda"
+		order_label.text += "\n- Bottle of Soda"
 
 
 func _process(delta) -> void:
@@ -78,60 +90,60 @@ func _process(delta) -> void:
 func _on_check_my_order():
 	var order_counter = 0
 	var path
-	if get_node("/root/World/order_plate/patty").visible != true:
+	if patty.visible != true:
 		print("Patty is missing")
-	if get_node("/root/World/order_plate/bottom_bun").visible != true:
+	if bottom_bun.visible != true:
 		print("Bottom bun is missing")
-	if get_node("/root/World/order_plate/top_bun").visible != true:
+	if top_bun.visible != true:
 		print("Top bun is missing")
-	if get_node("/root/World/order_plate/cheese").visible == true and i_want_cheese == true:
+	if cheese.visible == true and i_want_cheese == true:
 		print("Cheese is correct")
 		order_counter += 1
-	if get_node("/root/World/order_plate/cheese").visible != true and i_want_cheese == true:
+	if cheese.visible != true and i_want_cheese == true:
 		print("Cheese is missing")
-	if get_node("/root/World/order_plate/cheese").visible == true and i_want_cheese != true:
+	if cheese.visible == true and i_want_cheese != true:
 		print("Cheese is incorrect")
-	if get_node("/root/World/order_plate/tomatoes").visible == true and i_want_tomato == true:
+	if tomato.visible == true and i_want_tomato == true:
 		print("Tomato is correct")
 		order_counter += 1
-	if get_node("/root/World/order_plate/tomatoes").visible != true and i_want_tomato == true:
+	if tomato.visible != true and i_want_tomato == true:
 		print("Tomato is missing")
-	if get_node("/root/World/order_plate/tomatoes").visible == true and i_want_tomato != true:
+	if tomato.visible == true and i_want_tomato != true:
 		print("Tomato is incorrect")
-	if get_node("/root/World/order_plate/lettuce").visible == true and i_want_lettuce == true:
+	if lettuce.visible == true and i_want_lettuce == true:
 		print("Lettuce is correct")
 		order_counter += 1
-	if get_node("/root/World/order_plate/lettuce").visible != true and i_want_lettuce == true:
+	if lettuce.visible != true and i_want_lettuce == true:
 		print("Lettuce is missing")
-	if get_node("/root/World/order_plate/lettuce").visible == true and i_want_lettuce != true:
+	if lettuce.visible == true and i_want_lettuce != true:
 		print("Lettuce is incorrect")
-	if get_node("/root/World/order_plate/onions").visible == true and i_want_onion == true:
+	if onion.visible == true and i_want_onion == true:
 		print("Onions is correct")
 		order_counter += 1
-	if get_node("/root/World/order_plate/onions").visible != true and i_want_onion == true:
+	if onion.visible != true and i_want_onion == true:
 		print("Onions is missing")
-	if get_node("/root/World/order_plate/onions").visible == true and i_want_onion != true:
+	if onion.visible == true and i_want_onion != true:
 		print("Onions is incorrect")
-	if get_node("/root/World/order_plate/fries").visible == true and i_want_fries == true:
+	if fries.visible == true and i_want_fries == true:
 		print("Fries is correct")
 		order_counter += 1
-	if get_node("/root/World/order_plate/fries").visible != true and i_want_fries == true:
+	if fries.visible != true and i_want_fries == true:
 		print("Fries is missing")
-	if get_node("/root/World/order_plate/fries").visible == true and i_want_fries != true:
+	if fries.visible == true and i_want_fries != true:
 		print("Fries is incorrect")
-	if get_node("/root/World/order_plate/soda").visible == true and i_want_soda == true:
+	if soda.visible == true and i_want_soda == true:
 		print("Soda is correct")
 		order_counter += 1
-	if get_node("/root/World/order_plate/soda").visible != true and i_want_soda == true:
+	if soda.visible != true and i_want_soda == true:
 		print("Soda is missing")
-	if get_node("/root/World/order_plate/soda").visible == true and i_want_soda != true:
+	if soda.visible == true and i_want_soda != true:
 		print("Soda is incorrect")
-	if get_node("/root/World/order_plate/chips").visible == true and i_want_chips == true:
+	if chips.visible == true and i_want_chips == true:
 		print("Chips is correct")
 		order_counter += 1
-	if get_node("/root/World/order_plate/chips").visible != true and i_want_chips == true:
+	if chips.visible != true and i_want_chips == true:
 		print("Chips is missing")
-	if get_node("/root/World/order_plate/chips").visible == true and i_want_chips != true:
+	if chips.visible == true and i_want_chips != true:
 		print("Chips is incorrect")
 	
 	
@@ -160,10 +172,10 @@ func _on_check_my_order():
 		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_angry")
 		world.score += 5
 		
-	get_node("/root/World/Root Scene/register/score").text = "$" + str(world.score)
-	get_node("/root/World/order_plate/resetTemp").set_collision_mask_value(1, false)
+	get_node("/root/" + level + "/Kitchen/Root Scene/register/score").text = "$" + str(world.score)
+	get_node("/root/" + level + "/Kitchen/order_plate/resetTemp").set_collision_mask_value(1, false)
 	await get_tree().create_timer(3).timeout
-	get_node("/root/World/order_plate/resetTemp").set_collision_mask_value(1, true)
+	get_node("/root/" + level + "/Kitchen/order_plate/resetTemp").set_collision_mask_value(1, true)
 		
 	
 	get_tree().call_group("map", "_spawn_new_customer_or_cop")
