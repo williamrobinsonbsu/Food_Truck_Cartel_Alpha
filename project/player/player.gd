@@ -35,6 +35,15 @@ func _input(event):
 				pick_object()
 				if picked_object.has_method("audio_play"):
 					picked_object.audio_play()
+				else:
+					var audio_stream_player := AudioStreamPlayer.new()
+					audio_stream_player.bus = "Sound"
+					audio_stream_player.stream = load("res://audio/newSounds/pick_up.wav")
+					get_parent().add_child(audio_stream_player)
+					audio_stream_player.play()
+					audio_stream_player.finished.connect(func():
+						audio_stream_player.queue_free()
+						)
 		
 		if collider != null:		
 			if collider.has_method("use") and picked_object != null:
@@ -109,6 +118,14 @@ func pick_object():
 func drop_object():
 	if picked_object != null:
 		if picked_object.has_method("picked"):
+			var audio_stream_player := AudioStreamPlayer.new()
+			audio_stream_player.bus = "Sound"
+			audio_stream_player.stream = load("res://audio/newSounds/pick_up.wav")
+			get_parent().add_child(audio_stream_player)
+			audio_stream_player.play()
+			audio_stream_player.finished.connect(func():
+				audio_stream_player.queue_free()
+				)
 			picked_object.picked(false)
 		picked_object = null
 
