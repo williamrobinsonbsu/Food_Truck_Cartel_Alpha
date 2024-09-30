@@ -1,9 +1,13 @@
 extends StaticBody3D
 
+
 signal reset_ingredients
+var level: String
+
 
 func reset():
-	if get_node("/root/Beach/Kitchen/Root Scene").door_status() == true:
+	level = get_parent().get_parent().get_parent().name
+	if get_node("/root/" + level + "/Kitchen/Root Scene").door_status() == true:
 		var audio_stream_player := AudioStreamPlayer.new()
 		audio_stream_player.bus = "Sound"
 		audio_stream_player.stream = load("res://audio/newSounds/bell.wav")

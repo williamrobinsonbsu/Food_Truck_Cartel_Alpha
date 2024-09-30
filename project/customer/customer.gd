@@ -10,6 +10,7 @@ var i_want_soda = false
 var npc_name
 
 @export var level: String
+@export var level_path: String
 
 var counter = 0
 @onready var texture: Sprite3D = $Sprite3D
@@ -151,21 +152,21 @@ func _on_check_my_order():
 	if world.starting_counter == 0:
 		world.score += 0
 	elif order_counter == counter:
-		path = "res://customer/npcs/" + npc_name + "/happy.png"
+		path = "res://customer/npcs/" + level_path + "/" + npc_name + "/happy.png"
 		var new_texture = load(path)
 		texture.texture = new_texture
 		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_happy")
 		voice.play_string("Thank you so much")
 		world.score += 10 + counter
 	elif order_counter == 0:
-		path = "res://customer/npcs/" + npc_name + "/mad.png"
+		path = "res://customer/npcs/" + level_path + "/" + npc_name + "/mad.png"
 		var new_texture = load(path)
 		voice.play_string("What the hell")
 		texture.texture = new_texture
 		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_angry")
 		world.score += 0
 	else:
-		path = "res://customer/npcs/" + npc_name + "/mad.png"
+		path = "res://customer/npcs/" + level_path + "/" + npc_name + "/mad.png"
 		var new_texture = load(path)
 		voice.play_string("thanks, I guess")
 		texture.texture = new_texture
@@ -197,29 +198,29 @@ func _on_voicebox_characters_sounded(characters: String):
 func _get_npc(npc):   #update for every new npc
 	var path
 	if npc == 0:
-		npc_name = "blondie"
+		npc_name = "npc0"
 		voice.base_pitch = 4
 	elif npc == 1:
-		npc_name = "lifeguard"
+		npc_name = "npc1"
 		voice.base_pitch = 3
 	elif npc == 2: 
-		npc_name = "surfer"
+		npc_name = "npc2"
 		voice.base_pitch = 2
 	elif npc == 3:
-		npc_name = "dude"
+		npc_name = "npc3"
 		voice.base_pitch = 1
 	elif npc == 4:
-		npc_name = "goth"
+		npc_name = "npc4"
 		voice.base_pitch = 3
 	elif npc == 5:
-		npc_name = "business_woman"
+		npc_name = "npc5"
 		voice.base_pitch = 5
 	elif npc == 6:
-		npc_name = "skater"
+		npc_name = "npc6"
 		voice.base_pitch = 2
 	dialogue.text = ""
 	
-	path = "res://customer/npcs/" + npc_name + "/normal.png"
+	path = "res://customer/npcs/" + level_path + "/" + npc_name + "/normal.png"
 	var new_texture = load(path)
 	
 	texture.texture = new_texture

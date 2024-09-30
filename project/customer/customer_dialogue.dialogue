@@ -6,19 +6,19 @@ Customer: Yo.
 
 
 #Blondie
-~ blondie
+~ npc0
 
 Blondie: Here's my order!
 
 => END
 
-~ blondie_angry
+~ npc0_angry
 
 Blondie: Seriously?
 
 => END
 
-~ blondie_happy
+~ npc0_happy
 
 Blondie: Thanks!
 
@@ -29,19 +29,19 @@ Blondie: Thanks!
 
 
 #Lifeguard
-~ lifeguard
+~ npc1
 
 Lifeguard: I’m beat! Shark sightings have been more common than ever.
 
 => END
 
-~ lifeguard_angry
+~ npc1_angry
 
 Lifeguard: This took forever. I would rather be swimming!
 
 => END
 
-~ lifeguard_happy
+~ npc1_happy
 
 Lifeguard: This definitely hits the spot. Best secret burger ever!
 
@@ -51,19 +51,19 @@ Lifeguard: This definitely hits the spot. Best secret burger ever!
 
 
 #surfer
-~ surfer
+~ npc2
 
 Surfer: Ever swam with sharks? I have! Accidentally took my leg off though, Ha!
 
 => END
 
-~ surfer_angry
+~ npc2_angry
 
 Surfer: Seriously?
 
 => END
 
-~ surfer_happy
+~ npc2_happy
 
 Surfer: This food is radical, dude!
 
@@ -72,19 +72,19 @@ Surfer: This food is radical, dude!
 
 
 #dude
-~ dude
+~ npc3
 
 Dude: bruh
 
 => END
 
-~ dude_angry
+~ npc3_angry
 
 Dude: bruh
 
 => END 
 
-~ dude_happy
+~ npc3_happy
 
 Dude: bruh
 
@@ -93,19 +93,19 @@ Dude: bruh
 
 
 #goth person
-~ goth
+~ npc4
 
 Goth: The sun’s very bright today. I don’t like it.
 
 => END 
 
-~ goth_angry
+~ npc4_angry
 
 Goth: Thanks alot, I guess.…
 
 => END 
 
-~ goth_happy
+~ npc4_happy
 
 Goth: Metal.
 
@@ -114,19 +114,19 @@ Goth: Metal.
 
 
 #business woman
-~ business_woman
+~ npc5
 
 Business Woman: I’m a busy person so don’t make me wait long.
 
 => END 
 
-~ business_woman_angry
+~ npc5_angry
 
 Business Woman: I hope you get fired.
 
 => END 
 
-~ business_woman_happy
+~ npc5_happy
 
 Business Woman: Call me if you ever need a real job.
 
@@ -136,19 +136,19 @@ Business Woman: Call me if you ever need a real job.
 
 
 #skater
-~ skater
+~ npc6
 
 Skater: My buddy got a broken arm from skating off a roof. It was kinda sick looking with the bone out.
 
 => END 
 
-~ skater_angry
+~ npc6_angry
 
 Skater: This food is bad luck man.
 
 => END 
 
-~ skater_happy
+~ npc6_happy
 
 Skater: This food is gnarly dude. Thanks!
 
