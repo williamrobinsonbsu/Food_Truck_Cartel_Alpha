@@ -18,7 +18,8 @@ signal timer
 
 func _ready():
 	level = str(get_parent().get_parent().name)
-	get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = 0	
+	print(level)
+	get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = 0
 	var value = get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value
 	print(value)
 	

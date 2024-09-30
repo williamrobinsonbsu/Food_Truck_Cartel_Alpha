@@ -221,7 +221,7 @@ func _get_npc(npc):   #update for every new npc
 	elif npc == 6:
 		npc_name = "npc6"
 		voice.base_pitch = 2
-	dialogue.text = ""
+	#dialogue.text = ""
 	
 	path = "res://customer/npcs/" + level_path + "/" + npc_name + "/normal.png"
 	var new_texture = load(path)
