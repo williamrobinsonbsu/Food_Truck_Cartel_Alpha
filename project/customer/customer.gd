@@ -191,6 +191,7 @@ func _on_assembly_timer_timeout():
 	get_tree().call_group("map", "_spawn_new_customer_or_cop")
 	get_tree().call_group("police", "despawn")
 	$".".queue_free()
+	
 
 func _on_voicebox_characters_sounded(characters: String):
 	dialogue.text += characters
