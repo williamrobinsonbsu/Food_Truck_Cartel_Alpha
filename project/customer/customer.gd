@@ -39,7 +39,7 @@ func _ready():
 	npc_name = ""
 	npc_name = _get_npc(npc)
 	voice.play_string("Here is my order")
-	DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name)
+	DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "normal")
 	
 	
 	
@@ -155,7 +155,7 @@ func _on_check_my_order():
 		path = "res://customer/npcs/" + level_path + "/" + npc_name + "/happy.png"
 		var new_texture = load(path)
 		texture.texture = new_texture
-		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_happy")
+		DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "happy")
 		voice.play_string("Thank you so much")
 		world.score += 10 + counter
 	elif order_counter == 0:
@@ -163,14 +163,14 @@ func _on_check_my_order():
 		var new_texture = load(path)
 		voice.play_string("What the hell")
 		texture.texture = new_texture
-		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_angry")
+		DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "angry")
 		world.score += 0
 	else:
 		path = "res://customer/npcs/" + level_path + "/" + npc_name + "/mad.png"
 		var new_texture = load(path)
 		voice.play_string("thanks, I guess")
 		texture.texture = new_texture
-		DialogueManager.show_example_dialogue_balloon(load("res://customer/customer_dialogue.dialogue"), npc_name + "_angry")
+		DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "angry")
 		world.score += 5
 		
 	get_node("/root/" + level + "/Kitchen/Root Scene/register/score").text = "$" + str(world.score)
@@ -197,6 +197,9 @@ func _on_voicebox_characters_sounded(characters: String):
 
 func _get_npc(npc):   #update for every new npc
 	var path
+	if level_path == "rave_kitchen":
+		npc = 0
+	
 	if npc == 0:
 		npc_name = "npc0"
 		voice.base_pitch = 4
