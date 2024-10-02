@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sed5sx6mopnv"
-path.s3tc="res://.godot/imported/plate_standardSurface1_Metallic.png-2b2302bd902738d29b26763f29b646af.s3tc.ctex"
+path.s3tc="res://.godot/imported/Plate_standardSurface1_Metallic.png-3e30debe706f95e3124cfa9eba8879be.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/plate_standardSurface1_Metallic.png"
-dest_files=["res://.godot/imported/plate_standardSurface1_Metallic.png-2b2302bd902738d29b26763f29b646af.s3tc.ctex"]
+source_file="res://Textures/Plate_standardSurface1_Metallic.png"
+dest_files=["res://.godot/imported/Plate_standardSurface1_Metallic.png-3e30debe706f95e3124cfa9eba8879be.s3tc.ctex"]
 
 [params]
 
