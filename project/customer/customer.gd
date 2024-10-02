@@ -84,7 +84,7 @@ func _ready():
 		order_label.text += "\n- Bottle of Soda"
 
 
-func _process(delta) -> void:
+func _process(_delta) -> void:
 	$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
 
 	
