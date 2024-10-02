@@ -5,13 +5,13 @@ Goth: The sun’s very bright today. I don’t like it.
 
 => END 
 
-~ npc4_angry
+~ angry
 
 Goth: Thanks alot, I guess.…
 
 => END 
 
-~ npc4_happy
+~ happy
 
 Goth: Metal.
 
