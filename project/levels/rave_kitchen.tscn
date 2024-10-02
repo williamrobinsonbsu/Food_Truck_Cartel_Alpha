@@ -6,6 +6,9 @@
 
 [node name="Kitchen" parent="." instance=ExtResource("1_5wdmp")]
 
+[node name="Camera3D" parent="Kitchen/Player" index="2"]
+current = false
+
 [editable path="Kitchen"]
 [editable path="Kitchen/Root Scene"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese"]
