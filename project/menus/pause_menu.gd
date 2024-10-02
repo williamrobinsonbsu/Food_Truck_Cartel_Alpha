@@ -17,7 +17,6 @@ func _process(_delta):
 
 
 func show_pause_menu() -> void:
-	DialogueManager.queue_free()
 	$CanvasLayer.show()
 
 
