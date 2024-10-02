@@ -95,4 +95,4 @@ exit={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://customer/npcs/beach/npc2/dialogue.dialogue", "res://customer/npcs/beach/npc0/dialogue.dialogue", "res://customer/npcs/beach/npc1/dialogue.dialogue", "res://customer/npcs/beach/npc3/dialogue.dialogue", "res://customer/npcs/beach/npc4/dialogue.dialogue", "res://customer/npcs/beach/npc5/dialogue.dialogue", "res://customer/npcs/beach/npc6/dialogue.dialogue", "res://customer/npcs/rave_kitchen/npc0/dialogue.dialogue", "res://customer/npcs/rave_kitchen/npc1/dialogue.dialogue")
+locale/translations_pot_files=PackedStringArray("res://customer/npcs/beach/npc2/dialogue.dialogue", "res://customer/npcs/beach/npc0/dialogue.dialogue", "res://customer/npcs/beach/npc1/dialogue.dialogue", "res://customer/npcs/beach/npc3/dialogue.dialogue", "res://customer/npcs/beach/npc4/dialogue.dialogue", "res://customer/npcs/beach/npc5/dialogue.dialogue", "res://customer/npcs/beach/npc6/dialogue.dialogue", "res://customer/npcs/rave_kitchen/npc0/dialogue.dialogue")
