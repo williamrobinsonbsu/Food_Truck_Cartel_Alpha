@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw5xp2liyjr1i"]
+[gd_scene load_steps=2 format=3 uid="uid://b26xnprpqn041"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_5wdmp"]
 
@@ -6,18 +6,12 @@
 
 [node name="Kitchen" parent="." instance=ExtResource("1_5wdmp")]
 
-[node name="Camera3D" parent="Kitchen/Player" index="2"]
-current = false
-
 [editable path="Kitchen"]
 [editable path="Kitchen/Root Scene"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese2"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese3"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese4"]
-[editable path="Kitchen/Root Scene/FryerBasket"]
-[editable path="Kitchen/Root Scene/FryerBasket/StaticBody3D/Fries"]
-[editable path="Kitchen/Root Scene/FryerBasket/StaticBody3D/Basket"]
 [editable path="Kitchen/Player"]
 [editable path="Kitchen/order_plate"]
 [editable path="Kitchen/order_plate/Root Scene"]
@@ -54,6 +48,3 @@ current = false
 [editable path="Kitchen/PattyStacks"]
 [editable path="Kitchen/TOPBreadStack"]
 [editable path="Kitchen/BOTTOMJBread"]
-[editable path="Kitchen/freezerdoor"]
-[editable path="Kitchen/fridgedoor"]
-[editable path="Kitchen/minifridgedoor"]

@@ -1,9 +1,7 @@
 extends StaticBody3D
 
-
 var scene = preload("res://ingredients/boxed_fries.tscn")
 var fries_cooked = false
-
 
 func use(ingredient):
 	if ingredient.has_method("slice_name") and ingredient.slice_name() == "fries":
