@@ -84,7 +84,7 @@ func _ready():
 		order_label.text += "\n- Bottle of Soda"
 
 
-func _process(delta) -> void:
+func _process(_delta) -> void:
 	$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
 
 	
@@ -199,7 +199,8 @@ func _on_voicebox_characters_sounded(characters: String):
 func _get_npc(npc):   #update for every new npc
 	var path
 	if level_path == "rave_kitchen":
-		npc = 0
+		var rng = RandomNumberGenerator.new()
+		npc = rng.randi_range(0, 1)
 	
 	if npc == 0:
 		npc_name = "npc0"
