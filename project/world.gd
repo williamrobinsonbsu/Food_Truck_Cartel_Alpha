@@ -5,12 +5,13 @@ extends Node3D
 @export var starting_counter = 0
 @export var level: String
 @export var lane_progression_counter = 0
+@export var diff_modifier: float
 signal timer
 var shutter_door_close = false
 var can_police_catch_player = false
 var poRate = 0
 var goal_score = 150
-@export var diff_modifier: float
+
 
 
 @onready var customer_or_cop_timer := $customer_or_police_spawn_timer
