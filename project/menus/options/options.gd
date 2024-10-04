@@ -24,6 +24,10 @@ func _on_resolutions_item_selected(index):
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 		1:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			DisplayServer.window_set_size(Vector2i(1152,648))
+		2:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			DisplayServer.window_set_size(Vector2i(1980,1080))
 
 
 func _on_window_size_item_selected(index):

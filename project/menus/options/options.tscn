@@ -72,24 +72,13 @@ text = "Screen Setting"
 
 [node name="Resolutions" type="OptionButton" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-item_count = 2
-popup/item_0/text = "full_screen(default)"
-popup/item_0/id = 0
-popup/item_1/text = "windowed"
-popup/item_1/id = 1
-
-[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Window Size (only works for window view)"
-
-[node name="WindowSize" type="OptionButton" parent="CanvasLayer/MarginContainer/VBoxContainer"]
-layout_mode = 2
 item_count = 3
-popup/item_0/text = "1152X648"
+selected = 0
+popup/item_0/text = "full_screen"
 popup/item_0/id = 0
-popup/item_1/text = "1980X1080"
+popup/item_1/text = "windowed (1152,648)"
 popup/item_1/id = 1
-popup/item_2/text = "1200X300"
+popup/item_2/text = "windowed (1980,1080)"
 popup/item_2/id = 2
 
 [node name="BrightLabel" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
@@ -115,6 +104,5 @@ color = Color(0, 0, 0, 0)
 
 [connection signal="toggled" from="CanvasLayer/MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
 [connection signal="item_selected" from="CanvasLayer/MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
-[connection signal="item_selected" from="CanvasLayer/MarginContainer/VBoxContainer/WindowSize" to="." method="_on_window_size_item_selected"]
 [connection signal="value_changed" from="CanvasLayer/MarginContainer/VBoxContainer/brightness" to="." method="_on_brightness_value_changed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
