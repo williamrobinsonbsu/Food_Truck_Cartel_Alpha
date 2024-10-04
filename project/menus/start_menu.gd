@@ -18,3 +18,14 @@ func _on_play_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_settings_pressed():
+	$Title.hide()
+	$Play.hide()
+	$Quit.hide()
+	get_node("Options/CanvasLayer").show()
+	await $Options.closed
+	$Title.show()
+	$Play.show()
+	$Quit.show()

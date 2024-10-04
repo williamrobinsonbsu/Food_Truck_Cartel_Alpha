@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfrc1hhj1krjp"]
+[gd_scene load_steps=3 format=3 uid="uid://dfrc1hhj1krjp"]
 
 [ext_resource type="Script" path="res://menus/start_menu.gd" id="1_phsgr"]
+[ext_resource type="PackedScene" uid="uid://42jgpbvyneu0" path="res://menus/options/options.tscn" id="2_u16ru"]
 
 [node name="StartMenu" type="Control"]
 process_mode = 3
@@ -51,5 +52,20 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Quit"
 
+[node name="Settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 457.0
+offset_right = 614.0
+offset_bottom = 488.0
+text = "Settings
+"
+
+[node name="Options" parent="." instance=ExtResource("2_u16ru")]
+process_mode = 3
+visible = false
+layout_mode = 1
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
