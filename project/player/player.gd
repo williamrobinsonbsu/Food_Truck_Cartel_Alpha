@@ -11,8 +11,8 @@ var picked_object
 var pull_power = 10
 
 
-var trueSpeed = SPEED
-var isCrouching = false
+var true_speed = SPEED
+var is_crouching = false
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -82,9 +82,9 @@ func _physics_process(_delta):
 		var b = hand.global_transform.origin
 		picked_object.set_linear_velocity((b-a) * pull_power)
 	if Input.is_action_just_pressed("crouch"):
-		if isCrouching == false:
+		if is_crouching == false:
 			movementStateChange("crouch")
-		elif isCrouching == true:
+		elif is_crouching == true:
 			movementStateChange("uncrouch")
 			
 	move_and_slide()
@@ -99,10 +99,10 @@ func movementStateChange(changeType):
 	match changeType:
 		"crouch":
 			$AnimationPlayer.play("crouch_animation")
-			isCrouching = true
+			is_crouching = true
 		"uncrouch":
 			$AnimationPlayer.play_backwards("crouch_animation")
-			isCrouching = false
+			is_crouching = false
 
 func pick_object():
 	var collider = interaction.get_collider()
@@ -131,5 +131,6 @@ func drop_object():
 
 
 func _on_day_timer_timeout():
-	$Control/DayIcon.set_texture(tex_array[index])
-	index += 1
+	while index < 4:
+		$Control/DayIcon.set_texture(tex_array[index])
+		index += 1
