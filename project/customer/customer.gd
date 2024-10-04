@@ -32,6 +32,8 @@ var counter = 0
 signal new_customer
 
 func _ready():
+	$AssemblyTimer.wait_time = $AssemblyTimer.wait_time / world.diff_modifier
+	$AssemblyTimer.start()
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var npc = rng.randi_range(0, 6)

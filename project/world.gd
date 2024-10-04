@@ -1,20 +1,21 @@
 extends Node3D
 
-@onready var customer_or_cop_timer := $customer_or_police_spawn_timer
-@onready var cop_catch_timer := $cop_catch_timer
 
-var shutter_door_close = false
-var can_police_catch_player = false
 @export var score = 0
 @export var starting_counter = 0
 @export var level: String
-
-
-
 @export var lane_progression_counter = 0
+signal timer
+var shutter_door_close = false
+var can_police_catch_player = false
 var poRate = 0
 var goal_score = 150
-signal timer
+@export var diff_modifier: float
+
+
+@onready var customer_or_cop_timer := $customer_or_police_spawn_timer
+@onready var cop_catch_timer := $cop_catch_timer
+
 
 func _ready():
 	level = str(get_parent().get_parent().name)
@@ -22,6 +23,11 @@ func _ready():
 	get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = 0
 	var value = get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value
 	print(value)
+	
+	if level == "Beach":
+		diff_modifier = 1
+	elif level == "RaveKitchen":
+		diff_modifier = 1.25
 	
 
 func _physics_process(_delta: float) -> void:
@@ -140,7 +146,7 @@ func _on_police():
 			j += 1
 
 func policeRate():
-	if randf() <= .3:
+	if randf() <= .3 * diff_modifier:
 		if lane_progression_counter < 3:
 			lane_progression_counter += 1
 		else:
