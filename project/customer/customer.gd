@@ -202,7 +202,7 @@ func _get_npc(npc):   #update for every new npc
 	var path
 	if level_path == "rave_kitchen":
 		var rng = RandomNumberGenerator.new()
-		npc = rng.randi_range(0, 1)
+		npc = rng.randi_range(0, 2)
 	
 	if npc == 0:
 		npc_name = "npc0"

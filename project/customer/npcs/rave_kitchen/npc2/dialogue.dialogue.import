@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://6yresdj7ma7o"
+path="res://.godot/imported/dialogue.dialogue-f9cbbecca8d35e098be3b72c0bafce60.tres"
+
+[deps]
+
+source_file="res://customer/npcs/rave_kitchen/npc2/dialogue.dialogue"
+dest_files=["res://.godot/imported/dialogue.dialogue-f9cbbecca8d35e098be3b72c0bafce60.tres"]
+
+[params]
+
+defaults=true
