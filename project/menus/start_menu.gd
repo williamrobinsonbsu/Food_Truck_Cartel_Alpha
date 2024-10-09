@@ -13,19 +13,10 @@ func _process(_delta):
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://levels/beach.tscn")
+	get_tree().change_scene_to_file("res://menus/road_map.tscn")
 
 
 func _on_quit_pressed():
 	get_tree().quit()
 
 
-func _on_settings_pressed():
-	$Title.hide()
-	$Play.hide()
-	$Quit.hide()
-	get_node("Options/CanvasLayer").show()
-	await $Options.closed
-	$Title.show()
-	$Play.show()
-	$Quit.show()

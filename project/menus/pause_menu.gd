@@ -33,8 +33,9 @@ func _on_options_pressed():
 	
 	
 func _on_quit_pressed():
-	get_tree().quit()
-
+	dismissed.emit()
+	get_tree().change_scene_to_file("res://menus/start_menu.tscn")
+	
 func _on_resume_mouse_entered():
 	$CanvasLayer/PauseNote.texture = load("res://menus/Pause_Menu_Resume_Click.webp")
 
