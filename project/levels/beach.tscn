@@ -27,7 +27,7 @@ transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -
 shadow_enabled = true
 
 [node name="Background" type="Sprite3D" parent="."]
-transform = Transform3D(-0.225917, 0, 8.74228e-09, 0, 0.136202, 0, -1.97503e-08, 0, -0.1, 0, 2.05358, 7.12983)
+transform = Transform3D(-2.034, 0, 1.35896e-07, 0, 1.224, 0, -3.07125e-07, 0, -0.9, 0, 8.09562, 13.9361)
 texture = ExtResource("1_bo5x3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
