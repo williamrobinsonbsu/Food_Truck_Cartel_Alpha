@@ -234,3 +234,9 @@ func _get_npc(npc):   #update for every new npc
 	#$ACVoicebox.play_string("HHi! Here's my order")
 	#dialogue.text = "Hi! Here's my order."
 	return npc_name
+
+func toggle_assembly_timer():
+	if $AssemblyTimer.paused == true:
+		$AssemblyTimer.paused = false
+	elif $AssemblyTimer.paused == false:
+		$AssemblyTimer.paused = true

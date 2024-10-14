@@ -14,8 +14,8 @@ var goal_score = 150
 
 
 
-@onready var customer_or_cop_timer := $customer_or_police_spawn_timer
-@onready var cop_catch_timer := $cop_catch_timer
+@onready var customer_or_cop_timer: Timer = $customer_or_police_spawn_timer
+@onready var cop_catch_timer: Timer = $cop_catch_timer
 
 
 func _ready():
@@ -29,12 +29,41 @@ func _ready():
 		diff_modifier = 1
 	elif level == "RaveKitchen":
 		diff_modifier = 1.25
+	elif level == "Area51":
+		diff_modifier = 1.5
+	elif level == "Casino":
+		diff_modifier = 1.75
 	
 
 func _physics_process(_delta: float) -> void:
+	get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = cop_catch_timer.get_time_left() * 20
+	
+	# QA INPUT CHEATS
 	if Input.is_action_pressed("exit"):
 		get_tree().quit()
 	
+	if Input.is_action_pressed("police_lane_1"):
+		_spawn_police(1)
+	
+	if Input.is_action_pressed("police_lane_2"):
+		_spawn_police(2)
+	
+	if Input.is_action_pressed("police_lane_3"):
+		_spawn_police(3)
+	
+	if Input.is_action_pressed("give_money"):
+		score += 100
+		$register/score.text = str("$" + str(score))
+	
+	if Input.is_action_just_pressed("toggle_level_timer"):
+		if $LevelTimer.paused == true:
+			$LevelTimer.paused = false
+		elif $LevelTimer.paused == false:
+			$LevelTimer.paused = true
+	
+	if Input.is_action_just_pressed("toggle_order_timer"):
+		get_tree().call_group("customer", "toggle_assembly_timer")
+		
 func shutter_door_control():
 	if shutter_door_close == false:
 		$ShutterDoor.hide()
@@ -109,7 +138,6 @@ func _on_police():
 	var scene = preload("res://police/police.tscn")
 	var police = scene.instantiate()
 	var i = 0
-	var j = 0
 	add_child(police)
 	if lane_progression_counter == 1:
 		i = randi()%2
@@ -140,11 +168,7 @@ func _on_police():
 			police.position = $Close2.position
 		police.catch()
 		cop_catch_timer.start()
-		while j < 10:
-			#get_node("/root/World/Player/Control/CatchMeter").text += "-"
-			get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value += 10
-			await get_tree().create_timer(.5).timeout
-			j += 1
+		
 
 func policeRate():
 	if randf() <= .3 * diff_modifier:
@@ -176,3 +200,12 @@ func _on_level_timer_timeout():
 	await get_tree().create_timer(5).timeout
 	get_tree().change_scene_to_file("res://menus/caught_scene.tscn")
 	
+
+func _spawn_police(modifier):
+	if modifier < 1 or modifier > 3:
+		pass
+	else:
+		cop_catch_timer.stop()
+		get_tree().call_group("police", "despawn")
+		lane_progression_counter = modifier
+		_on_police()
