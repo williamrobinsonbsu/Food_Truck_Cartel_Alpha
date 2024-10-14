@@ -1,0 +1,18 @@
+#business woman
+~ normal
+
+Business Woman: I’m a busy person so don’t make me wait long.
+
+=> END 
+
+~ angry
+
+Business Woman: I hope you get fired.
+
+=> END 
+
+~ happy
+
+Business Woman: Call me if you ever need a real job.
+
+=> END 

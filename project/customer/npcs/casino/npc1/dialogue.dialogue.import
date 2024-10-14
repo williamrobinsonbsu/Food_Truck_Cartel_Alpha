@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://uqb2u87fkodm"
+path="res://.godot/imported/dialogue.dialogue-7e2fb086de0bc3cca8fdb9329d45b8c0.tres"
+
+[deps]
+
+source_file="res://customer/npcs/casino/npc1/dialogue.dialogue"
+dest_files=["res://.godot/imported/dialogue.dialogue-7e2fb086de0bc3cca8fdb9329d45b8c0.tres"]
+
+[params]
+
+defaults=true

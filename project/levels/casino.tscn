@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c151w43g5m7eh"]
+
+[ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_21q4g"]
+
+[node name="Casino" type="Node3D"]
+
+[node name="Kitchen" parent="." instance=ExtResource("1_21q4g")]
