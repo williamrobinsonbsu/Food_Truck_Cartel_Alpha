@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://player/player.gd" id="1_sh6bp"]
 [ext_resource type="Texture2D" uid="uid://ddwecisrh30hl" path="res://player/Day_Beginning.png" id="2_05itk"]
 [ext_resource type="PackedScene" uid="uid://bv41uwieducpe" path="res://menus/pause_menu.tscn" id="2_xfury"]
-[ext_resource type="PackedScene" uid="uid://d4gt0koccxrbf" path="res://menus/loading_screen.tscn" id="3_ragej"]
+[ext_resource type="PackedScene" path="res://menus/loading_screen.tscn" id="3_ragej"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6w4jn"]
 
