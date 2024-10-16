@@ -16,7 +16,7 @@ var true_speed = SPEED
 var is_crouching = false
 
 func _ready():
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(2).timeout
 	loading_screen.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
