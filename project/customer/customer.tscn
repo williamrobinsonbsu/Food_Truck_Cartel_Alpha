@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cuqr3ppkwg1gj"]
 
 [ext_resource type="Script" path="res://customer/customer.gd" id="1_u5n8i"]
-[ext_resource type="Texture2D" uid="uid://cs5xsv7dvgmo0" path="res://customer/npcs/beach/npc6/normal.png" id="2_1fc1u"]
+[ext_resource type="Texture2D" uid="uid://cs5xsv7dvgmo0" path="res://customer/npcs/casino/npc6/normal.png" id="2_1fc1u"]
 [ext_resource type="PackedScene" uid="uid://cj1qcw81lh2l5" path="res://audio/ACVoicebox.tscn" id="2_ve2d7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vifeq"]
