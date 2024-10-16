@@ -1,10 +1,12 @@
 extends StaticBody3D
 
 var scene = preload("res://ingredients/patty.tscn")
+var cooking := false
 
 func use(ingredient):
-	if ingredient.has_method("name") and ingredient.name() == "patty_raw":
+	if ingredient.has_method("name") and ingredient.name() == "patty_raw" and cooking == false:
 		$PattyRaw.show()
+		cooking = true
 		ingredient.audio_play_grill()
 		$PattyRaw.set_collision_layer_value(1, false)
 		ingredient.queue_free()
@@ -13,6 +15,7 @@ func use(ingredient):
 		var patty = scene.instantiate()
 		add_child(patty)
 		patty.position = %CookedPatty.position
+		cooking = false
 	else:
 		pass
 		
