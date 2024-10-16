@@ -12,7 +12,7 @@ func _process(_delta):
 	
 func _on_beach_pressed():
 	_play_loading_screen()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	get_tree().change_scene_to_file("res://levels/beach.tscn")
 
 func _on_beach_mouse_entered():
@@ -27,7 +27,7 @@ func _on_beach_mouse_exited():
 
 func _on_rave_pressed():
 	_play_loading_screen()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	get_tree().change_scene_to_file("res://levels/rave_kitchen.tscn")
 
 func _on_rave_mouse_entered():
@@ -47,7 +47,7 @@ func _on_return_pressed():
 
 func _on_area_51_pressed():
 	_play_loading_screen()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	get_tree().change_scene_to_file("res://levels/area51.tscn")
 
 
@@ -66,7 +66,7 @@ func _on_area_51_mouse_exited():
 
 func _on_casino_pressed():
 	_play_loading_screen()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	get_tree().change_scene_to_file("res://levels/casino.tscn")
 
 
@@ -81,7 +81,6 @@ func _on_casino_mouse_entered():
 func _on_casino_mouse_exited():
 	$placeholder.visible = false
 	$Text.visible = false
-
 
 func _play_loading_screen():
 	var scene := preload("res://menus/loading_screen.tscn")
