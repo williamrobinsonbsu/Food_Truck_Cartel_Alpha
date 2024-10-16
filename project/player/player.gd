@@ -4,6 +4,7 @@ const SPEED = 5.0
 
 @onready var interaction := $Camera3D/Interaction
 @onready var hand := $Camera3D/Hand
+@onready var loading_screen: Control = $LoadingScreen
 
 var index = 1
 var tex_array = [load("res://player/Day_Beginning.png"),load("res://player/Day_Mid.png"),load("res://player/Day_Late.png"),load("res://player/Day_End.png")]
@@ -15,6 +16,8 @@ var true_speed = SPEED
 var is_crouching = false
 
 func _ready():
+	await get_tree().create_timer(3).timeout
+	loading_screen.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 
