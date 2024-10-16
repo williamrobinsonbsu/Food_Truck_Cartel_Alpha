@@ -14,7 +14,7 @@ func place(picked_object):
 	var level = get_parent().get_parent().get_parent().name
 	if picked_object != null and get_node("/root/" + level + "/Kitchen/Root Scene").door_status() == true:
 		if picked_object.has_method("name"):
-			if picked_object.name() == "burger":
+			if picked_object.name() == "burger" and bottom_bun_placed == false:
 				$"../bottom_bun".show()
 				bottom_bun_placed = true
 				picked_object.queue_free()
