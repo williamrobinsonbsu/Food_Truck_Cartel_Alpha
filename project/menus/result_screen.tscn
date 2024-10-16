@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4wtg5p2iea7c"]
+
+[ext_resource type="Script" path="res://menus/result_screen.gd" id="1_27g73"]
+[ext_resource type="Texture2D" uid="uid://ddsynu0fhi4be" path="res://menus/resultscreen.webp" id="2_s02ca"]
+
+[node name="ResultScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_27g73")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Next" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -21.0
+offset_right = 167.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Next"
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = 57.0
+offset_right = 164.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[node name="Resultscreen" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(599, 340)
+texture = ExtResource("2_s02ca")
+
+[connection signal="pressed" from="CanvasLayer/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
