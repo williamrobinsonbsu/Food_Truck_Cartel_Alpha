@@ -82,6 +82,7 @@ func _on_casino_mouse_exited():
 	$placeholder.visible = false
 	$Text.visible = false
 
+
 func _play_loading_screen():
 	var scene := preload("res://menus/loading_screen.tscn")
 	var loading_screen = scene.instantiate()
