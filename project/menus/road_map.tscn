@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://46i7qfxwfv6b"]
+[gd_scene load_steps=5 format=3 uid="uid://46i7qfxwfv6b"]
 
 [ext_resource type="Script" path="res://menus/road_map.gd" id="1_g8hro"]
 [ext_resource type="Texture2D" uid="uid://csxej8eat4awk" path="res://menus/level_map.png" id="2_825dd"]
 [ext_resource type="Texture2D" uid="uid://msf27v0mhh7h" path="res://menus/hey_queue.png" id="3_n5rdp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j12d8"]
 
 [node name="Road_map" type="Control"]
 layout_mode = 3
@@ -87,10 +89,26 @@ position = Vector2(-74, -51)
 scale = Vector2(0.02, 0.02)
 texture = ExtResource("3_n5rdp")
 
+[node name="Text" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 567.0
+offset_top = 560.0
+offset_right = 782.0
+offset_bottom = 635.0
+label_settings = SubResource("LabelSettings_j12d8")
+
 [connection signal="mouse_entered" from="Beach" to="." method="_on_beach_mouse_entered"]
 [connection signal="mouse_exited" from="Beach" to="." method="_on_beach_mouse_exited"]
 [connection signal="pressed" from="Beach" to="." method="_on_beach_pressed"]
 [connection signal="mouse_entered" from="Rave" to="." method="_on_rave_mouse_entered"]
 [connection signal="mouse_exited" from="Rave" to="." method="_on_rave_mouse_exited"]
 [connection signal="pressed" from="Rave" to="." method="_on_rave_pressed"]
+[connection signal="mouse_entered" from="Area51" to="." method="_on_area_51_mouse_entered"]
+[connection signal="mouse_exited" from="Area51" to="." method="_on_area_51_mouse_exited"]
+[connection signal="pressed" from="Area51" to="." method="_on_area_51_pressed"]
+[connection signal="mouse_entered" from="Casino" to="." method="_on_casino_mouse_entered"]
+[connection signal="mouse_exited" from="Casino" to="." method="_on_casino_mouse_exited"]
+[connection signal="pressed" from="Casino" to="." method="_on_casino_pressed"]
 [connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
