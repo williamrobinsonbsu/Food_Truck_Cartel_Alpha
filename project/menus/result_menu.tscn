@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://drgv7rcigj87x"]
+
+[ext_resource type="Shader" path="res://menus/result_menu.gdshader" id="1_krsvx"]
+[ext_resource type="Shader" path="res://menus/pause_menu.gdshader" id="2_uju28"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_056rd"]
+shader = ExtResource("1_krsvx")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qsroo"]
+shader = ExtResource("2_uju28")
+shader_parameter/amount = 3.0
+
+[node name="ResultMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_056rd")
+anchors_preset = -1
+anchor_right = 0.999
+anchor_bottom = 1.0
+offset_right = 0.151855
+offset_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ColorRect"]
+material = SubResource("ShaderMaterial_qsroo")
+offset_right = 1152.0
+offset_bottom = 652.0
