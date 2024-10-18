@@ -10,7 +10,7 @@ signal timer
 var shutter_door_close = false
 var can_police_catch_player = false
 var poRate = 0
-var goal_score = 150
+var goal_score = 100
 
 
 

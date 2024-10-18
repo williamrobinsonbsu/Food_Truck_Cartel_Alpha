@@ -14,6 +14,7 @@ func _on_beach_pressed():
 	_play_loading_screen()
 	await get_tree().create_timer(2).timeout
 	get_tree().change_scene_to_file("res://levels/beach.tscn")
+	
 
 func _on_beach_mouse_entered():
 	$placeholder.position = $Beach.position
@@ -21,14 +22,18 @@ func _on_beach_mouse_entered():
 	$Text.text = level_array[0]
 	$Text.position = $Beach.position + Vector2(110.0,-50)
 	$Text.visible = true
+	
+	
 func _on_beach_mouse_exited():
 	$placeholder.visible = false
 	$Text.visible = false
+	
 
 func _on_rave_pressed():
 	_play_loading_screen()
 	await get_tree().create_timer(2).timeout
 	get_tree().change_scene_to_file("res://levels/rave_kitchen.tscn")
+	
 
 func _on_rave_mouse_entered():
 	$placeholder.position = $Rave.position
