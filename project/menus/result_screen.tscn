@@ -57,10 +57,10 @@ texture = ExtResource("2_s02ca")
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CanvasLayer2"]
-offset_left = 646.0
-offset_top = 156.0
-offset_right = 686.0
-offset_bottom = 195.0
+offset_left = 638.0
+offset_top = 143.0
+offset_right = 678.0
+offset_bottom = 182.0
 text = "$"
 label_settings = SubResource("LabelSettings_cykmm")
 
