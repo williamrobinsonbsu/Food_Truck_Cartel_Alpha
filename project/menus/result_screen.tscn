@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4wtg5p2iea7c"]
+[gd_scene load_steps=4 format=3 uid="uid://c4wtg5p2iea7c"]
 
 [ext_resource type="Script" path="res://menus/result_screen.gd" id="1_27g73"]
 [ext_resource type="Texture2D" uid="uid://ddsynu0fhi4be" path="res://menus/resultscreen.webp" id="2_s02ca"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_cykmm"]
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+
 [node name="ResultScreen" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +18,7 @@ grow_vertical = 2
 script = ExtResource("1_27g73")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="Next" type="Button" parent="CanvasLayer"]
 anchors_preset = 8
@@ -23,7 +29,7 @@ anchor_bottom = 0.5
 offset_left = -127.0
 offset_top = -21.0
 offset_right = 167.0
-offset_bottom = 10.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Next"
@@ -37,14 +43,30 @@ anchor_bottom = 0.5
 offset_left = -127.0
 offset_top = 57.0
 offset_right = 164.0
-offset_bottom = 88.0
+offset_bottom = 114.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Quit"
 
 [node name="Resultscreen" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(599, 340)
+z_index = 1
+position = Vector2(582.375, 321)
+scale = Vector2(0.955011, 0.962963)
 texture = ExtResource("2_s02ca")
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer2"]
+offset_left = 646.0
+offset_top = 156.0
+offset_right = 686.0
+offset_bottom = 195.0
+text = "$"
+label_settings = SubResource("LabelSettings_cykmm")
+
+[connection signal="mouse_entered" from="CanvasLayer/Next" to="." method="_on_next_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Next" to="." method="_on_next_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Next" to="." method="_on_next_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
