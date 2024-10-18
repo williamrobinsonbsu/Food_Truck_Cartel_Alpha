@@ -50,7 +50,8 @@ text = "Quit"
 
 [node name="Resultscreen" type="Sprite2D" parent="CanvasLayer"]
 z_index = 1
-position = Vector2(599, 340)
+position = Vector2(582.375, 321)
+scale = Vector2(0.955011, 0.962963)
 texture = ExtResource("2_s02ca")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
