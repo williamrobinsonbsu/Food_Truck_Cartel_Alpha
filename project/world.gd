@@ -189,16 +189,16 @@ func _on_police_catch_timer_timeout():
 
 
 func _on_level_timer_timeout():
-	$"../Player/Control/LevelTimerLabel".text = "Final score: $" + str(score)
+	#$"../Player/Control/LevelTimerLabel".text = "Final score: $" + str(score)
 	print(score)
-	if score == goal_score or score > goal_score:
-		$"../Player/Control/LevelTimerLabel".text += """
-		Good Job!"""
-	elif score < goal_score:
-		$"../Player/Control/LevelTimerLabel".text += """
-		Uh oh..."""
+	#if score == goal_score or score > goal_score:
+		#$"../Player/Control/LevelTimerLabel".text += """
+		#Good Job!"""
+	#elif score < goal_score:
+		#$"../Player/Control/LevelTimerLabel".text += """
+		#Uh oh..."""
 	await get_tree().create_timer(5).timeout
-	get_tree().change_scene_to_file("res://menus/caught_scene.tscn")
+	get_tree().change_scene_to_file("res://menus/result_screen.tscn")
 	
 
 func _spawn_police(modifier):
