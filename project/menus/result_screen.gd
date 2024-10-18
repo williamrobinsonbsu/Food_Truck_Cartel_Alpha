@@ -1,6 +1,7 @@
 extends Control
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,6 +11,7 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_pressed("exit"):
 		get_tree().quit()
+	$CanvasLayer2/Label.text = "$" 
 
 
 func _on_next_pressed():
@@ -23,14 +25,13 @@ func _on_quit_pressed():
 func _on_next_mouse_entered():
 	$CanvasLayer/Resultscreen.texture = load("res://menus/resultscreenclicknext.png")
 
-
 func _on_next_mouse_exited():
 	$CanvasLayer/Resultscreen.texture = load("res://menus/resultscreen.webp")
-
+	
 
 func _on_quit_mouse_entered():
 	$CanvasLayer/Resultscreen.texture = load("res://menus/resultscreenclickquit.png")
 
-
 func _on_quit_mouse_exited():
 	$CanvasLayer/Resultscreen.texture = load("res://menus/resultscreen.webp")
+	
