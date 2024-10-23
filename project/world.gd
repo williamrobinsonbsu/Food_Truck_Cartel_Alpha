@@ -33,6 +33,7 @@ func _ready():
 		diff_modifier = 1.5
 	elif level == "Casino":
 		diff_modifier = 1.75
+		get_node("/root/" + level + "/Kitchen/Root Scene/hot_dog_box").show()
 	
 
 func _physics_process(_delta: float) -> void:
