@@ -40,11 +40,11 @@ albedo_texture = ExtResource("13_3f51r")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0vgt"]
 albedo_texture = ExtResource("15_b28ad")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dv64r"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cbeqh"]
 albedo_texture = ExtResource("16_fbqht")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3ymf"]
-albedo_color = Color(1, 0.847059, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dysfr"]
+albedo_color = Color(0.796078, 0.67451, 0, 1)
 albedo_texture = ExtResource("17_ggfmk")
 
 [node name="Node3D" type="Node3D"]
@@ -155,25 +155,26 @@ transform = Transform3D(-0.0893132, 0.789527, 0.607182, 0.993662, 0.112405, 0, -
 transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 0, -0.270791, 5.85469)
 material_override = SubResource("StandardMaterial3D_p0vgt")
 
-[node name="fries" parent="." instance=ExtResource("10_c2qvc")]
-visible = false
-
-[node name="Fry" parent="fries/RootNode" index="0"]
-transform = Transform3D(0.165682, -6.82571e-17, 0.479164, 5.83451e-17, 0.6, 4.08537e-17, -0.479164, 4.94571e-17, 0.165682, -0.0429237, -0.0622635, 0.0956959)
-
-[node name="frybox" parent="fries/RootNode/Fry" index="0"]
-transform = Transform3D(0.114438, 1.86191e-33, 6.93889e-18, -1.86191e-33, 0.114438, -2.25712e-33, -6.93889e-18, 2.25712e-33, 0.114438, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_dv64r")
-
-[node name="fries" parent="fries/RootNode/Fry" index="1"]
-transform = Transform3D(0.114438, 8.6854e-24, 0, 0, 0.114438, 0, 0, -1.8198e-23, 0.114438, 0.00575364, -0.00656769, 0.284205)
-material_override = SubResource("StandardMaterial3D_s3ymf")
-
 [node name="hot_dog" parent="." instance=ExtResource("20_5xn4d")]
 visible = false
 
 [node name="condiment_bottle" parent="hot_dog/RootNode" index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0764097, 0.0753764, 0.368186)
+
+[node name="fries" parent="." instance=ExtResource("10_c2qvc")]
+transform = Transform3D(0.079164, 0, -0.796074, 0, 0.8, 0, 0.796074, 0, 0.079164, -0.0810807, -0.07098, 0.0475836)
+visible = false
+
+[node name="Fry" parent="fries/RootNode" index="0"]
+transform = Transform3D(-0.657612, 6.668e-17, 0.239351, 8.05343e-17, 0.827508, 5.63907e-17, -0.239351, 9.52289e-17, -0.657612, 0, 0, 0)
+
+[node name="frybox" parent="fries/RootNode/Fry" index="0"]
+transform = Transform3D(0.114438, 1.86191e-33, 6.93889e-18, -1.86191e-33, 0.114438, -2.25712e-33, -6.93889e-18, 2.25712e-33, 0.114438, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_cbeqh")
+
+[node name="fries" parent="fries/RootNode/Fry" index="1"]
+transform = Transform3D(0.114438, 1.15805e-23, 0, 0, 0.114438, 0, 0, -1.98523e-23, 0.114438, 0.00149274, -0.0219489, 0.288305)
+material_override = SubResource("StandardMaterial3D_dysfr")
 
 [editable path="Root Scene"]
 [editable path="bottom_bun"]
@@ -185,5 +186,5 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0764
 [editable path="top_bun"]
 [editable path="soda"]
 [editable path="chips"]
-[editable path="fries"]
 [editable path="hot_dog"]
+[editable path="fries"]
