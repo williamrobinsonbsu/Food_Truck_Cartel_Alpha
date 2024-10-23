@@ -7,11 +7,13 @@ var i_want_tomato = false
 var i_want_fries = false
 var i_want_chips = false
 var i_want_soda = false
+var i_want_hot_dog = false
+var i_want_burger = false
 var npc_name
 
 @export var level: String
 @export var level_path: String
-
+var order
 var counter = 0
 @onready var texture: Sprite3D = $Sprite3D
 @onready var world = get_node("/root/" + level +"/Kitchen/Root Scene")
@@ -44,26 +46,31 @@ func _ready():
 	DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "normal")
 	
 	
-	
-	
-	print("I would like a burger!")
-	order_label.text = "-=+Current Order+=-\n- Burger with: "
-	if randf() <= .50:
+	if level == "Casino" and randf() >= .3:
+		print("I would like a hot dog")
+		order = "hot dog"
+		i_want_hot_dog = true
+	else:
+		print("I would like a burger!")
+		i_want_burger = true
+		order = "burger"
+	order_label.text = "-=+Current Order+=-\n- "+order+ " with: "
+	if randf() <= .50 and i_want_burger == true:
 		i_want_lettuce = true
 		counter += 1
 		print("With lettuce")
 		order_label.text += "\nLettuce"
-	if randf() <= .10:
+	if randf() <= .10 and i_want_burger == true:
 		i_want_tomato = true
 		counter += 1
 		print("With tomato")
 		order_label.text += "\nTomato"
-	if randf() <= .75:
+	if randf() <= .75 and i_want_burger == true:
 		i_want_cheese = true
 		counter += 1
 		print("With cheese")
 		order_label.text += "\nCheese"
-	if randf() <= .45:
+	if randf() <= .45 and i_want_burger == true:
 		i_want_onion = true
 		counter += 1
 		print("With onion")
