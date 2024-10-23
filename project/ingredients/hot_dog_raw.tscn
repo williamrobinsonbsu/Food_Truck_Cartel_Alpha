@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://tmoj36x3y03"]
+
+[ext_resource type="Script" path="res://ingredients/hot_dog_raw.gd" id="1_wui3h"]
+[ext_resource type="PackedScene" uid="uid://c3odcn55fqw5v" path="res://FBXRaw/RawPattie.fbx" id="2_yeoyh"]
+[ext_resource type="Texture2D" uid="uid://cc1un8sga4i5g" path="res://Textures/RawPattie_standardSurface1_BaseColor.png" id="3_kwt71"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ludw6"]
+albedo_texture = ExtResource("3_kwt71")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_f0o13"]
+height = 0.0204953
+radius = 0.0970133
+
+[node name="Hot_dog_raw" type="RigidBody3D"]
+script = ExtResource("1_wui3h")
+
+[node name="Root Scene" parent="." instance=ExtResource("2_yeoyh")]
+
+[node name="Burger" parent="Root Scene/RootNode/Truck" index="0"]
+transform = Transform3D(0.91124, 0, 0, 0, 0.7038, 0, 0, 0, 0.91124, 0, 0, 0)
+
+[node name="Patty" parent="Root Scene/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(1.82095, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0, -0.0135002, 0)
+material_override = SubResource("StandardMaterial3D_ludw6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.24, 0, 0, 0, -3.94277e-07, -0.28, 0, 9.02, -1.22392e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_f0o13")
+
+[node name="CookTimer" type="Timer" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 9.0
+offset_right = 46.0
+offset_bottom = 49.0
+
+[editable path="Root Scene"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://tsbefmiro8lh"]
+[gd_scene load_steps=29 format=3 uid="uid://tsbefmiro8lh"]
 
 [ext_resource type="PackedScene" uid="uid://din6t3fv4n6pv" path="res://FBXRaw/PlateSingle.fbx" id="1_52jp6"]
 [ext_resource type="Script" path="res://ingredients/plate.gd" id="2_lbwt3"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://ckta3svl1gefc" path="res://Textures/ChipBag_standardSurface1_BaseColor.png" id="15_b28ad"]
 [ext_resource type="Texture2D" uid="uid://caj18fs5bqc0w" path="res://Textures/FryWBox_standardSurface1_BaseColor.png" id="16_fbqht"]
 [ext_resource type="Texture2D" uid="uid://cvylco8mll464" path="res://Textures/FriesIndiv_standardSurface1_BaseColor.png" id="17_ggfmk"]
+[ext_resource type="PackedScene" uid="uid://dyl8i7khgv2i7" path="res://FBXRaw/condiment_bottle.fbx" id="20_5xn4d"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rf0rk"]
 height = 0.233957
@@ -27,7 +28,7 @@ radius = 0.136671
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynu4e"]
 albedo_texture = ExtResource("4_233gv")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8yx1l"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tq15"]
 albedo_texture = ExtResource("11_id26x")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_73yg8"]
@@ -116,11 +117,11 @@ transform = Transform3D(7.9664, 0, -2.89953, 0, 0.511897, 0, 2.89953, 0, 7.9664,
 visible = false
 
 [node name="Burger" parent="top_bun/RootNode/Truck" index="0"]
-transform = Transform3D(0.911239, 0, 0, 0, 0.703799, 0, 0, 0, 0.911239, 0.0487147, 0.0417648, 0.0260707)
+transform = Transform3D(0.91124, 0, 0, 0, 0.7038, 0, 0, 0, 0.91124, 0, 0, 0)
 
 [node name="BreadTop" parent="top_bun/RootNode/Truck/Burger" index="0"]
-transform = Transform3D(8.47766, 0, 0, 0, 2.20424, 0, 0, 0, 8.47766, 0, 0.00158791, -0.00518902)
-material_override = SubResource("StandardMaterial3D_8yx1l")
+transform = Transform3D(8.47766, 0, 0, 0, 2.20425, 0, 0, 0, 8.47766, 0.0423815, 0.0583715, 0.0221755)
+material_override = SubResource("StandardMaterial3D_5tq15")
 
 [node name="resetTemp" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.760155, 0.110318, 0.0561066)
@@ -168,6 +169,12 @@ material_override = SubResource("StandardMaterial3D_dv64r")
 transform = Transform3D(0.114438, 8.6854e-24, 0, 0, 0.114438, 0, 0, -1.8198e-23, 0.114438, 0.00575364, -0.00656769, 0.284205)
 material_override = SubResource("StandardMaterial3D_s3ymf")
 
+[node name="hot_dog" parent="." instance=ExtResource("20_5xn4d")]
+visible = false
+
+[node name="condiment_bottle" parent="hot_dog/RootNode" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0764097, 0.0753764, 0.368186)
+
 [editable path="Root Scene"]
 [editable path="bottom_bun"]
 [editable path="patty"]
@@ -179,3 +186,4 @@ material_override = SubResource("StandardMaterial3D_s3ymf")
 [editable path="soda"]
 [editable path="chips"]
 [editable path="fries"]
+[editable path="hot_dog"]

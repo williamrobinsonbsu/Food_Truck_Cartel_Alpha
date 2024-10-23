@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtf747hsr5w16"]
+
+[ext_resource type="Script" path="res://kitchen/dog_machine.gd" id="1_20m23"]
+[ext_resource type="PackedScene" uid="uid://tmoj36x3y03" path="res://ingredients/hot_dog_raw.tscn" id="3_w8vg1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c2bbm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bjgm5"]
+
+[node name="Dog_machine" type="StaticBody3D"]
+script = ExtResource("1_20m23")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_c2bbm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_bjgm5")
+
+[node name="CookedPatty" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564465, 0)
+
+[node name="Hot_dog_raw" parent="." instance=ExtResource("3_w8vg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564, 0)
+visible = false
+
+[editable path="Hot_dog_raw"]
+[editable path="Hot_dog_raw/Root Scene"]

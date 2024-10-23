@@ -7,6 +7,7 @@ var tomato_placed = false
 var onion_placed = false
 var cheese_placed = false
 var top_bun_placed = false
+#var hot_dog_placed = false
 
 signal check_my_order
 
@@ -14,7 +15,7 @@ func place(picked_object):
 	var level = get_parent().get_parent().get_parent().name
 	if picked_object != null and get_node("/root/" + level + "/Kitchen/Root Scene").door_status() == true:
 		if picked_object.has_method("name"):
-			if picked_object.name() == "burger" and bottom_bun_placed == false:
+			if picked_object.name() == "burger":
 				$"../bottom_bun".show()
 				bottom_bun_placed = true
 				picked_object.queue_free()
@@ -31,6 +32,9 @@ func place(picked_object):
 				if picked_object.name() == "patty":
 					$"../patty".show()
 					patty_placed = true
+					picked_object.queue_free()
+				elif picked_object.name() == "hot_dog":
+					$"../hot_dog".show()
 					picked_object.queue_free()
 		
 		if picked_object.has_method("slice_name"):		
@@ -62,4 +66,4 @@ func _on_reset_ingredients():
 	patty_placed = false
 	tomato_placed = false
 	top_bun_placed = false
-	
+#	hot_dog_placed = false
