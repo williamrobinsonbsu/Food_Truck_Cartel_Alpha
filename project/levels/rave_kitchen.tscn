@@ -30,6 +30,7 @@ texture = ExtResource("2_pxk0b")
 [editable path="Kitchen/order_plate/soda"]
 [editable path="Kitchen/order_plate/chips"]
 [editable path="Kitchen/order_plate/fries"]
+[editable path="Kitchen/order_plate/hot_dog"]
 [editable path="Kitchen/Grill5"]
 [editable path="Kitchen/Fryer"]
 [editable path="Kitchen/Trash"]
