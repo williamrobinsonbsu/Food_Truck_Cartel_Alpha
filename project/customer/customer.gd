@@ -211,7 +211,8 @@ func _get_npc(npc):   #update for every new npc
 		var rng = RandomNumberGenerator.new()
 		npc = rng.randi_range(0, 3)
 	elif level_path == "casino":
-		npc = 0
+		var rng = RandomNumberGenerator.new()
+		npc = rng.randi_range(0, 1)
 	
 	if npc == 0:
 		npc_name = "npc0"
