@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://tsbefmiro8lh"]
+[gd_scene load_steps=31 format=3 uid="uid://tsbefmiro8lh"]
 
 [ext_resource type="PackedScene" uid="uid://din6t3fv4n6pv" path="res://FBXRaw/PlateSingle.fbx" id="1_52jp6"]
 [ext_resource type="Script" path="res://ingredients/plate.gd" id="2_lbwt3"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://caj18fs5bqc0w" path="res://Textures/FryWBox_standardSurface1_BaseColor.png" id="16_fbqht"]
 [ext_resource type="Texture2D" uid="uid://cvylco8mll464" path="res://Textures/FriesIndiv_standardSurface1_BaseColor.png" id="17_ggfmk"]
 [ext_resource type="PackedScene" uid="uid://dyl8i7khgv2i7" path="res://FBXRaw/condiment_bottle.fbx" id="20_5xn4d"]
+[ext_resource type="Script" path="res://ingredients/clear_plate.gd" id="21_hcyh8"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rf0rk"]
 height = 0.233957
@@ -46,6 +47,9 @@ albedo_texture = ExtResource("16_fbqht")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dysfr"]
 albedo_color = Color(0.796078, 0.67451, 0, 1)
 albedo_texture = ExtResource("17_ggfmk")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sf3ox"]
+size = Vector3(0.170532, 0.152191, 0.188507)
 
 [node name="Node3D" type="Node3D"]
 
@@ -175,6 +179,20 @@ material_override = SubResource("StandardMaterial3D_cbeqh")
 [node name="fries" parent="fries/RootNode/Fry" index="1"]
 transform = Transform3D(0.114438, 1.15805e-23, 0, 0, 0.114438, 0, 0, -1.98523e-23, 0.114438, 0.00149274, -0.0219489, 0.288305)
 material_override = SubResource("StandardMaterial3D_dysfr")
+
+[node name="ClearPlate" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.611252, 0, 0)
+script = ExtResource("21_hcyh8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ClearPlate"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.145589, 0.0929727, -0.0127743)
+shape = SubResource("BoxShape3D_sf3ox")
+
+[node name="Label3D" type="Label3D" parent="ClearPlate"]
+transform = Transform3D(-0.4, 0, -6.03983e-08, 0, 0.4, 0, 6.03983e-08, 0, -0.4, -0.158442, 0.0984033, -0.12582)
+text = "Clear Plate"
+
+[connection signal="clear_plate" from="ClearPlate" to="StaticBody3D" method="_on_clear_plate_clear_plate"]
 
 [editable path="Root Scene"]
 [editable path="bottom_bun"]
