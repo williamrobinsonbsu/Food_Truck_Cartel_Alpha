@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://46i7qfxwfv6b"]
 
 [ext_resource type="Script" path="res://menus/road_map.gd" id="1_g8hro"]
-[ext_resource type="Texture2D" uid="uid://csxej8eat4awk" path="res://menus/level_map.png" id="2_825dd"]
+[ext_resource type="Texture2D" uid="uid://dfe6sb1kk5prx" path="res://menus/updatedmap.png" id="2_6bh4j"]
 [ext_resource type="Texture2D" uid="uid://msf27v0mhh7h" path="res://menus/hey_queue.png" id="3_n5rdp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j12d8"]
@@ -55,7 +55,7 @@ text = "Casino"
 [node name="roadMap" type="Sprite2D" parent="."]
 position = Vector2(574, 355)
 scale = Vector2(0.23035, 0.2)
-texture = ExtResource("2_825dd")
+texture = ExtResource("2_6bh4j")
 metadata/_edit_lock_ = true
 
 [node name="Return" type="Button" parent="."]
