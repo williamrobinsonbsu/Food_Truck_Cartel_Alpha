@@ -25,7 +25,7 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x) * 0.25)
 		$Camera3D.rotate_x(deg_to_rad(-event.relative.y) * 0.25)
-		$Camera3D.rotation.x = clamp($Camera3D.rotation.x,deg_to_rad(-90), deg_to_rad(90))
+		$Camera3D.rotation.x = clamp($Camera3D.rotation.x,deg_to_rad(-50), deg_to_rad(50))
 	
 	if Input.is_action_just_pressed("left_click"):
 		var collider = interaction.get_collider()
