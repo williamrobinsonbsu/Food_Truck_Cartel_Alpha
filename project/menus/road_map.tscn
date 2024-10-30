@@ -1,10 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://46i7qfxwfv6b"]
 
 [ext_resource type="Script" path="res://menus/road_map.gd" id="1_g8hro"]
-[ext_resource type="Texture2D" uid="uid://dfe6sb1kk5prx" path="res://menus/updatedmap.png" id="2_6bh4j"]
+[ext_resource type="Texture2D" uid="uid://8vlh0rcvgwjw" path="res://menus/updatedmap.webp" id="2_hla2o"]
 [ext_resource type="Texture2D" uid="uid://msf27v0mhh7h" path="res://menus/hey_queue.png" id="3_n5rdp"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_j12d8"]
+[sub_resource type="LabelSettings" id="LabelSettings_xgc72"]
+font_size = 30
 
 [node name="Road_map" type="Control"]
 process_mode = 3
@@ -16,47 +17,45 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g8hro")
 
+[node name="RoadMap" type="Sprite2D" parent="."]
+position = Vector2(574, 327)
+texture = ExtResource("2_hla2o")
+
 [node name="Beach" type="Button" parent="."]
 layout_mode = 0
-offset_left = 823.0
-offset_top = 588.0
-offset_right = 879.0
-offset_bottom = 619.0
+offset_left = 733.0
+offset_top = 499.0
+offset_right = 825.0
+offset_bottom = 573.0
 scale = Vector2(1.5, 1.5)
 text = "Beach"
 
 [node name="Rave" type="Button" parent="."]
 layout_mode = 0
-offset_left = 791.0
-offset_top = 310.0
-offset_right = 837.0
-offset_bottom = 341.0
+offset_left = 713.0
+offset_top = 248.0
+offset_right = 801.0
+offset_bottom = 327.0
 scale = Vector2(1.5, 1.5)
 text = "Rave"
 
 [node name="Area51" type="Button" parent="."]
 layout_mode = 0
-offset_left = 189.0
-offset_top = 415.0
-offset_right = 252.0
-offset_bottom = 446.0
+offset_left = 236.0
+offset_top = 341.0
+offset_right = 329.0
+offset_bottom = 425.0
 scale = Vector2(1.5, 1.5)
 text = "Area51"
 
 [node name="Casino" type="Button" parent="."]
 layout_mode = 0
-offset_left = 204.0
-offset_top = 111.0
-offset_right = 264.0
+offset_left = 241.0
+offset_top = 65.0
+offset_right = 335.0
 offset_bottom = 142.0
 scale = Vector2(1.5, 1.5)
 text = "Casino"
-
-[node name="roadMap" type="Sprite2D" parent="."]
-position = Vector2(574, 355)
-scale = Vector2(0.23035, 0.2)
-texture = ExtResource("2_6bh4j")
-metadata/_edit_lock_ = true
 
 [node name="Return" type="Button" parent="."]
 layout_mode = 1
@@ -65,24 +64,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -495.0
-offset_top = 246.0
-offset_right = -434.0
-offset_bottom = 277.0
+offset_left = -410.0
+offset_top = 243.0
+offset_right = -349.0
+offset_bottom = 274.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 text = "Return
 "
 
-[node name="Label" type="Label" parent="."]
+[node name="Map_Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 544.0
-offset_top = 18.0
-offset_right = 584.0
-offset_bottom = 41.0
-text = "Map
+offset_left = 793.0
+offset_top = 17.0
+offset_right = 858.0
+offset_bottom = 54.0
+text = "Level Map
 "
+label_settings = SubResource("LabelSettings_xgc72")
+metadata/_edit_use_anchors_ = true
 
 [node name="placeholder" type="Sprite2D" parent="."]
 visible = false
@@ -90,15 +91,14 @@ position = Vector2(-74, -51)
 scale = Vector2(0.02, 0.02)
 texture = ExtResource("3_n5rdp")
 
-[node name="Text" type="Label" parent="."]
-visible = false
-modulate = Color(0, 0, 0, 1)
+[node name="BeachLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 567.0
-offset_top = 560.0
-offset_right = 782.0
-offset_bottom = 635.0
-label_settings = SubResource("LabelSettings_j12d8")
+offset_left = 734.0
+offset_top = 499.0
+offset_right = 869.0
+offset_bottom = 613.0
+text = "Level 1: Beach
+"
 
 [connection signal="mouse_entered" from="Beach" to="." method="_on_beach_mouse_entered"]
 [connection signal="mouse_exited" from="Beach" to="." method="_on_beach_mouse_exited"]
