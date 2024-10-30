@@ -75,10 +75,12 @@ visible = false
 layout_mode = 1
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+follow_viewport_enabled = true
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(697, 299)
+motion_mirroring = Vector2(1400, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 scale = Vector2(0.2, 0.2)
@@ -86,43 +88,62 @@ texture = ExtResource("3_jxcpw")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(697, 299)
-scale = Vector2(0.2, 0.2)
 motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1400, 0)
 script = ExtResource("4_1fdxu")
-shadow_speed = -1.0
+shadow_speed = -500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture_repeat = 2
+position = Vector2(-220, -285)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_b5hg4")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 7000, 3500)
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(697, 299)
-scale = Vector2(0.2, 0.2)
-motion_scale = Vector2(0, 1)
+position = Vector2(692, 354)
+motion_mirroring = Vector2(1400, 0)
 script = ExtResource("6_1dtjx")
-Canyon_speed = -2.0
+Canyon_speed = -1000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture_repeat = 2
+position = Vector2(-228, -355)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_ol6iv")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 7000, 3500)
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(697, 299)
 motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1400, 700)
 script = ExtResource("6_gi6n4")
-road_speed = -3.0
+road_speed = -1500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(459, -9)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_2viki")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(697, 299)
-motion_scale = Vector2(0, 1)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1400, 700)
 script = ExtResource("6_gi6n4")
-road_speed = -3.0
+road_speed = -1500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_repeat = 2
+position = Vector2(-231, -349)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_i6ubb")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 7000, 3500)
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
