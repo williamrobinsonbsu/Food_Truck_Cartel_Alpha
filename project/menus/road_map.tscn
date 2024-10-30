@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://46i7qfxwfv6b"]
+[gd_scene load_steps=4 format=3 uid="uid://46i7qfxwfv6b"]
 
 [ext_resource type="Script" path="res://menus/road_map.gd" id="1_g8hro"]
-[ext_resource type="Texture2D" uid="uid://dfe6sb1kk5prx" path="res://menus/updatedmap.png" id="2_6bh4j"]
-[ext_resource type="Texture2D" uid="uid://msf27v0mhh7h" path="res://menus/hey_queue.png" id="3_n5rdp"]
+[ext_resource type="Texture2D" uid="uid://8vlh0rcvgwjw" path="res://menus/updatedmap.webp" id="2_hla2o"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_j12d8"]
+[sub_resource type="LabelSettings" id="LabelSettings_xgc72"]
+font_size = 30
 
 [node name="Road_map" type="Control"]
 process_mode = 3
@@ -17,46 +17,50 @@ grow_vertical = 2
 script = ExtResource("1_g8hro")
 
 [node name="Beach" type="Button" parent="."]
-layout_mode = 0
-offset_left = 823.0
-offset_top = 588.0
-offset_right = 879.0
-offset_bottom = 619.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.641
+anchor_top = 0.762
+anchor_right = 0.751
+anchor_bottom = 0.946
+offset_left = 20.568
+offset_top = 21.224
+offset_right = -19.152
+offset_bottom = -16.008
 scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(40, 42.6667)
 text = "Beach"
 
 [node name="Rave" type="Button" parent="."]
 layout_mode = 0
-offset_left = 791.0
-offset_top = 310.0
-offset_right = 837.0
-offset_bottom = 341.0
+offset_left = 733.0
+offset_top = 294.0
+offset_right = 808.0
+offset_bottom = 342.0
 scale = Vector2(1.5, 1.5)
 text = "Rave"
 
 [node name="Area51" type="Button" parent="."]
 layout_mode = 0
-offset_left = 189.0
-offset_top = 415.0
-offset_right = 252.0
-offset_bottom = 446.0
+offset_left = 260.0
+offset_top = 379.0
+offset_right = 337.0
+offset_bottom = 438.0
 scale = Vector2(1.5, 1.5)
 text = "Area51"
 
 [node name="Casino" type="Button" parent="."]
 layout_mode = 0
-offset_left = 204.0
-offset_top = 111.0
-offset_right = 264.0
-offset_bottom = 142.0
+offset_left = 273.0
+offset_top = 102.0
+offset_right = 346.0
+offset_bottom = 154.0
 scale = Vector2(1.5, 1.5)
 text = "Casino"
 
-[node name="roadMap" type="Sprite2D" parent="."]
-position = Vector2(574, 355)
-scale = Vector2(0.23035, 0.2)
-texture = ExtResource("2_6bh4j")
-metadata/_edit_lock_ = true
+[node name="RoadMap" type="Sprite2D" parent="."]
+position = Vector2(574, 327)
+texture = ExtResource("2_hla2o")
 
 [node name="Return" type="Button" parent="."]
 layout_mode = 1
@@ -65,40 +69,67 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -495.0
-offset_top = 246.0
-offset_right = -434.0
-offset_bottom = 277.0
+offset_left = -410.0
+offset_top = 243.0
+offset_right = -349.0
+offset_bottom = 274.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 text = "Return
 "
 
-[node name="Label" type="Label" parent="."]
+[node name="Map_Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 544.0
-offset_top = 18.0
-offset_right = 584.0
-offset_bottom = 41.0
-text = "Map
+offset_left = 793.0
+offset_top = 17.0
+offset_right = 858.0
+offset_bottom = 54.0
+text = "Level Map
 "
+label_settings = SubResource("LabelSettings_xgc72")
+metadata/_edit_use_anchors_ = true
 
-[node name="placeholder" type="Sprite2D" parent="."]
+[node name="BeachLabel" type="Label" parent="."]
 visible = false
-position = Vector2(-74, -51)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("3_n5rdp")
-
-[node name="Text" type="Label" parent="."]
-visible = false
-modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 567.0
-offset_top = 560.0
-offset_right = 782.0
-offset_bottom = 635.0
-label_settings = SubResource("LabelSettings_j12d8")
+offset_left = 732.0
+offset_top = 515.0
+offset_right = 867.0
+offset_bottom = 548.0
+text = "Level 1: Beach
+"
+horizontal_alignment = 1
+
+[node name="RaveLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 711.0
+offset_top = 272.0
+offset_right = 842.0
+offset_bottom = 302.0
+text = "Level 2: Rave"
+horizontal_alignment = 1
+
+[node name="Area51Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 235.0
+offset_top = 360.0
+offset_right = 376.0
+offset_bottom = 394.0
+text = "Level 4: Area51"
+horizontal_alignment = 1
+
+[node name="CasinoLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 239.0
+offset_top = 86.0
+offset_right = 381.0
+offset_bottom = 115.0
+text = "Level 3: Casino"
+horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="Beach" to="." method="_on_beach_mouse_entered"]
 [connection signal="mouse_exited" from="Beach" to="." method="_on_beach_mouse_exited"]
