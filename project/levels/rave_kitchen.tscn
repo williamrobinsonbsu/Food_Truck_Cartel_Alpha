@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b26xnprpqn041"]
+[gd_scene load_steps=4 format=3 uid="uid://b26xnprpqn041"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_5wdmp"]
 [ext_resource type="Texture2D" uid="uid://dnb74k7qrwbmn" path="res://levels/rave_background.png" id="2_pxk0b"]
+[ext_resource type="AudioStream" uid="uid://co0xbjcape520" path="res://audio/hype-is-everything-mountaineer-main-version-02-35-3287.mp3" id="3_nu4lg"]
 
 [node name="RaveKitchen" type="Node3D"]
 
@@ -13,6 +14,12 @@ current = true
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 13.2537)
 texture = ExtResource("2_pxk0b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite3D"]
+stream = ExtResource("3_nu4lg")
+volume_db = -30.615
+autoplay = true
+bus = &"Music"
 
 [editable path="Kitchen"]
 [editable path="Kitchen/Root Scene"]
