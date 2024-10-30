@@ -17,14 +17,11 @@ func _on_beach_pressed():
 	
 
 func _on_beach_mouse_entered():
-	$placeholder.position = $Beach.position
-	$placeholder.visible = true
 	$BeachLabel.visible = true
 
 	
 	
 func _on_beach_mouse_exited():
-	$placeholder.visible = false
 	$BeachLabel.visible = false
 	
 
@@ -35,12 +32,9 @@ func _on_rave_pressed():
 	
 
 func _on_rave_mouse_entered():
-	$placeholder.position = $Rave.position
-	$placeholder.visible = true
 	$RaveLabel.visible = true
 
 func _on_rave_mouse_exited():
-	$placeholder.visible = false
 	$RaveLabel.visible = false
 
 
@@ -55,14 +49,11 @@ func _on_area_51_pressed():
 
 
 func _on_area_51_mouse_entered():
-	$placeholder.position = $Area51.position
-	$placeholder.visible = true
 	$Area51Label.visible = true
 
 
 
 func _on_area_51_mouse_exited():
-	$placeholder.visible = false
 	$Area51Label.visible = false
 
 
@@ -73,14 +64,11 @@ func _on_casino_pressed():
 
 
 func _on_casino_mouse_entered():
-	$placeholder.position = $Casino.position
-	$placeholder.visible = true
 	$CasinoLabel.visible = true
 
 
 
 func _on_casino_mouse_exited():
-	$placeholder.visible = false
 	$CasinoLabel.visible = false
 
 func _play_loading_screen():

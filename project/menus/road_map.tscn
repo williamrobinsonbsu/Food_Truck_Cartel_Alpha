@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://46i7qfxwfv6b"]
+[gd_scene load_steps=4 format=3 uid="uid://46i7qfxwfv6b"]
 
 [ext_resource type="Script" path="res://menus/road_map.gd" id="1_g8hro"]
 [ext_resource type="Texture2D" uid="uid://8vlh0rcvgwjw" path="res://menus/updatedmap.webp" id="2_hla2o"]
-[ext_resource type="Texture2D" uid="uid://msf27v0mhh7h" path="res://menus/hey_queue.png" id="3_n5rdp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xgc72"]
 font_size = 30
@@ -18,20 +17,26 @@ grow_vertical = 2
 script = ExtResource("1_g8hro")
 
 [node name="Beach" type="Button" parent="."]
-layout_mode = 0
-offset_left = 763.0
-offset_top = 522.0
-offset_right = 835.0
-offset_bottom = 581.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.641
+anchor_top = 0.762
+anchor_right = 0.751
+anchor_bottom = 0.946
+offset_left = 20.568
+offset_top = 21.224
+offset_right = -19.152
+offset_bottom = -16.008
 scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(40, 42.6667)
 text = "Beach"
 
 [node name="Rave" type="Button" parent="."]
 layout_mode = 0
 offset_left = 733.0
-offset_top = 285.0
+offset_top = 294.0
 offset_right = 808.0
-offset_bottom = 339.0
+offset_bottom = 342.0
 scale = Vector2(1.5, 1.5)
 text = "Rave"
 
@@ -85,44 +90,46 @@ text = "Level Map
 label_settings = SubResource("LabelSettings_xgc72")
 metadata/_edit_use_anchors_ = true
 
-[node name="placeholder" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-74, -51)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("3_n5rdp")
-
 [node name="BeachLabel" type="Label" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 747.0
-offset_top = 492.0
-offset_right = 882.0
-offset_bottom = 525.0
+offset_left = 732.0
+offset_top = 515.0
+offset_right = 867.0
+offset_bottom = 548.0
 text = "Level 1: Beach
 "
+horizontal_alignment = 1
 
 [node name="RaveLabel" type="Label" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 715.0
-offset_top = 250.0
-offset_right = 846.0
-offset_bottom = 280.0
+offset_left = 711.0
+offset_top = 272.0
+offset_right = 842.0
+offset_bottom = 302.0
 text = "Level 2: Rave"
+horizontal_alignment = 1
 
 [node name="Area51Label" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 235.0
-offset_top = 341.0
+offset_top = 360.0
 offset_right = 376.0
-offset_bottom = 375.0
+offset_bottom = 394.0
 text = "Level 4: Area51"
+horizontal_alignment = 1
 
 [node name="CasinoLabel" type="Label" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 242.0
-offset_top = 65.0
-offset_right = 384.0
-offset_bottom = 94.0
+offset_left = 239.0
+offset_top = 86.0
+offset_right = 381.0
+offset_bottom = 115.0
 text = "Level 3: Casino"
+horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="Beach" to="." method="_on_beach_mouse_entered"]
 [connection signal="mouse_exited" from="Beach" to="." method="_on_beach_mouse_exited"]
