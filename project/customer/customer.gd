@@ -95,6 +95,9 @@ func _ready():
 
 func _process(_delta) -> void:
 	$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
+	look_at(
+		get_viewport().get_camera_3d().global_position,Vector3(0,1,0)
+	)
 
 	
 func _on_check_my_order():
