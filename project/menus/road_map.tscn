@@ -118,7 +118,7 @@ offset_left = 235.0
 offset_top = 360.0
 offset_right = 376.0
 offset_bottom = 394.0
-text = "Level 4: Area51"
+text = "LOCKED"
 horizontal_alignment = 1
 
 [node name="CasinoLabel" type="Label" parent="."]
@@ -128,7 +128,7 @@ offset_left = 239.0
 offset_top = 86.0
 offset_right = 381.0
 offset_bottom = 115.0
-text = "Level 3: Casino"
+text = "LOCKED"
 horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="Beach" to="." method="_on_beach_mouse_entered"]

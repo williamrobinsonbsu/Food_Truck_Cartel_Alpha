@@ -8,9 +8,6 @@
 
 [node name="Kitchen" parent="." instance=ExtResource("1_5wdmp")]
 
-[node name="Camera3D" parent="Kitchen/Player" index="2"]
-current = true
-
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 13.2537)
 texture = ExtResource("2_pxk0b")
