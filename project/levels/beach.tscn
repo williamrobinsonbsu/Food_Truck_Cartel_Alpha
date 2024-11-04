@@ -41,6 +41,9 @@ bus = &"Music"
 [node name="Lettuce_Head" parent="Kitchen/Root Scene/RootNode/Truck" index="35"]
 transform = Transform3D(0.502537, 0, 0, 0, 0.354617, 0, 0, 0, 0.502537, -1.61676, 0.0509, 1.28822)
 
+[node name="Camera3D" parent="Kitchen/Player" index="2"]
+current = false
+
 [editable path="Kitchen"]
 [editable path="Kitchen/Root Scene"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese"]
@@ -59,6 +62,7 @@ transform = Transform3D(0.502537, 0, 0, 0, 0.354617, 0, 0, 0, 0.502537, -1.61676
 [editable path="Kitchen/order_plate/top_bun"]
 [editable path="Kitchen/order_plate/soda"]
 [editable path="Kitchen/order_plate/chips"]
+[editable path="Kitchen/order_plate/hot_dog"]
 [editable path="Kitchen/order_plate/fries"]
 [editable path="Kitchen/Dog_machine"]
 [editable path="Kitchen/Dog_machine/Hot_dog_raw"]
