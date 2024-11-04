@@ -1,5 +1,11 @@
 extends CharacterBody3D
 
+
+signal pickup
+signal drop
+signal pause_clicked
+
+
 const SPEED = 5.0
 
 @onready var interaction := $Camera3D/Interaction
@@ -93,6 +99,7 @@ func _physics_process(_delta):
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("pause"):
+		pause_clicked.emit()
 		get_tree().paused = true
 		$PauseMenu.show_pause_menu()
 		await $PauseMenu.dismissed
@@ -113,6 +120,7 @@ func pick_object():
 		picked_object = collider
 	elif collider != null and collider is StaticBody3D and collider.has_method("pick_item"):
 		picked_object = collider.pick_item()
+		pickup.emit()
 		
 	if picked_object.has_method("picked"):
 		picked_object.picked(true)
@@ -131,6 +139,7 @@ func drop_object():
 				)
 			picked_object.picked(false)
 		picked_object = null
+		drop.emit()
 
 
 func _on_day_timer_timeout():
