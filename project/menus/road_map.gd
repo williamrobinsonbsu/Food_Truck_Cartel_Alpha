@@ -59,10 +59,10 @@ func _on_area_51_mouse_exited():
 
 
 func _on_casino_pressed():
-	print("Locked")
-	#_play_loading_screen()
-	#await get_tree().create_timer(2).timeout
-	#get_tree().change_scene_to_file("res://levels/casino.tscn")
+	#print("Locked")
+	_play_loading_screen()
+	await get_tree().create_timer(2).timeout
+	get_tree().change_scene_to_file("res://levels/casino.tscn")
 
 
 func _on_casino_mouse_entered():

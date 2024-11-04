@@ -20,7 +20,7 @@ func place(picked_object):
 				$"../bottom_bun".show()
 				bottom_bun_placed = true
 				picked_object.queue_free()
-			elif picked_object.has_method("hot_dog_bun"):
+			elif picked_object.name() == "hot_dog_bun":
 				$"../hot_dog_bun".show()
 				dog_bun_placed = true
 				picked_object.queue_free()
@@ -41,6 +41,7 @@ func place(picked_object):
 			elif dog_bun_placed == true:
 				if picked_object.name() == "hot_dog":
 					$"../full_dog".show()
+					$"../hot_dog_bun".hide()
 					picked_object.queue_free()
 		
 		if picked_object.has_method("slice_name"):		
@@ -73,6 +74,7 @@ func _on_reset_ingredients():
 	tomato_placed = false
 	top_bun_placed = false
 #	hot_dog_placed = false
+	dog_bun_placed = false
 
 
 func _on_clear_plate_clear_plate():
@@ -83,3 +85,4 @@ func _on_clear_plate_clear_plate():
 	patty_placed = false
 	tomato_placed = false
 	top_bun_placed = false
+	dog_bun_placed = false
