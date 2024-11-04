@@ -15,10 +15,8 @@ func _process(_delta):
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-
 func show_pause_menu() -> void:
 	$CanvasLayer.show()
-
 
 func _on_resume_pressed():
 	get_node("CanvasLayer").hide()

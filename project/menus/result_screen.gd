@@ -1,6 +1,6 @@
 extends Control
 
-
+var pickupAmount = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +13,9 @@ func _process(_delta):
 	if Input.is_action_pressed("exit"):
 		get_tree().quit()
 	$CanvasLayer2/Label.text = "$" 
+	await $Player.pickup
+	pickupAmount += 1
+	print(pickupAmount)
 
 
 func _on_next_pressed():
