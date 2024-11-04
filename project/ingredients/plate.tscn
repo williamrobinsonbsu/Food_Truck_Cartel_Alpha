@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://tsbefmiro8lh"]
+[gd_scene load_steps=32 format=3 uid="uid://tsbefmiro8lh"]
 
 [ext_resource type="PackedScene" uid="uid://din6t3fv4n6pv" path="res://FBXRaw/PlateSingle.fbx" id="1_52jp6"]
 [ext_resource type="Script" path="res://ingredients/plate.gd" id="2_lbwt3"]
@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://ckta3svl1gefc" path="res://Textures/ChipBag_standardSurface1_BaseColor.png" id="15_b28ad"]
 [ext_resource type="Texture2D" uid="uid://caj18fs5bqc0w" path="res://Textures/FryWBox_standardSurface1_BaseColor.png" id="16_fbqht"]
 [ext_resource type="Texture2D" uid="uid://cvylco8mll464" path="res://Textures/FriesIndiv_standardSurface1_BaseColor.png" id="17_ggfmk"]
-[ext_resource type="PackedScene" uid="uid://dyl8i7khgv2i7" path="res://FBXRaw/condiment_bottle.fbx" id="20_5xn4d"]
 [ext_resource type="Script" path="res://ingredients/clear_plate.gd" id="21_hcyh8"]
 [ext_resource type="PackedScene" uid="uid://bbj7px7l6an41" path="res://FBXRaw/hotdog_bun.fbx" id="22_8mlvg"]
 [ext_resource type="PackedScene" uid="uid://vafop1gyn3j5" path="res://FBXRaw/full hotdog.fbx" id="23_jc7b7"]
@@ -161,12 +160,6 @@ transform = Transform3D(-0.0893132, 0.789527, 0.607182, 0.993662, 0.112405, 0, -
 transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 0, -0.270791, 5.85469)
 material_override = SubResource("StandardMaterial3D_p0vgt")
 
-[node name="hot_dog" parent="." instance=ExtResource("20_5xn4d")]
-visible = false
-
-[node name="condiment_bottle" parent="hot_dog/RootNode" index="0"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0764097, 0.0753764, 0.368186)
-
 [node name="fries" parent="." instance=ExtResource("10_c2qvc")]
 transform = Transform3D(0.079164, 0, -0.796074, 0, 0.8, 0, 0.796074, 0, 0.079164, -0.0810807, -0.07098, 0.0475836)
 visible = false
@@ -214,5 +207,4 @@ visible = false
 [editable path="top_bun"]
 [editable path="soda"]
 [editable path="chips"]
-[editable path="hot_dog"]
 [editable path="fries"]

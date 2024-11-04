@@ -21,6 +21,8 @@ var pull_power = 10
 var true_speed = SPEED
 var is_crouching = false
 
+
+
 func _ready():
 	await get_tree().create_timer(2).timeout
 	loading_screen.hide()
@@ -101,8 +103,8 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("pause"):
 		pause_clicked.emit()
 		get_tree().paused = true
-		$PauseMenu.show_pause_menu()
-		await $PauseMenu.dismissed
+		$Pause/PauseMenu.show_pause_menu()
+		await $Pause/PauseMenu.dismissed
 		get_tree().paused = false
 	
 func movementStateChange(changeType):
