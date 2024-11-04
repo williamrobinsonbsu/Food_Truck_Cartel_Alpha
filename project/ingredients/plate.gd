@@ -74,6 +74,7 @@ func _on_reset_ingredients():
 	tomato_placed = false
 	top_bun_placed = false
 #	hot_dog_placed = false
+	dog_bun_placed = false
 
 
 func _on_clear_plate_clear_plate():
@@ -84,3 +85,4 @@ func _on_clear_plate_clear_plate():
 	patty_placed = false
 	tomato_placed = false
 	top_bun_placed = false
+	dog_bun_placed = false
