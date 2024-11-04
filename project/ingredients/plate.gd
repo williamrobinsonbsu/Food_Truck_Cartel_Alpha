@@ -9,6 +9,7 @@ var cheese_placed = false
 var top_bun_placed = false
 #var hot_dog_placed = false
 
+var dog_bun_placed = false
 signal check_my_order
 
 func place(picked_object):
@@ -18,6 +19,10 @@ func place(picked_object):
 			if picked_object.name() == "burger":
 				$"../bottom_bun".show()
 				bottom_bun_placed = true
+				picked_object.queue_free()
+			elif picked_object.has_method("hot_dog_bun"):
+				$"../hot_dog_bun".show()
+				dog_bun_placed = true
 				picked_object.queue_free()
 			elif picked_object.name() == "boxed fries":
 				$"../fries".show()
@@ -33,8 +38,9 @@ func place(picked_object):
 					$"../patty".show()
 					patty_placed = true
 					picked_object.queue_free()
-				elif picked_object.name() == "hot_dog":
-					$"../hot_dog".show()
+			elif dog_bun_placed == true:
+				if picked_object.name() == "hot_dog":
+					$"../full_dog".show()
 					picked_object.queue_free()
 		
 		if picked_object.has_method("slice_name"):		

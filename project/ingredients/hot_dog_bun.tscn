@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4yjclqj3p8f"]
+
+[ext_resource type="Script" path="res://ingredients/hot_dog_bun.gd" id="1_4fv1g"]
+[ext_resource type="PackedScene" uid="uid://bbj7px7l6an41" path="res://FBXRaw/hotdog_bun.fbx" id="2_k5gv2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6yafv"]
+height = 0.0251091
+radius = 0.0966295
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_4fv1g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, -3.14722e-07, -0.4, 0, 7.2, -1.74846e-08, -0.0072877, 0.00159863, 0.00364937)
+shape = SubResource("CylinderShape3D_6yafv")
+
+[node name="Root Scene" parent="." instance=ExtResource("2_k5gv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52639, -1.34484, 1.35004)

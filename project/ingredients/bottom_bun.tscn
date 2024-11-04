@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4yjclqj3p8f"]
+[gd_scene load_steps=6 format=3 uid="uid://ch0r202jcuua0"]
 
 [ext_resource type="Script" path="res://ingredients/bottom_bun.gd" id="1_6psfg"]
 [ext_resource type="PackedScene" uid="uid://h0fccvfrm8gl" path="res://FBXRaw/BreadBottom.fbx" id="2_42oa7"]
