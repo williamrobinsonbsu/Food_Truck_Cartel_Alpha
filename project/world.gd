@@ -200,7 +200,11 @@ func _on_level_timer_timeout():
 		#$"../Player/Control/LevelTimerLabel".text += """
 		#Uh oh..."""
 	await get_tree().create_timer(5).timeout
-	get_tree().change_scene_to_file("res://menus/result_screen.tscn")
+	var resultScene = preload("res://menus/result_screen.tscn").instantiate()
+	resultScene.totalPickup = 200
+	get_tree().root.add_child(resultScene)
+	get_node("res://world.gd").free()
+
 	
 	
 
