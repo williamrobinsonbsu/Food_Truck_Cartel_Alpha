@@ -5,6 +5,7 @@
 [ext_resource type="VideoStream" path="res://menus/Mug_Shot.ogv" id="3_dgop7"]
 
 [node name="CaughtScene" type="Control"]
+z_index = 200
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,19 +18,6 @@ script = ExtResource("1_ujr7k")
 position = Vector2(576.5, 324)
 scale = Vector2(1.16263, 0.925714)
 texture = ExtResource("2_7qixl")
-
-[node name="Retry" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 684.0
-offset_top = 236.0
-offset_right = -339.0
-offset_bottom = -324.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Retry"
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 1
@@ -62,7 +50,6 @@ scale = Vector2(0.530682, 0.398368)
 stream = ExtResource("3_dgop7")
 autoplay = true
 
-[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

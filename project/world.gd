@@ -63,6 +63,7 @@ func _physics_process(_delta: float) -> void:
 			$LevelTimer.paused = false
 		elif $LevelTimer.paused == false:
 			$LevelTimer.paused = true
+		
 	
 	if Input.is_action_just_pressed("toggle_order_timer"):
 		get_tree().call_group("customer", "toggle_assembly_timer")
@@ -186,6 +187,7 @@ func _on_police_catch_timer_timeout():
 	if can_police_catch_player == true:
 		get_tree().change_scene_to_file("res://menus/caught_scene.tscn")
 		
+		
 	elif can_police_catch_player == false:
 		get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = 0	
 		get_tree().call_group("police", "despawn")
@@ -203,7 +205,7 @@ func _on_level_timer_timeout():
 	var resultScene = preload("res://menus/result_screen.tscn").instantiate()
 	resultScene.totalPickup = 200
 	get_tree().root.add_child(resultScene)
-	get_node("res://world.gd").free()
+	#get_node("res://world.gd").free()
 
 	
 	
