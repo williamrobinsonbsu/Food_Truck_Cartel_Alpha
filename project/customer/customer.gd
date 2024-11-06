@@ -170,6 +170,8 @@ func _on_check_my_order():
 		DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "happy")
 		voice.play_string("Thank you so much")
 		world.score += 10 + counter
+		Global.succ_submit += 1
+		print("Successful Submissions: " + str(Global.succ_submit))
 	elif order_counter == 0:
 		path = "res://customer/npcs/" + level_path + "/" + npc_name + "/mad.png"
 		var new_texture = load(path)
@@ -177,6 +179,8 @@ func _on_check_my_order():
 		texture.texture = new_texture
 		DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "angry")
 		world.score += 0
+		Global.fai_submit += 1
+		print("Failed Submissions: " + str(Global.fai_submit))
 	else:
 		path = "res://customer/npcs/" + level_path + "/" + npc_name + "/mad.png"
 		var new_texture = load(path)
@@ -184,6 +188,8 @@ func _on_check_my_order():
 		texture.texture = new_texture
 		DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "angry")
 		world.score += 5
+		Global.fai_submit += 1
+		print("Failed Submissions: " + str(Global.fai_submit))
 		
 	get_node("/root/" + level + "/Kitchen/Root Scene/register/score").text = "$" + str(world.score)
 	get_node("/root/" + level + "/Kitchen/order_plate/resetTemp").set_collision_mask_value(1, false)

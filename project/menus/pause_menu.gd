@@ -16,6 +16,8 @@ func _process(_delta):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func show_pause_menu() -> void:
+	Global.pause += 1
+	print("Times Paused: " + str(Global.pause))
 	$CanvasLayer.show()
 
 func _on_resume_pressed():

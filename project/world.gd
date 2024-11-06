@@ -69,6 +69,8 @@ func _physics_process(_delta: float) -> void:
 		get_tree().call_group("customer", "toggle_assembly_timer")
 		
 func shutter_door_control():
+	Global.shutter += 1
+	print("Shutter Used: " + str(Global.shutter))
 	if shutter_door_close == false:
 		$ShutterDoor.hide()
 		shutter_door_close = true

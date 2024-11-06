@@ -94,8 +94,11 @@ func _physics_process(_delta):
 		var b = hand.global_transform.origin
 		picked_object.set_linear_velocity((b-a) * pull_power)
 	if Input.is_action_just_pressed("crouch"):
+	
 		if is_crouching == false:
 			movementStateChange("crouch")
+			print("Crouch: " + str(Global.crouch))
+			Global.crouch += 1
 		elif is_crouching == true:
 			movementStateChange("uncrouch")
 			
@@ -121,8 +124,12 @@ func pick_object():
 	var collider = interaction.get_collider()
 	if collider != null and collider is RigidBody3D:
 		picked_object = collider
+		Global.pick_up += 1
+		print("Pick: " + str(Global.pick_up))
 	elif collider != null and collider is StaticBody3D and collider.has_method("pick_item"):
+		Global.pick_up += 1
 		picked_object = collider.pick_item()
+		print("Pick: " + str(Global.pick_up))
 		
 	if picked_object.has_method("picked"):
 		picked_object.picked(true)
@@ -130,6 +137,8 @@ func pick_object():
 
 func drop_object():
 	if picked_object != null:
+		Global.drop += 1
+		print("Drop: " + str(Global.drop))
 		if picked_object.has_method("picked"):
 			var audio_stream_player := AudioStreamPlayer.new()
 			audio_stream_player.bus = "Sound"

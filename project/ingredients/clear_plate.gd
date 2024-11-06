@@ -5,6 +5,7 @@ signal clear_plate
 
 
 func reset():
+	Global.clear += 1
 	clear_plate.emit()
 	$"../bottom_bun".hide()
 	$"../patty".hide()

@@ -13,10 +13,12 @@ func _process(_delta):
 
 
 func _on_play_pressed():
+	print(Global.log_file)
 	get_tree().change_scene_to_file("res://menus/road_map.tscn")
 
 
 func _on_quit_pressed():
+	Global.save_data()
 	get_tree().quit()
 
 
