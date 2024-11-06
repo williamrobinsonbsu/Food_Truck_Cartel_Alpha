@@ -8,8 +8,23 @@
 
 [node name="Kitchen" parent="." instance=ExtResource("1_5wdmp")]
 
+[node name="hot_dog_box" parent="Kitchen/Root Scene" index="17"]
+transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 1.67177, 0.283231, -0.817478)
+
+[node name="hot_dog_bun_box" parent="Kitchen/Root Scene" index="18"]
+transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 1.61704, 0.283231, -0.817478)
+
 [node name="Camera3D" parent="Kitchen/Player" index="2"]
 current = false
+
+[node name="CollisionShape3D" parent="Kitchen/Dog_machine" index="0"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.98408, 1.07586, 0)
+
+[node name="Root Scene" parent="Kitchen/Dog_machine" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.592086, 0, 1.59078)
+
+[node name="Root Scene2" parent="Kitchen/Dog_machine" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.309584, 0, 1.59078)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 13.2537)

@@ -77,7 +77,7 @@ texture = ExtResource("2_1fc1u")
 [node name="ACVoicebox" parent="." instance=ExtResource("2_ve2d7")]
 
 [node name="OrderTimer" type="Label3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.371326, 0.595465, -0.00638431)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.371326, 0.595465, -0.100711)
 modulate = Color(0, 0, 0, 1)
 
 [node name="TimerBG" type="Sprite3D" parent="."]
