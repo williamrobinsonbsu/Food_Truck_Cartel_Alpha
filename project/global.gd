@@ -2,7 +2,16 @@ extends Node
 
 
 var data
-var data_array: Array = ["Pickups", "Drops", "Successful Submissions", "Failed Submissions", "Plate Clears", "Crouches", "Shutters", "Pauses"]
+var data_array: Array = ["Pickups", 
+		"Drops", 
+		"Successful Submissions", 
+		"Failed Submissions", 
+		"Plate Clears", 
+		"Crouches", 
+		"Shutters", 
+		"Pauses",
+		"Grill Uses",
+		"Frier Uses"]
 var index := 0
 
 
@@ -14,16 +23,21 @@ var index := 0
 @export var crouch: int = 0
 @export var shutter: int = 0
 @export var pause: int = 0
+@export var grill_used: int = 0
+@export var frier_used: int = 0
 
 
 func save_data():
-	var log_file = "user://" + Time.get_date_string_from_system() + ".csv"
+	var time = Time.get_time_dict_from_system()
+	var curr_time = "%02d-%02d-%02d" % [time.hour, time.minute, time.second]
+	
+	var log_file = "user://" + Time.get_date_string_from_system() + "-" + curr_time + ".csv"
 	var file = FileAccess.open(log_file, FileAccess.WRITE)
-	var numeric_data = [pick_up, drop, succ_submit, fai_submit, clear, crouch, shutter, pause]
+	var numeric_data = [pick_up, drop, succ_submit, fai_submit, clear, crouch, shutter, pause, grill_used, frier_used]
 	print(log_file)
 	
 	
-	while index < 8:
+	while index < data_array.size():
 		data = PackedStringArray([data_array[index], str(numeric_data[index])])
 		file.store_csv_line(data)
 		index += 1
