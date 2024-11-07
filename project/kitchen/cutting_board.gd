@@ -35,6 +35,7 @@ func use(ingredient):
 			sliced_ingredient.position = %CuttingBoardMarker.position
 			count += 1
 		ingredient.queue_free()
+		Global.cut_board_used += 1
 		var audio_stream_player := AudioStreamPlayer.new()
 		audio_stream_player.bus = "Sound"
 		get_parent().add_child(audio_stream_player)
