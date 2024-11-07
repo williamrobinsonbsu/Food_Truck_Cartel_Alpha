@@ -7,6 +7,7 @@ func use(ingredient):
 	if ingredient.has_method("slice_name") and ingredient.slice_name() == "fries":
 		$Fries.show()
 		$AnimationPlayer.play("in")
+		Global.frier_used += 1
 		ingredient.queue_free()
 		await get_tree().create_timer(3).timeout
 		$AnimationPlayer.play("out")
