@@ -17,7 +17,8 @@ var data_array: Array = [
 		"Pauses",
 		"Grill Uses",
 		"Frier Uses",
-		"Cut Board Uses"]
+		"Cut Board Uses"
+		]
 var index := 0
 
  
