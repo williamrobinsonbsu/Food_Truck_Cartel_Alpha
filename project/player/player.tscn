@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://cywlto4wavxy4"]
+[gd_scene load_steps=15 format=3 uid="uid://cywlto4wavxy4"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sh6bp"]
 [ext_resource type="Texture2D" uid="uid://ddwecisrh30hl" path="res://player/Day_Beginning.png" id="2_05itk"]
 [ext_resource type="PackedScene" uid="uid://bv41uwieducpe" path="res://menus/pause_menu.tscn" id="2_xfury"]
+[ext_resource type="Texture2D" uid="uid://bw5731dngws4l" path="res://player/LeftClick.png" id="3_ome4q"]
 [ext_resource type="PackedScene" uid="uid://d4gt0koccxrbf" path="res://menus/loading_screen.tscn" id="3_ragej"]
+[ext_resource type="Texture2D" uid="uid://cocvuda1do4l" path="res://player/RightClick.png" id="4_g5s24"]
+[ext_resource type="Texture2D" uid="uid://cvlgf7bbdbtje" path="res://player/CrouchButton.png" id="5_diusi"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6w4jn"]
 
@@ -12,6 +15,13 @@ radius = 0.254774
 
 [sub_resource type="LabelSettings" id="LabelSettings_3dcpl"]
 font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_axio4"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fdc7j"]
+font_size = 48
 
 [sub_resource type="Animation" id="Animation_vjo18"]
 resource_name = "crouch_animation"
@@ -39,7 +49,6 @@ script = ExtResource("1_sh6bp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00897205, 0, 0)
-visible = false
 mesh = SubResource("CapsuleMesh_6w4jn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -99,19 +108,67 @@ offset_right = 2.0
 offset_bottom = 27.0
 grow_horizontal = 2
 
-[node name="LevelTimerLabel" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 41.0
-offset_top = 202.0
-offset_right = 81.0
-offset_bottom = 225.0
-text = "300"
-
 [node name="DayIcon" type="Sprite2D" parent="Control"]
-visible = false
-position = Vector2(1089, 41)
-scale = Vector2(0.05, 0.05)
+position = Vector2(88, 61)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_05itk")
+
+[node name="LevelTimerLabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036
+anchor_top = 0.311
+anchor_right = 0.07
+anchor_bottom = 0.347
+offset_left = 18.564
+offset_top = -152.839
+offset_right = 21.43
+offset_bottom = -142.203
+text = "300"
+label_settings = SubResource("LabelSettings_axio4")
+
+[node name="LeftClick" type="Sprite2D" parent="Control"]
+position = Vector2(61, 561)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_ome4q")
+
+[node name="PickUpLabel" type="Label" parent="Control/LeftClick"]
+offset_left = -85.0
+offset_top = 150.0
+offset_right = 87.0
+offset_bottom = 217.0
+text = "Pick Up/
+Use"
+label_settings = SubResource("LabelSettings_fdc7j")
+horizontal_alignment = 1
+
+[node name="RightClick" type="Sprite2D" parent="Control"]
+position = Vector2(132, 561)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_g5s24")
+
+[node name="DropLabel" type="Label" parent="Control/RightClick"]
+offset_left = -85.0
+offset_top = 150.0
+offset_right = 87.0
+offset_bottom = 217.0
+text = "Drop"
+label_settings = SubResource("LabelSettings_fdc7j")
+horizontal_alignment = 1
+
+[node name="Crouchbutton" type="Sprite2D" parent="Control"]
+position = Vector2(201, 561)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_diusi")
+
+[node name="CrouchLabel" type="Label" parent="Control/Crouchbutton"]
+offset_left = -95.0
+offset_top = 150.0
+offset_right = 77.0
+offset_bottom = 217.0
+text = "Crouch
+"
+label_settings = SubResource("LabelSettings_fdc7j")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -120,11 +177,13 @@ libraries = {
 speed_scale = 0.5
 
 [node name="LoadingScreen" parent="." instance=ExtResource("3_ragej")]
+visible = false
 
 [node name="DayTimer" type="Timer" parent="."]
 wait_time = 75.0
 
 [node name="Pause" type="Node2D" parent="."]
+visible = false
 z_index = 100
 
 [node name="PauseMenu" parent="Pause" instance=ExtResource("2_xfury")]
