@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cywlto4wavxy4"]
+[gd_scene load_steps=16 format=3 uid="uid://cywlto4wavxy4"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sh6bp"]
 [ext_resource type="Texture2D" uid="uid://ddwecisrh30hl" path="res://player/Day_Beginning.png" id="2_05itk"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d4gt0koccxrbf" path="res://menus/loading_screen.tscn" id="3_ragej"]
 [ext_resource type="Texture2D" uid="uid://cocvuda1do4l" path="res://player/RightClick.png" id="4_g5s24"]
 [ext_resource type="Texture2D" uid="uid://cvlgf7bbdbtje" path="res://player/CrouchButton.png" id="5_diusi"]
+[ext_resource type="Texture2D" uid="uid://dk3vylb8u6auq" path="res://player/WASDButtons.png" id="6_mphvj"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6w4jn"]
 
@@ -156,12 +157,12 @@ text = "Drop"
 label_settings = SubResource("LabelSettings_fdc7j")
 horizontal_alignment = 1
 
-[node name="Crouchbutton" type="Sprite2D" parent="Control"]
+[node name="CrouchButton" type="Sprite2D" parent="Control"]
 position = Vector2(201, 561)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_diusi")
 
-[node name="CrouchLabel" type="Label" parent="Control/Crouchbutton"]
+[node name="CrouchLabel" type="Label" parent="Control/CrouchButton"]
 offset_left = -95.0
 offset_top = 150.0
 offset_right = 77.0
@@ -169,6 +170,22 @@ offset_bottom = 217.0
 text = "Crouch
 "
 label_settings = SubResource("LabelSettings_fdc7j")
+horizontal_alignment = 1
+
+[node name="WASDButtons" type="Sprite2D" parent="Control"]
+position = Vector2(1017, 561)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_mphvj")
+
+[node name="WASDLabel" type="Label" parent="Control/WASDButtons"]
+offset_left = -130.0
+offset_top = 145.0
+offset_right = 138.0
+offset_bottom = 282.0
+text = "Move Using 
+WASD"
+label_settings = SubResource("LabelSettings_fdc7j")
+horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
