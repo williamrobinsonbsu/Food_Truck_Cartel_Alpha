@@ -206,6 +206,7 @@ func _on_check_my_order():
 
 func _on_assembly_timer_timeout():
 	world.score += 0
+	Global.fai_submit += 1
 	get_tree().call_group("map", "_spawn_new_customer_or_cop")
 	get_tree().call_group("police", "despawn")
 	$".".queue_free()

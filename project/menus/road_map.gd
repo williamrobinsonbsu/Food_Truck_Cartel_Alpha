@@ -44,9 +44,9 @@ func _on_return_pressed():
 
 func _on_area_51_pressed():
 	print("Locked")
-	#_play_loading_screen()
-	#await get_tree().create_timer(2).timeout
-	#get_tree().change_scene_to_file("res://levels/area51.tscn")
+	_play_loading_screen()
+	await get_tree().create_timer(2).timeout
+	get_tree().change_scene_to_file("res://levels/area51.tscn")
 
 
 func _on_area_51_mouse_entered():

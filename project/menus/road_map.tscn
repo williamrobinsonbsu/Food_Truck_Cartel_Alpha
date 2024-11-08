@@ -1,10 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://46i7qfxwfv6b"]
+[gd_scene load_steps=8 format=3 uid="uid://46i7qfxwfv6b"]
 
 [ext_resource type="Script" path="res://menus/road_map.gd" id="1_g8hro"]
 [ext_resource type="Texture2D" uid="uid://8vlh0rcvgwjw" path="res://menus/updatedmap.webp" id="2_hla2o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xgc72"]
 font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_pq4y7"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j3bio"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_co1tl"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_q1b6s"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="Road_map" type="Control"]
 process_mode = 3
@@ -99,6 +111,7 @@ offset_right = 867.0
 offset_bottom = 548.0
 text = "Level 1: Beach
 "
+label_settings = SubResource("LabelSettings_pq4y7")
 horizontal_alignment = 1
 
 [node name="RaveLabel" type="Label" parent="."]
@@ -109,6 +122,7 @@ offset_top = 272.0
 offset_right = 842.0
 offset_bottom = 302.0
 text = "Level 2: Rave"
+label_settings = SubResource("LabelSettings_j3bio")
 horizontal_alignment = 1
 
 [node name="Area51Label" type="Label" parent="."]
@@ -118,7 +132,8 @@ offset_left = 235.0
 offset_top = 360.0
 offset_right = 376.0
 offset_bottom = 394.0
-text = "LOCKED"
+text = "Level 4: Area 51"
+label_settings = SubResource("LabelSettings_co1tl")
 horizontal_alignment = 1
 
 [node name="CasinoLabel" type="Label" parent="."]
@@ -128,7 +143,8 @@ offset_left = 239.0
 offset_top = 86.0
 offset_right = 381.0
 offset_bottom = 115.0
-text = "LOCKED"
+text = "Level 3: Casino"
+label_settings = SubResource("LabelSettings_q1b6s")
 horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="Beach" to="." method="_on_beach_mouse_entered"]

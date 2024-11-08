@@ -134,14 +134,6 @@ func _on_new_customer():
 		
 	
 func _on_police():
-	#var audio_stream_player := AudioStreamPlayer.new()
-	#audio_stream_player.stream = load("res://audio/police_siren.wav")
-	#audio_stream_player.volume_db = linear_to_db(0.3)
-	#get_parent().add_child(audio_stream_player)
-	#audio_stream_player.play()
-	#audio_stream_player.finished.connect(func():
-	#	audio_stream_player.queue_free()
-	#)
 	var scene = preload("res://police/police.tscn")
 	var police = scene.instantiate()
 	var i = 0
@@ -167,6 +159,14 @@ func _on_police():
 			police.position = $Mid3.position
 			police.scale.x *= -1
 	else:
+		var audio_stream_player := AudioStreamPlayer.new()
+		audio_stream_player.stream = load("res://audio/police_siren.wav")
+		audio_stream_player.volume_db = linear_to_db(0.3)
+		get_parent().add_child(audio_stream_player)
+		audio_stream_player.play()
+		audio_stream_player.finished.connect(func():
+			audio_stream_player.queue_free()
+		)
 		i = randi()%1
 		Global.police_spawns += 1
 		police.scale = Vector3(1, 1, 1)
