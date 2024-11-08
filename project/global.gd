@@ -1,8 +1,13 @@
 extends Node
 
 
+
+@export var end_of_level_money: int = 0
+
+
 var data
-var data_array: Array = ["Pickups", 
+var data_array: Array = [
+		"Pickups", 
 		"Drops", 
 		"Successful Submissions", 
 		"Failed Submissions", 
@@ -14,6 +19,8 @@ var data_array: Array = ["Pickups",
 		"Frier Uses",
 		"Cut Board Uses"]
 var index := 0
+
+ 
 
 
 @export var pick_up: int = 0

@@ -1,10 +1,9 @@
 extends Control
 
-var totalPickup
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(totalPickup)
+	print(Global.end_of_level_money)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,7 +11,7 @@ func _process(_delta):
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if Input.is_action_pressed("exit"):
 		get_tree().quit()
-	$CanvasLayer2/Label.text = "$" 
+	$CanvasLayer2/Label.text = "$" + str(Global.end_of_level_money);
 	
 	
 

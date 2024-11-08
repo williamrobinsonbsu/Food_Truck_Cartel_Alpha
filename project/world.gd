@@ -197,17 +197,10 @@ func _on_police_catch_timer_timeout():
 
 func _on_level_timer_timeout():
 	print(score)
-	#if score == goal_score or score > goal_score:
-		#$"../Player/Control/LevelTimerLabel".text += """
-		#Good Job!"""
-	#elif score < goal_score:
-		#$"../Player/Control/LevelTimerLabel".text += """
-		#Uh oh..."""
+	Global.end_of_level_money = score
+	
 	await get_tree().create_timer(5).timeout
-	var resultScene = preload("res://menus/result_screen.tscn").instantiate()
-	resultScene.totalPickup = 200
-	get_tree().root.add_child(resultScene)
-	#get_node("res://world.gd").free()
+	get_tree().change_scene_to_file("res://menus/result_screen.tscn")
 
 	
 	
