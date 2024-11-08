@@ -20,6 +20,7 @@ var goal_score = 100
 
 func _ready():
 	level = str(get_parent().get_parent().name)
+	Global.curr_level = level
 	print(level)
 	get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = 0
 	var value = get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value
@@ -167,6 +168,7 @@ func _on_police():
 			police.scale.x *= -1
 	else:
 		i = randi()%1
+		Global.police_spawns += 1
 		police.scale = Vector3(1, 1, 1)
 		if i == 0:
 			police.position = $Close1.position
@@ -187,10 +189,14 @@ func policeRate():
 		
 func _on_police_catch_timer_timeout():
 	if can_police_catch_player == true:
+		Global.police_catches = 1
+		Global.end_of_level_money = score
+		Global.save_data()
 		get_tree().change_scene_to_file("res://menus/caught_scene.tscn")
 		
 		
 	elif can_police_catch_player == false:
+		Global.police_dodges += 1
 		get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = 0	
 		get_tree().call_group("police", "despawn")
 
@@ -198,6 +204,7 @@ func _on_police_catch_timer_timeout():
 func _on_level_timer_timeout():
 	print(score)
 	Global.end_of_level_money = score
+	Global.save_data()
 	
 	await get_tree().create_timer(5).timeout
 	get_tree().change_scene_to_file("res://menus/result_screen.tscn")

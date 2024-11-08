@@ -17,7 +17,7 @@ func _on_play_pressed():
 
 
 func _on_quit_pressed():
-	Global.save_data()
+	#Global.save_data()
 	get_tree().quit()
 
 

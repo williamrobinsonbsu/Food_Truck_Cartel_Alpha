@@ -33,6 +33,8 @@ func _on_options_pressed():
 	
 	
 func _on_quit_pressed():
+	Global.level_quit = 1
+	Global.save_data()
 	dismissed.emit()
 	get_tree().change_scene_to_file("res://menus/start_menu.tscn")
 	

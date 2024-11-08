@@ -1,7 +1,6 @@
 extends Node
 
 
-
 @export var end_of_level_money: int = 0
 
 
@@ -17,11 +16,14 @@ var data_array: Array = [
 		"Pauses",
 		"Grill Uses",
 		"Frier Uses",
-		"Cut Board Uses"
+		"Cut Board Uses",
+		"Police Spawns",
+		"Caught by Police",
+		"Police Dodges",
+		"Level Quit",
+		"Ending Money"
 		]
 var index := 0
-
- 
 
 
 @export var pick_up: int = 0
@@ -35,20 +37,45 @@ var index := 0
 @export var grill_used: int = 0
 @export var frier_used: int = 0
 @export var cut_board_used: int = 0
+@export var police_spawns: int = 0
+@export var police_catches: int = 0
+@export var police_dodges: int = 0
+@export var level_quit: int = 0
+@export var curr_level: String = "no_level"
 
 
 func save_data():
 	var time = Time.get_time_dict_from_system()
 	var curr_time = "%02d-%02d-%02d" % [time.hour, time.minute, time.second]
 	
-	var log_file = "user://PLAYTEST-" + Time.get_date_string_from_system() + "-" + curr_time + ".csv"
+	var log_file = "user://" + curr_level + "-PLAYTEST-" + Time.get_date_string_from_system() + "-" + curr_time + ".csv"
 	var file = FileAccess.open(log_file, FileAccess.WRITE)
-	var numeric_data = [pick_up, drop, succ_submit, fai_submit, clear, crouch, shutter, pause, grill_used, frier_used, cut_board_used]
+	var numeric_data = get_num_array()
 	print(log_file)
 	
-	
+	data = PackedStringArray(["Level", curr_level])
+	file.store_csv_line(data)
 	while index < data_array.size():
 		data = PackedStringArray([data_array[index], str(numeric_data[index])])
 		file.store_csv_line(data)
 		index += 1
 	file = null
+
+func get_num_array():
+	return [
+			pick_up, 
+			drop,
+			succ_submit, 
+			fai_submit, 
+			clear, 
+			crouch, 
+			shutter, 
+			pause, 
+			grill_used, 
+			frier_used, 
+			cut_board_used,
+			police_spawns,
+			police_catches,
+			police_dodges,
+			level_quit,
+			end_of_level_money]
