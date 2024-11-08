@@ -60,6 +60,9 @@ func save_data():
 		file.store_csv_line(data)
 		index += 1
 	file = null
+	reset_data()
+	index = 0
+	
 
 func get_num_array():
 	return [
@@ -79,3 +82,20 @@ func get_num_array():
 			police_dodges,
 			level_quit,
 			end_of_level_money]
+
+func reset_data():
+	pick_up = 0
+	drop = 0
+	succ_submit = 0
+	fai_submit = 0
+	clear = 0
+	crouch = 0
+	shutter = 0
+	pause = 0
+	grill_used = 0
+	frier_used = 0
+	cut_board_used = 0
+	police_spawns = 0
+	police_catches = 0
+	police_dodges = 0
+	level_quit = 0
