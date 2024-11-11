@@ -93,11 +93,12 @@ func _ready():
 		order_label.text += "\n- Bottle of Soda"
 
 
-func _process(_delta) -> void:
+func _physics_process(_delta) -> void:
 	$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
 	look_at(
 		get_viewport().get_camera_3d().global_position,Vector3(0,1,0)
 	)
+	
 
 	
 func _on_check_my_order():
@@ -222,7 +223,7 @@ func _get_npc(npc):   #update for every new npc
 		npc = rng.randi_range(0, 3)
 	elif level_path == "casino":
 		var rng = RandomNumberGenerator.new()
-		npc = rng.randi_range(0, 2)
+		npc = rng.randi_range(0, 4)
 	
 	if npc == 0:
 		npc_name = "npc0"
