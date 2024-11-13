@@ -19,6 +19,7 @@ var goal_score = 100
 
 
 func _ready():
+	MenuMusic.stop()
 	level = str(get_parent().get_parent().name)
 	Global.curr_level = level
 	print(level)

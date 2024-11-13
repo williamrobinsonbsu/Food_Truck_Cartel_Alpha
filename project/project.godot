@@ -23,6 +23,7 @@ buses/default_bus_layout="res://audio/default_bus_layout.tres"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Global="*res://global.gd"
+MenuMusic="*res://audio/music/menu_music.tscn"
 
 [dialogue_manager]
 
