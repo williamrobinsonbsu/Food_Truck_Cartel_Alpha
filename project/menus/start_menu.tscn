@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cm2vkxu7ebt6i"]
+[gd_scene load_steps=12 format=3 uid="uid://cm2vkxu7ebt6i"]
 
 [ext_resource type="Script" path="res://menus/start_menu.gd" id="1_phsgr"]
+[ext_resource type="Texture2D" uid="uid://q3uvf7w55bh1" path="res://menus/title.png" id="2_516am"]
 [ext_resource type="PackedScene" uid="uid://42jgpbvyneu0" path="res://menus/options/options.tscn" id="2_u16ru"]
 [ext_resource type="Texture2D" uid="uid://j4ncepgvk4pr" path="res://menus/parallax_background/parallaxdesert_back.png" id="3_jxcpw"]
 [ext_resource type="Script" path="res://menus/parallax_background/shadow_layer.gd" id="4_1fdxu"]
@@ -21,18 +22,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_phsgr")
 
-[node name="Title" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 508.0
-offset_right = -508.0
-offset_bottom = -546.0
-grow_horizontal = 2
-text = "Food Truck Cartel"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Title" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(553, 151)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_516am")
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 1
