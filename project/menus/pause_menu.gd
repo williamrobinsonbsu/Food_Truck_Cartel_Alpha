@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 ## Emitted when the pause menu is dismissed.
 signal dismissed

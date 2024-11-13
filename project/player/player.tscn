@@ -222,12 +222,8 @@ wait_time = 75.0
 
 [node name="Pause" type="Node2D" parent="."]
 visible = false
-z_index = 100
+z_index = 1000
 
 [node name="PauseMenu" parent="Pause" instance=ExtResource("2_xfury")]
-offset_left = 576.0
-offset_top = 324.0
-offset_right = 576.0
-offset_bottom = 324.0
 
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]

@@ -9,16 +9,10 @@
 shader = ExtResource("2_r8srx")
 shader_parameter/amount = 3.0
 
-[node name="PauseMenu" type="Control"]
+[node name="PauseMenu" type="Node2D"]
 process_mode = 3
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+z_index = 500
+z_as_relative = false
 script = ExtResource("1_82swi")
 metadata/_edit_use_anchors_ = true
 
@@ -66,7 +60,6 @@ https://uppbeat.io/t/mountaineer/hype-is-everything
 License code: 8C1RFLS8BWUBEFAZ"
 
 [node name="Options" parent="." instance=ExtResource("3_alftw")]
-layout_mode = 1
 
 [connection signal="mouse_entered" from="CanvasLayer/Resume" to="." method="_on_resume_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Resume" to="." method="_on_resume_mouse_exited"]
