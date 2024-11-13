@@ -10,6 +10,7 @@ var i_want_soda = false
 var i_want_hot_dog = false
 var i_want_burger = false
 var npc_name
+var curr_dialogue
 
 @export var level: String
 @export var level_path: String
@@ -43,7 +44,7 @@ func _ready():
 	npc_name = ""
 	npc_name = _get_npc(npc)
 	voice.play_string("Here is my order")
-	DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "normal")
+	curr_dialogue = DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "normal")
 	
 	
 	if level == "Casino" and randf() >= .3:
@@ -98,6 +99,9 @@ func _physics_process(_delta) -> void:
 	look_at(
 		get_viewport().get_camera_3d().global_position,Vector3(0,1,0)
 	)
+	
+	if Input.is_action_just_pressed("pause") and curr_dialogue != null:
+		curr_dialogue.queue_free()
 	
 
 	
@@ -168,7 +172,7 @@ func _on_check_my_order():
 		path = "res://customer/npcs/" + level_path + "/" + npc_name + "/happy.png"
 		var new_texture = load(path)
 		texture.texture = new_texture
-		DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "happy")
+		curr_dialogue = DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "happy")
 		voice.play_string("Thank you so much")
 		world.score += 10 + counter
 		Global.succ_submit += 1
@@ -178,7 +182,7 @@ func _on_check_my_order():
 		var new_texture = load(path)
 		voice.play_string("What the hell")
 		texture.texture = new_texture
-		DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "angry")
+		curr_dialogue = DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "angry")
 		world.score += 0
 		Global.fai_submit += 1
 		print("Failed Submissions: " + str(Global.fai_submit))
@@ -187,7 +191,7 @@ func _on_check_my_order():
 		var new_texture = load(path)
 		voice.play_string("thanks, I guess")
 		texture.texture = new_texture
-		DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "angry")
+		curr_dialogue = DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "angry")
 		world.score += 5
 		Global.fai_submit += 1
 		print("Failed Submissions: " + str(Global.fai_submit))
