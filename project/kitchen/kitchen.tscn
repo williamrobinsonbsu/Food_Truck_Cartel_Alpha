@@ -1,4 +1,4 @@
-[gd_scene load_steps=445 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=443 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -297,8 +297,6 @@
 [ext_resource type="Texture2D" uid="uid://1komuyxn34h1" path="res://Textures/BreadBottom_standardSurface14_Height.png" id="292_deusa"]
 [ext_resource type="Texture2D" uid="uid://cqpwrnw210ujg" path="res://Textures/BreadBottom_standardSurface14_Normal.png" id="293_o4agj"]
 [ext_resource type="Texture2D" uid="uid://df2mqdrxs2k2" path="res://Textures/FryPoster.png" id="297_ktcbn"]
-[ext_resource type="PackedScene" uid="uid://c4lc3waa11se" path="res://kitchen/freezer_door.fbx" id="298_t4d3x"]
-[ext_resource type="PackedScene" uid="uid://b1oiwvu0vgxoh" path="res://kitchen/fridge_door.fbx" id="299_v6ofg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l8cx"]
 metallic = 1.0
@@ -3274,12 +3272,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0738468, 2.9091, 5.90585)
 light_color = Color(0.635294, 0.635294, 0.635294, 1)
 omni_range = 2.741
 omni_attenuation = 0.60776
-
-[node name="Freezer" parent="." instance=ExtResource("298_t4d3x")]
-transform = Transform3D(1, 0, 0, 0, 1.41383, 0, 0, 0, 1.40762, -0.751179, -0.442166, 1.68429)
-
-[node name="Root Scene4" parent="." instance=ExtResource("299_v6ofg")]
-transform = Transform3D(1, 0, 0, 0, 1.32595, 0, 0, 0, 1.40837, -0.749194, -0.293255, 1.70584)
 
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
