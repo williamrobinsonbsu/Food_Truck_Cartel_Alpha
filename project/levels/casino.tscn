@@ -9,7 +9,7 @@
 [node name="Kitchen" parent="." instance=ExtResource("1_21q4g")]
 
 [node name="Background" type="Sprite3D" parent="."]
-transform = Transform3D(0.537679, 0, 0, 0, 0.553591, 0, 0, 0, 0.8, 0, 5.60867, 11.5044)
+transform = Transform3D(0.341, 0, 0, 0, 0.35, 0, 0, 0, 0.506, 0, 5.60867, 8.88153)
 texture = ExtResource("2_5o1hu")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
