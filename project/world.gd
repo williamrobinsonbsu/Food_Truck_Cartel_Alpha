@@ -132,6 +132,8 @@ func _on_new_customer():
 	print(customer.level_path)
 	add_child(customer)
 	customer.position = %customer.position
+	if level == "Area51":
+		customer.position.y += .15
 		
 	
 func _on_police():

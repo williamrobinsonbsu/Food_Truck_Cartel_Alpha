@@ -35,6 +35,8 @@ var counter = 0
 signal new_customer
 
 func _ready():
+	texture.scale.x = -.07
+	texture.scale = texture.scale*.9
 	$AssemblyTimer.wait_time = $AssemblyTimer.wait_time / world.diff_modifier
 	$AssemblyTimer.start()
 	var rng = RandomNumberGenerator.new()
@@ -96,9 +98,9 @@ func _ready():
 
 func _physics_process(_delta) -> void:
 	$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
-	look_at(
-		get_viewport().get_camera_3d().global_position,Vector3(0,1,0)
-	)
+	#look_at(
+	#	get_viewport().get_camera_3d().global_position,Vector3(0,1,0)
+	#)
 	
 	if Input.is_action_just_pressed("pause") and curr_dialogue != null:
 		curr_dialogue.queue_free()
