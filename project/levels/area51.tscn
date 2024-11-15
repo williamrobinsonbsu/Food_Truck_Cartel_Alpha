@@ -1,7 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://ev4ls1tgjigw"]
+[gd_scene load_steps=3 format=3 uid="uid://ev4ls1tgjigw"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_30eag"]
+[ext_resource type="AudioStream" uid="uid://dbegh8kt11m2m" path="res://audio/music/Will 2 Pwr - half.cool.mp3" id="2_vj0v1"]
 
 [node name="Area51" type="Node3D"]
 
 [node name="Kitchen" parent="." instance=ExtResource("1_30eag")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vj0v1")
+volume_db = -13.117
+autoplay = true
+bus = &"Music"

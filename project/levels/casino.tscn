@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c151w43g5m7eh"]
+[gd_scene load_steps=4 format=3 uid="uid://c151w43g5m7eh"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_21q4g"]
 [ext_resource type="Texture2D" uid="uid://qt05vo6ts4iu" path="res://levels/casino_background_optimized_10000.png" id="2_5o1hu"]
+[ext_resource type="AudioStream" uid="uid://bg5q4emuh4m3v" path="res://audio/music/Give My Regards To Broadway - Freedom Trail Studio.mp3" id="3_jbwoa"]
 
 [node name="Casino" type="Node3D"]
 
@@ -10,6 +11,11 @@
 [node name="Background" type="Sprite3D" parent="."]
 transform = Transform3D(0.537679, 0, 0, 0, 0.553591, 0, 0, 0, 0.8, 0, 5.60867, 11.5044)
 texture = ExtResource("2_5o1hu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jbwoa")
+volume_db = -10.84
+autoplay = true
 
 [editable path="Kitchen"]
 [editable path="Kitchen/Root Scene"]

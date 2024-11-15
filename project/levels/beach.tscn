@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bjvux2qe0fbxi"]
 
 [ext_resource type="Texture2D" uid="uid://dna18yv4adnfk" path="res://Textures/background.jpg" id="1_bo5x3"]
-[ext_resource type="AudioStream" uid="uid://cd4at2aq3jwen" path="res://kitchen/Beach Ambience.wav" id="2_ol3d0"]
+[ext_resource type="AudioStream" uid="uid://dyl7wyofvfvj1" path="res://audio/music/Beach-Ambience.ogg" id="2_l76mk"]
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="2_pgehg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2gful"]
@@ -31,7 +31,7 @@ transform = Transform3D(-2.034, 0, 1.35896e-07, 0, 1.224, 0, -3.07125e-07, 0, -0
 texture = ExtResource("1_bo5x3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_ol3d0")
+stream = ExtResource("2_l76mk")
 volume_db = 9.369
 autoplay = true
 bus = &"Music"
