@@ -182,7 +182,7 @@ func _on_police():
 		
 
 func policeRate():
-	if randf() <= .3 * diff_modifier:
+	if randf() <= .8:
 		if lane_progression_counter < 3:
 			lane_progression_counter += 1
 		else:
