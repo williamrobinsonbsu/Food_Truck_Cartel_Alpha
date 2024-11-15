@@ -16,6 +16,7 @@ texture = ExtResource("2_5o1hu")
 stream = ExtResource("3_jbwoa")
 volume_db = -10.84
 autoplay = true
+bus = &"Music"
 
 [editable path="Kitchen"]
 [editable path="Kitchen/Root Scene"]
