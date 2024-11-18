@@ -7,6 +7,7 @@ func use(ingredient):
 		var sliced_ingredient = scene.instantiate()
 		Global.frier_used += 1
 		print(Global.frier_used)
+		ingredient.play_fry_audio()
 		add_child(sliced_ingredient)
 		sliced_ingredient.position = %friesPosition.position
 		ingredient.queue_free()
