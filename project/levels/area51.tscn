@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ev4ls1tgjigw"]
+[gd_scene load_steps=4 format=3 uid="uid://ev4ls1tgjigw"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_30eag"]
 [ext_resource type="AudioStream" uid="uid://dbegh8kt11m2m" path="res://audio/music/Will 2 Pwr - half.cool.mp3" id="2_vj0v1"]
+[ext_resource type="Texture2D" uid="uid://bou83a746u7r" path="res://levels/area51-background.png" id="3_5tc67"]
 
 [node name="Area51" type="Node3D"]
 
@@ -12,3 +13,10 @@ stream = ExtResource("2_vj0v1")
 volume_db = -13.117
 autoplay = true
 bus = &"Music"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-0.3, 0, -2.62268e-08, 0, 0.3, 0, 2.62268e-08, 0, -0.3, 0, 3.32554, 10.9627)
+texture = ExtResource("3_5tc67")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.72751, -2.42915)
