@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cm2vkxu7ebt6i"]
+[gd_scene load_steps=13 format=3 uid="uid://cm2vkxu7ebt6i"]
 
 [ext_resource type="Script" path="res://menus/start_menu.gd" id="1_phsgr"]
 [ext_resource type="Texture2D" uid="uid://q3uvf7w55bh1" path="res://menus/title.png" id="2_516am"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://p4fsvyalndn6" path="res://menus/parallax_background/parallaxdesert_roadTILED.png" id="12_fpyde"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hng4o"]
-load_path = "res://.godot/imported/parallaxdesert_road.png-169bb4b95d80b18a48a9b850139b8b2b.ctex"
 
 [node name="StartMenu" type="Control"]
 process_mode = 3

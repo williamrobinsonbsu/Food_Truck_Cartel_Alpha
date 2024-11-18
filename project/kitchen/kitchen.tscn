@@ -1,4 +1,4 @@
-[gd_scene load_steps=455 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=443 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -258,7 +258,7 @@
 [ext_resource type="PackedScene" uid="uid://bdry7bcac8mtb" path="res://FBXRaw/light.fbx" id="253_bj68c"]
 [ext_resource type="PackedScene" uid="uid://c0ka07p5mk3n5" path="res://FBXRaw/plate.fbx" id="254_qppnp"]
 [ext_resource type="Texture2D" uid="uid://catc017pjk1xa" path="res://Textures/Plate_standardSurface1_BaseColor.png" id="255_55bw1"]
-[ext_resource type="Texture2D" uid="uid://sed5sx6mopnv" path="res://Textures/plate_standardSurface1_Metallic.png" id="256_th0qj"]
+[ext_resource type="Texture2D" uid="uid://sed5sx6mopnv" path="res://Textures/Plate_standardSurface1_Metallic.png" id="256_th0qj"]
 [ext_resource type="Texture2D" uid="uid://687lxgovyljm" path="res://Textures/Plate_standardSurface1_Normal.png" id="257_rpmyt"]
 [ext_resource type="Texture2D" uid="uid://ghe117v606xl" path="res://Textures/Plate_standardSurface1_Roughness.png" id="258_pggc8"]
 [ext_resource type="PackedScene" uid="uid://d373bngdby8el" path="res://FBXRaw/CabinetDoor.fbx" id="259_72m0t"]
@@ -279,10 +279,10 @@
 [ext_resource type="Texture2D" uid="uid://u74de5t2jke5" path="res://Textures/fridge_standardSurface1_Normal.png" id="274_to34s"]
 [ext_resource type="Texture2D" uid="uid://dssfxossr2qkn" path="res://Textures/fridge_standardSurface1_Roughness.png" id="275_i7721"]
 [ext_resource type="PackedScene" uid="uid://cm4q1p7y80o4t" path="res://FBXRaw/Frame.fbx" id="276_vatlq"]
+[ext_resource type="Texture2D" uid="uid://c3dcoosntghl3" path="res://Textures/Frame_standardSurface1_BaseColor.png" id="277_wj1qd"]
 [ext_resource type="Texture2D" uid="uid://7e6rg8wjewn1" path="res://Textures/Frame_standardSurface1_Height.png" id="278_ssi8y"]
 [ext_resource type="Texture2D" uid="uid://by8di5ls81e5i" path="res://Textures/Frame_standardSurface1_Metallic.png" id="279_5dycn"]
 [ext_resource type="Texture2D" uid="uid://daghqlk1x5n1s" path="res://Textures/Frame_standardSurface1_Normal.png" id="280_0bmbh"]
-[ext_resource type="Texture2D" uid="uid://dl5v05mj2vm3y" path="res://Textures/FrameP_standardSurface1_BaseColor.png" id="280_ly6mx"]
 [ext_resource type="Texture2D" uid="uid://c6rfrm27lvnlm" path="res://Textures/Frame_standardSurface1_Roughness.png" id="281_eogfh"]
 [ext_resource type="PackedScene" uid="uid://c3odcn55fqw5v" path="res://FBXRaw/RawPattie.fbx" id="282_gjyrr"]
 [ext_resource type="Texture2D" uid="uid://cc1un8sga4i5g" path="res://Textures/RawPattie_standardSurface1_BaseColor.png" id="283_l2lu6"]
@@ -293,20 +293,10 @@
 [ext_resource type="PackedScene" uid="uid://b4gw4orru5cvj" path="res://FBXRaw/TopBread.fbx" id="288_6014q"]
 [ext_resource type="Texture2D" uid="uid://ctoatx5fbcgw2" path="res://Textures/BreadTopp_standardSurface13_BaseColor.png" id="289_g2roh"]
 [ext_resource type="PackedScene" uid="uid://h0fccvfrm8gl" path="res://FBXRaw/BreadBottom.fbx" id="290_m06dl"]
-[ext_resource type="PackedScene" uid="uid://bw0tu6nu0d81p" path="res://kitchen/Sink.fbx" id="291_f5rxf"]
 [ext_resource type="Texture2D" uid="uid://b1fn45li61uoq" path="res://Textures/BreadBottom_standardSurface14_BaseColor.png" id="291_xcumj"]
 [ext_resource type="Texture2D" uid="uid://1komuyxn34h1" path="res://Textures/BreadBottom_standardSurface14_Height.png" id="292_deusa"]
-[ext_resource type="Texture2D" uid="uid://cg0yxsscrvxr5" path="res://Textures/Sink_standardSurface1_BaseColor.png" id="292_qc8um"]
 [ext_resource type="Texture2D" uid="uid://cqpwrnw210ujg" path="res://Textures/BreadBottom_standardSurface14_Normal.png" id="293_o4agj"]
-[ext_resource type="Texture2D" uid="uid://dd80eoi53ynhd" path="res://Textures/Sink_standardSurface1_Height.png" id="293_vaaom"]
-[ext_resource type="Texture2D" uid="uid://bwuqk6kag805j" path="res://Textures/Sink_standardSurface1_Metallic.png" id="294_nl7fx"]
-[ext_resource type="Texture2D" uid="uid://do3jxqvcsr3y1" path="res://Textures/Sink_standardSurface1_Normal.png" id="295_skiia"]
-[ext_resource type="Texture2D" uid="uid://clw4hx8qevitj" path="res://Textures/Sink_standardSurface1_Roughness.png" id="296_7k3se"]
 [ext_resource type="Texture2D" uid="uid://df2mqdrxs2k2" path="res://Textures/FryPoster.png" id="297_ktcbn"]
-[ext_resource type="PackedScene" uid="uid://dg1t18r8v5l8a" path="res://kitchen/cuttingboard.fbx" id="304_i0eaa"]
-[ext_resource type="Texture2D" uid="uid://be78vre448u56" path="res://Textures/cuttingboard_standardSurface4_BaseColor.png" id="305_uwueh"]
-[ext_resource type="Texture2D" uid="uid://o7xhcbmpja4p" path="res://Textures/cuttingboard_standardSurface4_Metallic.png" id="306_88icj"]
-[ext_resource type="Texture2D" uid="uid://drydnka0vkny2" path="res://Textures/cuttingboard_standardSurface4_Roughness.png" id="307_q6mrr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l8cx"]
 metallic = 1.0
@@ -1304,12 +1294,13 @@ normal_texture = ExtResource("274_to34s")
 heightmap_texture = ExtResource("272_mqsel")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ygin0"]
-albedo_texture = ExtResource("280_ly6mx")
+albedo_texture = ExtResource("277_wj1qd")
 metallic = 1.0
 metallic_texture = ExtResource("279_5dycn")
 roughness_texture = ExtResource("281_eogfh")
 normal_enabled = true
 normal_texture = ExtResource("280_0bmbh")
+heightmap_enabled = true
 heightmap_texture = ExtResource("278_ssi8y")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kwwk"]
@@ -1359,15 +1350,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kx50x")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3jl6"]
-albedo_texture = ExtResource("292_qc8um")
-metallic = 1.0
-metallic_texture = ExtResource("294_nl7fx")
-roughness_texture = ExtResource("296_7k3se")
-normal_enabled = true
-normal_texture = ExtResource("295_skiia")
-heightmap_texture = ExtResource("293_vaaom")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wtaa"]
 albedo_texture = ExtResource("289_g2roh")
@@ -1478,14 +1460,6 @@ refraction_texture = SubResource("NoiseTexture2D_1jpf1")
 
 [sub_resource type="BoxMesh" id="BoxMesh_38ahk"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_il6wg"]
-albedo_texture = ExtResource("305_uwueh")
-metallic = 1.0
-metallic_texture = ExtResource("306_88icj")
-roughness_texture = ExtResource("307_q6mrr")
-normal_enabled = true
-normal_texture = ExtResource("156_y3p5o")
-
 [node name="Kitchen" type="Node3D"]
 
 [node name="Root Scene" parent="." groups=["map"] instance=ExtResource("1_kyxpc")]
@@ -1516,8 +1490,6 @@ visible = false
 material_override = SubResource("StandardMaterial3D_nn88i")
 
 [node name="Sink" parent="Root Scene/RootNode/Truck" index="5"]
-transform = Transform3D(34.3287, 0, 0, 0, 37.8532, 0, 0, 0, 120.544, -0.792222, 0.203216, 0.81843)
-visible = false
 material_override = SubResource("StandardMaterial3D_d6rrr")
 
 [node name="Refridge" parent="Root Scene/RootNode/Truck" index="6"]
@@ -1773,12 +1745,10 @@ material_override = SubResource("StandardMaterial3D_8gj7e")
 
 [node name="Sprite3D" type="Sprite3D" parent="Root Scene/RootNode/Truck" index="50"]
 transform = Transform3D(1.17005e-10, 0, -0.236338, 0, 0.00737939, 0, 0.00981183, 0, 2.81831e-09, 0.924105, 0.797069, 0.812805)
-gi_mode = 0
 texture = ExtResource("213_owig0")
 
 [node name="Sprite3D2" type="Sprite3D" parent="Root Scene/RootNode/Truck" index="51"]
 transform = Transform3D(-3.86295e-10, 0, 0.956843, 0, 0.00867811, 0, -0.00883741, 0, -4.18249e-08, -0.92673, 0.731443, 1.10563)
-gi_mode = 0
 texture = ExtResource("95_nlabw")
 
 [node name="Radio" parent="Root Scene/RootNode" index="1"]
@@ -2077,8 +2047,6 @@ material_override = SubResource("StandardMaterial3D_av3vg")
 material_override = SubResource("StandardMaterial3D_0pko6")
 
 [node name="cuttingboard" parent="Root Scene/RootNode" index="19"]
-transform = Transform3D(0, 0, 0.845917, 0, 1, 0, -1, 0, 0, 2.67457, 1.14235, 2.41089)
-visible = false
 material_override = SubResource("StandardMaterial3D_8qkmj")
 
 [node name="chip_bag" parent="Root Scene/RootNode" index="20"]
@@ -2469,9 +2437,6 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.686268, 0.327242, -0.
 [node name="Player" parent="." instance=ExtResource("189_grvwk")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
 
-[node name="Camera3D" parent="Player" index="2"]
-current = false
-
 [node name="CatchMeter" parent="Player/Control" index="1"]
 offset_left = -1.5
 offset_top = 29.0
@@ -2546,9 +2511,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163408, 0.0929726, -0.01277
 [node name="Label3D" parent="order_plate/ClearPlate" index="1"]
 transform = Transform3D(-0.275626, 0, -6.03983e-08, 0, 0.4, 0, 4.16184e-08, 0, -0.4, 0.157685, 0.0984032, -0.12582)
 
-[node name="hot_dog_bun" parent="order_plate" index="15"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50148, -1.31141, 1.36157)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.018292, 1.28813e-09, 0, -1.59914e-09, 0.0147345, 0, 0, 0, -0.0183799, -0.643705, 1.16552, 4.48899)
 material_override = SubResource("StandardMaterial3D_1e6qw")
@@ -2564,7 +2526,7 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.515, 1.07586, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.882013, 1.22731, 0)
 
 [node name="Hot_dog_raw" parent="Dog_machine" index="2"]
-transform = Transform3D(1.0003, 0, 0, 0, 1.0003, 0, 0, 0, 1.0003, 0.456246, 1.22685, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.456246, 1.22685, 0)
 
 [node name="Root Scene" parent="Dog_machine" instance=ExtResource("197_aiq65")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0374038, 0, 1.59078)
@@ -2809,10 +2771,8 @@ material_override = SubResource("StandardMaterial3D_8ytfy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.392694, -0.293255, 1.62051)
 
 [node name="FDA_Frame" parent="Root Scene3/RootNode" index="0"]
-transform = Transform3D(-1.50138, 0, -2.26702e-07, 0, 1.50138, 0, 2.26702e-07, 0, -1.50138, -0.313633, -0.375107, 2.82061)
+transform = Transform3D(-1.5, 0, -2.26494e-07, 0, 1.5, 0, 2.26494e-07, 0, -1.5, -0.313633, -0.375107, 2.82061)
 material_override = SubResource("StandardMaterial3D_ygin0")
-
-[node name="Label3D" type="Label3D" parent="Root Scene3/RootNode/FDA_Frame" index="0"]
 
 [node name="PattyStacks" parent="." instance=ExtResource("282_gjyrr")]
 transform = Transform3D(1.07312, 0, 0, 0, 1.05044, 0, 0, 0, 1.05066, -2.66918, 0.859365, -3.00191)
@@ -2961,13 +2921,6 @@ transform = Transform3D(9.10473, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.712538, 0
 material_override = SubResource("StandardMaterial3D_8kwwk")
 mesh = SubResource("ArrayMesh_kxv3c")
 skeleton = NodePath("")
-
-[node name="Sink_New" parent="PattyStacks/RootNode/Truck/Burger" index="24" instance=ExtResource("291_f5rxf")]
-transform = Transform3D(0.513911, 0, 0, 0, 0.525006, 0, 0, 0, 0.524897, 1.88318, -0.406208, 0.981959)
-
-[node name="Cube" parent="PattyStacks/RootNode/Truck/Burger/Sink_New/RootNode" index="0"]
-transform = Transform3D(-92.1165, 0, 0, 0, 1.78936e-05, 149.72, 0, -150.103, 1.7848e-05, -3.17486, 0.660051, 1.4822)
-material_override = SubResource("StandardMaterial3D_j3jl6")
 
 [node name="TOPBreadStack" parent="." instance=ExtResource("288_6014q")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -3.0762, -0.661559, -4.0172)
@@ -3147,7 +3100,6 @@ skeleton = NodePath("")
 
 [node name="FryInstructions" type="Sprite3D" parent="."]
 transform = Transform3D(-8.74228e-10, 0, -0.02, 0, 0.02, 0, 0.02, 0, -8.74228e-10, 2.77597, 2.37547, -0.0843844)
-gi_mode = 0
 texture = ExtResource("297_ktcbn")
 
 [node name="Label3D" type="Label3D" parent="."]
@@ -3163,19 +3115,12 @@ font_size = 15
 outline_size = 10
 
 [node name="Label3D3" type="Label3D" parent="."]
-transform = Transform3D(-3.47983e-08, 0, 1, 0, 0.561111, 0, -0.796092, 0, -4.37114e-08, -2.69443, 2.54698, 4.25967)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.69443, 2.24683, 4.22739)
 text = "Keep an eye 
-on that customer
+on that 
+customer
  timer ;) "
 font_size = 20
-outline_size = 9
-
-[node name="Label3D11" type="Label3D" parent="."]
-transform = Transform3D(-3.47983e-08, 0, 1, 0, 0.561111, 0, -0.796092, 0, -4.37114e-08, -2.7232, 2.08574, 4.25967)
-text = "- P.S Close shutter 
-to hide from 
-police"
-font_size = 19
 outline_size = 9
 
 [node name="Label3D4" type="Label3D" parent="."]
@@ -3328,13 +3273,6 @@ light_color = Color(0.635294, 0.635294, 0.635294, 1)
 omni_range = 2.741
 omni_attenuation = 0.60776
 
-[node name="CuttingBoard" parent="." instance=ExtResource("304_i0eaa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11999, 1.20648, 3.98501)
-
-[node name="cuttingboard" parent="CuttingBoard/RootNode" index="0"]
-transform = Transform3D(-0.0250655, -1.04524e-07, 1.19034, 0, 1.38467, 8.9881e-08, -1.46982, 1.7825e-09, -0.0202994, 5.76336, -0.0315069, -0.441192)
-material_override = SubResource("StandardMaterial3D_il6wg")
-
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
 [connection signal="timeout" from="Root Scene/customer_or_police_spawn_timer" to="Root Scene" method="_on_customer_or_police_spawn_timer_timeout"]
@@ -3384,7 +3322,5 @@ material_override = SubResource("StandardMaterial3D_il6wg")
 [editable path="Root Scene2"]
 [editable path="Root Scene3"]
 [editable path="PattyStacks"]
-[editable path="PattyStacks/RootNode/Truck/Burger/Sink_New"]
 [editable path="TOPBreadStack"]
 [editable path="BOTTOMJBread"]
-[editable path="CuttingBoard"]
