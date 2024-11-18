@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bff6ijl8j1wnf"
-path="res://.godot/imported/parallaxdesert_canyon.png-3fef1d522cb875a2f3ed7414775255c8.ctex"
+uid="uid://ytam8ak7m3kp"
+path="res://.godot/imported/parallaxdesert_canyonTILED.png-928492732bbcfa37ea6638c5987b684d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menus/parallax_background/parallaxdesert_canyon.png"
-dest_files=["res://.godot/imported/parallaxdesert_canyon.png-3fef1d522cb875a2f3ed7414775255c8.ctex"]
+source_file="res://menus/parallax_background/parallaxdesert_canyonTILED.png"
+dest_files=["res://.godot/imported/parallaxdesert_canyonTILED.png-928492732bbcfa37ea6638c5987b684d.ctex"]
 
 [params]
 
