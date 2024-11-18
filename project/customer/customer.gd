@@ -232,7 +232,7 @@ func _get_npc(npc):   #update for every new npc
 		npc = rng.randi_range(0, 4)
 	elif level_path == "area_51":
 		var rng = RandomNumberGenerator.new()
-		npc = rng.randi_range(0, 3)
+		npc = rng.randi_range(0, 4)
 	
 	if npc == 0:
 		npc_name = "npc0"

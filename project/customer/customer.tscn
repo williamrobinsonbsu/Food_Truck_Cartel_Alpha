@@ -1,7 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cuqr3ppkwg1gj"]
 
 [ext_resource type="Script" path="res://customer/customer.gd" id="1_u5n8i"]
-[ext_resource type="Texture2D" uid="uid://cs5xsv7dvgmo0" path="res://customer/npcs/casino/npc6/normal.png" id="2_1fc1u"]
 [ext_resource type="PackedScene" uid="uid://cj1qcw81lh2l5" path="res://audio/ACVoicebox.tscn" id="2_ve2d7"]
 [ext_resource type="Texture2D" uid="uid://dwkgl11dkcsm8" path="res://customer/Timer.png" id="4_slnak"]
 
@@ -48,6 +47,9 @@ _data = {
 "slide_in": SubResource("Animation_pk5dj")
 }
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uqo62"]
+load_path = "res://.godot/imported/normal.png-1048bbfa8d7a4784bdaa35764f74d714.s3tc.ctex"
+
 [node name="customer" type="StaticBody3D" groups=["customer"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.741381, 0)
 script = ExtResource("1_u5n8i")
@@ -72,7 +74,7 @@ one_shot = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.07, 0, 0, 0, 0.068, 0, 0, 0, 0.078, 0, 0.35765, 0)
-texture = ExtResource("2_1fc1u")
+texture = SubResource("CompressedTexture2D_uqo62")
 
 [node name="ACVoicebox" parent="." instance=ExtResource("2_ve2d7")]
 bus = &"Sound"
