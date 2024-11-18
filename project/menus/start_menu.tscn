@@ -8,10 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://cxm3nlno1rv4p" path="res://menus/parallax_background/parallaxdesert_shadow.png" id="4_b5hg4"]
 [ext_resource type="Script" path="res://menus/parallax_background/canyon_layer.gd" id="6_1dtjx"]
 [ext_resource type="Script" path="res://menus/parallax_background/road_layer.gd" id="6_gi6n4"]
-[ext_resource type="Texture2D" uid="uid://0iuucq6tyw5f" path="res://menus/parallax_background/parallaxdesert_road.png" id="6_i6ubb"]
 [ext_resource type="Texture2D" uid="uid://ytam8ak7m3kp" path="res://menus/parallax_background/parallaxdesert_canyonTILED.png" id="8_8axbo"]
 [ext_resource type="Texture2D" uid="uid://d0asonbclj7oe" path="res://menus/parallax_background/parallaxdesert_weeds.png" id="9_2viki"]
 [ext_resource type="Texture2D" uid="uid://p4fsvyalndn6" path="res://menus/parallax_background/parallaxdesert_roadTILED.png" id="12_fpyde"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hng4o"]
+load_path = "res://.godot/imported/parallaxdesert_road.png-169bb4b95d80b18a48a9b850139b8b2b.ctex"
 
 [node name="StartMenu" type="Control"]
 process_mode = 3
@@ -135,7 +137,7 @@ road_speed = -750.0
 texture_repeat = 2
 position = Vector2(-231, -349)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("6_i6ubb")
+texture = SubResource("CompressedTexture2D_hng4o")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 7000, 3500)
