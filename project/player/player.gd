@@ -4,6 +4,9 @@ extends CharacterBody3D
 #signal pickup
 #signal drop
 #signal pause_clicked
+
+signal hover
+
 var totalPickup = 0
 
 

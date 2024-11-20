@@ -223,3 +223,6 @@ func _spawn_police(modifier):
 		get_tree().call_group("police", "despawn")
 		lane_progression_counter = modifier
 		_on_police()
+
+
+

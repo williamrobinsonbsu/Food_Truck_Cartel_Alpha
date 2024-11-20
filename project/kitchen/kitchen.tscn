@@ -1710,6 +1710,7 @@ material_override = SubResource("StandardMaterial3D_vc08v")
 material_override = SubResource("StandardMaterial3D_vc08v")
 
 [node name="Basket4" parent="Root Scene/RootNode/Truck" index="43"]
+transform = Transform3D(-14.3266, -2.78634e-14, 0, 1.48087e-13, -2.69563, 0, 0, 0, 11.8871, -0.775588, 0.114347, 0.990956)
 material_override = SubResource("StandardMaterial3D_vc08v")
 
 [node name="Lettuce_Head1" parent="Root Scene/RootNode/Truck" index="44"]
@@ -2235,7 +2236,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.746527, 0, 1.19666)
 script = ExtResource("176_73vsf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/lettuce_bowl"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028313, -0.0240879, 0.0547633)
 shape = SubResource("CylinderShape3D_x7ngb")
 
 [node name="potato_bowl" type="StaticBody3D" parent="Root Scene"]
@@ -2346,6 +2347,11 @@ material_override = SubResource("StandardMaterial3D_2mtio")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/cheese_block"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0154914, 0.0170288, 0.0621948)
 shape = SubResource("BoxShape3D_3vp0x")
+
+[node name="ActionLabelCheese" type="Label3D" parent="Root Scene/cheese_block"]
+transform = Transform3D(-4.7552e-09, 0.00977934, 0.999063, 2.06037e-10, 0.225701, -0.0432881, -0.108888, 0, -4.37114e-08, 0.0873426, 0.0324537, 0.0612478)
+visible = false
+text = "Pick up cheese"
 
 [node name="frier" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06907, 0, 0)
