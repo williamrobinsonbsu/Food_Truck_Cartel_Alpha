@@ -1,4 +1,4 @@
-[gd_scene load_steps=443 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=442 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -186,7 +186,6 @@
 [ext_resource type="Script" path="res://kitchen/level_timer.gd" id="184_phgmx"]
 [ext_resource type="Texture2D" uid="uid://b56aq5nq3b4km" path="res://Textures/police scanner tracker.png" id="185_bgorc"]
 [ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="185_qdfto"]
-[ext_resource type="Script" path="res://kitchen/frier.gd" id="186_yv3i3"]
 [ext_resource type="PackedScene" uid="uid://cywlto4wavxy4" path="res://player/player.tscn" id="189_grvwk"]
 [ext_resource type="PackedScene" uid="uid://tsbefmiro8lh" path="res://ingredients/plate.tscn" id="190_a410o"]
 [ext_resource type="Texture2D" uid="uid://dfgulhcothr7" path="res://Textures/bell_lambert3SG_BaseColor.png" id="191_i34n2"]
@@ -2350,7 +2349,6 @@ shape = SubResource("BoxShape3D_3vp0x")
 
 [node name="frier" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06907, 0, 0)
-script = ExtResource("186_yv3i3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/frier"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00634766, -0.0322873, -0.0444336)
