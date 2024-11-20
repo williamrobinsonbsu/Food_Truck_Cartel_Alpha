@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cywlto4wavxy4"]
+[gd_scene load_steps=19 format=3 uid="uid://cywlto4wavxy4"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sh6bp"]
 [ext_resource type="Texture2D" uid="uid://ddwecisrh30hl" path="res://player/Day_Beginning.png" id="2_05itk"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cvlgf7bbdbtje" path="res://player/CrouchButton.png" id="5_diusi"]
 [ext_resource type="Texture2D" uid="uid://dk3vylb8u6auq" path="res://player/WASDButtons.png" id="6_mphvj"]
 [ext_resource type="Texture2D" uid="uid://dyfd26tkc0a78" path="res://player/ESCButton.png" id="7_j5ety"]
+[ext_resource type="Script" path="res://player/fps_label.gd" id="8_ew1g4"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6w4jn"]
 
@@ -207,6 +208,13 @@ text = "Pause
 "
 label_settings = SubResource("LabelSettings_1qkn5")
 horizontal_alignment = 1
+
+[node name="FPSLabel" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("8_ew1g4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
