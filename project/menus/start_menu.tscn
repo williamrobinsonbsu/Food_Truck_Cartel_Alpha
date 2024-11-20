@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cm2vkxu7ebt6i"]
+[gd_scene load_steps=14 format=3 uid="uid://cm2vkxu7ebt6i"]
 
 [ext_resource type="Script" path="res://menus/start_menu.gd" id="1_phsgr"]
 [ext_resource type="Texture2D" uid="uid://q3uvf7w55bh1" path="res://menus/title.png" id="2_516am"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://menus/parallax_background/road_layer.gd" id="6_gi6n4"]
 [ext_resource type="Texture2D" uid="uid://ytam8ak7m3kp" path="res://menus/parallax_background/parallaxdesert_canyonTILED.png" id="8_8axbo"]
 [ext_resource type="Texture2D" uid="uid://d0asonbclj7oe" path="res://menus/parallax_background/parallaxdesert_weeds.png" id="9_2viki"]
+[ext_resource type="Texture2D" uid="uid://m4r0rcmm0ttr" path="res://menus/trucj (1).png" id="12_7nq3d"]
 [ext_resource type="Texture2D" uid="uid://p4fsvyalndn6" path="res://menus/parallax_background/parallaxdesert_roadTILED.png" id="12_fpyde"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hng4o"]
@@ -156,6 +157,11 @@ texture = ExtResource("12_fpyde")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 7000, 3500)
+
+[node name="Trucj(1)" type="Sprite2D" parent="."]
+position = Vector2(203, 528)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_7nq3d")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

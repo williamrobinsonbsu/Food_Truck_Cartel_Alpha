@@ -8,6 +8,7 @@ func use(ingredient):
 		$Fries.show()
 		$AnimationPlayer.play("in")
 		Global.frier_used += 1
+		ingredient.audio_play_grill()
 		ingredient.queue_free()
 		await get_tree().create_timer(3).timeout
 		$AnimationPlayer.play("out")
