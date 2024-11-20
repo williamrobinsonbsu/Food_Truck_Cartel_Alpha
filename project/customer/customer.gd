@@ -31,6 +31,7 @@ var counter = 0
 @onready var fries = get_node("/root/" + level + "/Kitchen/order_plate/fries")
 @onready var soda = get_node("/root/" + level + "/Kitchen/order_plate/soda")
 @onready var chips = get_node("/root/" + level + "/Kitchen/order_plate/chips")
+@onready var order_timer: Timer = $AssemblyTimer
 
 signal new_customer
 
@@ -38,7 +39,13 @@ func _ready():
 	texture.scale.x = -.07
 	texture.scale = texture.scale*.9
 	$AssemblyTimer.wait_time = $AssemblyTimer.wait_time / world.diff_modifier
-	$AssemblyTimer.start()
+	if level == "Beach":
+		if world.starting_counter != 0:
+			$AssemblyTimer.start()
+		else:
+			$OrderTimer.hide()
+	else:
+		$AssemblyTimer.start()
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var npc = rng.randi_range(0, 6)
@@ -96,7 +103,12 @@ func _ready():
 
 
 func _physics_process(_delta) -> void:
-	$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
+	print(level)
+	if level == "Beach":
+		if world.starting_counter != 0:
+			$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
+	else:
+		$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
 	#look_at(
 	#	get_viewport().get_camera_3d().global_position,Vector3(0,1,0)
 	#)
