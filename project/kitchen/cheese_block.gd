@@ -8,7 +8,8 @@ func pick_item():
 	var cheese = scene.instantiate()
 	add_child(cheese)
 	return cheese
+
+func hover_name():
+	$ActionLabelCheese.show()
 	
-func show_action():
-	await $Player.hover
-	$ActionLabel.show()
+
