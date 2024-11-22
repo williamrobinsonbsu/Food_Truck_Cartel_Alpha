@@ -1,14 +1,9 @@
 extends CharacterBody3D
 
 
-#signal pickup
-#signal drop
-#signal pause_clicked
-
 signal hover
 
 var totalPickup = 0
-
 
 const SPEED = 5.0
 
@@ -21,18 +16,14 @@ var tex_array = [load("res://player/Day_Beginning.png"),load("res://player/Day_M
 var picked_object
 var pull_power = 10
 
-
 var true_speed = SPEED
 var is_crouching = false
-
-
 
 func _ready():
 	await get_tree().create_timer(2).timeout
 	loading_screen.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
-
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x) * 0.25)
@@ -140,7 +131,6 @@ func pick_object():
 	if picked_object.has_method("picked"):
 		picked_object.picked(true)
 		
-
 func drop_object():
 	if picked_object != null:
 		Global.drop += 1
@@ -157,8 +147,6 @@ func drop_object():
 			picked_object.picked(false)
 		picked_object = null
 		
-
-
 func _on_day_timer_timeout():
 	while index < 4:
 		$Control/DayIcon.set_texture(tex_array[index])
