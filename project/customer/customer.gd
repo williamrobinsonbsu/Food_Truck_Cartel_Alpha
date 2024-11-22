@@ -31,6 +31,8 @@ var counter = 0
 @onready var fries = get_node("/root/" + level + "/Kitchen/order_plate/fries")
 @onready var soda = get_node("/root/" + level + "/Kitchen/order_plate/soda")
 @onready var chips = get_node("/root/" + level + "/Kitchen/order_plate/chips")
+@onready var plate = get_node("/root/" + level + "/Kitchen/order_plate/StaticBody3D")
+@onready var clear_plate = get_node("/root/" + level + "/Kitchen/order_plate/ClearPlate")
 @onready var order_timer: Timer = $AssemblyTimer
 
 signal new_customer
@@ -228,7 +230,8 @@ func _on_assembly_timer_timeout():
 	get_tree().call_group("map", "_spawn_new_customer_or_cop")
 	get_tree().call_group("police", "despawn")
 	$".".queue_free()
-	
+	plate._on_clear_plate_clear_plate()
+	clear_plate.reset()
 
 func _on_voicebox_characters_sounded(characters: String):
 	dialogue.text += characters
