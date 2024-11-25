@@ -2138,7 +2138,7 @@ visible = false
 light_color = Color(0.976471, 0.827451, 0.596078, 1)
 
 [node name="Stove" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.152867, 0.419192)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.0159268, 0.419192)
 script = ExtResource("169_21eag")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Stove"]
@@ -2146,7 +2146,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0181274, -0.0266113, 0.5178
 shape = SubResource("BoxShape3D_n3er8")
 
 [node name="ActionLabelStove" type="Label3D" parent="Root Scene/Stove"]
-transform = Transform3D(-1.25148e-08, 0, -1, 0, 0.748534, 0, 0.286306, 0, -4.37114e-08, -0.116112, 0.637109, 0.362341)
+transform = Transform3D(-1.25148e-08, 0, -1, 0, 0.748534, 0, 0.286306, 0, -4.37114e-08, -0.172675, 0.517085, 0.376787)
 text = "Place uncooked patty to cook a burger"
 
 [node name="LabelStoveTimer" type="Timer" parent="Root Scene/Stove/ActionLabelStove"]
@@ -2224,12 +2224,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0286197, 0.367827, 0.00602
 shape = SubResource("CylinderShape3D_hadr5")
 
 [node name="patty_fridge" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0518179, 0.691969, 0.173055)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.817488, 0.814645, 0.0516407)
 script = ExtResource("175_w3hs7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/patty_fridge"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.154964, 0.489262, -0.72838)
 shape = SubResource("BoxShape3D_dfedg")
+
+[node name="ActionLabelPatty" type="Label3D" parent="Root Scene/patty_fridge"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.11759e-08, 0.0423703, 0.115862)
+text = "Patties"
+
+[node name="LabelPattyTimer" type="Timer" parent="Root Scene/patty_fridge/ActionLabelPatty"]
+wait_time = 0.5
 
 [node name="Floor" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.592228, 0.0061779)
@@ -2335,6 +2341,13 @@ script = ExtResource("180_mewoh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.151794, 0.201416)
 shape = SubResource("BoxShape3D_fsf1v")
 
+[node name="ActionLabelChips" type="Label3D" parent="Root Scene/chip_shelf"]
+transform = Transform3D(-1.96701e-08, 0, 0.45, 0, 0.45, 0, -0.45, 0, -1.96701e-08, 0.501348, 0.146963, 0.207392)
+text = "Chips"
+
+[node name="LabelChipsTimer" type="Timer" parent="Root Scene/chip_shelf/ActionLabelChips"]
+wait_time = 0.5
+
 [node name="soda_fridge" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03159, 0.713809, -0.472105)
 script = ExtResource("181_qrijm")
@@ -2342,6 +2355,13 @@ script = ExtResource("181_qrijm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/soda_fridge"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0557251, 0.00231934, 0.00615311)
 shape = SubResource("BoxShape3D_fdrga")
+
+[node name="ActionLabelSoda" type="Label3D" parent="Root Scene/soda_fridge"]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0.375449, 0, 0.04)
+text = "Soda"
+
+[node name="LabelSodaTimer" type="Timer" parent="Root Scene/soda_fridge/ActionLabelSoda"]
+wait_time = 0.5
 
 [node name="bread_bottom_shelf" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11496, 0, 0)
@@ -3308,10 +3328,13 @@ visible = false
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
+[connection signal="timeout" from="Root Scene/patty_fridge/ActionLabelPatty/LabelPattyTimer" to="Root Scene/patty_fridge" method="_on_label_patty_timer_timeout"]
 [connection signal="timeout" from="Root Scene/lettuce_bowl/ActionLabelLettuce/LabelLettuceTimer" to="Root Scene/lettuce_bowl" method="_on_label_lettuce_timer_timeout"]
 [connection signal="timeout" from="Root Scene/potato_bowl/ActionLabelPotato/LabelPotatoTimer" to="Root Scene/potato_bowl" method="_on_label_potato_timer_timeout"]
 [connection signal="timeout" from="Root Scene/tomato_bowl/ActionLabelTomato/LabelTomatoTimer" to="Root Scene/tomato_bowl" method="_on_label_tomato_timer_timeout"]
 [connection signal="timeout" from="Root Scene/onion_bowl/ActionLabelOnion/LabelOnionTimer" to="Root Scene/onion_bowl" method="_on_label_onion_timer_timeout"]
+[connection signal="timeout" from="Root Scene/chip_shelf/ActionLabelChips/LabelChipsTimer" to="Root Scene/chip_shelf" method="_on_label_chips_timer_timeout"]
+[connection signal="timeout" from="Root Scene/soda_fridge/ActionLabelSoda/LabelSodaTimer" to="Root Scene/soda_fridge" method="_on_label_soda_timer_timeout"]
 [connection signal="timeout" from="Root Scene/bread_bottom_shelf/ActionLabelBottomBun/LabelBottomBunTimer" to="Root Scene/bread_bottom_shelf" method="_on_label_bottom_bun_timer_timeout"]
 [connection signal="timeout" from="Root Scene/top_bun_shelf/ActionLabelTopBun/LabelTopBunTimer" to="Root Scene/top_bun_shelf" method="_on_label_top_bun_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cheese_block/ActionLabelCheese/LabelCheeseTimer" to="Root Scene/cheese_block" method="_on_label_cheese_timer_timeout"]
