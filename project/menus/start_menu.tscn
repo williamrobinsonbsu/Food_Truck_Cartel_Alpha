@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cm2vkxu7ebt6i"]
+[gd_scene load_steps=24 format=3 uid="uid://cm2vkxu7ebt6i"]
 
 [ext_resource type="Script" path="res://menus/start_menu.gd" id="1_phsgr"]
 [ext_resource type="Texture2D" uid="uid://q3uvf7w55bh1" path="res://menus/title.png" id="2_516am"]
@@ -12,8 +12,188 @@
 [ext_resource type="Texture2D" uid="uid://d0asonbclj7oe" path="res://menus/parallax_background/parallaxdesert_weeds.png" id="9_2viki"]
 [ext_resource type="Texture2D" uid="uid://m4r0rcmm0ttr" path="res://menus/trucj (1).png" id="12_7nq3d"]
 [ext_resource type="Texture2D" uid="uid://p4fsvyalndn6" path="res://menus/parallax_background/parallaxdesert_roadTILED.png" id="12_fpyde"]
+[ext_resource type="Texture2D" uid="uid://cjbafjsdsy2a8" path="res://menus/truck/tire_01-removebg-preview.png" id="13_v4cix"]
+[ext_resource type="Texture2D" uid="uid://cechydr26txmn" path="res://menus/truck/tire_02-removebg-preview.png" id="14_27e1b"]
+[ext_resource type="Texture2D" uid="uid://b6qxklc58ioum" path="res://menus/truck/truck_body-removebg-preview.png" id="15_d4rwg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hng4o"]
+
+[sub_resource type="Animation" id="Animation_8od2e"]
+resource_name = "Truck"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TruckBody-removebg-preview:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.282743, 0.0, 0.270526, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TruckBody-removebg-preview:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(244, 521), Vector2(227, 495), Vector2(244, 521), Vector2(261, 482), Vector2(244, 521)]
+}
+
+[sub_resource type="Animation" id="Animation_454e3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TruckBody-removebg-preview:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TruckBody-removebg-preview:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(244, 521)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l0oo4"]
+_data = {
+"RESET": SubResource("Animation_454e3"),
+"Truck": SubResource("Animation_8od2e")
+}
+
+[sub_resource type="Animation" id="Animation_tc55m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Tire02-removebg-preview:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [6.28319]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TruckBody-removebg-preview:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(244, 521)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TruckBody-removebg-preview:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ah2f8"]
+resource_name = "tires"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Tire02-removebg-preview:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_leq6j"]
+resource_name = "truck"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TruckBody-removebg-preview:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(244, 521), Vector2(237, 506), Vector2(244, 521), Vector2(253, 506), Vector2(244, 521)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TruckBody-removebg-preview:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.122173, 0.0, 0.0872665, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tqjwa"]
+_data = {
+"RESET": SubResource("Animation_tc55m"),
+"tires": SubResource("Animation_ah2f8"),
+"truck": SubResource("Animation_leq6j")
+}
 
 [node name="StartMenu" type="Control"]
 process_mode = 3
@@ -159,9 +339,39 @@ region_enabled = true
 region_rect = Rect2(0, 0, 7000, 3500)
 
 [node name="Trucj(1)" type="Sprite2D" parent="."]
-position = Vector2(203, 528)
+position = Vector2(730, 455)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_7nq3d")
+
+[node name="Tire01-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(344, 583)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("13_v4cix")
+
+[node name="Tire02-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(193, 580)
+rotation = 6.28319
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("14_27e1b")
+
+[node name="TruckBody-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(244, 521)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("15_d4rwg")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimationPlayer")
+libraries = {
+"": SubResource("AnimationLibrary_l0oo4")
+}
+autoplay = "Truck"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Tire01-removebg-preview")
+libraries = {
+"": SubResource("AnimationLibrary_tqjwa")
+}
+autoplay = "tires"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
