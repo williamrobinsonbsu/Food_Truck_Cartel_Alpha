@@ -339,6 +339,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 7000, 3500)
 
 [node name="Trucj(1)" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(730, 455)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_7nq3d")

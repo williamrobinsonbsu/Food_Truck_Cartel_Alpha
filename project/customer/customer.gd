@@ -33,6 +33,7 @@ var counter = 0
 @onready var chips = get_node("/root/" + level + "/Kitchen/order_plate/chips")
 @onready var plate = get_node("/root/" + level + "/Kitchen/order_plate/StaticBody3D")
 @onready var clear_plate = get_node("/root/" + level + "/Kitchen/order_plate/ClearPlate")
+@onready var dog = get_node("/root/" + level + "/Kitchen/Dog")
 @onready var order_timer: Timer = $AssemblyTimer
 
 signal new_customer
@@ -225,6 +226,7 @@ func _on_check_my_order():
 
 
 func _on_assembly_timer_timeout():
+	dog.visible = true
 	world.score += 0
 	Global.fai_submit += 1
 	get_tree().call_group("map", "_spawn_new_customer_or_cop")
@@ -232,12 +234,14 @@ func _on_assembly_timer_timeout():
 	$".".queue_free()
 	plate._on_clear_plate_clear_plate()
 	clear_plate.reset()
+	
 
 func _on_voicebox_characters_sounded(characters: String):
 	dialogue.text += characters
 
 func _get_npc(npc):   #update for every new npc
 	var path
+	dog.visible = false
 	if level_path == "rave_kitchen":
 		var rng = RandomNumberGenerator.new()
 		npc = rng.randi_range(0, 3)
