@@ -76,7 +76,7 @@ func _physics_process(_delta):
 	if interaction.is_colliding() == true:
 		if interaction.get_collider().has_method("hover_name"):
 			interaction.get_collider().hover_name()
-	#elif interaction.is_colliding() != true:
+		
 		
 	self.position.y = 1.226
 	var input_dir = Input.get_vector("left", "right", "forward", "back")

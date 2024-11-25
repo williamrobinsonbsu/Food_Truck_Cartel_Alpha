@@ -10,6 +10,8 @@ func pick_item():
 	return cheese
 
 func hover_name():
+	$ActionLabelCheese/LabelCheeseTimer.start()
 	$ActionLabelCheese.show()
 	
-
+func _on_label_cheese_timer_timeout():
+	$ActionLabelCheese.hide()
