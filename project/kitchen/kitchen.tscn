@@ -862,7 +862,7 @@ size = Vector3(0.0883789, 1.42145, 2.69037)
 size = Vector3(0.226196, 0.0192871, 0.381226)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7uq41"]
-size = Vector3(0.220596, 0.0965576, 0.0756836)
+size = Vector3(0.256904, 0.11322, 0.0756836)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hadr5"]
 height = 0.353577
@@ -2212,7 +2212,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0158047, 0.0679311, -0.040
 script = ExtResource("173_csr8x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Radio"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.665546, 0.811423, 1.68593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647392, 0.803092, 1.68593)
 shape = SubResource("BoxShape3D_7uq41")
 
 [node name="Trash Bin" type="StaticBody3D" parent="Root Scene"]
@@ -2258,6 +2258,13 @@ script = ExtResource("176_73vsf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028313, -0.0240879, 0.0547633)
 shape = SubResource("CylinderShape3D_x7ngb")
 
+[node name="ActionLabelLettuce" type="Label3D" parent="Root Scene/lettuce_bowl"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0.17, 0.05)
+text = "Lettuce"
+
+[node name="LabelLettuceTimer" type="Timer" parent="Root Scene/lettuce_bowl/ActionLabelLettuce"]
+wait_time = 0.5
+
 [node name="potato_bowl" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.746527, 0, 0.932612)
 script = ExtResource("177_xs7eh")
@@ -2266,6 +2273,12 @@ script = ExtResource("177_xs7eh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
 shape = SubResource("CylinderShape3D_x7ngb")
 
+[node name="ActionLabelPotato" type="Label3D" parent="Root Scene/potato_bowl"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0.16, 0.05)
+text = "Potato"
+
+[node name="LabelPotatoTimer" type="Timer" parent="Root Scene/potato_bowl/ActionLabelPotato"]
+
 [node name="tomato_bowl" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.737941, 0, 0.660603)
 script = ExtResource("178_twd0r")
@@ -2273,6 +2286,13 @@ script = ExtResource("178_twd0r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/tomato_bowl"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
 shape = SubResource("CylinderShape3D_x7ngb")
+
+[node name="ActionLabelTomato" type="Label3D" parent="Root Scene/tomato_bowl"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0.16, 0.05)
+text = "Tomato"
+
+[node name="LabelTomatoTimer" type="Timer" parent="Root Scene/tomato_bowl/ActionLabelTomato"]
+wait_time = 0.5
 
 [node name="hot_dog_box" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 1.38038, 0.283231, -0.817478)
@@ -2299,6 +2319,13 @@ script = ExtResource("179_cxam2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/onion_bowl"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
 shape = SubResource("CylinderShape3D_x7ngb")
+
+[node name="ActionLabelOnion" type="Label3D" parent="Root Scene/onion_bowl"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0.16, 0.05)
+text = "Onion"
+
+[node name="LabelOnionTimer" type="Timer" parent="Root Scene/onion_bowl/ActionLabelOnion"]
+wait_time = 0.5
 
 [node name="chip_shelf" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08367, 0, -0.681595)
@@ -3157,54 +3184,6 @@ customer
 font_size = 20
 outline_size = 9
 
-[node name="Label3D4" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.32491, 0.514453, 3.75298)
-text = "Lettuce"
-font_size = 20
-outline_size = 9
-
-[node name="Label3D5" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.32491, 0.514453, 2.93736)
-text = "Potato
-"
-font_size = 20
-outline_size = 9
-
-[node name="Label3D6" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.32491, 0.514453, 2.04983)
-text = "Tomato
-"
-font_size = 20
-outline_size = 9
-
-[node name="Label3D7" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.32491, 0.514453, 1.16538)
-text = "Onion
-"
-font_size = 20
-outline_size = 9
-
-[node name="Label3D8" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.21433, 0.532025, 0.0868571)
-text = "Bottom Bun
-"
-font_size = 20
-outline_size = 9
-
-[node name="Label3D9" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.21433, 1.65578, 0.0868571)
-text = "Top Bun
-"
-font_size = 20
-outline_size = 9
-
-[node name="Label3D10" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.87848, 2.75647, 0.0868571)
-text = "Patty
-"
-font_size = 20
-outline_size = 9
-
 [node name="Oil" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.962857, 0, 0, 0, 0.351445, 0, 0, 0, 1.28872, 2.20282, 0.770315, -0.121098)
 material_override = SubResource("StandardMaterial3D_jtjta")
@@ -3315,6 +3294,10 @@ visible = false
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
+[connection signal="timeout" from="Root Scene/lettuce_bowl/ActionLabelLettuce/LabelLettuceTimer" to="Root Scene/lettuce_bowl" method="_on_label_lettuce_timer_timeout"]
+[connection signal="timeout" from="Root Scene/potato_bowl/ActionLabelPotato/LabelPotatoTimer" to="Root Scene/potato_bowl" method="_on_label_potato_timer_timeout"]
+[connection signal="timeout" from="Root Scene/tomato_bowl/ActionLabelTomato/LabelTomatoTimer" to="Root Scene/tomato_bowl" method="_on_label_tomato_timer_timeout"]
+[connection signal="timeout" from="Root Scene/onion_bowl/ActionLabelOnion/LabelOnionTimer" to="Root Scene/onion_bowl" method="_on_label_onion_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cheese_block/ActionLabelCheese/LabelCheeseTimer" to="Root Scene/cheese_block" method="_on_label_cheese_timer_timeout"]
 [connection signal="timeout" from="Root Scene/frier/ActionLabelFryer/LabelFryerTimer" to="Root Scene/frier" method="_on_label_fryer_timer_timeout"]
 [connection signal="timeout" from="Root Scene/customer_or_police_spawn_timer" to="Root Scene" method="_on_customer_or_police_spawn_timer_timeout"]
