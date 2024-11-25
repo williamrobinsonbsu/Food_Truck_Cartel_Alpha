@@ -2224,7 +2224,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0286197, 0.367827, 0.00602
 shape = SubResource("CylinderShape3D_hadr5")
 
 [node name="patty_fridge" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0518179, 0.358636, 0.173055)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0518179, 0.691969, 0.173055)
 script = ExtResource("175_w3hs7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/patty_fridge"]
@@ -2351,13 +2351,27 @@ script = ExtResource("182_7m4oo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.345703, 0.11676, 0.020462)
 shape = SubResource("BoxShape3D_lb7kd")
 
+[node name="ActionLabelBottomBun" type="Label3D" parent="Root Scene/bread_bottom_shelf"]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0.4, 0.204458, 0.03)
+text = "Bottom
+Bun
+"
+
+[node name="LabelBottomBunTimer" type="Timer" parent="Root Scene/bread_bottom_shelf/ActionLabelBottomBun"]
+
 [node name="top_bun_shelf" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12232, 0.791708, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12232, 0.41291, 0)
 script = ExtResource("183_8a653")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/top_bun_shelf"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00933838, -0.333496, 0.013916)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00933838, 0.058946, 0.013916)
 shape = SubResource("BoxShape3D_xaik4")
+
+[node name="ActionLabelTopBun" type="Label3D" parent="Root Scene/top_bun_shelf"]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0.4, 0.1, 0.03)
+text = "Top Buns"
+
+[node name="LabelTopBunTimer" type="Timer" parent="Root Scene/top_bun_shelf/ActionLabelTopBun"]
 
 [node name="cheese_block" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.759624, 0.385259, 0.808025)
@@ -2825,7 +2839,7 @@ material_override = SubResource("StandardMaterial3D_rpc60")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8617, -0.293255, 1.33139)
 
 [node name="Fridge" parent="Root Scene2/RootNode" index="0"]
-transform = Transform3D(2, 0, 0, 0, 1.43743, 0, 0, 0, 1.49443, 1.07905, -0.192553, 0.549421)
+transform = Transform3D(2, 0, 0, 0, 1.43743, 0, 0, 0, 1.49443, 1.07803, -0.194111, 0.541932)
 material_override = SubResource("StandardMaterial3D_8ytfy")
 
 [node name="Root Scene3" parent="." instance=ExtResource("276_vatlq")]
@@ -3298,6 +3312,8 @@ visible = false
 [connection signal="timeout" from="Root Scene/potato_bowl/ActionLabelPotato/LabelPotatoTimer" to="Root Scene/potato_bowl" method="_on_label_potato_timer_timeout"]
 [connection signal="timeout" from="Root Scene/tomato_bowl/ActionLabelTomato/LabelTomatoTimer" to="Root Scene/tomato_bowl" method="_on_label_tomato_timer_timeout"]
 [connection signal="timeout" from="Root Scene/onion_bowl/ActionLabelOnion/LabelOnionTimer" to="Root Scene/onion_bowl" method="_on_label_onion_timer_timeout"]
+[connection signal="timeout" from="Root Scene/bread_bottom_shelf/ActionLabelBottomBun/LabelBottomBunTimer" to="Root Scene/bread_bottom_shelf" method="_on_label_bottom_bun_timer_timeout"]
+[connection signal="timeout" from="Root Scene/top_bun_shelf/ActionLabelTopBun/LabelTopBunTimer" to="Root Scene/top_bun_shelf" method="_on_label_top_bun_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cheese_block/ActionLabelCheese/LabelCheeseTimer" to="Root Scene/cheese_block" method="_on_label_cheese_timer_timeout"]
 [connection signal="timeout" from="Root Scene/frier/ActionLabelFryer/LabelFryerTimer" to="Root Scene/frier" method="_on_label_fryer_timer_timeout"]
 [connection signal="timeout" from="Root Scene/customer_or_police_spawn_timer" to="Root Scene" method="_on_customer_or_police_spawn_timer_timeout"]
