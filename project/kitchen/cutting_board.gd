@@ -7,6 +7,10 @@ var lettuce_scene = preload("res://ingredients/lettuce_slice.tscn")
 var fries_scene = preload("res://ingredients/potato_slice.tscn")
 var onion_scene = preload("res://ingredients/onion_slice.tscn")
 
+func _ready():
+	$ActionLabelCuttingBoard.hide()
+	
+	
 func get_ingredient(ingredient): 
 	print(ingredient)
 	if ingredient == "tomato":
@@ -45,3 +49,10 @@ func use(ingredient):
 			audio_stream_player.play()
 			await audio_stream_player.finished
 		audio_stream_player.queue_free()
+		
+func hover_name():
+	$ActionLabelCuttingBoard/LabelCuttingBoardTimer.start()
+	$ActionLabelCuttingBoard.show()
+
+func _on_label_cutting_board_timer_timeout():
+	$ActionLabelCuttingBoard.hide()

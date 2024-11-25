@@ -1,4 +1,4 @@
-[gd_scene load_steps=444 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=445 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -167,6 +167,7 @@
 [ext_resource type="Texture2D" uid="uid://btwhair3lvm5f" path="res://Textures/potato_UV_potatoSG_Metallic.png" id="165_f6pfg"]
 [ext_resource type="Texture2D" uid="uid://da8pspb6raji6" path="res://Textures/potato_UV_potatoSG_Normal.png" id="166_4hk3a"]
 [ext_resource type="Texture2D" uid="uid://cexwxrqm7s3q6" path="res://Textures/potato_UV_potatoSG_Roughness.png" id="167_x1gtu"]
+[ext_resource type="Script" path="res://kitchen/Stove.gd" id="169_21eag"]
 [ext_resource type="Script" path="res://kitchen/cutting_board.gd" id="171_l7qsn"]
 [ext_resource type="Script" path="res://kitchen/radio.gd" id="173_csr8x"]
 [ext_resource type="Script" path="res://kitchen/trash_bin.gd" id="174_yp6dd"]
@@ -2138,10 +2139,18 @@ light_color = Color(0.976471, 0.827451, 0.596078, 1)
 
 [node name="Stove" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.152867, 0.419192)
+script = ExtResource("169_21eag")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Stove"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0181274, -0.0266113, 0.517827)
 shape = SubResource("BoxShape3D_n3er8")
+
+[node name="ActionLabelStove" type="Label3D" parent="Root Scene/Stove"]
+transform = Transform3D(-1.25148e-08, 0, -1, 0, 0.748534, 0, 0.286306, 0, -4.37114e-08, -0.116112, 0.637109, 0.362341)
+text = "Place uncooked patty to cook a burger"
+
+[node name="LabelStoveTimer" type="Timer" parent="Root Scene/Stove/ActionLabelStove"]
+wait_time = 0.5
 
 [node name="Front Counter" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0575547, 1.89526)
@@ -2189,6 +2198,14 @@ shape = SubResource("BoxShape3D_bkuw4")
 [node name="CuttingBoardMarker" type="Marker3D" parent="Root Scene/cutting_board"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398838, -0.277534, 0.0964434)
+
+[node name="ActionLabelCuttingBoard" type="Label3D" parent="Root Scene/cutting_board"]
+transform = Transform3D(-1.563e-08, 0, 1, 0, 0.378888, 0, -0.357572, 0, -4.37114e-08, -0.497752, -0.216074, 0.098526)
+text = "Use to cut 
+vegetables"
+
+[node name="LabelCuttingBoardTimer" type="Timer" parent="Root Scene/cutting_board/ActionLabelCuttingBoard"]
+wait_time = 0.5
 
 [node name="Radio" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0158047, 0.0679311, -0.0406093)
@@ -2375,6 +2392,7 @@ transform = Transform3D(-1.45705e-08, 0, -0.333333, 0, 0.333333, 0, 0.333333, 0,
 text = "Use with cut fries"
 
 [node name="LabelFryerTimer" type="Timer" parent="Root Scene/frier/ActionLabelFryer"]
+wait_time = 0.5
 
 [node name="customer" type="Marker3D" parent="Root Scene"]
 unique_name_in_owner = true
@@ -3294,6 +3312,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.985433, 6.36504)
 visible = false
 
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
+[connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
+[connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
 [connection signal="timeout" from="Root Scene/cheese_block/ActionLabelCheese/LabelCheeseTimer" to="Root Scene/cheese_block" method="_on_label_cheese_timer_timeout"]
 [connection signal="timeout" from="Root Scene/frier/ActionLabelFryer/LabelFryerTimer" to="Root Scene/frier" method="_on_label_fryer_timer_timeout"]
