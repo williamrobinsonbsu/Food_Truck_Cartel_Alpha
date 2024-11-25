@@ -2354,6 +2354,9 @@ transform = Transform3D(-4.7552e-09, 0.00977934, 0.999063, 2.06037e-10, 0.225701
 visible = false
 text = "Pick up cheese"
 
+[node name="LabelCheeseTimer" type="Timer" parent="Root Scene/cheese_block/ActionLabelCheese"]
+wait_time = 0.5
+
 [node name="frier" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06907, 0, 0)
 
@@ -3284,6 +3287,7 @@ visible = false
 
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
+[connection signal="timeout" from="Root Scene/cheese_block/ActionLabelCheese/LabelCheeseTimer" to="Root Scene/cheese_block" method="_on_label_cheese_timer_timeout"]
 [connection signal="timeout" from="Root Scene/customer_or_police_spawn_timer" to="Root Scene" method="_on_customer_or_police_spawn_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cop_catch_timer" to="Root Scene" method="_on_police_catch_timer_timeout"]
 [connection signal="timeout" from="Root Scene/LevelTimer" to="Root Scene" method="_on_level_timer_timeout"]
