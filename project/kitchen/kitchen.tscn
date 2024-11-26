@@ -2142,7 +2142,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02054, -0.0159268, 0.419192
 script = ExtResource("169_21eag")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Stove"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0181274, -0.0266113, 0.517827)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0297396, -0.0721936, 0.524861)
 shape = SubResource("BoxShape3D_n3er8")
 
 [node name="ActionLabelStove" type="Label3D" parent="Root Scene/Stove"]
