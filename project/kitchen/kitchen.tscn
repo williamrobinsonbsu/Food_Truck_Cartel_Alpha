@@ -2531,7 +2531,6 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.686268, 0.327242, -0.
 
 [node name="CopTimer" type="Timer" parent="Root Scene"]
 wait_time = 15.0
-autostart = true
 
 [node name="Player" parent="." instance=ExtResource("189_grvwk")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)

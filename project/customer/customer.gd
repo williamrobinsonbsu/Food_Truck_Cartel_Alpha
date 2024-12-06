@@ -106,7 +106,6 @@ func _ready():
 
 
 func _physics_process(_delta) -> void:
-	print(level)
 	if level == "Beach":
 		if world.starting_counter != 0:
 			$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
@@ -288,3 +287,10 @@ func toggle_assembly_timer():
 		$AssemblyTimer.paused = false
 	elif $AssemblyTimer.paused == false:
 		$AssemblyTimer.paused = true
+
+
+func selfhide():
+	self.hide()
+
+func selfshow():
+	self.show()

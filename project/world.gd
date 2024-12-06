@@ -82,6 +82,7 @@ func shutter_door_control():
 			get_node("/root/" + level + "/Kitchen/Player/Control/DayIcon").show()
 			get_node("/root/" + level + "/Kitchen/Player/DayTimer").start()
 			$LevelTimer.start()
+			$CopTimer.start()
 			timer.emit()
 			starting_counter += 1
 		can_police_catch_player = true
@@ -175,10 +176,13 @@ func _on_police():
 			police.position = $Close2.position
 		police.catch()
 		cop_catch_timer.start()
+		get_tree().call_group("customer", "selfhide")
 		
 
 func policeRate():
-	if randf() <= .5:
+	var rand = randf()
+	print("Rand: %f" % rand)
+	if rand <= .5:
 		if lane_progression_counter < 3:
 			lane_progression_counter += 1
 		else:
@@ -198,6 +202,7 @@ func _on_police_catch_timer_timeout():
 		Global.police_dodges += 1
 		get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = 0	
 		get_tree().call_group("police", "despawn")
+		get_tree().call_group("customer", "selfshow")
 
 
 func _on_level_timer_timeout():
@@ -220,6 +225,7 @@ func _spawn_police(modifier):
 
 
 func _on_cop_timer_timeout():
+	print("Cop Timer Called")
 	get_tree().call_group("police", "despawn")
 	poRate = policeRate()
 	if poRate != 0:
