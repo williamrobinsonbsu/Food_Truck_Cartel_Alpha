@@ -116,10 +116,6 @@ func _on_customer_or_police_spawn_timer_timeout():
 func _customer_or_cop():
 	_on_new_customer()
 	starting_counter += 1
-	poRate = policeRate()
-	if poRate != 0:
-		_on_police()
-		print(poRate)
 	
 
 func _on_new_customer():
@@ -182,7 +178,7 @@ func _on_police():
 		
 
 func policeRate():
-	if randf() <= .8:
+	if randf() <= .5:
 		if lane_progression_counter < 3:
 			lane_progression_counter += 1
 		else:
@@ -213,8 +209,6 @@ func _on_level_timer_timeout():
 	get_tree().change_scene_to_file("res://menus/result_screen.tscn")
 
 	
-	
-
 func _spawn_police(modifier):
 	if modifier < 1 or modifier > 3:
 		pass
@@ -225,4 +219,12 @@ func _spawn_police(modifier):
 		_on_police()
 
 
+func _on_cop_timer_timeout():
+	get_tree().call_group("police", "despawn")
+	poRate = policeRate()
+	if poRate != 0:
+		_on_police()
+		print(poRate)
+	$CopTimer.wait_time = 15
+	$CopTimer.start()
 

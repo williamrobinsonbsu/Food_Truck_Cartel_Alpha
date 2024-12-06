@@ -2529,6 +2529,10 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.686268, 0.327242, 0.0
 [node name="FryerBasket2" parent="Root Scene" instance=ExtResource("181_jeug3")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.686268, 0.327242, -0.14398)
 
+[node name="CopTimer" type="Timer" parent="Root Scene"]
+wait_time = 15.0
+autostart = true
+
 [node name="Player" parent="." instance=ExtResource("189_grvwk")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
 
@@ -3342,6 +3346,7 @@ visible = false
 [connection signal="timeout" from="Root Scene/customer_or_police_spawn_timer" to="Root Scene" method="_on_customer_or_police_spawn_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cop_catch_timer" to="Root Scene" method="_on_police_catch_timer_timeout"]
 [connection signal="timeout" from="Root Scene/LevelTimer" to="Root Scene" method="_on_level_timer_timeout"]
+[connection signal="timeout" from="Root Scene/CopTimer" to="Root Scene" method="_on_cop_timer_timeout"]
 [connection signal="reset_ingredients" from="order_plate/resetTemp" to="order_plate/StaticBody3D" method="_on_reset_ingredients"]
 
 [editable path="Root Scene"]
