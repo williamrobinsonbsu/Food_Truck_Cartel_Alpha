@@ -1,4 +1,4 @@
-extends RigidBody3D
+extends PickedIngredient
 
 
 func place_ingredient():
