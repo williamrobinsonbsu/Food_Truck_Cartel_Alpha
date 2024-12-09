@@ -291,6 +291,8 @@ func toggle_assembly_timer():
 
 func selfhide():
 	self.hide()
+	$AssemblyTimer.paused = true
 
 func selfshow():
 	self.show()
+	$AssemblyTimer.paused = false

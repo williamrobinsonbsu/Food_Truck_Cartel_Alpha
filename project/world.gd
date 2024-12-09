@@ -12,8 +12,6 @@ var can_police_catch_player = false
 var poRate = 0
 var goal_score = 100
 
-
-
 @onready var customer_or_cop_timer: Timer = $customer_or_police_spawn_timer
 @onready var cop_catch_timer: Timer = $cop_catch_timer
 
@@ -32,9 +30,9 @@ func _ready():
 	elif level == "RaveKitchen":
 		diff_modifier = 1.25
 	elif level == "Area51":
-		diff_modifier = 1.5
-	elif level == "Casino":
 		diff_modifier = 1.75
+	elif level == "Casino":
+		diff_modifier = 1.5
 		#get_node("/root/" + level + "/Kitchen/Root Scene/hot_dog_box").show()
 		#get_node("/root/" + level + "/Kitchen/Dog_machine").show()
 		#get_node("/root/" + level + "/Kitchen/Root Scene/hot_dog_bun_box").show()
