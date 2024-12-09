@@ -59,14 +59,15 @@ func _ready():
 	curr_dialogue = DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "normal")
 	
 	
-	#if level == "Casino" and randf() >= .3:
-		#print("I would like a hot dog")
-		#order = "hot dog"
-		#i_want_hot_dog = true
-	print("I would like a burger!")
-	i_want_burger = true
-	order = "burger"
-	order_label.text = "-=+Current Order+=-\n- "+order+ " with: "
+	if level == "Casino" and randf() >= .3:
+		print("I would like a hot dog")
+		order = "hot dog"
+		i_want_hot_dog = true
+	else:
+		print("I would like a burger!")
+		i_want_burger = true
+		order = "burger"
+		order_label.text = "-=+Current Order+=-\n- "+order+ " with: "
 	if randf() <= .50 and i_want_burger == true:
 		i_want_lettuce = true
 		counter += 1

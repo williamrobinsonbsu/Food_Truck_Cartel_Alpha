@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://c151w43g5m7eh"]
+[gd_scene load_steps=11 format=3 uid="uid://c151w43g5m7eh"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_21q4g"]
 [ext_resource type="Texture2D" uid="uid://qt05vo6ts4iu" path="res://levels/casino_background_optimized_10000.png" id="2_5o1hu"]
 [ext_resource type="AudioStream" uid="uid://bg5q4emuh4m3v" path="res://audio/music/Give My Regards To Broadway - Freedom Trail Studio.mp3" id="3_jbwoa"]
+[ext_resource type="PackedScene" uid="uid://daotgg4on0oip" path="res://FBXRaw/HOTDOG_mACHINE.fbx" id="4_c3jps"]
+[ext_resource type="PackedScene" uid="uid://dtf747hsr5w16" path="res://kitchen/dog_machine.tscn" id="5_e3p2g"]
+[ext_resource type="PackedScene" uid="uid://cbv5wbdqacal8" path="res://FBXRaw/hotdog_storage.fbx" id="6_eae8k"]
+[ext_resource type="Script" path="res://kitchen/hot_dog_box.gd" id="7_686vn"]
+[ext_resource type="Script" path="res://kitchen/hot_dog_bun_box.gd" id="8_6i6cq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wd1im"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rrdo1"]
 
 [node name="Casino" type="Node3D"]
 
@@ -17,6 +26,36 @@ stream = ExtResource("3_jbwoa")
 volume_db = -10.84
 autoplay = true
 bus = &"Music"
+
+[node name="Hot_Dog_Cooker" parent="." instance=ExtResource("4_c3jps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.596408, -0.409898, -0.720393)
+
+[node name="Dog_machine" parent="Hot_Dog_Cooker" instance=ExtResource("5_e3p2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56797, 0.663956, -1.37221)
+
+[node name="Dog_machine2" parent="Hot_Dog_Cooker" instance=ExtResource("5_e3p2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53569, 0.654994, -1.62814)
+
+[node name="Dog_Shelves" parent="." instance=ExtResource("6_eae8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.596408, -0.409898, -0.720393)
+
+[node name="hot_dog_box" type="StaticBody3D" parent="Dog_Shelves"]
+transform = Transform3D(1.90761, 0, 0, 0, 0.494561, 0, 0, 0, 1.2122, 1.4738, 0.516662, -1.74759)
+script = ExtResource("7_686vn")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dog_Shelves/hot_dog_box"]
+transform = Transform3D(0.238923, 0, 0, 0, 0.347297, 0, 0, 0, 0.258128, -0.028313, -0.0240879, 0.0396659)
+shape = SubResource("BoxShape3D_wd1im")
+
+[node name="hot_dog_bun_box" type="StaticBody3D" parent="Dog_Shelves"]
+transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 3.01822, 0.693129, -0.0970849)
+script = ExtResource("8_6i6cq")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dog_Shelves/hot_dog_bun_box"]
+transform = Transform3D(0.859683, 0, 0, 0, 0.509786, 0, 0, 0, 0.401807, -2.12757, -0.77193, -1.39906)
+shape = SubResource("BoxShape3D_rrdo1")
 
 [editable path="Kitchen"]
 [editable path="Kitchen/Root Scene"]
