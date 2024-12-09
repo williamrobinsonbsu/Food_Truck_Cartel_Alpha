@@ -38,6 +38,7 @@ var counter = 0
 
 signal new_customer
 
+
 func _ready():
 	texture.scale.x = -.07
 	texture.scale = texture.scale*.9
@@ -282,6 +283,7 @@ func _get_npc(npc):   #update for every new npc
 	#dialogue.text = "Hi! Here's my order."
 	return npc_name
 
+
 func toggle_assembly_timer():
 	if $AssemblyTimer.paused == true:
 		$AssemblyTimer.paused = false
@@ -292,6 +294,7 @@ func toggle_assembly_timer():
 func selfhide():
 	self.hide()
 	$AssemblyTimer.paused = true
+
 
 func selfshow():
 	self.show()
