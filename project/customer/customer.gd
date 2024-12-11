@@ -24,6 +24,7 @@ var counter = 0
 @onready var patty = get_node("/root/" + level + "/Kitchen/order_plate/patty")
 @onready var bottom_bun = get_node("/root/" + level + "/Kitchen/order_plate/bottom_bun")
 @onready var top_bun = get_node("/root/" + level + "/Kitchen/order_plate/top_bun")
+@onready var hot_dog = get_node("/root/" + level + "/Kitchen/order_plate/full_dog")
 @onready var cheese = get_node("/root/" + level + "/Kitchen/order_plate/cheese")
 @onready var tomato = get_node("/root/" + level + "/Kitchen/order_plate/tomatoes")
 @onready var lettuce = get_node("/root/" + level + "/Kitchen/order_plate/lettuce")
@@ -60,10 +61,12 @@ func _ready():
 	curr_dialogue = DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "normal")
 	
 	
-	if level == "Casino" and randf() >= .3:
+	if level == "Casino" and randf() <= .3:
 		print("I would like a hot dog")
 		order = "hot dog"
 		i_want_hot_dog = true
+		counter += 1
+		order_label.text = "-=+Current Order+=-\n- "+order+ " with: "
 	else:
 		print("I would like a burger!")
 		i_want_burger = true
@@ -125,11 +128,18 @@ func _physics_process(_delta) -> void:
 func _on_check_my_order():
 	var order_counter = 0
 	var path
-	if patty.visible != true:
+	if patty.visible != true and i_want_burger == true:
 		print("Patty is missing")
-	if bottom_bun.visible != true:
+	if hot_dog.visible != true and i_want_hot_dog == true:
+		print("Hot Dog is missing")
+	if hot_dog.visible == true and i_want_hot_dog == true:
+		print("Hot Dog is correct")
+		order_counter += 1
+	if hot_dog.visible == true and i_want_hot_dog != true:
+		print("Hot Dog is incorrect")
+	if bottom_bun.visible != true and i_want_burger == true:
 		print("Bottom bun is missing")
-	if top_bun.visible != true:
+	if top_bun.visible != true and i_want_burger == true:
 		print("Top bun is missing")
 	if cheese.visible == true and i_want_cheese == true:
 		print("Cheese is correct")
