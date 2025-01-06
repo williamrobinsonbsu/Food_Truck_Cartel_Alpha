@@ -2241,7 +2241,7 @@ wait_time = 0.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.592228, 0.0061779)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, -0.00539571, 0.354126)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, 0.032755, 0.354126)
 shape = SubResource("BoxShape3D_y5oxw")
 
 [node name="ShutterDoor" type="StaticBody3D" parent="Root Scene"]
@@ -3368,6 +3368,7 @@ visible = false
 [editable path="order_plate/hot_dog"]
 [editable path="order_plate/fries"]
 [editable path="order_plate/full_dog"]
+[editable path="order_plate/hot_dog_bun"]
 [editable path="Dog_machine"]
 [editable path="Dog_machine/Hot_dog_raw"]
 [editable path="Dog_machine/Hot_dog_raw/Root Scene2"]
