@@ -50,15 +50,6 @@ text = "Quit"
 position = Vector2(576, 324)
 texture = ExtResource("2_2j8ff")
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 6.0
-offset_top = 578.0
-offset_right = 416.0
-offset_bottom = 653.0
-text = "Music from #Uppbeat (free for Creators!):
-https://uppbeat.io/t/mountaineer/hype-is-everything
-License code: 8C1RFLS8BWUBEFAZ"
-
 [node name="Options" parent="." instance=ExtResource("3_alftw")]
 
 [connection signal="mouse_entered" from="CanvasLayer/Resume" to="." method="_on_resume_mouse_entered"]
