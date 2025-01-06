@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4yjclqj3p8f"]
+[gd_scene load_steps=6 format=3 uid="uid://d4yjclqj3p8f"]
 
 [ext_resource type="Script" path="res://ingredients/hot_dog_bun.gd" id="1_4fv1g"]
 [ext_resource type="PackedScene" uid="uid://bbj7px7l6an41" path="res://FBXRaw/hotdog_bun.fbx" id="2_k5gv2"]
+[ext_resource type="Texture2D" uid="uid://bcu8cu43l4syu" path="res://Textures/hotdog_bun_standardSurface1_BaseColor.png" id="3_wadvu"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6yafv"]
 height = 0.0251091
 radius = 0.0966295
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nl43x"]
+albedo_texture = ExtResource("3_wadvu")
 
 [node name="RigidBody3D" type="RigidBody3D"]
 script = ExtResource("1_4fv1g")
@@ -16,3 +20,8 @@ shape = SubResource("CylinderShape3D_6yafv")
 
 [node name="Root Scene" parent="." instance=ExtResource("2_k5gv2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52639, -1.34484, 1.35004)
+
+[node name="hotdog_bun" parent="Root Scene/RootNode" index="0"]
+material_override = SubResource("StandardMaterial3D_nl43x")
+
+[editable path="Root Scene"]

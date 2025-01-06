@@ -17,4 +17,5 @@ func reset():
 	$"../fries".hide()
 	$"../soda".hide()
 	$"../chips".hide()
-	$"../hot_dog".hide()
+	$"../full_dog".hide()
+	$"../hot_dog_bun".hide()

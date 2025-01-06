@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://tmoj36x3y03"]
+[gd_scene load_steps=6 format=3 uid="uid://tmoj36x3y03"]
 
 [ext_resource type="Script" path="res://ingredients/hot_dog_raw.gd" id="1_wui3h"]
 [ext_resource type="PackedScene" uid="uid://dfed862ec223c" path="res://FBXRaw/hotdog.fbx" id="2_bo8ou"]
+[ext_resource type="Texture2D" uid="uid://3die8n2p2fmb" path="res://Textures/hotdog_standardSurface1_BaseColor.png" id="3_aqs7i"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_f0o13"]
 height = 0.0204953
 radius = 0.0970133
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnnyd"]
+albedo_texture = ExtResource("3_aqs7i")
 
 [node name="Hot_dog_raw" type="RigidBody3D"]
 script = ExtResource("1_wui3h")
@@ -40,3 +44,8 @@ offset_bottom = 49.0
 
 [node name="Root Scene2" parent="." instance=ExtResource("2_bo8ou")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51686, -1.36544, 1.13193)
+
+[node name="hotdog" parent="Root Scene2/RootNode" index="0"]
+material_override = SubResource("StandardMaterial3D_mnnyd")
+
+[editable path="Root Scene2"]

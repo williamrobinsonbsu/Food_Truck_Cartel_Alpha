@@ -21,3 +21,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564, 0)
 visible = false
 
 [editable path="Hot_dog_raw"]
+[editable path="Hot_dog_raw/Root Scene2"]
