@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjvux2qe0fbxi"]
+[gd_scene load_steps=9 format=3 uid="uid://bjvux2qe0fbxi"]
 
 [ext_resource type="Texture2D" uid="uid://dna18yv4adnfk" path="res://Textures/background.jpg" id="1_bo5x3"]
 [ext_resource type="AudioStream" uid="uid://dyl7wyofvfvj1" path="res://audio/music/Beach-Ambience.ogg" id="2_l76mk"]
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="2_pgehg"]
+[ext_resource type="FontFile" uid="uid://bx7dpr2q6beki" path="res://font/Starborn.ttf" id="4_701md"]
+[ext_resource type="FontFile" uid="uid://c2ns0mejwetfy" path="res://font/Nice Sugar.ttf" id="5_87wn2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2gful"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -49,6 +51,24 @@ transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 1.3513, 0.283231, -0.
 
 [node name="Camera3D" parent="Kitchen/Player" index="2"]
 current = false
+
+[node name="LevelTimerLabel" parent="Kitchen/Player/Control" index="3"]
+theme_override_fonts/font = ExtResource("4_701md")
+
+[node name="PickUpLabel" parent="Kitchen/Player/Control/LeftClick" index="0"]
+theme_override_fonts/font = ExtResource("5_87wn2")
+
+[node name="DropLabel" parent="Kitchen/Player/Control/RightClick" index="0"]
+theme_override_fonts/font = ExtResource("5_87wn2")
+
+[node name="CrouchLabel" parent="Kitchen/Player/Control/CrouchButton" index="0"]
+theme_override_fonts/font = ExtResource("5_87wn2")
+
+[node name="WASDLabel" parent="Kitchen/Player/Control/WASDButtons" index="0"]
+theme_override_fonts/font = ExtResource("5_87wn2")
+
+[node name="EscLabel" parent="Kitchen/Player/Control/EscButton" index="0"]
+theme_override_fonts/font = ExtResource("5_87wn2")
 
 [node name="CollisionShape3D" parent="Kitchen/Dog_machine" index="0"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.70275, 1.07586, 0)
