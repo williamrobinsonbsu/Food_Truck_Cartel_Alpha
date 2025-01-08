@@ -9,7 +9,7 @@ func use(ingredient):
 		Global.grill_used += 1
 		cooking = true
 		ingredient.audio_play_grill()
-		$PattyRaw.set_collision_layer_value(1, false)
+		#$PattyRaw.set_collision_layer_value(1, false)
 		ingredient.queue_free()
 		await get_tree().create_timer(5).timeout
 		$PattyRaw.hide()

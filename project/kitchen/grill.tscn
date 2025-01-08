@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgl48vx5udmve"]
+[gd_scene load_steps=6 format=3 uid="uid://bgl48vx5udmve"]
 
 [ext_resource type="Script" path="res://kitchen/grill.gd" id="1_o1va7"]
-[ext_resource type="PackedScene" uid="uid://b5gfufuvlkpab" path="res://ingredients/patty_raw.tscn" id="2_nld3c"]
+[ext_resource type="PackedScene" uid="uid://c3odcn55fqw5v" path="res://FBXRaw/RawPattie.fbx" id="2_qelhg"]
+[ext_resource type="Texture2D" uid="uid://cc1un8sga4i5g" path="res://Textures/RawPattie_standardSurface1_BaseColor.png" id="3_aphcd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c2bbm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_egrp5"]
+albedo_texture = ExtResource("3_aphcd")
 
 [node name="Grill" type="StaticBody3D"]
 script = ExtResource("1_o1va7")
@@ -11,13 +15,15 @@ script = ExtResource("1_o1va7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_c2bbm")
 
-[node name="PattyRaw" parent="." instance=ExtResource("2_nld3c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564464, 0)
-visible = false
-
 [node name="CookedPatty" type="Marker3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564465, 0)
 
+[node name="PattyRaw" parent="." instance=ExtResource("2_qelhg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.766008, -0.628002, -3.13525)
+
+[node name="Patty" parent="PattyRaw/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.750614, 0.475665, 0.518766)
+material_override = SubResource("StandardMaterial3D_egrp5")
+
 [editable path="PattyRaw"]
-[editable path="PattyRaw/Root Scene"]
