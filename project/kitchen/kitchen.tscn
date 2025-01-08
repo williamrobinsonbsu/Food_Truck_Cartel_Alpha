@@ -2150,7 +2150,7 @@ transform = Transform3D(-1.25148e-08, 0, -1, 0, 0.748534, 0, 0.286306, 0, -4.371
 text = "Place uncooked patty to cook a burger"
 
 [node name="LabelStoveTimer" type="Timer" parent="Root Scene/Stove/ActionLabelStove"]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="Front Counter" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0575547, 1.89526)
@@ -2205,7 +2205,7 @@ text = "Use to cut
 vegetables"
 
 [node name="LabelCuttingBoardTimer" type="Timer" parent="Root Scene/cutting_board/ActionLabelCuttingBoard"]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="Radio" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0158047, 0.0679311, -0.0406093)
@@ -2235,13 +2235,13 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.11759e-08, 0.0423703
 text = "Patties"
 
 [node name="LabelPattyTimer" type="Timer" parent="Root Scene/patty_fridge/ActionLabelPatty"]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="Floor" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.592228, 0.0061779)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, 0.032755, 0.354126)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, 0.0133756, 0.354126)
 shape = SubResource("BoxShape3D_y5oxw")
 
 [node name="ShutterDoor" type="StaticBody3D" parent="Root Scene"]
@@ -2269,7 +2269,7 @@ transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 
 text = "Lettuce"
 
 [node name="LabelLettuceTimer" type="Timer" parent="Root Scene/lettuce_bowl/ActionLabelLettuce"]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="potato_bowl" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.746527, 0, 0.932612)
@@ -2284,6 +2284,7 @@ transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 
 text = "Potato"
 
 [node name="LabelPotatoTimer" type="Timer" parent="Root Scene/potato_bowl/ActionLabelPotato"]
+wait_time = 0.1
 
 [node name="tomato_bowl" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.737941, 0, 0.660603)
@@ -2298,7 +2299,7 @@ transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 
 text = "Tomato"
 
 [node name="LabelTomatoTimer" type="Timer" parent="Root Scene/tomato_bowl/ActionLabelTomato"]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="hot_dog_box" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 1.38038, 0.283231, -0.817478)
@@ -2331,7 +2332,7 @@ transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 
 text = "Onion"
 
 [node name="LabelOnionTimer" type="Timer" parent="Root Scene/onion_bowl/ActionLabelOnion"]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="chip_shelf" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08367, 0, -0.681595)
@@ -2346,7 +2347,7 @@ transform = Transform3D(-1.96701e-08, 0, 0.45, 0, 0.45, 0, -0.45, 0, -1.96701e-0
 text = "Chips"
 
 [node name="LabelChipsTimer" type="Timer" parent="Root Scene/chip_shelf/ActionLabelChips"]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="soda_fridge" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03159, 0.713809, -0.472105)
@@ -2361,7 +2362,7 @@ transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 
 text = "Soda"
 
 [node name="LabelSodaTimer" type="Timer" parent="Root Scene/soda_fridge/ActionLabelSoda"]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="bread_bottom_shelf" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11496, 0, 0)
@@ -2378,6 +2379,7 @@ Bun
 "
 
 [node name="LabelBottomBunTimer" type="Timer" parent="Root Scene/bread_bottom_shelf/ActionLabelBottomBun"]
+wait_time = 0.1
 
 [node name="top_bun_shelf" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12232, 0.41291, 0)
@@ -2392,6 +2394,7 @@ transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 
 text = "Top Buns"
 
 [node name="LabelTopBunTimer" type="Timer" parent="Root Scene/top_bun_shelf/ActionLabelTopBun"]
+wait_time = 0.1
 
 [node name="cheese_block" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.759624, 0.385259, 0.808025)
@@ -2434,7 +2437,7 @@ visible = false
 text = "Pick up cheese"
 
 [node name="LabelCheeseTimer" type="Timer" parent="Root Scene/cheese_block/ActionLabelCheese"]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="frier" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06907, 0.333333, 0)
@@ -2453,7 +2456,7 @@ transform = Transform3D(-1.45705e-08, 0, -0.333333, 0, 0.333333, 0, 0.333333, 0,
 text = "Use with cut fries"
 
 [node name="LabelFryerTimer" type="Timer" parent="Root Scene/frier/ActionLabelFryer"]
-wait_time = 0.5
+wait_time = 0.1
 
 [node name="customer" type="Marker3D" parent="Root Scene"]
 unique_name_in_owner = true
