@@ -100,6 +100,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.913787, 0, 1.59078)
 [editable path="Kitchen/order_plate/hot_dog"]
 [editable path="Kitchen/order_plate/fries"]
 [editable path="Kitchen/order_plate/full_dog"]
+[editable path="Kitchen/order_plate/hot_dog_bun"]
 [editable path="Kitchen/Dog_machine"]
 [editable path="Kitchen/Dog_machine/Hot_dog_raw"]
 [editable path="Kitchen/Dog_machine/Hot_dog_raw/Root Scene2"]
