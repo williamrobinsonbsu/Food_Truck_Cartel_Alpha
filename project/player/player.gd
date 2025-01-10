@@ -20,6 +20,8 @@ var pull_power = 10
 var true_speed = SPEED
 var is_crouching = false
 
+
+@export var lose_state := false
 @export var cam_target: Marker3D
 
 func _ready():
@@ -28,10 +30,11 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 func _input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and lose_state == false:
 		rotate_y(deg_to_rad(-event.relative.x) * 0.25)
 		$Camera3D.rotate_x(deg_to_rad(-event.relative.y) * 0.25)
 		$Camera3D.rotation.x = clamp($Camera3D.rotation.x,deg_to_rad(-80), deg_to_rad(50))
+		
 	
 	if Input.is_action_just_pressed("left_click"):
 		var collider = interaction.get_collider()
@@ -76,6 +79,15 @@ func _input(event):
 			drop_object()
 #
 func _physics_process(_delta):
+	if lose_state == true:
+		camera.global_position = cam_target.global_position
+		camera.look_at(Vector3(cam_target.global_position.x, 
+				cam_target.global_position.y, 
+				cam_target.global_position.z + 1))
+		camera.apply_shake()
+		
+		
+		
 	if interaction.is_colliding() == true:
 		if interaction.get_collider().has_method("hover_name"):
 			interaction.get_collider().hover_name()
@@ -156,9 +168,13 @@ func drop_object():
 func lose_cam():
 	if cam_target != null:
 		print("Target is not null")
-		camera.look_at(cam_target.global_position)
+		lose_state = true
 	else:
 		print("Target is null")
+		
+
+func lose_off():
+	lose_state = false
 
 
 func _on_day_timer_timeout():

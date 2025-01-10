@@ -195,6 +195,8 @@ func _on_police_catch_timer_timeout():
 		Global.save_data()
 		get_tree().call_group("player", "lose_cam")
 		await get_tree().create_timer(5).timeout
+		get_tree().call_group("player", "lose_off")
+		await get_tree().create_timer(.5).timeout
 		get_tree().change_scene_to_file("res://menus/caught_scene.tscn")
 		
 		
