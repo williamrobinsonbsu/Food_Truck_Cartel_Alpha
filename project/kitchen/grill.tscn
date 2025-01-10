@@ -21,6 +21,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564465, 0)
 
 [node name="PattyRaw" parent="." instance=ExtResource("2_qelhg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.766008, -0.628002, -3.13525)
+visible = false
 
 [node name="Patty" parent="PattyRaw/RootNode/Truck/Burger" index="0"]
 transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.750614, 0.475665, 0.518766)
