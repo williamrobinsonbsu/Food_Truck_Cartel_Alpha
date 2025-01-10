@@ -65,7 +65,6 @@ MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [node name="ExampleBalloon" type="CanvasLayer"]
-layer = 100
 script = ExtResource("1_36de5")
 
 [node name="Balloon" type="Control" parent="."]

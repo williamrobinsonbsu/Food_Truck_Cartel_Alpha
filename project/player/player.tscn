@@ -1,15 +1,17 @@
-[gd_scene load_steps=19 format=3 uid="uid://cywlto4wavxy4"]
+[gd_scene load_steps=21 format=3 uid="uid://cywlto4wavxy4"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sh6bp"]
 [ext_resource type="Texture2D" uid="uid://ddwecisrh30hl" path="res://player/Day_Beginning.png" id="2_05itk"]
 [ext_resource type="PackedScene" uid="uid://bv41uwieducpe" path="res://menus/pause_menu.tscn" id="2_xfury"]
 [ext_resource type="Texture2D" uid="uid://bw5731dngws4l" path="res://player/LeftClick.png" id="3_ome4q"]
 [ext_resource type="PackedScene" uid="uid://d4gt0koccxrbf" path="res://menus/loading_screen.tscn" id="3_ragej"]
+[ext_resource type="FontFile" uid="uid://c2ns0mejwetfy" path="res://font/Nice Sugar.ttf" id="4_c1kuy"]
 [ext_resource type="Texture2D" uid="uid://cocvuda1do4l" path="res://player/RightClick.png" id="4_g5s24"]
 [ext_resource type="Texture2D" uid="uid://cvlgf7bbdbtje" path="res://player/CrouchButton.png" id="5_diusi"]
 [ext_resource type="Texture2D" uid="uid://dk3vylb8u6auq" path="res://player/WASDButtons.png" id="6_mphvj"]
 [ext_resource type="Texture2D" uid="uid://dyfd26tkc0a78" path="res://player/ESCButton.png" id="7_j5ety"]
 [ext_resource type="Script" path="res://player/fps_label.gd" id="8_ew1g4"]
+[ext_resource type="FontFile" uid="uid://dmi7bafb802dp" path="res://font/Starshines.otf" id="9_6f7mi"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6w4jn"]
 
@@ -25,9 +27,11 @@ font_color = Color(0, 0, 0, 1)
 outline_size = 12
 
 [sub_resource type="LabelSettings" id="LabelSettings_fdc7j"]
+font = ExtResource("4_c1kuy")
 font_size = 48
 
 [sub_resource type="LabelSettings" id="LabelSettings_1qkn5"]
+font = ExtResource("9_6f7mi")
 font_size = 67
 
 [sub_resource type="Animation" id="Animation_vjo18"]
