@@ -1,4 +1,4 @@
-[gd_scene load_steps=445 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=440 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -172,9 +172,7 @@
 [ext_resource type="Script" path="res://kitchen/radio.gd" id="173_csr8x"]
 [ext_resource type="Script" path="res://kitchen/trash_bin.gd" id="174_yp6dd"]
 [ext_resource type="Script" path="res://kitchen/patty_fridge.gd" id="175_w3hs7"]
-[ext_resource type="Script" path="res://kitchen/hot_dog_box.gd" id="176_06vao"]
 [ext_resource type="Script" path="res://kitchen/lettuce_bowl.gd" id="176_73vsf"]
-[ext_resource type="Script" path="res://kitchen/hot_dog_bun_box.gd" id="177_n6ywt"]
 [ext_resource type="Script" path="res://kitchen/potato_bowl.gd" id="177_xs7eh"]
 [ext_resource type="Script" path="res://kitchen/tomato_bowl.gd" id="178_twd0r"]
 [ext_resource type="Script" path="res://kitchen/onion_bowl.gd" id="179_cxam2"]
@@ -198,12 +196,9 @@
 [ext_resource type="PackedScene" uid="uid://ka881bp6uowh" path="res://FBXRaw/grill.fbx" id="194_x0giq"]
 [ext_resource type="Texture2D" uid="uid://ccmejuvmad50d" path="res://Textures/bell_lambert3SG_Roughness.png" id="195_jley4"]
 [ext_resource type="Texture2D" uid="uid://o47x8lyj5krk" path="res://Textures/grill_standardSurface1_BaseColor.png" id="195_yb580"]
-[ext_resource type="PackedScene" uid="uid://dtf747hsr5w16" path="res://kitchen/dog_machine.tscn" id="196_4bhcg"]
 [ext_resource type="Texture2D" uid="uid://dhraycoxbj8w3" path="res://Textures/grill_standardSurface1_Height.png" id="196_pdhvf"]
 [ext_resource type="ArrayMesh" uid="uid://by1txa5gg2vl0" path="res://kitchen/bell.obj" id="196_ywmwj"]
-[ext_resource type="PackedScene" uid="uid://daotgg4on0oip" path="res://FBXRaw/HOTDOG_mACHINE.fbx" id="197_aiq65"]
 [ext_resource type="Texture2D" uid="uid://cq4gunvwluclv" path="res://Textures/grill_standardSurface1_Metallic.png" id="197_oh662"]
-[ext_resource type="PackedScene" uid="uid://cbv5wbdqacal8" path="res://FBXRaw/hotdog_storage.fbx" id="198_6knft"]
 [ext_resource type="Texture2D" uid="uid://deub740ak8etj" path="res://Textures/grill_standardSurface1_Normal.png" id="198_u2f55"]
 [ext_resource type="Texture2D" uid="uid://crxdpl04ffwwf" path="res://Textures/grill_standardSurface1_Roughness.png" id="199_3c8qc"]
 [ext_resource type="PackedScene" uid="uid://ddlf4j01iixvn" path="res://FBXRaw/fryer.fbx" id="200_yjknw"]
@@ -2301,24 +2296,6 @@ text = "Tomato"
 [node name="LabelTomatoTimer" type="Timer" parent="Root Scene/tomato_bowl/ActionLabelTomato"]
 wait_time = 0.1
 
-[node name="hot_dog_box" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 1.38038, 0.283231, -0.817478)
-script = ExtResource("176_06vao")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/hot_dog_box"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
-shape = SubResource("CylinderShape3D_x7ngb")
-
-[node name="hot_dog_bun_box" type="StaticBody3D" parent="Root Scene"]
-transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 3.61463, 0.283231, -0.817478)
-script = ExtResource("177_n6ywt")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/hot_dog_bun_box"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
-shape = SubResource("CylinderShape3D_x7ngb")
-
 [node name="onion_bowl" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.737941, 0, 0.342356)
 script = ExtResource("179_cxam2")
@@ -2617,24 +2594,6 @@ transform = Transform3D(-0.275626, 0, -6.03983e-08, 0, 0.4, 0, 4.16184e-08, 0, -
 transform = Transform3D(0.018292, 1.28813e-09, 0, -1.59914e-09, 0.0147345, 0, 0, 0, -0.0183799, -0.643705, 1.16552, 4.48899)
 material_override = SubResource("StandardMaterial3D_1e6qw")
 mesh = ExtResource("196_ywmwj")
-
-[node name="Dog_machine" parent="." instance=ExtResource("196_4bhcg")]
-transform = Transform3D(1.25, 0, 0, 0, 1.618, 0, 0, 0, 0.903, 1.7959, -0.454147, -2.35454)
-
-[node name="CollisionShape3D" parent="Dog_machine" index="0"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.515, 1.07586, 0)
-
-[node name="CookedPatty" parent="Dog_machine" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.882013, 1.22731, 0)
-
-[node name="Hot_dog_raw" parent="Dog_machine" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.456246, 1.22685, 0)
-
-[node name="Root Scene" parent="Dog_machine" instance=ExtResource("197_aiq65")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0374038, 0, 1.59078)
-
-[node name="Root Scene2" parent="Dog_machine" instance=ExtResource("198_6knft")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0374038, 0, 1.59078)
 
 [node name="Grill" parent="." instance=ExtResource("192_qqxpb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2743, 0.675363, 1.02967)
@@ -3376,9 +3335,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0916388, 2.26535, 4.02901)
 [editable path="order_plate/fries"]
 [editable path="order_plate/full_dog"]
 [editable path="order_plate/hot_dog_bun"]
-[editable path="Dog_machine"]
-[editable path="Dog_machine/Hot_dog_raw"]
-[editable path="Dog_machine/Hot_dog_raw/Root Scene2"]
 [editable path="Grill5"]
 [editable path="Fryer"]
 [editable path="Trash"]
