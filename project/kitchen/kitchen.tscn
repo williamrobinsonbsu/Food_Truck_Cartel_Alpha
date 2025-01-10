@@ -2535,8 +2535,9 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.686268, 0.327242, -0.
 [node name="CopTimer" type="Timer" parent="Root Scene"]
 wait_time = 15.0
 
-[node name="Player" parent="." instance=ExtResource("189_grvwk")]
+[node name="Player" parent="." node_paths=PackedStringArray("cam_target") instance=ExtResource("189_grvwk")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
+cam_target = NodePath("../LoseCamMarker")
 
 [node name="CatchMeter" parent="Player/Control" index="1"]
 offset_left = -1.5
@@ -3329,6 +3330,9 @@ omni_attenuation = 0.60776
 [node name="Dog" parent="." instance=ExtResource("297_eokpt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.985433, 6.36504)
 visible = false
+
+[node name="LoseCamMarker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0916388, 2.26535, 5.99013)
 
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]

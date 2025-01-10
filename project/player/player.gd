@@ -10,6 +10,7 @@ const SPEED = 5.0
 @onready var interaction := $Camera3D/Interaction
 @onready var hand := $Camera3D/Hand
 @onready var loading_screen: Control = $LoadingScreen
+@onready var camera: Camera3D = $Camera3D
 
 var index = 1
 var tex_array = [load("res://player/Day_Beginning.png"),load("res://player/Day_Mid.png"),load("res://player/Day_Late.png"),load("res://player/Day_End.png")]
@@ -18,6 +19,8 @@ var pull_power = 10
 
 var true_speed = SPEED
 var is_crouching = false
+
+@export var cam_target: Marker3D
 
 func _ready():
 	await get_tree().create_timer(2).timeout
@@ -148,7 +151,16 @@ func drop_object():
 				)
 			picked_object.picked(false)
 		picked_object = null
-		
+
+
+func lose_cam():
+	if cam_target != null:
+		print("Target is not null")
+		camera.look_at(cam_target.global_position)
+	else:
+		print("Target is null")
+
+
 func _on_day_timer_timeout():
 	while index < 4:
 		$Control/DayIcon.set_texture(tex_array[index])

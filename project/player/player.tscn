@@ -55,7 +55,7 @@ _data = {
 "crouch_animation": SubResource("Animation_vjo18")
 }
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_sh6bp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
