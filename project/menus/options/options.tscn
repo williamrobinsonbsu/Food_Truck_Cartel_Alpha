@@ -81,7 +81,7 @@ popup/item_2/id = 2
 
 [node name="BrightLabel" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "dims the game"
+text = "Dims the game"
 
 [node name="brightness" type="HSlider" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
