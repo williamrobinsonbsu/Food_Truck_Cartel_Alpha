@@ -35,9 +35,11 @@ func _on_rave_pressed():
 
 func _on_rave_mouse_entered():
 	$RaveLabel.visible = true
+	$AnimationPlayer.play("rave_hover")
 
 func _on_rave_mouse_exited():
 	$RaveLabel.visible = false
+	$AnimationPlayer.play("rave_idle")
 
 
 func _on_return_pressed():
@@ -69,11 +71,12 @@ func _on_casino_pressed():
 
 func _on_casino_mouse_entered():
 	$CasinoLabel.visible = true
-
+	$AnimationPlayer.play("casino_hover")
 
 
 func _on_casino_mouse_exited():
 	$CasinoLabel.visible = false
+	$AnimationPlayer.play("casino_idle")
 
 func _play_loading_screen():
 	var scene := preload("res://menus/loading_screen.tscn")

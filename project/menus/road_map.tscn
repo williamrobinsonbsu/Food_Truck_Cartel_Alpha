@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://46i7qfxwfv6b"]
+[gd_scene load_steps=21 format=3 uid="uid://46i7qfxwfv6b"]
 
 [ext_resource type="Script" path="res://menus/road_map.gd" id="1_g8hro"]
 [ext_resource type="Theme" uid="uid://ftmbu43vi6kk" path="res://theme.tres" id="1_ndbkm"]
 [ext_resource type="FontFile" uid="uid://bx7dpr2q6beki" path="res://font/Starborn.ttf" id="2_ohvaa"]
 [ext_resource type="Texture2D" uid="uid://tnet1mtgdw1p" path="res://menus/MapComplete.png" id="3_7nbwe"]
 [ext_resource type="Texture2D" uid="uid://djge2j2kljo71" path="res://menus/BeachIcon.png" id="5_l8qf5"]
+[ext_resource type="Texture2D" uid="uid://cvou87gigcfeb" path="res://menus/RaveIcon.png" id="5_peolj"]
+[ext_resource type="Texture2D" uid="uid://bjkcwmg02o5nk" path="res://menus/CasinoIcon.png" id="5_tqw8s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xgc72"]
 font_size = 30
@@ -75,6 +77,54 @@ tracks/1/keys = {
 "update": 0,
 "values": [-0.565487]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RaveIcon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RaveIcon:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CasinoIcon:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CasinoIcon:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_mnof7"]
 resource_name = "beach_idle"
@@ -104,11 +154,125 @@ tracks/1/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_0f0gw"]
+resource_name = "rave_idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RaveIcon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RaveIcon:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+
+[sub_resource type="Animation" id="Animation_qdoqu"]
+resource_name = "rave_hover"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RaveIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.05, 0.05), Vector2(0.05, 0.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RaveIcon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.424115, 0.42237]
+}
+
+[sub_resource type="Animation" id="Animation_83cfc"]
+resource_name = "casino_idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CasinoIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CasinoIcon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_i648o"]
+resource_name = "casino_hover"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CasinoIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.05, 0.05), Vector2(0.05, 0.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CasinoIcon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.424115, 0.563741]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n8m73"]
 _data = {
 "RESET": SubResource("Animation_8po3l"),
 "beach_hover": SubResource("Animation_vtqma"),
-"beach_idle": SubResource("Animation_mnof7")
+"beach_idle": SubResource("Animation_mnof7"),
+"casino_hover": SubResource("Animation_i648o"),
+"casino_idle": SubResource("Animation_83cfc"),
+"rave_hover": SubResource("Animation_qdoqu"),
+"rave_idle": SubResource("Animation_0f0gw")
 }
 
 [node name="Road_map" type="Control"]
@@ -169,6 +333,16 @@ text = "Casino"
 position = Vector2(576, 324)
 scale = Vector2(0.32, 0.324)
 texture = ExtResource("3_7nbwe")
+
+[node name="CasinoIcon" type="Sprite2D" parent="."]
+position = Vector2(384, 405)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_tqw8s")
+
+[node name="RaveIcon" type="Sprite2D" parent="."]
+position = Vector2(760, 225)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_peolj")
 
 [node name="BeachIcon" type="Sprite2D" parent="."]
 position = Vector2(876, 452)
