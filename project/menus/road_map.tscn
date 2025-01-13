@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://46i7qfxwfv6b"]
+[gd_scene load_steps=15 format=3 uid="uid://46i7qfxwfv6b"]
 
 [ext_resource type="Script" path="res://menus/road_map.gd" id="1_g8hro"]
-[ext_resource type="Texture2D" uid="uid://8vlh0rcvgwjw" path="res://menus/updatedmap.webp" id="2_hla2o"]
+[ext_resource type="Theme" uid="uid://ftmbu43vi6kk" path="res://theme.tres" id="1_ndbkm"]
 [ext_resource type="FontFile" uid="uid://bx7dpr2q6beki" path="res://font/Starborn.ttf" id="2_ohvaa"]
+[ext_resource type="Texture2D" uid="uid://tnet1mtgdw1p" path="res://menus/MapComplete.png" id="3_7nbwe"]
+[ext_resource type="Texture2D" uid="uid://djge2j2kljo71" path="res://menus/BeachIcon.png" id="5_l8qf5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xgc72"]
 font_size = 30
@@ -19,6 +21,96 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_q1b6s"]
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_vtqma"]
+resource_name = "beach_hover"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BeachIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.05, 0.05), Vector2(0.05, 0.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BeachIcon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.565487, 0.280998]
+}
+
+[sub_resource type="Animation" id="Animation_8po3l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BeachIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BeachIcon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.565487]
+}
+
+[sub_resource type="Animation" id="Animation_mnof7"]
+resource_name = "beach_idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BeachIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BeachIcon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n8m73"]
+_data = {
+"RESET": SubResource("Animation_8po3l"),
+"beach_hover": SubResource("Animation_vtqma"),
+"beach_idle": SubResource("Animation_mnof7")
+}
+
 [node name="Road_map" type="Control"]
 process_mode = 3
 layout_mode = 3
@@ -27,6 +119,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ndbkm")
 script = ExtResource("1_g8hro")
 
 [node name="Beach" type="Button" parent="."]
@@ -36,10 +129,10 @@ anchor_left = 0.641
 anchor_top = 0.762
 anchor_right = 0.751
 anchor_bottom = 0.946
-offset_left = 20.568
-offset_top = 21.224
-offset_right = -19.152
-offset_bottom = -16.008
+offset_left = 93.5681
+offset_top = -61.776
+offset_right = 53.8481
+offset_bottom = -99.008
 scale = Vector2(1.5, 1.5)
 pivot_offset = Vector2(40, 42.6667)
 theme_override_fonts/font = ExtResource("2_ohvaa")
@@ -47,34 +140,41 @@ text = "Beach"
 
 [node name="Rave" type="Button" parent="."]
 layout_mode = 0
-offset_left = 733.0
-offset_top = 294.0
-offset_right = 808.0
-offset_bottom = 342.0
+offset_left = 704.0
+offset_top = 192.0
+offset_right = 779.0
+offset_bottom = 240.0
 scale = Vector2(1.5, 1.5)
 text = "Rave"
 
 [node name="Area51" type="Button" parent="."]
 layout_mode = 0
-offset_left = 260.0
-offset_top = 379.0
-offset_right = 337.0
-offset_bottom = 438.0
+offset_left = 288.0
+offset_top = 264.0
+offset_right = 365.0
+offset_bottom = 323.0
 scale = Vector2(1.5, 1.5)
 text = "Area51"
 
 [node name="Casino" type="Button" parent="."]
 layout_mode = 0
-offset_left = 273.0
-offset_top = 102.0
-offset_right = 346.0
-offset_bottom = 154.0
+offset_left = 328.0
+offset_top = 368.0
+offset_right = 401.0
+offset_bottom = 420.0
 scale = Vector2(1.5, 1.5)
 text = "Casino"
 
 [node name="RoadMap" type="Sprite2D" parent="."]
-position = Vector2(574, 327)
-texture = ExtResource("2_hla2o")
+position = Vector2(576, 324)
+scale = Vector2(0.32, 0.324)
+texture = ExtResource("3_7nbwe")
+
+[node name="BeachIcon" type="Sprite2D" parent="."]
+position = Vector2(876, 452)
+rotation = -0.565487
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_l8qf5")
 
 [node name="Return" type="Button" parent="."]
 layout_mode = 1
@@ -83,10 +183,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -410.0
-offset_top = 243.0
-offset_right = -349.0
-offset_bottom = 274.0
+offset_left = -512.0
+offset_top = 204.0
+offset_right = -426.0
+offset_bottom = 235.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
@@ -95,7 +195,12 @@ text = "Return
 "
 
 [node name="Map_Label" type="Label" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0494792
+anchor_top = 0.0108025
+anchor_right = 0.0720486
+anchor_bottom = 0.0108025
 offset_left = 793.0
 offset_top = 17.0
 offset_right = 858.0
@@ -112,10 +217,10 @@ metadata/_edit_use_anchors_ = true
 [node name="BeachLabel" type="Label" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 732.0
-offset_top = 515.0
-offset_right = 867.0
-offset_bottom = 548.0
+offset_left = 792.0
+offset_top = 480.0
+offset_right = 945.0
+offset_bottom = 513.0
 theme_override_fonts/font = ExtResource("2_ohvaa")
 text = "Level 1: Beach
 "
@@ -125,10 +230,10 @@ horizontal_alignment = 1
 [node name="RaveLabel" type="Label" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 711.0
-offset_top = 272.0
-offset_right = 842.0
-offset_bottom = 302.0
+offset_left = 688.0
+offset_top = 192.0
+offset_right = 833.0
+offset_bottom = 222.0
 theme_override_fonts/font = ExtResource("2_ohvaa")
 text = "Level 2: Rave"
 label_settings = SubResource("LabelSettings_j3bio")
@@ -137,10 +242,10 @@ horizontal_alignment = 1
 [node name="Area51Label" type="Label" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 235.0
-offset_top = 360.0
-offset_right = 376.0
-offset_bottom = 394.0
+offset_left = 264.0
+offset_top = 264.0
+offset_right = 433.0
+offset_bottom = 298.0
 theme_override_fonts/font = ExtResource("2_ohvaa")
 text = "Level 4: Area 51"
 label_settings = SubResource("LabelSettings_co1tl")
@@ -149,14 +254,19 @@ horizontal_alignment = 1
 [node name="CasinoLabel" type="Label" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 239.0
-offset_top = 86.0
-offset_right = 381.0
-offset_bottom = 115.0
+offset_left = 304.0
+offset_top = 424.0
+offset_right = 470.0
+offset_bottom = 453.0
 theme_override_fonts/font = ExtResource("2_ohvaa")
 text = "Level 3: Casino"
 label_settings = SubResource("LabelSettings_q1b6s")
 horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n8m73")
+}
 
 [connection signal="mouse_entered" from="Beach" to="." method="_on_beach_mouse_entered"]
 [connection signal="mouse_exited" from="Beach" to="." method="_on_beach_mouse_exited"]

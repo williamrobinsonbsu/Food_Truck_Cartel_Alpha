@@ -1,7 +1,7 @@
 extends Camera3D
 
-@export var period = 0.3
-@export var magnitude = 0.03
+@export var period = 0.1
+@export var magnitude = 0.01
 
 func apply_shake():
 	var initial_transform = self.transform 
@@ -9,9 +9,9 @@ func apply_shake():
 
 	while elapsed_time < period:
 		var offset = Vector3(
-			0.0,
 			randf_range(-magnitude, magnitude),
-			randf_range(-magnitude, magnitude)
+			randf_range(-magnitude, magnitude),
+			0.0
 		)
 
 		self.transform.origin = initial_transform.origin + offset

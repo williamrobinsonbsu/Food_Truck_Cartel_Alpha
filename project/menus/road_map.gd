@@ -18,11 +18,13 @@ func _on_beach_pressed():
 
 func _on_beach_mouse_entered():
 	$BeachLabel.visible = true
+	$AnimationPlayer.play("beach_hover")
 
 	
 	
 func _on_beach_mouse_exited():
 	$BeachLabel.visible = false
+	$AnimationPlayer.play("beach_idle")
 	
 
 func _on_rave_pressed():
