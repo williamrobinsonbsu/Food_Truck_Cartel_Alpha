@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv41uwieducpe"]
+[gd_scene load_steps=12 format=3 uid="uid://bv41uwieducpe"]
 
 [ext_resource type="Script" path="res://menus/pause_menu.gd" id="1_82swi"]
 [ext_resource type="Texture2D" uid="uid://c4k5k8qxoi77a" path="res://menus/Pause_Menu_UnClick.webp" id="2_2j8ff"]
@@ -8,6 +8,30 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kvutn"]
 shader = ExtResource("2_r8srx")
 shader_parameter/amount = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4msj1"]
+bg_color = Color(0.921569, 0.619608, 0.243137, 0.188235)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8wh8w"]
+color = Color(1, 0.929412, 0.513726, 1)
+thickness = 5
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2n6d"]
+bg_color = Color(0.501961, 0.247059, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4r2n"]
+bg_color = Color(0.556863, 0.368627, 0.207843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6hmp"]
+bg_color = Color(0.294118, 0.156863, 0, 1)
+
+[sub_resource type="Theme" id="Theme_m21ia"]
+Button/styles/disabled = SubResource("StyleBoxFlat_4msj1")
+Button/styles/focus = SubResource("StyleBoxLine_8wh8w")
+Button/styles/hover = SubResource("StyleBoxFlat_t2n6d")
+Button/styles/normal = SubResource("StyleBoxFlat_v4r2n")
+Button/styles/pressed = SubResource("StyleBoxFlat_h6hmp")
 
 [node name="PauseMenu" type="Node2D"]
 process_mode = 3
@@ -30,6 +54,7 @@ offset_left = 464.0
 offset_top = 197.0
 offset_right = 653.0
 offset_bottom = 257.0
+theme = SubResource("Theme_m21ia")
 text = "Resume"
 
 [node name="Options" type="Button" parent="CanvasLayer"]
@@ -37,6 +62,7 @@ offset_left = 447.0
 offset_top = 286.0
 offset_right = 653.0
 offset_bottom = 348.0
+theme = SubResource("Theme_m21ia")
 text = "Options"
 
 [node name="Quit" type="Button" parent="CanvasLayer"]
@@ -44,6 +70,7 @@ offset_left = 447.0
 offset_top = 371.0
 offset_right = 634.0
 offset_bottom = 439.0
+theme = SubResource("Theme_m21ia")
 text = "Quit"
 
 [node name="PauseNote" type="Sprite2D" parent="CanvasLayer"]
