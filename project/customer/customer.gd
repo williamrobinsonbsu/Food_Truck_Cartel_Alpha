@@ -57,9 +57,9 @@ func _ready():
 	print(npc)
 	npc_name = ""
 	npc_name = _get_npc(npc)
+	$AnimationPlayer.play("slide_in")
 	voice.play_string("Here is my order")
 	curr_dialogue = DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "normal")
-	
 	
 	if level == "Casino" and randf() <= .3:
 		print("I would like a hot dog")
