@@ -55,11 +55,13 @@ func _on_area_51_pressed():
 
 func _on_area_51_mouse_entered():
 	$Area51Label.visible = true
+	$AnimationPlayer.play("alien_hover")
 
 
 
 func _on_area_51_mouse_exited():
 	$Area51Label.visible = false
+	$AnimationPlayer.play("alien_idle")
 
 
 func _on_casino_pressed():

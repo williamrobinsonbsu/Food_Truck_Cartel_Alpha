@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://46i7qfxwfv6b"]
+[gd_scene load_steps=24 format=3 uid="uid://46i7qfxwfv6b"]
 
 [ext_resource type="Script" path="res://menus/road_map.gd" id="1_g8hro"]
 [ext_resource type="Theme" uid="uid://ftmbu43vi6kk" path="res://theme.tres" id="1_ndbkm"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://djge2j2kljo71" path="res://menus/BeachIcon.png" id="5_l8qf5"]
 [ext_resource type="Texture2D" uid="uid://cvou87gigcfeb" path="res://menus/RaveIcon.png" id="5_peolj"]
 [ext_resource type="Texture2D" uid="uid://bjkcwmg02o5nk" path="res://menus/CasinoIcon.png" id="5_tqw8s"]
+[ext_resource type="Texture2D" uid="uid://d3cnkpnftv0io" path="res://menus/AlienIcon.png" id="5_y16b3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xgc72"]
 font_size = 30
@@ -22,34 +23,6 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_q1b6s"]
 font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Animation" id="Animation_vtqma"]
-resource_name = "beach_hover"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BeachIcon:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.05, 0.05), Vector2(0.05, 0.05)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BeachIcon:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = false
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-0.565487, 0.280998]
-}
 
 [sub_resource type="Animation" id="Animation_8po3l"]
 length = 0.001
@@ -125,6 +98,58 @@ tracks/5/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Area51Icon:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Area51Icon:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vtqma"]
+resource_name = "beach_hover"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BeachIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.05, 0.05), Vector2(0.05, 0.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BeachIcon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.565487, 0.280998]
+}
 
 [sub_resource type="Animation" id="Animation_mnof7"]
 resource_name = "beach_idle"
@@ -145,88 +170,6 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("BeachIcon:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_0f0gw"]
-resource_name = "rave_idle"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("RaveIcon:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("RaveIcon:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.03, 0.03)]
-}
-
-[sub_resource type="Animation" id="Animation_qdoqu"]
-resource_name = "rave_hover"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("RaveIcon:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.05, 0.05), Vector2(0.05, 0.05)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("RaveIcon:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-0.424115, 0.42237]
-}
-
-[sub_resource type="Animation" id="Animation_83cfc"]
-resource_name = "casino_idle"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CasinoIcon:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.03, 0.03)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CasinoIcon:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -264,9 +207,148 @@ tracks/1/keys = {
 "values": [-0.424115, 0.563741]
 }
 
+[sub_resource type="Animation" id="Animation_83cfc"]
+resource_name = "casino_idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CasinoIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CasinoIcon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qdoqu"]
+resource_name = "rave_hover"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RaveIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.05, 0.05), Vector2(0.05, 0.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RaveIcon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.424115, 0.42237]
+}
+
+[sub_resource type="Animation" id="Animation_0f0gw"]
+resource_name = "rave_idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RaveIcon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RaveIcon:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+
+[sub_resource type="Animation" id="Animation_hmyto"]
+resource_name = "alien_idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area51Icon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area51Icon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4reb3"]
+resource_name = "alien_hover"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area51Icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.424115, 0.563741]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area51Icon:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.05, 0.05), Vector2(0.05, 0.05)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n8m73"]
 _data = {
 "RESET": SubResource("Animation_8po3l"),
+"alien_hover": SubResource("Animation_4reb3"),
+"alien_idle": SubResource("Animation_hmyto"),
 "beach_hover": SubResource("Animation_vtqma"),
 "beach_idle": SubResource("Animation_mnof7"),
 "casino_hover": SubResource("Animation_i648o"),
@@ -333,6 +415,11 @@ text = "Casino"
 position = Vector2(576, 324)
 scale = Vector2(0.32, 0.324)
 texture = ExtResource("3_7nbwe")
+
+[node name="Area51Icon" type="Sprite2D" parent="."]
+position = Vector2(342, 279)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_y16b3")
 
 [node name="CasinoIcon" type="Sprite2D" parent="."]
 position = Vector2(384, 405)
@@ -404,10 +491,10 @@ horizontal_alignment = 1
 [node name="RaveLabel" type="Label" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 688.0
-offset_top = 192.0
-offset_right = 833.0
-offset_bottom = 222.0
+offset_left = 686.0
+offset_top = 250.0
+offset_right = 831.0
+offset_bottom = 280.0
 theme_override_fonts/font = ExtResource("2_ohvaa")
 text = "Level 2: Rave"
 label_settings = SubResource("LabelSettings_j3bio")
@@ -416,10 +503,10 @@ horizontal_alignment = 1
 [node name="Area51Label" type="Label" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 264.0
-offset_top = 264.0
-offset_right = 433.0
-offset_bottom = 298.0
+offset_left = 258.0
+offset_top = 317.0
+offset_right = 427.0
+offset_bottom = 351.0
 theme_override_fonts/font = ExtResource("2_ohvaa")
 text = "Level 4: Area 51"
 label_settings = SubResource("LabelSettings_co1tl")
