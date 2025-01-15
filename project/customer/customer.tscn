@@ -48,7 +48,6 @@ _data = {
 }
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uqo62"]
-load_path = "res://.godot/imported/normal.png-1048bbfa8d7a4784bdaa35764f74d714.s3tc.ctex"
 
 [node name="customer" type="StaticBody3D" groups=["customer"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.741381, 0)
