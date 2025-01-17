@@ -1,4 +1,4 @@
-[gd_scene load_steps=440 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=439 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -14,10 +14,12 @@
 [ext_resource type="Texture2D" uid="uid://b74jd1o111k6k" path="res://Textures/Floor_extracolor_Roughness.png" id="16_ui4wm"]
 [ext_resource type="Texture2D" uid="uid://dyu8g6wp12pvr" path="res://Textures/Stove_standardSurface2_BaseColor.png" id="17_3f1vf"]
 [ext_resource type="Texture2D" uid="uid://de5ow8skqxhdn" path="res://Textures/Stove_standardSurface2_Height.png" id="18_esb20"]
+[ext_resource type="Texture2D" uid="uid://cg0yxsscrvxr5" path="res://Textures/Sink_standardSurface1_BaseColor.png" id="18_k53wm"]
 [ext_resource type="Texture2D" uid="uid://dsaprrfm27af1" path="res://Textures/Stove_standardSurface2_Metallic.png" id="19_0448g"]
 [ext_resource type="Texture2D" uid="uid://b7utoc83fpcbv" path="res://Textures/Stove_standardSurface2_Normal.png" id="20_ut86l"]
 [ext_resource type="Texture2D" uid="uid://bpl4a6t363nvo" path="res://Textures/Stove_standardSurface2_Roughness.png" id="21_io3ig"]
 [ext_resource type="Texture2D" uid="uid://cvt7i5cloe8tt" path="res://Textures/Walls_extracolor_Height.png" id="22_h24ap"]
+[ext_resource type="Texture2D" uid="uid://rh6g5uppkkvk" path="res://Textures/Cardboard.jpg" id="23_0o63f"]
 [ext_resource type="Texture2D" uid="uid://dsu8f6f3qgyac" path="res://Textures/Walls_extracolor_Metallic.png" id="23_ircxl"]
 [ext_resource type="Texture2D" uid="uid://b815c7sh236be" path="res://Textures/Walls_extracolor_Normal.png" id="24_b0ic7"]
 [ext_resource type="Texture2D" uid="uid://ccerxh5565mo3" path="res://Textures/Walls_extracolor_Roughness.png" id="25_j82gb"]
@@ -153,10 +155,10 @@
 [ext_resource type="Texture2D" uid="uid://csvueo54d5qf1" path="res://Textures/spatula_UV_spatula_headSG_Metallic.png" id="151_lkmgi"]
 [ext_resource type="Texture2D" uid="uid://ks7ddddb68uf" path="res://Textures/spatula_UV_spatula_headSG_Normal.png" id="152_8cryj"]
 [ext_resource type="Texture2D" uid="uid://tux0sagsq015" path="res://Textures/spatula_UV_spatula_headSG_Roughness.png" id="153_bne42"]
-[ext_resource type="Texture2D" uid="uid://dpn01dfrci4ba" path="res://Textures/cuttingboard_UV_cuttingboardSG_BaseColor.png" id="154_31vew"]
 [ext_resource type="Texture2D" uid="uid://j1qho01bunb4" path="res://Textures/cuttingboard_UV_cuttingboardSG_Height.png" id="155_f7gpw"]
 [ext_resource type="Texture2D" uid="uid://blw1sfk72ggg5" path="res://Textures/cuttingboard_UV_cuttingboardSG_Metallic.png" id="156_y3p5o"]
 [ext_resource type="Texture2D" uid="uid://cwclyfly7jm4y" path="res://Textures/ChipBag_standardSurface4_BaseColor.png" id="157_5adju"]
+[ext_resource type="Texture2D" uid="uid://be78vre448u56" path="res://Textures/cuttingboard_standardSurface4_BaseColor.png" id="157_aqgdp"]
 [ext_resource type="Texture2D" uid="uid://dh1ws4eliu4l4" path="res://Textures/cuttingboard_UV_cuttingboardSG_Roughness.png" id="157_qb82w"]
 [ext_resource type="Texture2D" uid="uid://bcon418t1j44w" path="res://Textures/ChipBag_standardSurface4_Height.png" id="158_iqefm"]
 [ext_resource type="Texture2D" uid="uid://cc2wniyhvdjig" path="res://Textures/ChipBag_standardSurface4_Metallic.png" id="159_n3n4f"]
@@ -201,6 +203,7 @@
 [ext_resource type="Texture2D" uid="uid://cq4gunvwluclv" path="res://Textures/grill_standardSurface1_Metallic.png" id="197_oh662"]
 [ext_resource type="Texture2D" uid="uid://deub740ak8etj" path="res://Textures/grill_standardSurface1_Normal.png" id="198_u2f55"]
 [ext_resource type="Texture2D" uid="uid://crxdpl04ffwwf" path="res://Textures/grill_standardSurface1_Roughness.png" id="199_3c8qc"]
+[ext_resource type="PackedScene" uid="uid://dunhtos62v7g8" path="res://FBXRaw/Sink.fbx" id="199_dn354"]
 [ext_resource type="PackedScene" uid="uid://ddlf4j01iixvn" path="res://FBXRaw/fryer.fbx" id="200_yjknw"]
 [ext_resource type="Texture2D" uid="uid://blwn4um54c186" path="res://Textures/fryer_standardSurface1_BaseColor.png" id="201_ai2yf"]
 [ext_resource type="Texture2D" uid="uid://dbfa5v05bp7wx" path="res://Textures/fryer_standardSurface1_Height.png" id="202_eb5vy"]
@@ -225,11 +228,6 @@
 [ext_resource type="PackedScene" uid="uid://b0teif7ewdclq" path="res://FBXRaw/Clock.fbx" id="220_ai8kn"]
 [ext_resource type="Texture2D" uid="uid://wbx821pv03fc" path="res://Textures/Clock_standardSurface1_BaseColor.png" id="221_2arts"]
 [ext_resource type="PackedScene" uid="uid://b384cbmiovdoy" path="res://FBXRaw/walls.fbx" id="222_hnxfw"]
-[ext_resource type="Texture2D" uid="uid://dffyhkfg70xwd" path="res://Textures/walls_standardSurface1_BaseColor.png" id="223_xlbb4"]
-[ext_resource type="Texture2D" uid="uid://bxe1w1e0k1jpe" path="res://Textures/walls_standardSurface1_Height.png" id="224_a5j0r"]
-[ext_resource type="Texture2D" uid="uid://cfsghde230vf0" path="res://Textures/walls_standardSurface1_Metallic.png" id="225_plm3y"]
-[ext_resource type="Texture2D" uid="uid://s5rejha4rkey" path="res://Textures/walls_standardSurface1_Normal.png" id="226_013a1"]
-[ext_resource type="Texture2D" uid="uid://bgrue3gl15agh" path="res://Textures/walls_standardSurface1_Roughness.png" id="227_nbivl"]
 [ext_resource type="PackedScene" uid="uid://ox1qh2aynn1s" path="res://FBXRaw/register.fbx" id="228_djagy"]
 [ext_resource type="Texture2D" uid="uid://dhrodt3m55vb3" path="res://Textures/register_standardSurface1_BaseColor.png" id="233_qgxl6"]
 [ext_resource type="PackedScene" uid="uid://bnpfyrnpdu5ej" path="res://FBXRaw/radio.fbx" id="234_sk4il"]
@@ -338,6 +336,7 @@ heightmap_texture = ExtResource("18_esb20")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6rrr"]
 albedo_color = Color(0.737255, 0.737255, 0.737255, 1)
+albedo_texture = ExtResource("18_k53wm")
 metallic = 1.0
 metallic_specular = 0.72
 roughness = 0.75
@@ -359,15 +358,9 @@ normal_texture = ExtResource("24_b0ic7")
 heightmap_enabled = true
 heightmap_texture = ExtResource("22_h24ap")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oi2tr"]
-albedo_color = Color(0.490196, 0.266667, 0.133333, 1)
-metallic = 1.0
-metallic_texture = ExtResource("23_ircxl")
-roughness_texture = ExtResource("25_j82gb")
-normal_enabled = true
-normal_texture = ExtResource("24_b0ic7")
-heightmap_enabled = true
-heightmap_texture = ExtResource("22_h24ap")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ef4vu"]
+albedo_color = Color(0.435294, 0.470588, 0.396078, 1)
+albedo_texture = ExtResource("23_0o63f")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bu4t2"]
 albedo_texture = ExtResource("26_urhug")
@@ -806,7 +799,7 @@ heightmap_enabled = true
 heightmap_texture = ExtResource("150_muann")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qkmj"]
-albedo_texture = ExtResource("154_31vew")
+albedo_texture = ExtResource("157_aqgdp")
 metallic = 1.0
 metallic_texture = ExtResource("156_y3p5o")
 roughness_texture = ExtResource("157_qb82w")
@@ -814,6 +807,7 @@ normal_enabled = true
 normal_texture = ExtResource("36_vhgfv")
 heightmap_enabled = true
 heightmap_texture = ExtResource("155_f7gpw")
+uv1_scale = Vector3(0.775, 1.275, 1.065)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v3wov"]
 albedo_texture = ExtResource("157_5adju")
@@ -998,6 +992,10 @@ normal_texture = ExtResource("194_evn56")
 heightmap_enabled = true
 heightmap_texture = ExtResource("192_8lx4u")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fx31j"]
+albedo_texture = ExtResource("18_k53wm")
+metallic = 0.65
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nd7o3"]
 albedo_texture = ExtResource("195_yb580")
 metallic = 1.0
@@ -1047,14 +1045,10 @@ roughness_texture = ExtResource("109_ibbx4")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rnr1m"]
 albedo_texture = ExtResource("221_2arts")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0tfo"]
-albedo_texture = ExtResource("223_xlbb4")
-metallic = 1.0
-metallic_texture = ExtResource("225_plm3y")
-roughness_texture = ExtResource("227_nbivl")
-normal_enabled = true
-normal_texture = ExtResource("226_013a1")
-heightmap_texture = ExtResource("224_a5j0r")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d30rg"]
+albedo_color = Color(0.956863, 0.776471, 0.721569, 1)
+albedo_texture = ExtResource("23_0o63f")
+uv1_scale = Vector3(5.97, 5.97, 5.97)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vic2i"]
 albedo_texture = ExtResource("233_qgxl6")
@@ -1487,6 +1481,8 @@ visible = false
 material_override = SubResource("StandardMaterial3D_nn88i")
 
 [node name="Sink" parent="Root Scene/RootNode/Truck" index="5"]
+transform = Transform3D(34.3287, 0, 0, 0, 37.8532, 0, 0, 0, 120.544, -0.792222, 0.203216, 0.81843)
+visible = false
 material_override = SubResource("StandardMaterial3D_d6rrr")
 
 [node name="Refridge" parent="Root Scene/RootNode/Truck" index="6"]
@@ -1499,7 +1495,7 @@ transform = Transform3D(0, 0, 23.8228, 0, 23.1186, 0, -190.793, 0, 0, -0.842332,
 material_override = SubResource("StandardMaterial3D_kwu2d")
 
 [node name="Cupboard2" parent="Root Scene/RootNode/Truck" index="8"]
-material_override = SubResource("StandardMaterial3D_oi2tr")
+material_override = SubResource("StandardMaterial3D_ef4vu")
 
 [node name="Cabinet_Door1" parent="Root Scene/RootNode/Truck" index="9"]
 visible = false
@@ -1579,6 +1575,7 @@ visible = false
 material_override = SubResource("StandardMaterial3D_qnclt")
 
 [node name="Faucet" parent="Root Scene/RootNode/Truck" index="29"]
+visible = false
 material_override = SubResource("StandardMaterial3D_bhssi")
 
 [node name="Walls" parent="Root Scene/RootNode/Truck" index="30"]
@@ -2037,6 +2034,7 @@ material_override = SubResource("StandardMaterial3D_am6y0")
 
 [node name="Spatula" parent="Root Scene/RootNode" index="18"]
 transform = Transform3D(0, 0.984808, 0.173648, 1, 0, 0, 0, 0.173648, -0.984808, 1.93688, 1.72903, -1.48571)
+visible = false
 
 [node name="spatula_handle" parent="Root Scene/RootNode/Spatula" index="0"]
 material_override = SubResource("StandardMaterial3D_av3vg")
@@ -2610,6 +2608,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26012, 0.681824, 4.03106)
 [node name="NPCDialogue" type="Label3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.777896, 2.01874, 5.39714)
 
+[node name="Sink" parent="." instance=ExtResource("199_dn354")]
+transform = Transform3D(1.48094, 0, 0, 0, 1.34973, 0, 0, 0, 1.50814, 0.0225111, -0.348415, -0.0825183)
+
+[node name="Cube" parent="Sink/RootNode" index="0"]
+transform = Transform3D(-70, 0, 0, 0, 1.19209e-05, 100, 0, -100, 1.19209e-05, -1.94119, 1.04821, 1.82114)
+material_override = SubResource("StandardMaterial3D_fx31j")
+
 [node name="Grill5" parent="." instance=ExtResource("194_x0giq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.250117, -0.293256, 0.138888)
 
@@ -2679,7 +2684,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.347131, 0.771018, 0.905175
 
 [node name="walls" parent="Walls/RootNode" index="0"]
 transform = Transform3D(1.51668, 0, 0, 0, 1.52564, 0, 0, 0, 1.56159, 0.373983, -1.33406, -1.13928)
-material_override = SubResource("StandardMaterial3D_r0tfo")
+material_override = SubResource("StandardMaterial3D_d30rg")
 
 [node name="register" parent="." instance=ExtResource("228_djagy")]
 transform = Transform3D(1.48394, 0, 0, 0, 1.03274, 0, 0, 0, 1.45986, -0.631172, -0.0101246, 3.63709)
@@ -3335,6 +3340,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0916388, 2.26535, 4.02901)
 [editable path="order_plate/fries"]
 [editable path="order_plate/full_dog"]
 [editable path="order_plate/hot_dog_bun"]
+[editable path="Sink"]
 [editable path="Grill5"]
 [editable path="Fryer"]
 [editable path="Trash"]
