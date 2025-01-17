@@ -18,6 +18,7 @@ func connect_buttons(root):
 func connect_to_button(button: Button):
 	button.pressed.connect(func():
 			play_button_sound())
+			
 
 func play_button_sound():
 	var audio_stream_player := AudioStreamPlayer.new()
