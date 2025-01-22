@@ -2,6 +2,7 @@ class_name PickedIngredient extends RigidBody3D
 
 
 var picked_status
+var on_floor
 
 @onready var timer_path := preload("res://ingredients/queue_free_timer.tscn")
 var timer: Timer
@@ -18,9 +19,10 @@ func picked(pick):
 	elif pick == false:
 		set_collision_layer_value(1, true)
 		set_collision_mask_value(1, true)
-		timer.paused = false
-		timer.start(10)
-		timer.timeout.connect(func():
+		if on_floor == true:
+			timer.paused = false
+			timer.start(10)
+			timer.timeout.connect(func():
 				self.queue_free())
 		
 		
