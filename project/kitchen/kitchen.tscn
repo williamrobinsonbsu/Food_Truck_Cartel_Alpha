@@ -1,4 +1,4 @@
-[gd_scene load_steps=439 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=440 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -174,6 +174,7 @@
 [ext_resource type="Script" path="res://kitchen/radio.gd" id="173_csr8x"]
 [ext_resource type="Script" path="res://kitchen/trash_bin.gd" id="174_yp6dd"]
 [ext_resource type="Script" path="res://kitchen/patty_fridge.gd" id="175_w3hs7"]
+[ext_resource type="Script" path="res://kitchen/Floor.gd" id="176_2jpf6"]
 [ext_resource type="Script" path="res://kitchen/lettuce_bowl.gd" id="176_73vsf"]
 [ext_resource type="Script" path="res://kitchen/potato_bowl.gd" id="177_xs7eh"]
 [ext_resource type="Script" path="res://kitchen/tomato_bowl.gd" id="178_twd0r"]
@@ -2232,6 +2233,14 @@ wait_time = 0.1
 
 [node name="Floor" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.592228, 0.0061779)
+script = ExtResource("176_2jpf6")
+
+[node name="Area3D" type="Area3D" parent="Root Scene/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.32831e-09)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, 0.0133756, 0.354126)
+shape = SubResource("BoxShape3D_y5oxw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, 0.0133756, 0.354126)
@@ -3303,6 +3312,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0916388, 2.26535, 4.02901)
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
 [connection signal="timeout" from="Root Scene/patty_fridge/ActionLabelPatty/LabelPattyTimer" to="Root Scene/patty_fridge" method="_on_label_patty_timer_timeout"]
+[connection signal="area_entered" from="Root Scene/Floor/Area3D" to="Root Scene/Floor" method="_on_area_3d_area_entered"]
 [connection signal="timeout" from="Root Scene/lettuce_bowl/ActionLabelLettuce/LabelLettuceTimer" to="Root Scene/lettuce_bowl" method="_on_label_lettuce_timer_timeout"]
 [connection signal="timeout" from="Root Scene/potato_bowl/ActionLabelPotato/LabelPotatoTimer" to="Root Scene/potato_bowl" method="_on_label_potato_timer_timeout"]
 [connection signal="timeout" from="Root Scene/tomato_bowl/ActionLabelTomato/LabelTomatoTimer" to="Root Scene/tomato_bowl" method="_on_label_tomato_timer_timeout"]
