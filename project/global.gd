@@ -1,6 +1,14 @@
 extends Node
 
 
+const SAVE_FILE := "user://savefile.dat"
+
+var level_rave := 0
+var level_casino := 0
+var level_area51 := 0
+var level_endless := 0
+var level_data = { }
+
 @export var end_of_level_money: int = 0
 
 
@@ -99,3 +107,38 @@ func reset_data():
 	police_catches = 0
 	police_dodges = 0
 	level_quit = 0
+
+
+func unlock_level(level_num):
+	pass
+	
+	
+func save_unlocked_levels():
+	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
+	level_data = {
+		"level_rave" = level_rave,
+		"level_casino" = level_casino,
+		"level_area51" = level_area51,
+		"level_endless" = level_endless
+	}
+	file.store_var(level_data)
+	file = null
+	
+
+func load_unlocked_levels():
+	if not FileAccess.file_exists(SAVE_FILE):
+			level_data = {
+							"level_rave" = 0,
+							"level_casino" = 0,
+							"level_area51" = 0,
+							"level_endless" = 0
+			}
+			save_unlocked_levels()
+	
+	var file = FileAccess.open(SAVE_FILE, FileAccess.READ)
+	level_data = file.get_var()
+	level_rave = level_data.level_rave
+	level_casino = level_data.level_casino
+	level_area51 = level_data.level_area51
+	level_endless = level_data.level_endless
+	file = null
