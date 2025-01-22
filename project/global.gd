@@ -107,10 +107,6 @@ func reset_data():
 	police_catches = 0
 	police_dodges = 0
 	level_quit = 0
-
-
-func unlock_level(level_num):
-	pass
 	
 	
 func save_unlocked_levels():
