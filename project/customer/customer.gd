@@ -42,7 +42,10 @@ signal new_customer
 
 func _ready():
 	texture.scale.x = -.07
-	texture.scale = texture.scale*.9
+	if Global.curr_level == "Area51":
+		texture.scale = texture.scale*.6
+	else:
+		texture.scale = texture.scale*.9
 	$AssemblyTimer.wait_time = $AssemblyTimer.wait_time / world.diff_modifier
 	if level == "Beach":
 		if world.starting_counter != 0:
