@@ -10,10 +10,11 @@ signal timer
 var shutter_door_close = false
 var can_police_catch_player = false
 var poRate = 0
-var goal_score = 100
+var goal_score = 50
 
 @onready var customer_or_cop_timer: Timer = $customer_or_police_spawn_timer
 @onready var cop_catch_timer: Timer = $cop_catch_timer
+@onready var level_timer: Timer = $LevelTimer
 
 
 func _ready():
@@ -67,6 +68,12 @@ func _physics_process(_delta: float) -> void:
 	
 	if Input.is_action_just_pressed("toggle_order_timer"):
 		get_tree().call_group("customer", "toggle_assembly_timer")
+	
+	
+	if Input.is_action_just_pressed("force_win"):
+		level_timer.paused = true
+		level_timer.start(1)
+		level_timer.paused = false
 		
 func shutter_door_control():
 	Global.shutter += 1
@@ -211,6 +218,23 @@ func _on_level_timer_timeout():
 	print(score)
 	Global.end_of_level_money = score
 	Global.save_data()
+	
+	if level == "Beach" and score >= goal_score:
+		Global.level_rave = 1
+		Global.save_unlocked_levels()
+	
+	if level == "RaveKitchen" and score >= goal_score:
+		Global.level_casino = 1
+		Global.save_unlocked_levels()
+	
+	if level == "Casino" and score >= goal_score:
+		Global.level_area51 = 1
+		Global.save_unlocked_levels()
+		
+	if level == "Area51" and score >= goal_score:
+		Global.level_endless = 1
+		Global.save_unlocked_levels()
+		
 	
 	await get_tree().create_timer(5).timeout
 	get_tree().change_scene_to_file("res://menus/result_screen.tscn")
