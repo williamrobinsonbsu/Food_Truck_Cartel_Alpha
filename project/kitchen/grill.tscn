@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgl48vx5udmve"]
+[gd_scene load_steps=7 format=3 uid="uid://bgl48vx5udmve"]
 
 [ext_resource type="Script" path="res://kitchen/grill.gd" id="1_o1va7"]
 [ext_resource type="PackedScene" uid="uid://c3odcn55fqw5v" path="res://FBXRaw/RawPattie.fbx" id="2_qelhg"]
@@ -8,6 +8,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_egrp5"]
 albedo_texture = ExtResource("3_aphcd")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ysdsv"]
 
 [node name="Grill" type="StaticBody3D"]
 script = ExtResource("1_o1va7")
@@ -26,5 +28,14 @@ visible = false
 [node name="Patty" parent="PattyRaw/RootNode/Truck/Burger" index="0"]
 transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.750614, 0.475665, 0.518766)
 material_override = SubResource("StandardMaterial3D_egrp5")
+
+[node name="grill_top" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.957179, 0, 0, -0.0237361)
+
+[node name="patty_placer" type="CollisionShape3D" parent="grill_top"]
+transform = Transform3D(1.23828, 0, 0, 0, 0.0148886, 0, 0, 0, 1, -0.159585, 0.501239, 0)
+shape = SubResource("BoxShape3D_ysdsv")
+
+[connection signal="body_entered" from="grill_top" to="." method="_on_grill_top_body_entered"]
 
 [editable path="PattyRaw"]
