@@ -86,6 +86,7 @@ theme_override_fonts/font = ExtResource("5_87wn2")
 [editable path="Kitchen/order_plate/fries"]
 [editable path="Kitchen/order_plate/full_dog"]
 [editable path="Kitchen/order_plate/hot_dog_bun"]
+[editable path="Kitchen/Sink"]
 [editable path="Kitchen/Grill5"]
 [editable path="Kitchen/Fryer"]
 [editable path="Kitchen/Trash"]

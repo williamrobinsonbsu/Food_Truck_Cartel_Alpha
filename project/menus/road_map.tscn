@@ -529,6 +529,14 @@ libraries = {
 "": SubResource("AnimationLibrary_n8m73")
 }
 
+[node name="EndlessButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 38.0
+offset_right = 163.0
+offset_bottom = 64.0
+text = "ENDLESS!!!!!!"
+
 [connection signal="mouse_entered" from="Beach" to="." method="_on_beach_mouse_entered"]
 [connection signal="mouse_exited" from="Beach" to="." method="_on_beach_mouse_exited"]
 [connection signal="pressed" from="Beach" to="." method="_on_beach_pressed"]
@@ -542,3 +550,4 @@ libraries = {
 [connection signal="mouse_exited" from="Casino" to="." method="_on_casino_mouse_exited"]
 [connection signal="pressed" from="Casino" to="." method="_on_casino_pressed"]
 [connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="EndlessButton" to="." method="_on_endless_button_pressed"]

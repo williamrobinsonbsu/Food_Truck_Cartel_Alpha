@@ -104,3 +104,7 @@ func _play_loading_screen():
 	var scene := preload("res://menus/loading_screen.tscn")
 	var loading_screen = scene.instantiate()
 	add_child(loading_screen)
+
+
+func _on_endless_button_pressed():
+	pass # Replace with function body.
