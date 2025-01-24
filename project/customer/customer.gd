@@ -265,6 +265,9 @@ func _get_npc(npc):   #update for every new npc
 	elif level_path == "area_51":
 		var rng = RandomNumberGenerator.new()
 		npc = rng.randi_range(0, 4)
+	elif level_path == "endless":
+		var rng = RandomNumberGenerator.new()
+		npc = rng.randi_range(0, 18)
 	
 	if npc == 0:
 		npc_name = "npc0"
@@ -287,6 +290,8 @@ func _get_npc(npc):   #update for every new npc
 	elif npc == 6:
 		npc_name = "npc6"
 		voice.base_pitch = 2
+	
+	npc_name = "npc" + str(npc)
 	
 	
 	path = "res://customer/npcs/" + level_path + "/" + npc_name + "/normal.png"
