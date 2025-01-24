@@ -31,11 +31,6 @@ material_override = SubResource("StandardMaterial3D_0h8v3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000930786, 0.00294304, -0.000366211)
 shape = SubResource("BoxShape3D_geejx")
 
-[node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.0442918, 0.0423964)
-visible = false
-text = "Cheese"
-
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
