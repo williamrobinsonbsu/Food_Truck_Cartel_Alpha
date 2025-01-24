@@ -107,4 +107,6 @@ func _play_loading_screen():
 
 
 func _on_endless_button_pressed():
-	pass # Replace with function body.
+	_play_loading_screen()
+	await get_tree().create_timer(2).timeout
+	get_tree().change_scene_to_file("res://levels/endless.tscn")

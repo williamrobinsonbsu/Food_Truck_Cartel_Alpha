@@ -1,0 +1,18 @@
+#surfer
+~ normal
+
+Clem: Finally figured out how to match human speech frequencies, testing it out here if you don't mind!
+
+=> END
+
+~ angry
+
+Clem: I mean, the food wasn't the main goal... still disappointing...
+
+=> END
+
+~ happy
+
+Clem: This food is fantastic! Thank you!
+
+=> END
