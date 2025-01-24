@@ -36,6 +36,7 @@ func _ready():
 		diff_modifier = 1.5
 	elif level == "Endless":
 		diff_modifier = 2.0
+		level_timer.paused = true
 		#get_node("/root/" + level + "/Kitchen/Root Scene/hot_dog_box").show()
 		#get_node("/root/" + level + "/Kitchen/Dog_machine").show()
 		#get_node("/root/" + level + "/Kitchen/Root Scene/hot_dog_bun_box").show()

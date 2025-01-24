@@ -107,6 +107,16 @@ func _play_loading_screen():
 
 
 func _on_endless_button_pressed():
-	_play_loading_screen()
-	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://levels/endless.tscn")
+	if Global.level_endless == 1:
+		_play_loading_screen()
+		await get_tree().create_timer(2).timeout
+		get_tree().change_scene_to_file("res://levels/endless.tscn")
+
+
+func _on_endless_button_mouse_entered():
+	$EndlessLabel.visible = true
+
+
+func _on_endless_button_mouse_exited():
+	$EndlessLabel.visible = false
+

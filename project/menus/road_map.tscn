@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://46i7qfxwfv6b"]
+[gd_scene load_steps=26 format=3 uid="uid://46i7qfxwfv6b"]
 
 [ext_resource type="Script" path="res://menus/road_map.gd" id="1_g8hro"]
 [ext_resource type="Theme" uid="uid://ftmbu43vi6kk" path="res://theme.tres" id="1_ndbkm"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cvou87gigcfeb" path="res://menus/RaveIcon.png" id="5_peolj"]
 [ext_resource type="Texture2D" uid="uid://bjkcwmg02o5nk" path="res://menus/CasinoIcon.png" id="5_tqw8s"]
 [ext_resource type="Texture2D" uid="uid://d3cnkpnftv0io" path="res://menus/AlienIcon.png" id="5_y16b3"]
+[ext_resource type="Texture2D" uid="uid://cay3ckff53rxl" path="res://menus/endlessmodeicon.png" id="9_4e3ob"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xgc72"]
 font_size = 30
@@ -22,6 +23,9 @@ font_color = Color(0, 0, 0, 1)
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_q1b6s"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wyruk"]
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_8po3l"]
@@ -411,6 +415,15 @@ offset_bottom = 420.0
 scale = Vector2(1.5, 1.5)
 text = "Casino"
 
+[node name="EndlessButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 52.0
+offset_right = 167.0
+offset_bottom = 78.0
+scale = Vector2(1, 2.92)
+text = "ENDLESS!!!!!!"
+
 [node name="RoadMap" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 scale = Vector2(0.32, 0.324)
@@ -436,6 +449,11 @@ position = Vector2(876, 452)
 rotation = -0.565487
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("5_l8qf5")
+
+[node name="EndlessIcon" type="Sprite2D" parent="."]
+position = Vector2(115, 101)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("9_4e3ob")
 
 [node name="Return" type="Button" parent="."]
 layout_mode = 1
@@ -524,18 +542,21 @@ text = "Level 3: Casino"
 label_settings = SubResource("LabelSettings_q1b6s")
 horizontal_alignment = 1
 
+[node name="EndlessLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 73.0
+offset_top = 147.0
+offset_right = 137.0
+offset_bottom = 167.0
+theme = ExtResource("1_ndbkm")
+text = "Endless!"
+label_settings = SubResource("LabelSettings_wyruk")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_n8m73")
 }
-
-[node name="EndlessButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 38.0
-offset_right = 163.0
-offset_bottom = 64.0
-text = "ENDLESS!!!!!!"
 
 [connection signal="mouse_entered" from="Beach" to="." method="_on_beach_mouse_entered"]
 [connection signal="mouse_exited" from="Beach" to="." method="_on_beach_mouse_exited"]
@@ -549,5 +570,7 @@ text = "ENDLESS!!!!!!"
 [connection signal="mouse_entered" from="Casino" to="." method="_on_casino_mouse_entered"]
 [connection signal="mouse_exited" from="Casino" to="." method="_on_casino_mouse_exited"]
 [connection signal="pressed" from="Casino" to="." method="_on_casino_pressed"]
-[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
+[connection signal="mouse_entered" from="EndlessButton" to="." method="_on_endless_button_mouse_entered"]
+[connection signal="mouse_exited" from="EndlessButton" to="." method="_on_endless_button_mouse_exited"]
 [connection signal="pressed" from="EndlessButton" to="." method="_on_endless_button_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
