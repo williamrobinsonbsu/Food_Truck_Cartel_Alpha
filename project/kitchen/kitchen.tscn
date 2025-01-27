@@ -171,6 +171,7 @@
 [ext_resource type="Texture2D" uid="uid://cexwxrqm7s3q6" path="res://Textures/potato_UV_potatoSG_Roughness.png" id="167_x1gtu"]
 [ext_resource type="Script" path="res://kitchen/Stove.gd" id="169_21eag"]
 [ext_resource type="Script" path="res://kitchen/cutting_board.gd" id="171_l7qsn"]
+[ext_resource type="FontFile" uid="uid://c2ns0mejwetfy" path="res://font/Nice Sugar.ttf" id="172_jj25w"]
 [ext_resource type="Script" path="res://kitchen/radio.gd" id="173_csr8x"]
 [ext_resource type="Script" path="res://kitchen/trash_bin.gd" id="174_yp6dd"]
 [ext_resource type="Script" path="res://kitchen/patty_fridge.gd" id="175_w3hs7"]
@@ -272,8 +273,8 @@
 [ext_resource type="Texture2D" uid="uid://draj0qh5wdqm0" path="res://Textures/fridge_standardSurface1_Metallic.png" id="273_6qri4"]
 [ext_resource type="Texture2D" uid="uid://u74de5t2jke5" path="res://Textures/fridge_standardSurface1_Normal.png" id="274_to34s"]
 [ext_resource type="Texture2D" uid="uid://dssfxossr2qkn" path="res://Textures/fridge_standardSurface1_Roughness.png" id="275_i7721"]
+[ext_resource type="Texture2D" uid="uid://dl5v05mj2vm3y" path="res://Textures/FrameP_standardSurface1_BaseColor.png" id="276_p1868"]
 [ext_resource type="PackedScene" uid="uid://cm4q1p7y80o4t" path="res://FBXRaw/Frame.fbx" id="276_vatlq"]
-[ext_resource type="Texture2D" uid="uid://c3dcoosntghl3" path="res://Textures/Frame_standardSurface1_BaseColor.png" id="277_wj1qd"]
 [ext_resource type="Texture2D" uid="uid://7e6rg8wjewn1" path="res://Textures/Frame_standardSurface1_Height.png" id="278_ssi8y"]
 [ext_resource type="Texture2D" uid="uid://by8di5ls81e5i" path="res://Textures/Frame_standardSurface1_Metallic.png" id="279_5dycn"]
 [ext_resource type="Texture2D" uid="uid://daghqlk1x5n1s" path="res://Textures/Frame_standardSurface1_Normal.png" id="280_0bmbh"]
@@ -1286,13 +1287,12 @@ normal_texture = ExtResource("274_to34s")
 heightmap_texture = ExtResource("272_mqsel")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ygin0"]
-albedo_texture = ExtResource("277_wj1qd")
+albedo_texture = ExtResource("276_p1868")
 metallic = 1.0
 metallic_texture = ExtResource("279_5dycn")
 roughness_texture = ExtResource("281_eogfh")
 normal_enabled = true
 normal_texture = ExtResource("280_0bmbh")
-heightmap_enabled = true
 heightmap_texture = ExtResource("278_ssi8y")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kwwk"]
@@ -1482,7 +1482,7 @@ visible = false
 material_override = SubResource("StandardMaterial3D_nn88i")
 
 [node name="Sink" parent="Root Scene/RootNode/Truck" index="5"]
-transform = Transform3D(34.3287, 0, 0, 0, 37.8532, 0, 0, 0, 120.544, -0.792222, 0.203216, 0.81843)
+transform = Transform3D(34.3287, 0, 0, 0, 37.8532, 0, 0, 0, 120.544, -0.792222, 0.174773, 0.81843)
 visible = false
 material_override = SubResource("StandardMaterial3D_d6rrr")
 
@@ -1670,6 +1670,7 @@ visible = false
 material_override = SubResource("StandardMaterial3D_kirlk")
 
 [node name="Onion4" parent="Root Scene/RootNode/Truck" index="34"]
+transform = Transform3D(0.502537, 0, 0, 0, 0.388137, 0, 0, 0, 0.502537, -0.0841952, -0.318191, -1.0255)
 material_override = SubResource("StandardMaterial3D_8gj7e")
 
 [node name="Lettuce_Head" parent="Root Scene/RootNode/Truck" index="35"]
@@ -1735,9 +1736,11 @@ material_override = SubResource("StandardMaterial3D_h32io")
 material_override = SubResource("StandardMaterial3D_fbv5u")
 
 [node name="Onion32" parent="Root Scene/RootNode/Truck" index="48"]
+transform = Transform3D(0.502537, 0, 0, 0, -0.29733, 0.323025, 0, -0.249489, -0.384966, -0.149614, -0.430628, 1.83614)
 material_override = SubResource("StandardMaterial3D_8gj7e")
 
 [node name="Onion42" parent="Root Scene/RootNode/Truck" index="49"]
+transform = Transform3D(0.502537, 0, 0, 0, -0.29733, 0.323025, 0, -0.249489, -0.384966, -0.115472, -0.430628, 1.76468)
 material_override = SubResource("StandardMaterial3D_8gj7e")
 
 [node name="Sprite3D" type="Sprite3D" parent="Root Scene/RootNode/Truck" index="50"]
@@ -2076,12 +2079,15 @@ transform = Transform3D(0.5, -0.866025, 0, 0.866025, 0.5, 0, 0, 0, 1, -1.26237, 
 material_override = SubResource("StandardMaterial3D_v3wov")
 
 [node name="potato" parent="Root Scene/RootNode" index="22"]
+transform = Transform3D(13.3488, 0, 0, 0, 13.3488, 0, 0, 0, 13.3488, -1.62509, 0.297413, 2.07729)
 material_override = SubResource("StandardMaterial3D_3x7x1")
 
 [node name="potato1" parent="Root Scene/RootNode/Potato" index="0"]
+transform = Transform3D(13.3488, 0, 0, 0, 13.3488, 0, 0, 0, 13.3488, -1.62509, 0.297413, 1.94464)
 material_override = SubResource("StandardMaterial3D_3x7x1")
 
 [node name="potato2" parent="Root Scene/RootNode/Potato" index="1"]
+transform = Transform3D(2.31799, 13.146, 0, -13.146, 2.31799, 0, 0, 0, 13.3488, -1.51089, 0.297413, 2.02947)
 material_override = SubResource("StandardMaterial3D_3x7x1")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Root Scene/RootNode" index="24"]
@@ -2141,8 +2147,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0297396, -0.0721936, 0.524
 shape = SubResource("BoxShape3D_n3er8")
 
 [node name="ActionLabelStove" type="Label3D" parent="Root Scene/Stove"]
-transform = Transform3D(-1.25148e-08, 0, -1, 0, 0.748534, 0, 0.286306, 0, -4.37114e-08, -0.172675, 0.517085, 0.376787)
+transform = Transform3D(-1.24849e-08, 0, -0.997612, 0, 0.45563, 0, 0.285622, 0, -4.3607e-08, -0.172675, 0.517085, 0.376787)
 text = "Place uncooked patty to cook a burger"
+font = ExtResource("172_jj25w")
 
 [node name="LabelStoveTimer" type="Timer" parent="Root Scene/Stove/ActionLabelStove"]
 wait_time = 0.1
@@ -2198,6 +2205,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398838, -0.277534, 0.09644
 transform = Transform3D(-1.563e-08, 0, 1, 0, 0.378888, 0, -0.357572, 0, -4.37114e-08, -0.497752, -0.216074, 0.098526)
 text = "Use to cut 
 vegetables"
+font = ExtResource("172_jj25w")
 
 [node name="LabelCuttingBoardTimer" type="Timer" parent="Root Scene/cutting_board/ActionLabelCuttingBoard"]
 wait_time = 0.1
@@ -2232,8 +2240,9 @@ script = ExtResource("175_w3hs7")
 shape = SubResource("BoxShape3D_dfedg")
 
 [node name="ActionLabelPatty" type="Label3D" parent="Root Scene/patty_fridge"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.11759e-08, 0.0423703, 0.115862)
+transform = Transform3D(0.333201, 0, 5.32907e-15, 0, 0.329548, 0, -8.88178e-16, 0, 0.4, -1.11759e-08, 0.0423703, 0.115862)
 text = "Patties"
+font = ExtResource("172_jj25w")
 
 [node name="LabelPattyTimer" type="Timer" parent="Root Scene/patty_fridge/ActionLabelPatty"]
 wait_time = 0.1
@@ -2273,8 +2282,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028313, -0.0240879, 0.0547
 shape = SubResource("CylinderShape3D_x7ngb")
 
 [node name="ActionLabelLettuce" type="Label3D" parent="Root Scene/lettuce_bowl"]
-transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0.17, 0.05)
+transform = Transform3D(-1.59437e-08, 0, 0.4, 0, 0.342563, 0, -0.364748, 0, -1.74846e-08, 0, 0.17, 0.0500001)
 text = "Lettuce"
+font = ExtResource("172_jj25w")
 
 [node name="LabelLettuceTimer" type="Timer" parent="Root Scene/lettuce_bowl/ActionLabelLettuce"]
 wait_time = 0.1
@@ -2288,8 +2298,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.054
 shape = SubResource("CylinderShape3D_x7ngb")
 
 [node name="ActionLabelPotato" type="Label3D" parent="Root Scene/potato_bowl"]
-transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0.16, 0.05)
+transform = Transform3D(-1.52058e-08, 0, 0.40431, 0, 0.316763, 0, -0.347868, 0, -1.7673e-08, 0, 0.16, 0.05)
 text = "Potato"
+font = ExtResource("172_jj25w")
 
 [node name="LabelPotatoTimer" type="Timer" parent="Root Scene/potato_bowl/ActionLabelPotato"]
 wait_time = 0.1
@@ -2303,8 +2314,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.054
 shape = SubResource("CylinderShape3D_x7ngb")
 
 [node name="ActionLabelTomato" type="Label3D" parent="Root Scene/tomato_bowl"]
-transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0.16, 0.05)
+transform = Transform3D(-1.36618e-08, 0, 0.4, 0, 0.340478, 0, -0.312544, 0, -1.74846e-08, 0, 0.16, 0.05)
 text = "Tomato"
+font = ExtResource("172_jj25w")
 
 [node name="LabelTomatoTimer" type="Timer" parent="Root Scene/tomato_bowl/ActionLabelTomato"]
 wait_time = 0.1
@@ -2318,8 +2330,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.054
 shape = SubResource("CylinderShape3D_x7ngb")
 
 [node name="ActionLabelOnion" type="Label3D" parent="Root Scene/onion_bowl"]
-transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0, 0.16, 0.05)
+transform = Transform3D(-1.51444e-08, 0, 0.4, 0, 0.324499, 0, -0.346463, 0, -1.74846e-08, 0, 0.16, 0.05)
 text = "Onion"
+font = ExtResource("172_jj25w")
 
 [node name="LabelOnionTimer" type="Timer" parent="Root Scene/onion_bowl/ActionLabelOnion"]
 wait_time = 0.1
@@ -2333,8 +2346,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.151794, 0.201416)
 shape = SubResource("BoxShape3D_fsf1v")
 
 [node name="ActionLabelChips" type="Label3D" parent="Root Scene/chip_shelf"]
-transform = Transform3D(-1.96701e-08, 0, 0.45, 0, 0.45, 0, -0.45, 0, -1.96701e-08, 0.501348, 0.146963, 0.207392)
+transform = Transform3D(-1.70444e-08, 0, 0.45, 0, 0.374106, 0, -0.389931, 0, -1.96701e-08, 0.501348, 0.146963, 0.207392)
 text = "Chips"
+font = ExtResource("172_jj25w")
 
 [node name="LabelChipsTimer" type="Timer" parent="Root Scene/chip_shelf/ActionLabelChips"]
 wait_time = 0.1
@@ -2350,6 +2364,7 @@ shape = SubResource("BoxShape3D_fdrga")
 [node name="ActionLabelSoda" type="Label3D" parent="Root Scene/soda_fridge"]
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0.375449, 0, 0.04)
 text = "Soda"
+font = ExtResource("172_jj25w")
 
 [node name="LabelSodaTimer" type="Timer" parent="Root Scene/soda_fridge/ActionLabelSoda"]
 wait_time = 0.1
@@ -2367,6 +2382,7 @@ transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 
 text = "Bottom
 Bun
 "
+font = ExtResource("172_jj25w")
 
 [node name="LabelBottomBunTimer" type="Timer" parent="Root Scene/bread_bottom_shelf/ActionLabelBottomBun"]
 wait_time = 0.1
@@ -2382,6 +2398,7 @@ shape = SubResource("BoxShape3D_xaik4")
 [node name="ActionLabelTopBun" type="Label3D" parent="Root Scene/top_bun_shelf"]
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0.4, 0.1, 0.03)
 text = "Top Buns"
+font = ExtResource("172_jj25w")
 
 [node name="LabelTopBunTimer" type="Timer" parent="Root Scene/top_bun_shelf/ActionLabelTopBun"]
 wait_time = 0.1
@@ -2444,6 +2461,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362507, 0.357653, -0.03593
 [node name="ActionLabelFryer" type="Label3D" parent="Root Scene/frier"]
 transform = Transform3D(-1.45705e-08, 0, -0.333333, 0, 0.333333, 0, 0.333333, 0, -1.45705e-08, -0.217288, 0.113216, -0.0316148)
 text = "Use with cut fries"
+font = ExtResource("172_jj25w")
 
 [node name="LabelFryerTimer" type="Timer" parent="Root Scene/frier/ActionLabelFryer"]
 wait_time = 0.1
@@ -2510,6 +2528,8 @@ one_shot = true
 
 [node name="OrderLabel" type="Label3D" parent="Root Scene"]
 transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0.724438, 0.692153, 1.6464)
+font = ExtResource("172_jj25w")
+uppercase = true
 
 [node name="LevelTimer" type="Timer" parent="Root Scene"]
 wait_time = 300.0
@@ -2591,6 +2611,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.487827, 0.0845232, 0.00353
 [node name="CollisionShape3D" parent="order_plate/resetTemp" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699635, 0.0151153, -0.0296967)
 
+[node name="Label3D" parent="order_plate/resetTemp" index="1"]
+font = ExtResource("172_jj25w")
+
 [node name="fries" parent="order_plate" index="13"]
 transform = Transform3D(0.079164, 0, -0.796074, 0, 1.21842, 0, 0.796074, 0, 0.0791641, -0.0810807, -0.0889294, 0.0475841)
 
@@ -2602,6 +2625,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163408, 0.0929726, -0.01277
 
 [node name="Label3D" parent="order_plate/ClearPlate" index="1"]
 transform = Transform3D(-0.275626, 0, -6.03983e-08, 0, 0.4, 0, 4.16184e-08, 0, -0.4, 0.157685, 0.0984032, -0.12582)
+font = ExtResource("172_jj25w")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.018292, 1.28813e-09, 0, -1.59914e-09, 0.0147345, 0, 0, 0, -0.0183799, -0.643705, 1.16552, 4.48899)
@@ -2624,7 +2648,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26012, 0.681824, 4.03106)
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.777896, 2.01874, 5.39714)
 
 [node name="Sink" parent="." instance=ExtResource("199_dn354")]
-transform = Transform3D(1.48094, 0, 0, 0, 1.34973, 0, 0, 0, 1.50814, 0.0225111, -0.348415, -0.0825183)
+transform = Transform3D(1.48094, 0, 0, 0, 1.43441, 0, 0, 0, 1.50814, 0.0283752, -0.459528, -0.0540568)
 
 [node name="Cube" parent="Sink/RootNode" index="0"]
 transform = Transform3D(-70, 0, 0, 0, 1.19209e-05, 100, 0, -100, 1.19209e-05, -1.94119, 1.04821, 1.82114)
@@ -3186,21 +3210,24 @@ texture = ExtResource("297_ktcbn")
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0410365, 1.55884, 4.49069)
 text = "Click Plate to Place"
+font = ExtResource("172_jj25w")
 font_size = 10
 outline_size = 2
 
 [node name="Label3D2" type="Label3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.96399, 2.29549, 4.75568)
 text = "Start the Shift ! "
+font = ExtResource("172_jj25w")
 font_size = 15
 outline_size = 10
 
 [node name="Label3D3" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.69443, 2.24683, 4.22739)
+transform = Transform3D(-4.87867e-08, 0, 1, 0, 1.27482, 0, -1.11611, 0, -4.37114e-08, -2.69443, 2.24683, 4.22739)
 text = "Keep an eye 
 on that 
 customer
  timer ;) "
+font = ExtResource("172_jj25w")
 font_size = 20
 outline_size = 9
 

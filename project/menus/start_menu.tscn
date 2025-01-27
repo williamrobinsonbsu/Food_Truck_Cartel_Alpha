@@ -2,8 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://ftmbu43vi6kk" path="res://theme.tres" id="1_cgbw1"]
 [ext_resource type="Script" path="res://menus/start_menu.gd" id="1_phsgr"]
-[ext_resource type="Texture2D" uid="uid://q3uvf7w55bh1" path="res://menus/title.png" id="2_516am"]
 [ext_resource type="PackedScene" uid="uid://42jgpbvyneu0" path="res://menus/options/options.tscn" id="2_u16ru"]
+[ext_resource type="Texture2D" uid="uid://dchb67mjbqla2" path="res://Textures/new title.png" id="3_bo3ht"]
 [ext_resource type="FontFile" uid="uid://cd4cg0p6lfot2" path="res://font/BLACK BUBBLE.ttf" id="3_hhc8i"]
 [ext_resource type="Texture2D" uid="uid://j4ncepgvk4pr" path="res://menus/parallax_background/parallaxdesert_back.png" id="3_jxcpw"]
 [ext_resource type="Script" path="res://menus/parallax_background/shadow_layer.gd" id="4_1fdxu"]
@@ -210,46 +210,51 @@ script = ExtResource("1_phsgr")
 
 [node name="Title" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(553, 151)
-scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_516am")
+position = Vector2(572.5, 225)
+scale = Vector2(0.104945, 0.0997753)
+texture = ExtResource("3_bo3ht")
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 504.0
+offset_left = 485.0
 offset_top = 316.0
-offset_right = -503.0
-offset_bottom = -301.0
+offset_right = -486.0
+offset_bottom = -286.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_hhc8i")
-theme_override_font_sizes/font_size = 20
-text = "Get Cookin"
+theme_override_font_sizes/font_size = 23
+text = "Get Cookin'"
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 542.0
-offset_top = 456.0
-offset_right = -555.0
+offset_left = 524.0
+offset_top = 447.0
+offset_right = -534.0
 offset_bottom = -161.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_hhc8i")
+theme_override_font_sizes/font_size = 22
 text = "Quit"
 
 [node name="Settings" type="Button" parent="."]
 layout_mode = 0
-offset_left = 523.0
-offset_top = 386.0
-offset_right = 624.0
-offset_bottom = 417.0
+offset_left = 502.0
+offset_top = 384.0
+offset_right = 652.0
+offset_bottom = 430.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_hhc8i")
+theme_override_font_sizes/font_size = 21
 text = "Settings
 "
 
