@@ -1,4 +1,4 @@
-[gd_scene load_steps=441 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=442 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -1293,6 +1293,7 @@ metallic_texture = ExtResource("279_5dycn")
 roughness_texture = ExtResource("281_eogfh")
 normal_enabled = true
 normal_texture = ExtResource("280_0bmbh")
+heightmap_enabled = true
 heightmap_texture = ExtResource("278_ssi8y")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kwwk"]
@@ -3222,14 +3223,22 @@ font_size = 15
 outline_size = 10
 
 [node name="Label3D3" type="Label3D" parent="."]
-transform = Transform3D(-4.87867e-08, 0, 1, 0, 1.27482, 0, -1.11611, 0, -4.37114e-08, -2.69443, 2.24683, 4.22739)
+transform = Transform3D(-6.25467e-08, 0, 1, 0, 1.27482, 0, -1.4309, 0, -4.37114e-08, -2.69443, 2.27185, 4.22739)
 text = "Keep an eye 
 on that 
 customer
- timer ;) "
+ timer ;) 
+
+Close the 
+Shutter
+to hide from Police 
+
+Bottom Bun 
+First !"
 font = ExtResource("172_jj25w")
-font_size = 20
+font_size = 10
 outline_size = 9
+width = 501.405
 
 [node name="Oil" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.962857, 0, 0, 0, 0.351445, 0, 0, 0, 1.28872, 2.20282, 0.770315, -0.121098)
