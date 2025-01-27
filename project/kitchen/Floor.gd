@@ -7,4 +7,5 @@ func _ready():
 
 
 func _on_area_3d_body_entered(body):
-	on_floor.emit()
+	if body.has_method("pickable"):
+		on_floor.emit()
