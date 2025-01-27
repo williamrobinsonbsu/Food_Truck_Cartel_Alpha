@@ -230,6 +230,7 @@
 [ext_resource type="Texture2D" uid="uid://wbx821pv03fc" path="res://Textures/Clock_standardSurface1_BaseColor.png" id="221_2arts"]
 [ext_resource type="PackedScene" uid="uid://b384cbmiovdoy" path="res://FBXRaw/walls.fbx" id="222_hnxfw"]
 [ext_resource type="PackedScene" uid="uid://ox1qh2aynn1s" path="res://FBXRaw/register.fbx" id="228_djagy"]
+[ext_resource type="Texture2D" uid="uid://bsw3bbnyjqpql" path="res://Textures/wall_tile_DefaultMaterial_BaseColor.png" id="230_brw3o"]
 [ext_resource type="Texture2D" uid="uid://dhrodt3m55vb3" path="res://Textures/register_standardSurface1_BaseColor.png" id="233_qgxl6"]
 [ext_resource type="PackedScene" uid="uid://bnpfyrnpdu5ej" path="res://FBXRaw/radio.fbx" id="234_sk4il"]
 [ext_resource type="Texture2D" uid="uid://bfq6wc4sf6od7" path="res://Textures/radio_standardSurface1_BaseColor.png" id="235_tu0r2"]
@@ -239,12 +240,11 @@
 [ext_resource type="Texture2D" uid="uid://b0hwlwbmangc" path="res://Textures/radio_standardSurface1_Roughness.png" id="239_hwyqk"]
 [ext_resource type="PackedScene" uid="uid://cwv1ydmtl3tx2" path="res://FBXRaw/TomatoWhole.fbx" id="240_lymlo"]
 [ext_resource type="Texture2D" uid="uid://bjkite0hemhet" path="res://Textures/TomatoWhole_standardSurface1_BaseColor.png" id="241_m84hs"]
+[ext_resource type="Texture2D" uid="uid://dtq30otf6byfh" path="res://Textures/floor_tile_DefaultMaterial_BaseColor.png" id="242_qikhb"]
 [ext_resource type="PackedScene" uid="uid://dcrk0vy6jcfmt" path="res://FBXRaw/floor.fbx" id="242_xvdes"]
-[ext_resource type="Texture2D" uid="uid://nat86sj0rqao" path="res://Textures/FLOOR_extracolor.001_BaseColor.png" id="243_iobsn"]
-[ext_resource type="Texture2D" uid="uid://bull2fby4icfi" path="res://Textures/FLOOR_extracolor.001_Height.png" id="244_6e0cn"]
-[ext_resource type="Texture2D" uid="uid://c2m6tkf8g3arq" path="res://Textures/FLOOR_extracolor.001_Metallic.png" id="245_kde6h"]
-[ext_resource type="Texture2D" uid="uid://boqo2d7gmv2nv" path="res://Textures/FLOOR_extracolor.001_Normal.png" id="246_keqa7"]
-[ext_resource type="Texture2D" uid="uid://dxvwi4y31g8kn" path="res://Textures/FLOOR_extracolor.001_Roughness.png" id="247_hylxe"]
+[ext_resource type="Texture2D" uid="uid://bi3bsf2vhptqm" path="res://Textures/floor_tile_DefaultMaterial_Height.png" id="243_b2pse"]
+[ext_resource type="Texture2D" uid="uid://dg0pohq04jct4" path="res://Textures/floor_tile_DefaultMaterial_Metallic.png" id="244_c6k2i"]
+[ext_resource type="Texture2D" uid="uid://glgbs1xlmxle" path="res://Textures/floor_tile_DefaultMaterial_Normal.png" id="245_uguqg"]
 [ext_resource type="PackedScene" uid="uid://crlgr8na85qim" path="res://FBXRaw/FrontCounter.fbx" id="248_36pfg"]
 [ext_resource type="Texture2D" uid="uid://imrpiohbpdrb" path="res://Textures/FrontCounter_standardSurface1_Height.png" id="249_5f67y"]
 [ext_resource type="Texture2D" uid="uid://b42h3sciwp4w1" path="res://Textures/FrontCounter_standardSurface1_Metallic.png" id="250_barc3"]
@@ -1047,8 +1047,7 @@ roughness_texture = ExtResource("109_ibbx4")
 albedo_texture = ExtResource("221_2arts")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d30rg"]
-albedo_color = Color(0.956863, 0.776471, 0.721569, 1)
-albedo_texture = ExtResource("23_0o63f")
+albedo_texture = ExtResource("230_brw3o")
 uv1_scale = Vector3(5.97, 5.97, 5.97)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vic2i"]
@@ -1146,15 +1145,18 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_42cd2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmrkl"]
-albedo_texture = ExtResource("243_iobsn")
+albedo_texture = ExtResource("242_qikhb")
 metallic = 1.0
-metallic_texture = ExtResource("245_kde6h")
-roughness_texture = ExtResource("247_hylxe")
+metallic_texture = ExtResource("244_c6k2i")
+roughness_texture = ExtResource("16_ui4wm")
 normal_enabled = true
-normal_texture = ExtResource("246_keqa7")
-heightmap_texture = ExtResource("244_6e0cn")
+normal_texture = ExtResource("245_uguqg")
+heightmap_enabled = true
+heightmap_texture = ExtResource("243_b2pse")
+uv1_scale = Vector3(6, 6, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qw80e"]
+albedo_color = Color(0, 0.423529, 0.423529, 1)
 albedo_texture = ExtResource("3_bm3f8")
 metallic = 1.0
 metallic_texture = ExtResource("250_barc3")
@@ -3174,7 +3176,7 @@ mesh = SubResource("ArrayMesh_k36cb")
 skeleton = NodePath("")
 
 [node name="FryInstructions" type="Sprite3D" parent="."]
-transform = Transform3D(-8.74228e-10, 0, -0.02, 0, 0.02, 0, 0.02, 0, -8.74228e-10, 2.77597, 2.37547, -0.0843844)
+transform = Transform3D(-8.74228e-10, 0, -0.02, 0, 0.02, 0, 0.02, 0, -8.74228e-10, 2.77597, 2.46297, -0.0843844)
 texture = ExtResource("297_ktcbn")
 
 [node name="Label3D" type="Label3D" parent="."]
