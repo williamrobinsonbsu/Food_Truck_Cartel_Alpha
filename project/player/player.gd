@@ -150,6 +150,7 @@ func pick_object():
 		
 func drop_object():
 	if picked_object != null:
+		picked_object.can_sleep = false 
 		Global.drop += 1
 		print("Drop: " + str(Global.drop))
 		if picked_object.has_method("picked"):
