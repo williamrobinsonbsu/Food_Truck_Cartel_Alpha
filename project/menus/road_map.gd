@@ -1,19 +1,35 @@
 extends Control
 
 
+@onready var rave_button: Button = $Rave
+@onready var casino_button: Button = $Casino
+@onready var area51_button: Button = $Area51
+@onready var endless_button: Button = $EndlessButton
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.load_unlocked_levels()
+	
 	if Global.level_rave == 0:
 		$RaveIcon.modulate = Color.GRAY
+		rave_button.disabled = true
+		$RaveLabel.text = "Locked!"
 	
 	if Global.level_casino == 0:
 		$CasinoIcon.modulate = Color.GRAY
+		casino_button.disabled = true
+		$CasinoLabel.text = "Locked!"
 		
 	if Global.level_area51 == 0:
 		$Area51Icon.modulate = Color.GRAY
+		area51_button.disabled = true
+		$Area51Label.text = "Locked!"
 	
 	if Global.level_endless == 0:
 		$EndlessIcon.modulate = Color.GRAY
+		endless_button.disabled = true
+		$EndlessLabel.text = "Locked!"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,7 +48,6 @@ func _on_beach_mouse_entered():
 	$AnimationPlayer.play("beach_hover")
 
 	
-	
 func _on_beach_mouse_exited():
 	$BeachLabel.visible = false
 	$AnimationPlayer.play("beach_idle")
@@ -47,7 +62,8 @@ func _on_rave_pressed():
 
 func _on_rave_mouse_entered():
 	$RaveLabel.visible = true
-	$AnimationPlayer.play("rave_hover")
+	if Global.level_rave == 1:
+		$AnimationPlayer.play("rave_hover")
 
 func _on_rave_mouse_exited():
 	$RaveLabel.visible = false
@@ -67,7 +83,8 @@ func _on_area_51_pressed():
 
 func _on_area_51_mouse_entered():
 	$Area51Label.visible = true
-	$AnimationPlayer.play("alien_hover")
+	if Global.level_area51 == 1:
+		$AnimationPlayer.play("alien_hover")
 
 
 
@@ -85,7 +102,8 @@ func _on_casino_pressed():
 
 func _on_casino_mouse_entered():
 	$CasinoLabel.visible = true
-	$AnimationPlayer.play("casino_hover")
+	if Global.level_casino == 1:
+		$AnimationPlayer.play("casino_hover")
 
 
 func _on_casino_mouse_exited():
