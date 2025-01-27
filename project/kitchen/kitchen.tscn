@@ -1,4 +1,4 @@
-[gd_scene load_steps=440 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=441 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -849,6 +849,8 @@ size = Vector3(0.256904, 0.11322, 0.0756836)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hadr5"]
 height = 0.353577
 radius = 0.129032
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ksgwd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dfedg"]
 size = Vector3(0.37229, 0.323815, 0.301514)
@@ -2216,6 +2218,12 @@ script = ExtResource("174_yp6dd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0286197, 0.367827, 0.00602207)
 shape = SubResource("CylinderShape3D_hadr5")
 
+[node name="Area3D" type="Area3D" parent="Root Scene/Trash Bin"]
+transform = Transform3D(0.195, 0, 0, 0, 0.195, 0, 0, 0, 0.195, -0.0350633, 0.485514, 0.00187609)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Trash Bin/Area3D"]
+shape = SubResource("SphereShape3D_ksgwd")
+
 [node name="patty_fridge" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.817488, 0.814645, 0.0516407)
 script = ExtResource("175_w3hs7")
@@ -3309,6 +3317,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0916388, 2.26535, 4.02901)
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
+[connection signal="body_entered" from="Root Scene/Trash Bin/Area3D" to="Root Scene/Trash Bin" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Root Scene/patty_fridge/ActionLabelPatty/LabelPattyTimer" to="Root Scene/patty_fridge" method="_on_label_patty_timer_timeout"]
 [connection signal="body_entered" from="Root Scene/Floor/Area3D" to="Root Scene" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Root Scene/lettuce_bowl/ActionLabelLettuce/LabelLettuceTimer" to="Root Scene/lettuce_bowl" method="_on_label_lettuce_timer_timeout"]
