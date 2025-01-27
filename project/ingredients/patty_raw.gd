@@ -1,4 +1,5 @@
 extends PickedIngredient
+var cook := false
 
 func audio_play_grill():
 	var audio_stream_player := AudioStreamPlayer.new()
@@ -13,3 +14,9 @@ func audio_play_grill():
 
 func name():
 	return "patty_raw"
+
+func to_cook():
+	cook = true
+	
+func cooks():
+	return cook
