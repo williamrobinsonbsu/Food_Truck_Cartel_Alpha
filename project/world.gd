@@ -263,3 +263,8 @@ func _on_cop_timer_timeout():
 	$CopTimer.wait_time = 15
 	$CopTimer.start()
 
+
+
+func _on_area_3d_body_entered(body):
+	if body.has_method("name"):
+		body.queue_free()
