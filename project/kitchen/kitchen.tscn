@@ -3314,7 +3314,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0916388, 2.26535, 4.02901)
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
 [connection signal="timeout" from="Root Scene/patty_fridge/ActionLabelPatty/LabelPattyTimer" to="Root Scene/patty_fridge" method="_on_label_patty_timer_timeout"]
-[connection signal="body_entered" from="Root Scene/Floor/Area3D" to="Root Scene/Floor" method="_on_area_3d_body_entered"]
+[connection signal="area_entered" from="Root Scene/Floor/Area3D" to="Root Scene/Floor" method="_on_area_3d_area_entered"]
 [connection signal="timeout" from="Root Scene/lettuce_bowl/ActionLabelLettuce/LabelLettuceTimer" to="Root Scene/lettuce_bowl" method="_on_label_lettuce_timer_timeout"]
 [connection signal="timeout" from="Root Scene/potato_bowl/ActionLabelPotato/LabelPotatoTimer" to="Root Scene/potato_bowl" method="_on_label_potato_timer_timeout"]
 [connection signal="timeout" from="Root Scene/tomato_bowl/ActionLabelTomato/LabelTomatoTimer" to="Root Scene/tomato_bowl" method="_on_label_tomato_timer_timeout"]
