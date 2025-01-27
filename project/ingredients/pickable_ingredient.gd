@@ -8,6 +8,12 @@ var on_floor
 var timer: Timer
 
 
+func _ready():
+	timer = timer_path.instantiate()
+	add_child(timer)
+	timer.paused = true
+
+
 func picked(pick):
 	if pick == true:
 		if timer == null:
@@ -26,3 +32,12 @@ func picked(pick):
 				self.queue_free())
 		
 		
+func start_despawn():
+	timer.paused = false
+	timer.start(5)
+	await timer.timeout
+	self.queue_free()
+	
+
+func cancel_despawn():
+	timer.paused = true

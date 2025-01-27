@@ -859,7 +859,7 @@ size = Vector3(0.37229, 0.323815, 0.301514)
 size = Vector3(1.93439, 0.989208, 2.71558)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ya2w"]
-size = Vector3(1.89935, 1, 1.61182)
+size = Vector3(1.89935, 0.398438, 2.58032)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r2lbk"]
 size = Vector3(1.1, 0.61, 0.05)
@@ -2246,10 +2246,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0502014, 0.0133756, 0.35412
 shape = SubResource("BoxShape3D_y5oxw")
 
 [node name="Area3D" type="Area3D" parent="Root Scene/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.0820833, 0, 0, 0, 1, 0, 0.519535, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.519535, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00137329, 0.0865904, -0.305908)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00137329, -0.214191, 0.178344)
 shape = SubResource("BoxShape3D_2ya2w")
 
 [node name="ShutterDoor" type="StaticBody3D" parent="Root Scene"]
@@ -3320,6 +3320,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0916388, 2.26535, 4.02901)
 [connection signal="body_entered" from="Root Scene/Trash Bin/Area3D" to="Root Scene/Trash Bin" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Root Scene/patty_fridge/ActionLabelPatty/LabelPattyTimer" to="Root Scene/patty_fridge" method="_on_label_patty_timer_timeout"]
 [connection signal="body_entered" from="Root Scene/Floor/Area3D" to="Root Scene" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Root Scene/Floor/Area3D" to="Root Scene" method="_on_area_3d_body_exited"]
 [connection signal="timeout" from="Root Scene/lettuce_bowl/ActionLabelLettuce/LabelLettuceTimer" to="Root Scene/lettuce_bowl" method="_on_label_lettuce_timer_timeout"]
 [connection signal="timeout" from="Root Scene/potato_bowl/ActionLabelPotato/LabelPotatoTimer" to="Root Scene/potato_bowl" method="_on_label_potato_timer_timeout"]
 [connection signal="timeout" from="Root Scene/tomato_bowl/ActionLabelTomato/LabelTomatoTimer" to="Root Scene/tomato_bowl" method="_on_label_tomato_timer_timeout"]

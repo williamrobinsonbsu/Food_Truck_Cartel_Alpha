@@ -4,20 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://ddwecisrh30hl" path="res://player/Day_Beginning.png" id="2_05itk"]
 [ext_resource type="Script" path="res://player/camera.gd" id="2_v0twu"]
 [ext_resource type="PackedScene" uid="uid://bv41uwieducpe" path="res://menus/pause_menu.tscn" id="2_xfury"]
+[ext_resource type="Texture2D" uid="uid://bw5731dngws4l" path="res://player/LeftClick.png" id="3_ome4q"]
 [ext_resource type="PackedScene" uid="uid://d4gt0koccxrbf" path="res://menus/loading_screen.tscn" id="3_ragej"]
 [ext_resource type="FontFile" uid="uid://c2ns0mejwetfy" path="res://font/Nice Sugar.ttf" id="4_c1kuy"]
-[ext_resource type="Texture2D" uid="uid://c48saxf704837" path="res://Textures/leftclick.png" id="4_wwtqe"]
-[ext_resource type="Texture2D" uid="uid://cn4ukqpb4xcs7" path="res://Textures/rightclick.png" id="6_wsg54"]
-[ext_resource type="Texture2D" uid="uid://nh7f7nvif1cm" path="res://Textures/crouch.png" id="7_2nnpi"]
-[ext_resource type="Texture2D" uid="uid://vpme1bvsatmn" path="res://Textures/wasd.png" id="8_6vevc"]
+[ext_resource type="Texture2D" uid="uid://cocvuda1do4l" path="res://player/RightClick.png" id="4_g5s24"]
+[ext_resource type="Texture2D" uid="uid://cvlgf7bbdbtje" path="res://player/CrouchButton.png" id="5_diusi"]
+[ext_resource type="Texture2D" uid="uid://dk3vylb8u6auq" path="res://player/WASDButtons.png" id="6_mphvj"]
+[ext_resource type="Texture2D" uid="uid://dyfd26tkc0a78" path="res://player/ESCButton.png" id="7_j5ety"]
 [ext_resource type="Script" path="res://player/fps_label.gd" id="8_ew1g4"]
 [ext_resource type="FontFile" uid="uid://dmi7bafb802dp" path="res://font/Starshines.otf" id="9_6f7mi"]
-[ext_resource type="Texture2D" uid="uid://co0drkwakkflt" path="res://Textures/esc.png" id="9_oneov"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6w4jn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nm54x"]
-radius = 0.254774
+radius = 0.113043
 
 [sub_resource type="LabelSettings" id="LabelSettings_3dcpl"]
 font_size = 32
@@ -29,11 +29,11 @@ outline_size = 12
 
 [sub_resource type="LabelSettings" id="LabelSettings_fdc7j"]
 font = ExtResource("4_c1kuy")
-font_size = 120
+font_size = 48
 
 [sub_resource type="LabelSettings" id="LabelSettings_1qkn5"]
 font = ExtResource("9_6f7mi")
-font_size = 109
+font_size = 67
 
 [sub_resource type="Animation" id="Animation_vjo18"]
 resource_name = "crouch_animation"
@@ -143,44 +143,44 @@ label_settings = SubResource("LabelSettings_axio4")
 horizontal_alignment = 1
 
 [node name="LeftClick" type="Sprite2D" parent="Control"]
-position = Vector2(64.5, 568.5)
-scale = Vector2(0.110938, 0.132813)
-texture = ExtResource("4_wwtqe")
+position = Vector2(61, 561)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_ome4q")
 
 [node name="PickUpLabel" type="Label" parent="Control/LeftClick"]
-offset_left = -509.0
-offset_top = 222.0
-offset_right = 482.0
-offset_bottom = 606.0
+offset_left = -85.0
+offset_top = 150.0
+offset_right = 87.0
+offset_bottom = 217.0
 text = "Pick Up/
 Use"
 label_settings = SubResource("LabelSettings_fdc7j")
 horizontal_alignment = 1
 
 [node name="RightClick" type="Sprite2D" parent="Control"]
-position = Vector2(122.5, 567)
-scale = Vector2(0.107813, 0.125)
-texture = ExtResource("6_wsg54")
+position = Vector2(132, 561)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_g5s24")
 
 [node name="DropLabel" type="Label" parent="Control/RightClick"]
-offset_left = -218.0
-offset_top = 240.0
-offset_right = 250.0
-offset_bottom = 472.0
+offset_left = -85.0
+offset_top = 150.0
+offset_right = 87.0
+offset_bottom = 217.0
 text = "Drop"
 label_settings = SubResource("LabelSettings_fdc7j")
 horizontal_alignment = 1
 
 [node name="CrouchButton" type="Sprite2D" parent="Control"]
-position = Vector2(203.5, 568.5)
-scale = Vector2(0.148438, 0.135938)
-texture = ExtResource("7_2nnpi")
+position = Vector2(201, 561)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_diusi")
 
 [node name="CrouchLabel" type="Label" parent="Control/CrouchButton"]
-offset_left = -226.0
-offset_top = 217.0
-offset_right = 239.0
-offset_bottom = 474.0
+offset_left = -95.0
+offset_top = 150.0
+offset_right = 77.0
+offset_bottom = 217.0
 text = "Crouch
 "
 label_settings = SubResource("LabelSettings_fdc7j")
@@ -189,27 +189,27 @@ horizontal_alignment = 1
 [node name="WASDButtons" type="Sprite2D" parent="Control"]
 position = Vector2(1059, 561)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_6vevc")
+texture = ExtResource("6_mphvj")
 
 [node name="WASDLabel" type="Label" parent="Control/WASDButtons"]
-offset_left = -410.0
-offset_top = 130.0
-offset_right = 472.0
-offset_bottom = 439.0
+offset_left = -130.0
+offset_top = 145.0
+offset_right = 138.0
+offset_bottom = 282.0
 text = "Move Using 
 WASD"
 label_settings = SubResource("LabelSettings_fdc7j")
 horizontal_alignment = 1
 
 [node name="EscButton" type="Sprite2D" parent="Control"]
-position = Vector2(934, 577)
-scale = Vector2(0.184375, 0.171875)
-texture = ExtResource("9_oneov")
+position = Vector2(942, 569)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_j5ety")
 
 [node name="EscLabel" type="Label" parent="Control/EscButton"]
-offset_left = -228.0
-offset_top = 87.0
-offset_right = 266.0
+offset_left = -130.0
+offset_top = 145.0
+offset_right = 138.0
 offset_bottom = 282.0
 text = "Pause
 "

@@ -88,7 +88,7 @@ func _physics_process(_delta):
 		
 		
 		
-	if interaction.is_colliding() == true:
+	if interaction.is_colliding() == true and interaction.get_collider() != null:
 		if interaction.get_collider().has_method("hover_name"):
 			interaction.get_collider().hover_name()
 		
