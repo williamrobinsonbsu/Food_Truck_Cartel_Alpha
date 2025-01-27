@@ -349,18 +349,11 @@ rim_enabled = true
 rim = 0.6
 rim_tint = 0.51
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwu2d"]
-albedo_color = Color(0.490196, 0.266667, 0.133333, 1)
-metallic = 1.0
-metallic_texture = ExtResource("23_ircxl")
-roughness_texture = ExtResource("25_j82gb")
-normal_enabled = true
-normal_texture = ExtResource("24_b0ic7")
-heightmap_enabled = true
-heightmap_texture = ExtResource("22_h24ap")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v3ldd"]
+albedo_texture = ExtResource("23_0o63f")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ef4vu"]
-albedo_color = Color(0.435294, 0.470588, 0.396078, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2m34a"]
+albedo_color = Color(0.85098, 0.764706, 0.772549, 1)
 albedo_texture = ExtResource("23_0o63f")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bu4t2"]
@@ -1494,11 +1487,12 @@ visible = false
 material_override = SubResource("StandardMaterial3D_46vbb")
 
 [node name="Cupboard" parent="Root Scene/RootNode/Truck" index="7"]
-transform = Transform3D(0, 0, 23.8228, 0, 23.1186, 0, -190.793, 0, 0, -0.842332, 1.0604, 0.755599)
-material_override = SubResource("StandardMaterial3D_kwu2d")
+transform = Transform3D(0, 0, 23.8228, 0, 23.1186, 0, -155.202, 0, 0, -0.843808, 1.0604, 0.747523)
+material_override = SubResource("StandardMaterial3D_v3ldd")
 
 [node name="Cupboard2" parent="Root Scene/RootNode/Truck" index="8"]
-material_override = SubResource("StandardMaterial3D_ef4vu")
+transform = Transform3D(0, 0, 23.8203, 0, 23.1162, 0, -172.015, 0, 0, 0.827475, 1.0604, 0.755599)
+material_override = SubResource("StandardMaterial3D_2m34a")
 
 [node name="Cabinet_Door1" parent="Root Scene/RootNode/Truck" index="9"]
 visible = false
