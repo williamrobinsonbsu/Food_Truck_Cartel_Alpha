@@ -3,12 +3,23 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if Global.level_rave == 0:
+		$RaveIcon.modulate = Color.GRAY
+	
+	if Global.level_casino == 0:
+		$CasinoIcon.modulate = Color.GRAY
+		
+	if Global.level_area51 == 0:
+		$Area51Icon.modulate = Color.GRAY
+	
+	if Global.level_endless == 0:
+		$EndlessIcon.modulate = Color.GRAY
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
 	
 func _on_beach_pressed():
 	_play_loading_screen()
@@ -28,9 +39,10 @@ func _on_beach_mouse_exited():
 	
 
 func _on_rave_pressed():
-	_play_loading_screen()
-	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://levels/rave_kitchen.tscn")
+	if Global.level_rave == 1:
+		_play_loading_screen()
+		await get_tree().create_timer(2).timeout
+		get_tree().change_scene_to_file("res://levels/rave_kitchen.tscn")
 	
 
 func _on_rave_mouse_entered():
@@ -47,10 +59,10 @@ func _on_return_pressed():
 
 
 func _on_area_51_pressed():
-	print("Locked")
-	_play_loading_screen()
-	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://levels/area51.tscn")
+	if Global.level_area51 == 1:
+		_play_loading_screen()
+		await get_tree().create_timer(2).timeout
+		get_tree().change_scene_to_file("res://levels/area51.tscn")
 
 
 func _on_area_51_mouse_entered():
@@ -65,10 +77,10 @@ func _on_area_51_mouse_exited():
 
 
 func _on_casino_pressed():
-	#print("Locked")
-	_play_loading_screen()
-	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://levels/casino.tscn")
+	if Global.level_casino == 1:
+		_play_loading_screen()
+		await get_tree().create_timer(2).timeout
+		get_tree().change_scene_to_file("res://levels/casino.tscn")
 
 
 func _on_casino_mouse_entered():
