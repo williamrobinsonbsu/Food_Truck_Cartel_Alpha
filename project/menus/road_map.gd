@@ -27,6 +27,7 @@ func _ready():
 		$Area51Label.text = "Locked!"
 	
 	if Global.level_endless == 0:
+		$EndlessIcon.hide()
 		$EndlessIcon.modulate = Color.GRAY
 		endless_button.disabled = true
 		$EndlessLabel.text = "Locked!"
@@ -124,7 +125,8 @@ func _on_endless_button_pressed():
 
 
 func _on_endless_button_mouse_entered():
-	$EndlessLabel.visible = true
+	if Global.level_endless == 1:
+		$EndlessLabel.visible = true
 
 
 func _on_endless_button_mouse_exited():
