@@ -5,6 +5,7 @@ var cooking := false
 
 func use(ingredient):
 	if ingredient.has_method("name") and ingredient.name() == "patty_raw" and cooking == false:
+		ingredient.to_cook()
 		$PattyRaw.show()
 		Global.grill_used += 1
 		cooking = true
@@ -21,3 +22,8 @@ func use(ingredient):
 		pass
 		
 		
+
+
+func _on_grill_top_body_entered(body):
+		if body.has_method("cooks") and body.cooks() == false:
+			use(body)
