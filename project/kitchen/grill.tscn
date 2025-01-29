@@ -10,6 +10,7 @@
 albedo_texture = ExtResource("3_aphcd")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ysdsv"]
+size = Vector3(1, 0.0239868, 1)
 
 [node name="Grill" type="StaticBody3D"]
 script = ExtResource("1_o1va7")
@@ -30,10 +31,9 @@ transform = Transform3D(9.10476, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.750614, 0
 material_override = SubResource("StandardMaterial3D_egrp5")
 
 [node name="grill_top" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.957179, 0, 0, -0.0237361)
 
 [node name="patty_placer" type="CollisionShape3D" parent="grill_top"]
-transform = Transform3D(1.23828, 0, 0, 0, 0.0148886, 0, 0, 0, 1, -0.159585, 0.501239, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.159585, 0.515197, 0)
 shape = SubResource("BoxShape3D_ysdsv")
 
 [connection signal="body_entered" from="grill_top" to="." method="_on_grill_top_body_entered"]
