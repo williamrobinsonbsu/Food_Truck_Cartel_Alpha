@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=3 uid="uid://dk228xju2fkcx"]
+
+[ext_resource type="PackedScene" uid="uid://dufwtvyg0d3w6" path="res://customer/npcs/beach/npc0/blondie.fbx" id="1_3g3j4"]
+[ext_resource type="Texture2D" uid="uid://c2p1lu6xlxfkr" path="res://customer/npcs/beach/npc0/blondie_DefaultMaterial_BaseColor.png" id="2_wcwmo"]
+[ext_resource type="Texture2D" uid="uid://bbgrn5yum17c5" path="res://customer/npcs/beach/npc0/blondie_DefaultMaterial_Height.png" id="3_3ai5i"]
+[ext_resource type="Texture2D" uid="uid://5stk5jxafflw" path="res://customer/npcs/beach/npc0/blondie_DefaultMaterial_Metallic.png" id="3_ivl65"]
+[ext_resource type="Texture2D" uid="uid://b0jos0ehq830i" path="res://customer/npcs/beach/npc0/blondie_DefaultMaterial_Roughness.png" id="4_t2prs"]
+[ext_resource type="Texture2D" uid="uid://c5hayjvo81let" path="res://customer/npcs/beach/npc0/blondie_DefaultMaterial_Normal.png" id="4_viuwv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdw5k"]
+albedo_texture = ExtResource("2_wcwmo")
+metallic = 1.0
+metallic_texture = ExtResource("3_ivl65")
+roughness_texture = ExtResource("4_t2prs")
+normal_enabled = true
+normal_texture = ExtResource("4_viuwv")
+heightmap_scale = -3.988
+heightmap_texture = ExtResource("3_3ai5i")
+
+[node name="Npc" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_3g3j4")]
+
+[node name="Vert" parent="Root Scene/RootNode" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_kdw5k")
+
+[editable path="Root Scene"]

@@ -860,7 +860,7 @@ size = Vector3(0.37229, 0.323815, 0.301514)
 size = Vector3(1.93439, 0.989208, 2.71558)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ya2w"]
-size = Vector3(1.89935, 0.398438, 2.58032)
+size = Vector3(1.89935, 0.513611, 2.58032)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r2lbk"]
 size = Vector3(1.1, 0.61, 0.05)
@@ -2259,7 +2259,7 @@ shape = SubResource("BoxShape3D_y5oxw")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.519535, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/Floor/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00137329, -0.214191, 0.178344)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00137329, -0.156605, 0.178344)
 shape = SubResource("BoxShape3D_2ya2w")
 
 [node name="ShutterDoor" type="StaticBody3D" parent="Root Scene"]

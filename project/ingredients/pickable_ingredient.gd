@@ -33,6 +33,7 @@ func picked(pick):
 		
 		
 func start_despawn():
+	print("starting timer")
 	timer.paused = false
 	timer.start(5)
 	await timer.timeout
@@ -40,4 +41,5 @@ func start_despawn():
 	
 
 func cancel_despawn():
+	print("stopping timer")
 	timer.paused = true

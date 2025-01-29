@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cuqr3ppkwg1gj"]
+[gd_scene load_steps=11 format=3 uid="uid://cuqr3ppkwg1gj"]
 
 [ext_resource type="Script" path="res://customer/customer.gd" id="1_u5n8i"]
 [ext_resource type="PackedScene" uid="uid://cj1qcw81lh2l5" path="res://audio/ACVoicebox.tscn" id="2_ve2d7"]
-[ext_resource type="FontFile" uid="uid://bx7dpr2q6beki" path="res://font/Starborn.ttf" id="3_klfci"]
 [ext_resource type="Texture2D" uid="uid://dwkgl11dkcsm8" path="res://customer/Timer.png" id="4_slnak"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vifeq"]
@@ -83,9 +82,7 @@ bus = &"Sound"
 
 [node name="OrderTimer" type="Label3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.433471, 0.595465, -0.100711)
-modulate = Color(0.337255, 0.529412, 0.631373, 1)
-font = ExtResource("3_klfci")
-outline_size = 15
+modulate = Color(0, 0, 0, 1)
 
 [node name="TimerBG" type="Sprite3D" parent="."]
 transform = Transform3D(-0.00663413, 0, -2.26494e-09, 0, 0.015, 0, 1.00173e-09, 0, -0.015, 0.360278, 0.483639, -0.188404)
