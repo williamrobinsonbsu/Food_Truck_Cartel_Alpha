@@ -56,3 +56,7 @@ func hover_name():
 
 func _on_label_cutting_board_timer_timeout():
 	$ActionLabelCuttingBoard.hide()
+
+
+func _on_area_3d_body_entered(body):
+	use(body)

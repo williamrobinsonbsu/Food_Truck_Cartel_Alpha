@@ -1,4 +1,4 @@
-[gd_scene load_steps=442 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=443 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -843,6 +843,9 @@ size = Vector3(0.0883789, 1.42145, 2.69037)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bkuw4"]
 size = Vector3(0.226196, 0.0192871, 0.381226)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jqmyu"]
+size = Vector3(0.239136, 0.056427, 0.416626)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7uq41"]
 size = Vector3(0.256904, 0.11322, 0.0756836)
@@ -2211,6 +2214,12 @@ font = ExtResource("172_jj25w")
 [node name="LabelCuttingBoardTimer" type="Timer" parent="Root Scene/cutting_board/ActionLabelCuttingBoard"]
 wait_time = 0.1
 
+[node name="Area3D" type="Area3D" parent="Root Scene/cutting_board"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/cutting_board/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.404662, -0.30884, 0.102672)
+shape = SubResource("BoxShape3D_jqmyu")
+
 [node name="Radio" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0158047, 0.0679311, -0.0406093)
 script = ExtResource("173_csr8x")
@@ -3352,6 +3361,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0916388, 2.26535, 4.02901)
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]
+[connection signal="body_entered" from="Root Scene/cutting_board/Area3D" to="Root Scene/cutting_board" method="_on_area_3d_body_entered"]
 [connection signal="shutter_door_button" from="Root Scene/Radio" to="Root Scene" method="shutter_door_control"]
 [connection signal="body_entered" from="Root Scene/Trash Bin/Area3D" to="Root Scene/Trash Bin" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Root Scene/patty_fridge/ActionLabelPatty/LabelPattyTimer" to="Root Scene/patty_fridge" method="_on_label_patty_timer_timeout"]
