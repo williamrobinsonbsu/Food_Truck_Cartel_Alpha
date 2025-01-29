@@ -3240,6 +3240,24 @@ font_size = 10
 outline_size = 9
 width = 501.405
 
+[node name="Label3D4" type="Label3D" parent="."]
+transform = Transform3D(-6.25467e-08, 0, 1, 0, 1.27482, 0, -1.4309, 0, -4.37114e-08, -2.69443, 2.27185, 4.22739)
+text = "Keep an eye 
+on that 
+customer
+ timer ;) 
+
+Close the 
+Shutter
+to hide from Police 
+
+Bottom Bun 
+First !"
+font = ExtResource("172_jj25w")
+font_size = 10
+outline_size = 9
+width = 501.405
+
 [node name="Oil" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.962857, 0, 0, 0, 0.351445, 0, 0, 0, 1.28872, 2.20282, 0.770315, -0.121098)
 material_override = SubResource("StandardMaterial3D_jtjta")
