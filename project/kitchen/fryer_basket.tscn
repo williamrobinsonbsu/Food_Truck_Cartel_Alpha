@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dt1fa1cm8pnh6"]
+[gd_scene load_steps=12 format=3 uid="uid://dt1fa1cm8pnh6"]
 
 [ext_resource type="PackedScene" uid="uid://bag7mejrwpe4g" path="res://FBXRaw/FRYERBASKET.fbx" id="1_nupf7"]
 [ext_resource type="Script" path="res://kitchen/fryer_basket.gd" id="1_up7du"]
@@ -63,6 +63,9 @@ _data = {
 "out": SubResource("Animation_rd7f7")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lqv7s"]
+size = Vector3(0.754608, 0.325745, 0.335876)
+
 [node name="FryerBasket" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -92,6 +95,14 @@ libraries = {
 
 [node name="Marker3D" type="Marker3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16275, 0)
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0330048, 0.0706482, -0.0108337)
+shape = SubResource("BoxShape3D_lqv7s")
+
+[connection signal="body_entered" from="StaticBody3D/Area3D" to="StaticBody3D" method="_on_area_3d_body_entered"]
 
 [editable path="StaticBody3D/Fries"]
 [editable path="StaticBody3D/Basket"]
