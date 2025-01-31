@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://tsbefmiro8lh"]
+[gd_scene load_steps=38 format=3 uid="uid://tsbefmiro8lh"]
 
 [ext_resource type="PackedScene" uid="uid://din6t3fv4n6pv" path="res://FBXRaw/PlateSingle.fbx" id="1_52jp6"]
 [ext_resource type="Script" path="res://ingredients/plate.gd" id="2_lbwt3"]
@@ -29,6 +29,9 @@
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rf0rk"]
 height = 0.233957
 radius = 0.136671
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rgh78"]
+size = Vector3(1.14565, 0.318939, 0.50238)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynu4e"]
 albedo_texture = ExtResource("4_233gv")
@@ -75,6 +78,12 @@ script = ExtResource("2_lbwt3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("CylinderShape3D_rf0rk")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00911713, 0.0802917, 0.0104065)
+shape = SubResource("BoxShape3D_rgh78")
 
 [node name="bottom_bun" parent="." instance=ExtResource("3_e3ftj")]
 visible = false
@@ -216,6 +225,7 @@ visible = false
 [node name="hotdog_bun" parent="hot_dog_bun/RootNode" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_mk1jl")
 
+[connection signal="body_entered" from="StaticBody3D/Area3D" to="StaticBody3D" method="_on_area_3d_body_entered"]
 [connection signal="clear_plate" from="ClearPlate" to="StaticBody3D" method="_on_clear_plate_clear_plate"]
 
 [editable path="Root Scene"]

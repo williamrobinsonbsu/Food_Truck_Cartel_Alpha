@@ -2582,6 +2582,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00896125, 0, 0)
 [node name="CollisionShape3D" parent="order_plate/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.114904, 0)
 
+[node name="CollisionShape3D" parent="order_plate/StaticBody3D/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00911713, 0.138107, 0.0104065)
+
 [node name="BreadBot" parent="order_plate/bottom_bun/RootNode/Truck/Burger" index="0"]
 material_override = SubResource("StandardMaterial3D_usyyl")
 

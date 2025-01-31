@@ -86,3 +86,8 @@ func _on_clear_plate_clear_plate():
 	tomato_placed = false
 	top_bun_placed = false
 	dog_bun_placed = false
+
+
+func _on_area_3d_body_entered(body):
+	if body.has_method("name") or body.has_method("slice_name"):
+		place(body)
