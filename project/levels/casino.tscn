@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://c151w43g5m7eh"]
+[gd_scene load_steps=14 format=3 uid="uid://c151w43g5m7eh"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_21q4g"]
 [ext_resource type="Texture2D" uid="uid://qt05vo6ts4iu" path="res://levels/casino_background_optimized_10000.png" id="2_5o1hu"]
-[ext_resource type="AudioStream" uid="uid://bg5q4emuh4m3v" path="res://audio/music/Give My Regards To Broadway - Freedom Trail Studio.mp3" id="3_jbwoa"]
 [ext_resource type="PackedScene" uid="uid://daotgg4on0oip" path="res://FBXRaw/HOTDOG_mACHINE.fbx" id="4_c3jps"]
 [ext_resource type="Texture2D" uid="uid://cixs1sq5cyscv" path="res://Textures/HOTDOG_mACHINE_standardSurface1_BaseColor.png" id="5_2g1fe"]
 [ext_resource type="PackedScene" uid="uid://dtf747hsr5w16" path="res://kitchen/dog_machine.tscn" id="5_e3p2g"]
@@ -30,7 +29,6 @@ transform = Transform3D(0.341, 0, 0, 0, 0.35, 0, 0, 0, 0.506, 0, 5.60867, 8.8815
 texture = ExtResource("2_5o1hu")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_jbwoa")
 volume_db = -10.84
 autoplay = true
 bus = &"Music"
@@ -93,9 +91,7 @@ shape = SubResource("BoxShape3D_rrdo1")
 [editable path="Kitchen/order_plate/fries"]
 [editable path="Kitchen/order_plate/full_dog"]
 [editable path="Kitchen/order_plate/hot_dog_bun"]
-[editable path="Kitchen/Dog_machine"]
-[editable path="Kitchen/Dog_machine/Hot_dog_raw"]
-[editable path="Kitchen/Dog_machine/Hot_dog_raw/Root Scene2"]
+[editable path="Kitchen/Sink"]
 [editable path="Kitchen/Grill5"]
 [editable path="Kitchen/Fryer"]
 [editable path="Kitchen/Trash"]
