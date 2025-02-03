@@ -1910,45 +1910,59 @@ material_override = SubResource("StandardMaterial3D_j3w6x")
 material_override = SubResource("StandardMaterial3D_j3w6x")
 
 [node name="soda_bottle" parent="Root Scene/RootNode/Soda" index="0"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle1" parent="Root Scene/RootNode/Soda" index="1"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle2" parent="Root Scene/RootNode/Soda" index="2"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle3" parent="Root Scene/RootNode/Soda" index="3"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle4" parent="Root Scene/RootNode/Soda" index="4"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle5" parent="Root Scene/RootNode/Soda" index="5"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle6" parent="Root Scene/RootNode/Soda" index="6"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle7" parent="Root Scene/RootNode/Soda" index="7"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle8" parent="Root Scene/RootNode/Soda" index="8"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle9" parent="Root Scene/RootNode/Soda" index="9"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle10" parent="Root Scene/RootNode/Soda" index="10"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle11" parent="Root Scene/RootNode/Soda" index="11"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle12" parent="Root Scene/RootNode/Soda" index="12"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle13" parent="Root Scene/RootNode/Soda" index="13"]
+visible = false
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="soda_bottle14" parent="Root Scene/RootNode/Soda" index="14"]
@@ -2527,7 +2541,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.273232, 2.20019)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.280331, 0.273232, 2.20019)
 
 [node name="Close1" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.335137, 0.355757, 1.93649)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.290214, 2.09713)
 
 [node name="Close2" type="Marker3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.297335, 0.267485, 1.87233)
@@ -2721,7 +2735,7 @@ material_override = SubResource("StandardMaterial3D_bcxuh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.913825, -0.293255, -1.51564)
 
 [node name="Mini_Fridge" parent="MiniFridge/RootNode" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1.5665, 0, 0, 0, 1.40529, 0, -0.262978, 0.547103)
+transform = Transform3D(1, 0, 0, 0, 1.5665, 0, 0, 0, 1.40529, -0.245577, -0.262978, 0.547103)
 material_override = SubResource("StandardMaterial3D_dgky7")
 
 [node name="Clock" parent="." instance=ExtResource("220_ai8kn")]
