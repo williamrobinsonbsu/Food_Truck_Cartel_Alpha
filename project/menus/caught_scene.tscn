@@ -44,8 +44,10 @@ text = "Main Menu
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 0
-offset_right = 2160.0
-offset_bottom = 1632.0
+offset_left = -157.0
+offset_top = -130.0
+offset_right = 2696.0
+offset_bottom = 2340.0
 scale = Vector2(0.530682, 0.398368)
 stream = ExtResource("3_dgop7")
 autoplay = true

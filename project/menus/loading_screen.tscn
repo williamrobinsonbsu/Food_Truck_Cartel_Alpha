@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://d4gt0koccxrbf"]
 
-[ext_resource type="Texture2D" uid="uid://dwvh6n2y6i32x" path="res://Textures/LOGO.png" id="1_e3duf"]
+[ext_resource type="Texture2D" uid="uid://cvu1vui151omj" path="res://Textures/icon_updated.png" id="1_mmrpu"]
 
 [sub_resource type="Animation" id="Animation_j1pr7"]
 length = 0.001
@@ -61,9 +61,9 @@ color = Color(0, 0, 0, 1)
 position = Vector2(1079, 575)
 
 [node name="Logo" type="Sprite2D" parent="LogoNode"]
-position = Vector2(22.0001, 49.0001)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_e3duf")
+position = Vector2(-62, -37)
+scale = Vector2(0.3625, 0.36875)
+texture = ExtResource("1_mmrpu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

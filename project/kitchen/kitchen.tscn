@@ -1,4 +1,4 @@
-[gd_scene load_steps=453 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=456 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -191,13 +191,9 @@
 [ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="185_qdfto"]
 [ext_resource type="PackedScene" uid="uid://cywlto4wavxy4" path="res://player/player.tscn" id="189_grvwk"]
 [ext_resource type="PackedScene" uid="uid://tsbefmiro8lh" path="res://ingredients/plate.tscn" id="190_a410o"]
-[ext_resource type="Texture2D" uid="uid://dfgulhcothr7" path="res://Textures/bell_lambert3SG_BaseColor.png" id="191_i34n2"]
-[ext_resource type="Texture2D" uid="uid://cnujrvksl2lpm" path="res://Textures/bell_lambert3SG_Height.png" id="192_8lx4u"]
 [ext_resource type="PackedScene" uid="uid://bgl48vx5udmve" path="res://kitchen/grill.tscn" id="192_qqxpb"]
 [ext_resource type="Texture2D" uid="uid://dauwxgqfruutk" path="res://Textures/bell_lambert3SG_Metallic.png" id="193_qcjbp"]
-[ext_resource type="Texture2D" uid="uid://ip7poleugxx6" path="res://Textures/bell_lambert3SG_Normal.png" id="194_evn56"]
 [ext_resource type="PackedScene" uid="uid://ka881bp6uowh" path="res://FBXRaw/grill.fbx" id="194_x0giq"]
-[ext_resource type="Texture2D" uid="uid://ccmejuvmad50d" path="res://Textures/bell_lambert3SG_Roughness.png" id="195_jley4"]
 [ext_resource type="Texture2D" uid="uid://o47x8lyj5krk" path="res://Textures/grill_standardSurface1_BaseColor.png" id="195_yb580"]
 [ext_resource type="Texture2D" uid="uid://dhraycoxbj8w3" path="res://Textures/grill_standardSurface1_Height.png" id="196_pdhvf"]
 [ext_resource type="ArrayMesh" uid="uid://by1txa5gg2vl0" path="res://kitchen/bell.obj" id="196_ywmwj"]
@@ -290,9 +286,15 @@
 [ext_resource type="PackedScene" uid="uid://h0fccvfrm8gl" path="res://FBXRaw/BreadBottom.fbx" id="290_m06dl"]
 [ext_resource type="Texture2D" uid="uid://b1fn45li61uoq" path="res://Textures/BreadBottom_standardSurface14_BaseColor.png" id="291_xcumj"]
 [ext_resource type="Texture2D" uid="uid://1komuyxn34h1" path="res://Textures/BreadBottom_standardSurface14_Height.png" id="292_deusa"]
+[ext_resource type="PackedScene" uid="uid://5bkuw2nhimat" path="res://FBXRaw/DOOR.fbx" id="292_xn0q1"]
+[ext_resource type="Texture2D" uid="uid://btsaccaaju3hy" path="res://Textures/DOOR_DefaultMaterial_BaseColor.png" id="293_5cjro"]
 [ext_resource type="Texture2D" uid="uid://cqpwrnw210ujg" path="res://Textures/BreadBottom_standardSurface14_Normal.png" id="293_o4agj"]
 [ext_resource type="PackedScene" uid="uid://cbv5wbdqacal8" path="res://FBXRaw/hotdog_storage.fbx" id="294_kxpb7"]
+[ext_resource type="Texture2D" uid="uid://hap7irhdav6l" path="res://Textures/DOOR_DefaultMaterial_Height.png" id="294_md4rr"]
+[ext_resource type="Texture2D" uid="uid://h8y5pmxggbxy" path="res://Textures/DOOR_DefaultMaterial_Metallic.png" id="295_j8yq4"]
 [ext_resource type="Texture2D" uid="uid://bhjp1ubwguogg" path="res://Textures/hotdog_storage_standardSurface1_BaseColor.png" id="295_t8ncl"]
+[ext_resource type="Texture2D" uid="uid://b3nbnwwg2nbei" path="res://Textures/DOOR_DefaultMaterial_Normal.png" id="296_t0hkc"]
+[ext_resource type="Texture2D" uid="uid://d1kk10k1pux43" path="res://Textures/DOOR_DefaultMaterial_Roughness.png" id="297_dbgs1"]
 [ext_resource type="PackedScene" uid="uid://qd0p8x48irij" path="res://customer/dog/dog.tscn" id="297_eokpt"]
 [ext_resource type="Texture2D" uid="uid://df2mqdrxs2k2" path="res://Textures/FryPoster.png" id="297_ktcbn"]
 
@@ -817,7 +819,6 @@ heightmap_texture = ExtResource("158_iqefm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7iec"]
 resource_name = "standardSurface4"
-albedo_color = Color(1, 1, 1, 1)
 roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ufo7x"]
@@ -1095,13 +1096,12 @@ heightmap_enabled = true
 heightmap_texture = ExtResource("44_de7td")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1e6qw"]
-albedo_texture = ExtResource("191_i34n2")
+albedo_texture = ExtResource("113_psfst")
 metallic_texture = ExtResource("193_qcjbp")
-roughness_texture = ExtResource("195_jley4")
+roughness = 0.2
 normal_enabled = true
-normal_texture = ExtResource("194_evn56")
-heightmap_enabled = true
-heightmap_texture = ExtResource("192_8lx4u")
+uv1_scale = Vector3(-1.6, 0.38, 2.68)
+uv1_offset = Vector3(8.875, 0.235, 0.175)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fx31j"]
 albedo_texture = ExtResource("18_k53wm")
@@ -1458,6 +1458,9 @@ shadow_mesh = SubResource("ArrayMesh_kx50x")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wtaa"]
 albedo_texture = ExtResource("289_g2roh")
+roughness_texture = ExtResource("47_laf6i")
+uv1_scale = Vector3(1.135, 1.245, 1.805)
+uv1_offset = Vector3(-0.01, -0.03, 0.435)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hofbx"]
 resource_name = "standardSurface1"
@@ -1567,6 +1570,15 @@ refraction_texture = SubResource("NoiseTexture2D_1jpf1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30ipj"]
 albedo_texture = ExtResource("295_t8ncl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvuti"]
+albedo_texture = ExtResource("293_5cjro")
+metallic = 1.0
+metallic_texture = ExtResource("295_j8yq4")
+roughness_texture = ExtResource("297_dbgs1")
+normal_enabled = true
+normal_texture = ExtResource("296_t0hkc")
+heightmap_texture = ExtResource("294_md4rr")
 
 [node name="Kitchen" type="Node3D"]
 
@@ -2621,6 +2633,15 @@ font = ExtResource("172_jj25w")
 [node name="LabelFryerTimer" type="Timer" parent="Root Scene/frier/ActionLabelFryer"]
 wait_time = 0.1
 
+[node name="DiscardLabelFryer" type="Label3D" parent="Root Scene/frier/ActionLabelFryer"]
+transform = Transform3D(0.333233, 0, 0.00817891, 0, 0.333333, 0, -0.00817891, 0, 0.333233, -2.35004, -0.0889825, 0.575778)
+text = "Discard "
+font = ExtResource("172_jj25w")
+font_size = 52
+
+[node name="LabelFryerTimer" type="Timer" parent="Root Scene/frier/ActionLabelFryer/DiscardLabelFryer"]
+wait_time = 0.1
+
 [node name="customer" type="Marker3D" parent="Root Scene"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.254, 2.24698)
@@ -3516,6 +3537,13 @@ transform = Transform3D(1.75867, 0, 0, 0, 1.94105, 0, 0, 0, 1.51822, -0.433837, 
 transform = Transform3D(29.8825, 0, 0, 0, -4.93629e-06, 42.6893, 0, -41.4086, -5.08895e-06, 1.50795, 0.639189, -1.51821)
 material_override = SubResource("StandardMaterial3D_30ipj")
 
+[node name="Door" parent="." instance=ExtResource("292_xn0q1")]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, -0.0904688, -0.519238, 0.240426)
+
+[node name="Cube_002" parent="Door/RootNode" index="0"]
+transform = Transform3D(7, 0, 0, 0, -8.34465e-07, 7, 0, -7, -8.34465e-07, 0.273851, 1.14412, -1.60459)
+material_override = SubResource("StandardMaterial3D_yvuti")
+
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]
@@ -3535,6 +3563,7 @@ material_override = SubResource("StandardMaterial3D_30ipj")
 [connection signal="timeout" from="Root Scene/top_bun_shelf/ActionLabelTopBun/LabelTopBunTimer" to="Root Scene/top_bun_shelf" method="_on_label_top_bun_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cheese_block/ActionLabelCheese/LabelCheeseTimer" to="Root Scene/cheese_block" method="_on_label_cheese_timer_timeout"]
 [connection signal="timeout" from="Root Scene/frier/ActionLabelFryer/LabelFryerTimer" to="Root Scene/frier" method="_on_label_fryer_timer_timeout"]
+[connection signal="timeout" from="Root Scene/frier/ActionLabelFryer/DiscardLabelFryer/LabelFryerTimer" to="Root Scene/frier" method="_on_label_fryer_timer_timeout"]
 [connection signal="timeout" from="Root Scene/customer_or_police_spawn_timer" to="Root Scene" method="_on_customer_or_police_spawn_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cop_catch_timer" to="Root Scene" method="_on_police_catch_timer_timeout"]
 [connection signal="timeout" from="Root Scene/LevelTimer" to="Root Scene" method="_on_level_timer_timeout"]
@@ -3546,6 +3575,9 @@ material_override = SubResource("StandardMaterial3D_30ipj")
 [editable path="Root Scene/cheese_block/cheese2"]
 [editable path="Root Scene/cheese_block/cheese3"]
 [editable path="Root Scene/cheese_block/cheese4"]
+[editable path="Root Scene/FryerBasket"]
+[editable path="Root Scene/FryerBasket/StaticBody3D/Fries"]
+[editable path="Root Scene/FryerBasket/StaticBody3D/Basket"]
 [editable path="Player"]
 [editable path="order_plate"]
 [editable path="order_plate/Root Scene"]
@@ -3587,3 +3619,4 @@ material_override = SubResource("StandardMaterial3D_30ipj")
 [editable path="TOPBreadStack"]
 [editable path="BOTTOMJBread"]
 [editable path="Root Scene4"]
+[editable path="Door"]

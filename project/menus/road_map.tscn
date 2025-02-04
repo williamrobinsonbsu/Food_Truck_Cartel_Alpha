@@ -12,6 +12,9 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_xgc72"]
 font_size = 30
+font_color = Color(0.376471, 0.713726, 0.901961, 1)
+outline_size = 15
+outline_color = Color(0.0588235, 0.364706, 0.509804, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_pq4y7"]
 font_color = Color(0, 0, 0, 1)
@@ -451,7 +454,7 @@ scale = Vector2(0.03, 0.03)
 texture = ExtResource("5_l8qf5")
 
 [node name="EndlessIcon" type="Sprite2D" parent="."]
-position = Vector2(115, 101)
+position = Vector2(219.81, 184.39)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("9_4e3ob")
 
