@@ -24,6 +24,9 @@ albedo_texture = ExtResource("8_12k06")
 
 [node name="Kitchen" parent="." instance=ExtResource("1_21q4g")]
 
+[node name="hotdog_storage" parent="Kitchen/Root Scene4/RootNode" index="0"]
+transform = Transform3D(29.8825, 0, 0, 0, -4.93629e-06, 42.6893, 0, -41.4086, -5.08895e-06, 3.60718, 0.639189, -1.51821)
+
 [node name="Background" type="Sprite3D" parent="."]
 transform = Transform3D(0.341, 0, 0, 0, 0.35, 0, 0, 0, 0.506, 0, 5.60867, 8.88153)
 texture = ExtResource("2_5o1hu")
@@ -34,9 +37,10 @@ autoplay = true
 bus = &"Music"
 
 [node name="Hot_Dog_Cooker" parent="." instance=ExtResource("4_c3jps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.596408, -0.409898, -0.720393)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.00378308, -0.48212, -0.0469196)
 
 [node name="hotdog_machibe" parent="Hot_Dog_Cooker/RootNode" index="0"]
+transform = Transform3D(20, 0, 0, 0, -3.66926e-06, 20, 0, -30.78, -2.38419e-06, 1.54881, 1.20304, -0.972006)
 surface_material_override/0 = SubResource("StandardMaterial3D_yykio")
 
 [node name="Dog_machine" parent="Hot_Dog_Cooker" instance=ExtResource("5_e3p2g")]
@@ -46,13 +50,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56797, 0.663956, -1.37221)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53569, 0.654994, -1.62814)
 
 [node name="Dog_Shelves" parent="." instance=ExtResource("6_eae8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.596408, -0.409898, -0.720393)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.0453476, -0.487459, -0.0523405)
 
 [node name="hotdog_storage" parent="Dog_Shelves/RootNode" index="0"]
+transform = Transform3D(30.8, 0, 0, 0, -5.08785e-06, 44, 0, -42.68, -5.24521e-06, 1.50795, 0.590062, -0.971172)
 surface_material_override/0 = SubResource("StandardMaterial3D_wmt05")
 
 [node name="hot_dog_box" type="StaticBody3D" parent="Dog_Shelves"]
-transform = Transform3D(1.90761, 0, 0, 0, 0.494561, 0, 0, 0, 1.2122, 1.4738, 0.516662, -1.74759)
+transform = Transform3D(1.90761, 0, 0, 0, 0.494561, 0, 0, 0, 1.2122, 1.4738, 0.516662, -1.22377)
 script = ExtResource("7_686vn")
 metadata/_edit_group_ = true
 
@@ -61,7 +66,7 @@ transform = Transform3D(0.238923, 0, 0, 0, 0.347297, 0, 0, 0, 0.258128, -0.02831
 shape = SubResource("BoxShape3D_wd1im")
 
 [node name="hot_dog_bun_box" type="StaticBody3D" parent="Dog_Shelves"]
-transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 3.01822, 0.693129, -0.0970849)
+transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 3.01822, 0.693129, 0.41842)
 script = ExtResource("8_6i6cq")
 metadata/_edit_group_ = true
 
@@ -75,6 +80,9 @@ shape = SubResource("BoxShape3D_rrdo1")
 [editable path="Kitchen/Root Scene/cheese_block/cheese2"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese3"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese4"]
+[editable path="Kitchen/Root Scene/FryerBasket"]
+[editable path="Kitchen/Root Scene/FryerBasket/StaticBody3D/Fries"]
+[editable path="Kitchen/Root Scene/FryerBasket/StaticBody3D/Basket"]
 [editable path="Kitchen/Player"]
 [editable path="Kitchen/order_plate"]
 [editable path="Kitchen/order_plate/Root Scene"]
@@ -115,5 +123,7 @@ shape = SubResource("BoxShape3D_rrdo1")
 [editable path="Kitchen/PattyStacks"]
 [editable path="Kitchen/TOPBreadStack"]
 [editable path="Kitchen/BOTTOMJBread"]
+[editable path="Kitchen/Root Scene4"]
+[editable path="Kitchen/Door"]
 [editable path="Hot_Dog_Cooker"]
 [editable path="Dog_Shelves"]

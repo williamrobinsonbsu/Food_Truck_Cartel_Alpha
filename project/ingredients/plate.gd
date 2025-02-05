@@ -14,7 +14,7 @@ signal check_my_order
 
 func place(picked_object):
 	var level = get_parent().get_parent().get_parent().name
-	if picked_object != null and get_node("/root/" + level + "/Kitchen/Root Scene").door_status() == true:
+	if picked_object != null:
 		if picked_object.has_method("name"):
 			if picked_object.name() == "burger":
 				$"../bottom_bun".show()

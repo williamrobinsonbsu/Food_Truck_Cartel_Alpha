@@ -7,6 +7,12 @@
 
 [node name="Kitchen" parent="." instance=ExtResource("1_30eag")]
 
+[node name="CollisionShape3D" parent="Kitchen/order_plate/resetTemp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699635, 0.0151154, -0.0296967)
+
+[node name="Label3D" parent="Kitchen/order_plate/resetTemp" index="1"]
+transform = Transform3D(-0.297279, 0, -8.74228e-08, 0, 0.414358, 0, 2.5989e-08, 0, -1, 0.067137, -0.0187684, -0.111984)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -13.117
 autoplay = true
@@ -18,3 +24,55 @@ texture = ExtResource("3_5tc67")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.72751, -2.42915)
+
+[editable path="Kitchen"]
+[editable path="Kitchen/Root Scene"]
+[editable path="Kitchen/Root Scene/cheese_block/cheese"]
+[editable path="Kitchen/Root Scene/cheese_block/cheese2"]
+[editable path="Kitchen/Root Scene/cheese_block/cheese3"]
+[editable path="Kitchen/Root Scene/cheese_block/cheese4"]
+[editable path="Kitchen/Root Scene/FryerBasket"]
+[editable path="Kitchen/Root Scene/FryerBasket/StaticBody3D/Fries"]
+[editable path="Kitchen/Root Scene/FryerBasket/StaticBody3D/Basket"]
+[editable path="Kitchen/Player"]
+[editable path="Kitchen/order_plate"]
+[editable path="Kitchen/order_plate/Root Scene"]
+[editable path="Kitchen/order_plate/bottom_bun"]
+[editable path="Kitchen/order_plate/patty"]
+[editable path="Kitchen/order_plate/onions"]
+[editable path="Kitchen/order_plate/lettuce"]
+[editable path="Kitchen/order_plate/tomatoes"]
+[editable path="Kitchen/order_plate/cheese"]
+[editable path="Kitchen/order_plate/top_bun"]
+[editable path="Kitchen/order_plate/soda"]
+[editable path="Kitchen/order_plate/chips"]
+[editable path="Kitchen/order_plate/hot_dog"]
+[editable path="Kitchen/order_plate/fries"]
+[editable path="Kitchen/order_plate/full_dog"]
+[editable path="Kitchen/order_plate/hot_dog_bun"]
+[editable path="Kitchen/Sink"]
+[editable path="Kitchen/Grill5"]
+[editable path="Kitchen/Fryer"]
+[editable path="Kitchen/Trash"]
+[editable path="Kitchen/CorkBoard"]
+[editable path="Kitchen/Clipboard"]
+[editable path="Kitchen/MiniFridge"]
+[editable path="Kitchen/Clock"]
+[editable path="Kitchen/Walls"]
+[editable path="Kitchen/register"]
+[editable path="Kitchen/radio"]
+[editable path="Kitchen/tomatobasket"]
+[editable path="Kitchen/floor"]
+[editable path="Kitchen/frontcounter"]
+[editable path="Kitchen/lights"]
+[editable path="Kitchen/plate"]
+[editable path="Kitchen/cabinets"]
+[editable path="Kitchen/cabinets2"]
+[editable path="Kitchen/outsidetable"]
+[editable path="Kitchen/Root Scene2"]
+[editable path="Kitchen/Root Scene3"]
+[editable path="Kitchen/PattyStacks"]
+[editable path="Kitchen/TOPBreadStack"]
+[editable path="Kitchen/BOTTOMJBread"]
+[editable path="Kitchen/Root Scene4"]
+[editable path="Kitchen/Door"]
