@@ -1575,6 +1575,7 @@ albedo_texture = ExtResource("295_t8ncl")
 size = Vector3(1, 0.835815, 0.825195)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvuti"]
+albedo_color = Color(0.666667, 0.823529, 0.831373, 1)
 albedo_texture = ExtResource("293_5cjro")
 metallic = 1.0
 metallic_texture = ExtResource("295_j8yq4")
@@ -3551,10 +3552,9 @@ shape = SubResource("BoxShape3D_u0ppn")
 transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, -0.0904688, -0.519238, 0.240426)
 
 [node name="Cube_002" parent="Door/RootNode" index="0"]
-transform = Transform3D(7, 0, 0, 0, -8.34465e-07, 7, 0, -7, -8.34465e-07, 0.273851, 1.14412, -1.60459)
+transform = Transform3D(7, 0, 0, 0, -8.34465e-07, 7, 0, -7, -8.34465e-07, 0.273851, 1.14412, -1.59449)
 material_override = SubResource("StandardMaterial3D_yvuti")
 
-[connection signal="end_of_level" from="Root Scene" to="Player" method="_on_root_scene_end_of_level"]
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]
