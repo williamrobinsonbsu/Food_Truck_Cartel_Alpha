@@ -1,4 +1,4 @@
-[gd_scene load_steps=456 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=457 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -1570,6 +1570,9 @@ refraction_texture = SubResource("NoiseTexture2D_1jpf1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30ipj"]
 albedo_texture = ExtResource("295_t8ncl")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u0ppn"]
+size = Vector3(1, 0.835815, 0.825195)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvuti"]
 albedo_texture = ExtResource("293_5cjro")
@@ -3536,6 +3539,13 @@ transform = Transform3D(1.75867, 0, 0, 0, 1.94105, 0, 0, 0, 1.51822, -0.433837, 
 [node name="hotdog_storage" parent="Root Scene4/RootNode" index="0"]
 transform = Transform3D(29.8825, 0, 0, 0, -4.93629e-06, 42.6893, 0, -41.4086, -5.08895e-06, 1.50795, 0.639189, -1.51821)
 material_override = SubResource("StandardMaterial3D_30ipj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Root Scene4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70878, 0.716447, -1.57867)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene4/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0820923, 0.0612797)
+shape = SubResource("BoxShape3D_u0ppn")
 
 [node name="Door" parent="." instance=ExtResource("292_xn0q1")]
 transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, -0.0904688, -0.519238, 0.240426)

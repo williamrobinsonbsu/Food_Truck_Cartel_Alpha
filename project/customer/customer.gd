@@ -10,6 +10,7 @@ var i_want_soda = false
 var i_want_hot_dog = false
 var i_want_burger = false
 var npc_name
+var npc = -1
 var curr_dialogue
 
 @export var level: String
@@ -56,8 +57,6 @@ func _ready():
 		$AssemblyTimer.start()
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	var npc = rng.randi_range(0, 6)
-	print(npc)
 	npc_name = ""
 	npc_name = _get_npc(npc)
 	$AnimationPlayer.play("slide_in")
@@ -255,19 +254,27 @@ func _on_voicebox_characters_sounded(characters: String):
 
 func _get_npc(npc):   #update for every new npc
 	var path
+	var max
 	dog.visible = false
-	if level_path == "rave_kitchen":
-		var rng = RandomNumberGenerator.new()
-		npc = rng.randi_range(0, 3)
+	if level_path == "beach":
+		max = 6
+	elif level_path == "rave_kitchen":
+		max = 3
 	elif level_path == "casino":
-		var rng = RandomNumberGenerator.new()
-		npc = rng.randi_range(0, 4)
+		max = 4
 	elif level_path == "area_51":
-		var rng = RandomNumberGenerator.new()
-		npc = rng.randi_range(0, 4)
+		max = 4
 	elif level_path == "endless":
-		var rng = RandomNumberGenerator.new()
-		npc = rng.randi_range(0, 18)
+		max = 18
+	
+	var rng = RandomNumberGenerator.new()
+	npc = rng.randi_range(0, max)
+	while npc == Global.prev_npc:
+		npc = rng.randi_range(0, max)
+	
+	print("Curent npc: " + str(npc))
+	print("Previous npc: " + str(Global.prev_npc))
+	Global.prev_npc = npc
 	
 	if npc == 0:
 		npc_name = "npc0"

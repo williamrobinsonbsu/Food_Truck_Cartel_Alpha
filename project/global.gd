@@ -9,6 +9,8 @@ var level_area51 := 0
 var level_endless := 0
 var level_data = { }
 
+var prev_npc = -1
+
 @export var end_of_level_money: int = 0
 
 
