@@ -1,6 +1,8 @@
 extends Node3D
 
 
+signal end_of_level
+
 @export var score = 0
 @export var starting_counter = 0
 @export var level: String
@@ -219,6 +221,7 @@ func _on_police_catch_timer_timeout():
 
 
 func _on_level_timer_timeout():
+	end_of_level.emit()
 	print(score)
 	Global.end_of_level_money = score
 	Global.save_data()

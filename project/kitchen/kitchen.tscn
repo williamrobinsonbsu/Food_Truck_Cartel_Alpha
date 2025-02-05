@@ -3554,6 +3554,7 @@ transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, -0.0904688, -0.519238, 
 transform = Transform3D(7, 0, 0, 0, -8.34465e-07, 7, 0, -7, -8.34465e-07, 0.273851, 1.14412, -1.60459)
 material_override = SubResource("StandardMaterial3D_yvuti")
 
+[connection signal="end_of_level" from="Root Scene" to="Player" method="_on_root_scene_end_of_level"]
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]

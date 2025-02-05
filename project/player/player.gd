@@ -19,6 +19,7 @@ var pull_power = 10
 
 var true_speed = SPEED
 var is_crouching = false
+var is_done = false
 
 
 @export var lose_state := false
@@ -94,27 +95,28 @@ func _physics_process(_delta):
 		
 		
 	self.position.y = 1.226
-	var input_dir = Input.get_vector("left", "right", "forward", "back")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+	if is_done == false:
+		var input_dir = Input.get_vector("left", "right", "forward", "back")
+		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if direction:
+			velocity.x = direction.x * SPEED
+			velocity.z = direction.z * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.z = move_toward(velocity.z, 0, SPEED)
 
-	if picked_object != null:
-		var a = picked_object.global_transform.origin
-		var b = hand.global_transform.origin
-		picked_object.set_linear_velocity((b-a) * pull_power)
-	if Input.is_action_just_pressed("crouch"):
-	
-		if is_crouching == false:
-			movementStateChange("crouch")
-			print("Crouch: " + str(Global.crouch))
-			Global.crouch += 1
-		elif is_crouching == true:
-			movementStateChange("uncrouch")
+		if picked_object != null:
+			var a = picked_object.global_transform.origin
+			var b = hand.global_transform.origin
+			picked_object.set_linear_velocity((b-a) * pull_power)
+		if Input.is_action_just_pressed("crouch"):
+		
+			if is_crouching == false:
+				movementStateChange("crouch")
+				print("Crouch: " + str(Global.crouch))
+				Global.crouch += 1
+			elif is_crouching == true:
+				movementStateChange("uncrouch")
 			
 	move_and_slide()
 	
@@ -182,3 +184,10 @@ func _on_day_timer_timeout():
 	while index < 4:
 		$Control/DayIcon.set_texture(tex_array[index])
 		index += 1
+
+
+func _on_root_scene_end_of_level():
+	is_done = true
+	velocity = Vector3.ZERO
+	$Control/AnimationPlayer.play("fade_out")
+	$Control/FadeOverlay/Label.show()
