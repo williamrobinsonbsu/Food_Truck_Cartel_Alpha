@@ -86,6 +86,7 @@ func shutter_door_control():
 		shutter_door_close = true
 		door_shutter()
 		if starting_counter == 0:
+			$"../ShutterLabel".text = "Hide!"
 			_on_new_customer()
 			get_node("/root/" + level + "/Kitchen/Player/Control/DayIcon").show()
 			get_node("/root/" + level + "/Kitchen/Player/DayTimer").start()

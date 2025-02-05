@@ -3396,7 +3396,7 @@ font = ExtResource("172_jj25w")
 font_size = 10
 outline_size = 2
 
-[node name="Label3D2" type="Label3D" parent="."]
+[node name="ShutterLabel" type="Label3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.96399, 2.29549, 4.75568)
 text = "Start the Shift ! "
 font = ExtResource("172_jj25w")
