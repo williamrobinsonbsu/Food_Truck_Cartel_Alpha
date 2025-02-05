@@ -17,8 +17,10 @@ albedo_texture = ExtResource("5_2g1fe")
 albedo_texture = ExtResource("8_12k06")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wd1im"]
+size = Vector3(0.842529, 0.222046, 0.349335)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rrdo1"]
+size = Vector3(0.759689, 0.222626, 0.386719)
 
 [node name="Casino" type="Node3D"]
 
@@ -57,21 +59,20 @@ transform = Transform3D(30.8, 0, 0, 0, -5.08785e-06, 44, 0, -42.68, -5.24521e-06
 surface_material_override/0 = SubResource("StandardMaterial3D_wmt05")
 
 [node name="hot_dog_box" type="StaticBody3D" parent="Dog_Shelves"]
-transform = Transform3D(1.90761, 0, 0, 0, 0.494561, 0, 0, 0, 1.2122, 1.4738, 0.516662, -1.22377)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4738, 0.516662, -1.28459)
 script = ExtResource("7_686vn")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dog_Shelves/hot_dog_box"]
-transform = Transform3D(0.238923, 0, 0, 0, 0.347297, 0, 0, 0, 0.258128, -0.028313, -0.0240879, 0.0396659)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0504224, 0.0599575, 0.0741355)
 shape = SubResource("BoxShape3D_wd1im")
 
 [node name="hot_dog_bun_box" type="StaticBody3D" parent="Dog_Shelves"]
-transform = Transform3D(0.7, 0, 0, 0, 0.3, 0, 0, 0, 0.853, 3.01822, 0.693129, 0.41842)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56331, 0.521261, -0.773333)
 script = ExtResource("8_6i6cq")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dog_Shelves/hot_dog_bun_box"]
-transform = Transform3D(0.859683, 0, 0, 0, 0.509786, 0, 0, 0, 0.401807, -2.12757, -0.77193, -1.39906)
 shape = SubResource("BoxShape3D_rrdo1")
 
 [editable path="Kitchen"]

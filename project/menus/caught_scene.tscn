@@ -51,6 +51,7 @@ offset_bottom = 2340.0
 scale = Vector2(0.530682, 0.398368)
 stream = ExtResource("3_dgop7")
 autoplay = true
+expand = true
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
