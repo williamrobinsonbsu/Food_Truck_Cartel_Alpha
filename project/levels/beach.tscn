@@ -43,6 +43,9 @@ bus = &"Music"
 [node name="Lettuce_Head" parent="Kitchen/Root Scene/RootNode/Truck" index="35"]
 transform = Transform3D(0.502537, 0, 0, 0, 0.354617, 0, 0, 0, 0.502537, -1.61676, 0.0509, 1.28822)
 
+[node name="Camera3D" parent="Kitchen/Player" index="2"]
+current = false
+
 [node name="LevelTimerLabel" parent="Kitchen/Player/Control" index="3"]
 theme_override_fonts/font = ExtResource("4_701md")
 

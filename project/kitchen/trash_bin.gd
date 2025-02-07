@@ -1,8 +1,5 @@
 extends StaticBody3D
 
-func _ready():
-	$DiscardLabel.hide()
-
 
 func delete_item():
 	return

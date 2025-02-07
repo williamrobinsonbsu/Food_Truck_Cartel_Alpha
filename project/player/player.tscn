@@ -168,6 +168,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_05itk")
 
 [node name="LevelTimerLabel" type="Label" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.036
@@ -314,7 +315,4 @@ z_index = 1000
 
 [node name="PauseMenu" parent="Pause" instance=ExtResource("2_xfury")]
 
-[node name="MeterTimer" type="Timer" parent="."]
-
-[connection signal="police_here" from="." to="." method="_on_police_here"]
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
