@@ -1459,7 +1459,7 @@ shadow_mesh = SubResource("ArrayMesh_kx50x")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wtaa"]
 albedo_texture = ExtResource("289_g2roh")
 roughness_texture = ExtResource("47_laf6i")
-uv1_scale = Vector3(1.135, 1.245, 1.805)
+uv1_scale = Vector3(1.045, 1.37, 1.91)
 uv1_offset = Vector3(-0.01, -0.03, 0.435)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hofbx"]
@@ -1806,6 +1806,7 @@ transform = Transform3D(0.502537, 0, 0, 0, 0.388137, 0, 0, 0, 0.502537, -0.08419
 material_override = SubResource("StandardMaterial3D_8gj7e")
 
 [node name="Lettuce_Head" parent="Root Scene/RootNode/Truck" index="35"]
+transform = Transform3D(0.502537, 0, 0, 0, 0.354617, 0, 0, 0, 0.502537, -1.56566, 0.0509, 1.29765)
 material_override = SubResource("StandardMaterial3D_1y84f")
 
 [node name="tomato" parent="Root Scene/RootNode/Truck" index="36"]
@@ -1818,29 +1819,33 @@ material_override = SubResource("StandardMaterial3D_h32io")
 material_override = SubResource("StandardMaterial3D_fbv5u")
 
 [node name="Ceiling" parent="Root Scene/RootNode/Truck" index="37"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13075, 0.643866)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14616, 0.643866)
 material_override = SubResource("StandardMaterial3D_binuv")
 
 [node name="Ceiling2" type="MeshInstance3D" parent="Root Scene/RootNode/Truck" index="38"]
-transform = Transform3D(0.825926, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -0.111209, 1.24241, 0.0750022)
+transform = Transform3D(1.21718, 0, 0, 0, -1, 8.90089e-08, 0, -8.74228e-08, -1.01814, -0.111209, 1.24241, 0.0750022)
 material_override = SubResource("StandardMaterial3D_binuv")
 mesh = SubResource("ArrayMesh_wu114")
 skeleton = NodePath("")
 
 [node name="Basket" parent="Root Scene/RootNode/Truck" index="39"]
+transform = Transform3D(-14.3266, -2.78634e-14, 0, 1.48081e-13, -2.69553, -0.103111, 1.28453e-15, -0.0233824, 11.8867, -0.775588, 0.13875, 0.397515)
 material_override = SubResource("StandardMaterial3D_vc08v")
 
 [node name="Basket1" parent="Root Scene/RootNode/Truck" index="40"]
+transform = Transform3D(-14.3266, -2.78634e-14, 0, 1.48081e-13, -2.69553, -0.103111, 1.28453e-15, -0.0233824, 11.8867, -0.775588, 0.136631, 0.71375)
 material_override = SubResource("StandardMaterial3D_vc08v")
 
 [node name="Basket2" parent="Root Scene/RootNode/Truck" index="41"]
+transform = Transform3D(-14.3266, -2.78634e-14, 0, 1.48081e-13, -2.69553, -0.103111, 1.28453e-15, -0.0233824, 11.8867, -0.775588, 0.138185, 1.26913)
 material_override = SubResource("StandardMaterial3D_vc08v")
 
 [node name="Basket3" parent="Root Scene/RootNode/Truck" index="42"]
+transform = Transform3D(-14.3266, -2.78634e-14, 0, 1.48081e-13, -2.69553, -0.103111, 1.28453e-15, -0.0233824, 11.8867, -0.775588, 0.138185, 1.26913)
 material_override = SubResource("StandardMaterial3D_vc08v")
 
 [node name="Basket4" parent="Root Scene/RootNode/Truck" index="43"]
-transform = Transform3D(-14.3266, -2.78634e-14, 0, 1.48087e-13, -2.69563, 0, 0, 0, 11.8871, -0.775588, 0.114347, 0.990956)
+transform = Transform3D(-14.3266, -2.78634e-14, 0, 1.48081e-13, -2.69553, -0.103111, 1.28453e-15, -0.0233824, 11.8867, -0.775588, 0.139931, 0.990954)
 material_override = SubResource("StandardMaterial3D_vc08v")
 
 [node name="Lettuce_Head1" parent="Root Scene/RootNode/Truck" index="44"]
@@ -2178,9 +2183,11 @@ material_override = SubResource("StandardMaterial3D_5h7rs")
 material_override = SubResource("StandardMaterial3D_5h7rs")
 
 [node name="knife_blade" parent="Root Scene/RootNode/Knife" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, -2.55642, -0.698408)
 material_override = SubResource("StandardMaterial3D_tdy70")
 
 [node name="knife_handle" parent="Root Scene/RootNode/Knife" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, -2.55642, -0.698408)
 material_override = SubResource("StandardMaterial3D_am6y0")
 
 [node name="Spatula" parent="Root Scene/RootNode" index="18"]
@@ -2465,7 +2472,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.746527, 0, 0.932612)
 script = ExtResource("177_xs7eh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/potato_bowl"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0283131, -0.0240879, 0.0547633)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028313, -0.0240879, 0.0547633)
 shape = SubResource("CylinderShape3D_x7ngb")
 
 [node name="ActionLabelPotato" type="Label3D" parent="Root Scene/potato_bowl"]
@@ -2672,7 +2679,7 @@ one_shot = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.615191, 0.147444, 1.46159)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/register"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.176422, 0.305634, 0.0992661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115981, 0.305634, 0.0992661)
 shape = SubResource("BoxShape3D_5bl88")
 
 [node name="score" type="Label3D" parent="Root Scene/register"]
@@ -2747,13 +2754,15 @@ texture = ExtResource("185_bgorc")
 transform = Transform3D(1.541, 0, 0, 0, 0.952, 0, 0, 0, 1.5, 0, 1.18726, 4.47593)
 
 [node name="Plates1" parent="order_plate/Root Scene/RootNode/Stack" index="0"]
+transform = Transform3D(31.524, 0, 0, 0, 1.0643, 0, 0, 0, 31.524, -2.89264, -2.43644, -12.4178)
+visible = false
 material_override = SubResource("StandardMaterial3D_3ghn6")
 
 [node name="StaticBody3D" parent="order_plate" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00896125, 0, 0)
 
 [node name="CollisionShape3D" parent="order_plate/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.114904, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.287125, 0.114904, 0.0437484)
 
 [node name="CollisionShape3D" parent="order_plate/StaticBody3D/Area3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00911713, 0.138107, 0.0104065)
@@ -2807,7 +2816,7 @@ transform = Transform3D(0.079164, 0, -0.796074, 0, 1.21842, 0, 0.796074, 0, 0.07
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.673982, 0, 0)
 
 [node name="CollisionShape3D" parent="order_plate/ClearPlate" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163408, 0.0929726, -0.0127742)
+transform = Transform3D(2.01364, 0, 0, 0, 1, 0, 0, 0, 1, 0.163408, 0.0929726, -0.012774)
 
 [node name="Label3D" parent="order_plate/ClearPlate" index="1"]
 transform = Transform3D(-0.275626, 0, -6.03983e-08, 0, 0.4, 0, 4.16184e-08, 0, -0.4, 0.157685, 0.0984032, -0.12582)
@@ -2915,7 +2924,7 @@ material_override = SubResource("StandardMaterial3D_d30rg")
 transform = Transform3D(1.48394, 0, 0, 0, 1.03274, 0, 0, 0, 1.45986, -0.631172, -0.0101246, 3.63709)
 
 [node name="Register_001" parent="register/RootNode" index="0"]
-transform = Transform3D(1.0586, 0, 0, 0, 1.12435, 0, 0, 0, 1, 0.0303794, -0.122378, 0)
+transform = Transform3D(1.0586, 0, 0, 0, 1.12435, 0, 0, 0, 1, -0.0918104, -0.122378, 0)
 material_override = SubResource("StandardMaterial3D_vic2i")
 
 [node name="radio" parent="." instance=ExtResource("234_sk4il")]
@@ -3002,7 +3011,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240987, 0.66316, 4.18578)
 
 [node name="plate" parent="plate/RootNode" index="0"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0834564, -0.542903, -1.15927)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.312243, -0.542903, -1.15927)
 material_override = SubResource("StandardMaterial3D_8v2fl")
 
 [node name="cabinets" parent="." instance=ExtResource("259_72m0t")]
