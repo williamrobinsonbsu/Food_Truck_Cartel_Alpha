@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 
 signal hover
+signal police_here
 
 var totalPickup = 0
 
@@ -20,6 +21,7 @@ var pull_power = 10
 var true_speed = SPEED
 var is_crouching = false
 var is_done = false
+var police_gone: bool
 
 
 @export var lose_state := false
@@ -191,3 +193,20 @@ func _on_root_scene_end_of_level():
 	velocity = Vector3.ZERO
 	$Control/AnimationPlayer.play("fade_out")
 	$Control/FadeOverlay/Label.show()
+
+
+func _on_root_scene_cop_present(gone):
+	police_gone = gone
+	if gone == false:
+		police_here.emit()
+
+
+func _on_police_here():
+	var i = 0
+	while i != 100:
+		if police_gone == false:
+			$Control/CatchMeter.value += .1
+			i += 1
+		else:
+			return
+		await get_tree().create_timer(.045).timeout

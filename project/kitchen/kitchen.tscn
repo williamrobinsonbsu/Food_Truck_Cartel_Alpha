@@ -2710,7 +2710,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.290214, 2.09713)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.297335, 0.267485, 1.87233)
 
 [node name="cop_catch_timer" type="Timer" parent="Root Scene"]
-wait_time = 5.5
+wait_time = 5.0
 one_shot = true
 
 [node name="OrderLabel" type="Label3D" parent="Root Scene"]
@@ -3564,6 +3564,7 @@ transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, -0.0904688, -0.519238, 
 transform = Transform3D(7, 0, 0, 0, -8.34465e-07, 7, 0, -7, -8.34465e-07, 0.273851, 1.14412, -1.59449)
 material_override = SubResource("StandardMaterial3D_yvuti")
 
+[connection signal="cop_present" from="Root Scene" to="Player" method="_on_root_scene_cop_present"]
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]

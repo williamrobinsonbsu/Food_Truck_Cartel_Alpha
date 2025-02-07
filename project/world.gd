@@ -2,6 +2,7 @@ extends Node3D
 
 
 signal end_of_level
+signal cop_present(gone: bool)
 
 @export var score = 0
 @export var starting_counter = 0
@@ -45,7 +46,6 @@ func _ready():
 	
 
 func _physics_process(_delta: float) -> void:
-	get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = cop_catch_timer.get_time_left() * 20
 	
 	# QA INPUT CHEATS
 	if Input.is_action_pressed("exit"):
@@ -187,6 +187,7 @@ func _on_police():
 			police.position = $Close2.position
 		police.catch()
 		cop_catch_timer.start()
+		cop_present.emit(false)
 		get_tree().call_group("customer", "selfhide")
 		
 
@@ -214,6 +215,7 @@ func _on_police_catch_timer_timeout():
 		
 		
 	elif can_police_catch_player == false:
+		cop_present.emit(true)
 		Global.police_dodges += 1
 		get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = 0	
 		get_tree().call_group("police", "despawn")
