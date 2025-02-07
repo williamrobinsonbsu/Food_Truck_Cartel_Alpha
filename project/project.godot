@@ -13,7 +13,8 @@ config_version=5
 config/name="BaseEnvironment"
 run/main_scene="res://menus/start_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="res://Textures/splash page.png"
+config/icon="res://Textures/icon_updated.png"
 
 [audio]
 
