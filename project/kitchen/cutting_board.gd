@@ -33,7 +33,7 @@ func use(ingredient):
 		scene = get_ingredient(ingredient.name())
 		if scene == null:
 				return
-		while count != 3:
+		while count != 2:
 			var sliced_ingredient = scene.instantiate()
 			add_child(sliced_ingredient)
 			sliced_ingredient.position = %CuttingBoardMarker.position
