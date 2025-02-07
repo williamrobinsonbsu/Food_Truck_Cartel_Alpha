@@ -1,7 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://ev4ls1tgjigw"]
+[gd_scene load_steps=23 format=3 uid="uid://ev4ls1tgjigw"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_30eag"]
 [ext_resource type="Texture2D" uid="uid://bou83a746u7r" path="res://levels/area51-background.png" id="3_5tc67"]
+[ext_resource type="PackedScene" uid="uid://daotgg4on0oip" path="res://FBXRaw/HOTDOG_mACHINE.fbx" id="3_pv0ac"]
+[ext_resource type="Texture2D" uid="uid://cixs1sq5cyscv" path="res://Textures/HOTDOG_mACHINE_standardSurface1_BaseColor.png" id="4_33owl"]
+[ext_resource type="Texture2D" uid="uid://dqnu0jotfc7y1" path="res://Textures/HOTDOG_mACHINE_standardSurface1_Height.png" id="5_y8cmp"]
+[ext_resource type="Texture2D" uid="uid://byyuvf84wi7v7" path="res://Textures/HOTDOG_mACHINE_standardSurface1_Metallic.png" id="6_22be8"]
+[ext_resource type="Texture2D" uid="uid://c5olbpopmou0d" path="res://Textures/HOTDOG_mACHINE_standardSurface1_Normal.png" id="7_5xew4"]
+[ext_resource type="Texture2D" uid="uid://dmwnbcvvd77qs" path="res://Textures/HOTDOG_mACHINE_standardSurface1_Roughness.png" id="8_gqjxv"]
+[ext_resource type="PackedScene" uid="uid://dtf747hsr5w16" path="res://kitchen/dog_machine.tscn" id="9_uk7jq"]
+[ext_resource type="Script" path="res://kitchen/hot_dog_box.gd" id="10_rdj1t"]
+[ext_resource type="PackedScene" uid="uid://dfed862ec223c" path="res://FBXRaw/hotdog.fbx" id="11_qr7ta"]
+[ext_resource type="Texture2D" uid="uid://3die8n2p2fmb" path="res://Textures/hotdog_standardSurface1_BaseColor.png" id="12_338r8"]
+[ext_resource type="Texture2D" uid="uid://b6a8t1uyspewi" path="res://Textures/hotdog_standardSurface1_Metallic.png" id="13_005yc"]
+[ext_resource type="Texture2D" uid="uid://c4owbwpi32imj" path="res://Textures/hotdog_standardSurface1_Roughness.png" id="14_7pbmq"]
+[ext_resource type="Script" path="res://kitchen/hot_dog_bun_box.gd" id="15_p3hai"]
+[ext_resource type="PackedScene" uid="uid://bbj7px7l6an41" path="res://FBXRaw/hotdog_bun.fbx" id="16_qwrv2"]
+[ext_resource type="Texture2D" uid="uid://bcu8cu43l4syu" path="res://Textures/hotdog_bun_standardSurface1_BaseColor.png" id="17_bch3h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mdtke"]
+albedo_texture = ExtResource("4_33owl")
+metallic = 1.0
+metallic_texture = ExtResource("6_22be8")
+roughness_texture = ExtResource("8_gqjxv")
+normal_enabled = true
+normal_texture = ExtResource("7_5xew4")
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("5_y8cmp")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xd4jp"]
+size = Vector3(0.842529, 0.222046, 0.349335)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ss540"]
+albedo_texture = ExtResource("12_338r8")
+metallic = 1.0
+metallic_texture = ExtResource("13_005yc")
+roughness_texture = ExtResource("14_7pbmq")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nmuv1"]
+size = Vector3(0.759689, 0.222626, 0.386719)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o2vhw"]
+albedo_texture = ExtResource("17_bch3h")
+metallic = 1.0
+metallic_texture = ExtResource("13_005yc")
+roughness_texture = ExtResource("14_7pbmq")
 
 [node name="Area51" type="Node3D"]
 
@@ -9,9 +52,6 @@
 
 [node name="CollisionShape3D" parent="Kitchen/order_plate/resetTemp" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699635, 0.0151154, -0.0296967)
-
-[node name="Label3D" parent="Kitchen/order_plate/resetTemp" index="1"]
-transform = Transform3D(-0.297279, 0, -8.74228e-08, 0, 0.414358, 0, 2.5989e-08, 0, -1, 0.067137, -0.0187684, -0.111984)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -13.117
@@ -24,6 +64,163 @@ texture = ExtResource("3_5tc67")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.72751, -2.42915)
+
+[node name="hot_dog_machine" parent="." instance=ExtResource("3_pv0ac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11097, 1.49675, -1.52003)
+
+[node name="hotdog_machibe" parent="hot_dog_machine/RootNode" index="0"]
+transform = Transform3D(20, 0, 0, 0, -3.66926e-06, 20, 0, -30.78, -2.38419e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_mdtke")
+
+[node name="Dog_machine" parent="hot_dog_machine" instance=ExtResource("9_uk7jq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000402927, -0.543825, 0.119776)
+
+[node name="Dog_machine2" parent="hot_dog_machine" instance=ExtResource("9_uk7jq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000402927, -0.543825, -0.128187)
+
+[node name="hot_dog_box" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.87384, 0.213858, -1.89278)
+script = ExtResource("10_rdj1t")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hot_dog_box"]
+transform = Transform3D(1.335, 0, 0, 0, 2.03, 0, 0, 0, 1.45, 0.233157, 0.152545, 0.0741355)
+shape = SubResource("BoxShape3D_xd4jp")
+
+[node name="hot_dog_bundle" parent="hot_dog_box" instance=ExtResource("11_qr7ta")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0307385, -0.0885279, -0.0820452)
+
+[node name="hotdog" parent="hot_dog_box/hot_dog_bundle/RootNode" index="0"]
+transform = Transform3D(2.88, 0, 0, 0, -1.39732e-06, 2.88, 0, -11.7216, -3.43323e-07, 0.00318116, 0.0343673, -0.0361309)
+material_override = SubResource("StandardMaterial3D_ss540")
+
+[node name="Root Scene2" parent="hot_dog_box/hot_dog_bundle" instance=ExtResource("11_qr7ta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.072504, 5.96046e-08, 0)
+
+[node name="hotdog" parent="hot_dog_box/hot_dog_bundle/Root Scene2/RootNode" index="0"]
+transform = Transform3D(2.88, 0, 0, 0, -1.39732e-06, 2.88, 0, -11.7216, -3.43323e-07, 0.00318116, 0.0343673, -0.0361309)
+material_override = SubResource("StandardMaterial3D_ss540")
+
+[node name="Root Scene3" parent="hot_dog_box/hot_dog_bundle" instance=ExtResource("11_qr7ta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.153173, 5.96046e-08, 0)
+
+[node name="hotdog" parent="hot_dog_box/hot_dog_bundle/Root Scene3/RootNode" index="0"]
+transform = Transform3D(2.88, 0, 0, 0, -1.39732e-06, 2.88, 0, -11.7216, -3.43323e-07, 0.00318116, 0.0343673, -0.0361309)
+material_override = SubResource("StandardMaterial3D_ss540")
+
+[node name="Root Scene4" parent="hot_dog_box/hot_dog_bundle" instance=ExtResource("11_qr7ta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.230783, 5.96046e-08, 0)
+
+[node name="hotdog" parent="hot_dog_box/hot_dog_bundle/Root Scene4/RootNode" index="0"]
+transform = Transform3D(2.88, 0, 0, 0, -1.39732e-06, 2.88, 0, -11.7216, -3.43323e-07, 0.00318116, 0.0343673, -0.0361309)
+material_override = SubResource("StandardMaterial3D_ss540")
+
+[node name="Root Scene5" parent="hot_dog_box/hot_dog_bundle" instance=ExtResource("11_qr7ta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30724, 5.96046e-08, 0)
+
+[node name="hotdog" parent="hot_dog_box/hot_dog_bundle/Root Scene5/RootNode" index="0"]
+transform = Transform3D(2.88, 0, 0, 0, -1.39732e-06, 2.88, 0, -11.7216, -3.43323e-07, 0.00318116, 0.0343673, -0.0361309)
+material_override = SubResource("StandardMaterial3D_ss540")
+
+[node name="Root Scene6" parent="hot_dog_box/hot_dog_bundle" instance=ExtResource("11_qr7ta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268598, 0.0390745, 0)
+
+[node name="hotdog" parent="hot_dog_box/hot_dog_bundle/Root Scene6/RootNode" index="0"]
+transform = Transform3D(2.88, 0, 0, 0, -1.39732e-06, 2.88, 0, -11.7216, -3.43323e-07, 0.00318116, 0.0343673, -0.0361309)
+material_override = SubResource("StandardMaterial3D_ss540")
+
+[node name="Root Scene7" parent="hot_dog_box/hot_dog_bundle" instance=ExtResource("11_qr7ta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.193454, 0.0390745, 0)
+
+[node name="hotdog" parent="hot_dog_box/hot_dog_bundle/Root Scene7/RootNode" index="0"]
+transform = Transform3D(2.88, 0, 0, 0, -1.39732e-06, 2.88, 0, -11.7216, -3.43323e-07, 0.00318116, 0.0343673, -0.0361309)
+material_override = SubResource("StandardMaterial3D_ss540")
+
+[node name="Root Scene8" parent="hot_dog_box/hot_dog_bundle" instance=ExtResource("11_qr7ta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.109689, 0.0390745, 0)
+
+[node name="hotdog" parent="hot_dog_box/hot_dog_bundle/Root Scene8/RootNode" index="0"]
+transform = Transform3D(2.88, 0, 0, 0, -1.39732e-06, 2.88, 0, -11.7216, -3.43323e-07, 0.00318116, 0.0343673, -0.0361309)
+material_override = SubResource("StandardMaterial3D_ss540")
+
+[node name="Root Scene9" parent="hot_dog_box/hot_dog_bundle" instance=ExtResource("11_qr7ta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0278071, 0.0390745, 0)
+
+[node name="hotdog" parent="hot_dog_box/hot_dog_bundle/Root Scene9/RootNode" index="0"]
+transform = Transform3D(2.88, 0, 0, 0, -1.39732e-06, 2.88, 0, -11.7216, -3.43323e-07, 0.00318116, 0.0343673, -0.0361309)
+material_override = SubResource("StandardMaterial3D_ss540")
+
+[node name="hot_dog_bun_box" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86232, 0.259179, -1.21223)
+script = ExtResource("15_p3hai")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hot_dog_bun_box"]
+transform = Transform3D(1.475, 0, 0, 0, 2.035, 0, 0, 0, 1.4, 0.237509, 0.112254, 0)
+shape = SubResource("BoxShape3D_nmuv1")
+
+[node name="hot_dog_bun_bundle" parent="hot_dog_bun_box" instance=ExtResource("16_qwrv2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0363861, -0.0129862, -0.20214)
+
+[node name="hotdog_bun" parent="hot_dog_bun_box/hot_dog_bun_bundle/RootNode" index="0"]
+transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_o2vhw")
+
+[node name="Root Scene2" parent="hot_dog_bun_box/hot_dog_bun_bundle" instance=ExtResource("16_qwrv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0876986, 0, -1.19209e-07)
+
+[node name="hotdog_bun" parent="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene2/RootNode" index="0"]
+transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_o2vhw")
+
+[node name="Root Scene3" parent="hot_dog_bun_box/hot_dog_bun_bundle" instance=ExtResource("16_qwrv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.169938, 0, -1.19209e-07)
+
+[node name="hotdog_bun" parent="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene3/RootNode" index="0"]
+transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_o2vhw")
+
+[node name="Root Scene4" parent="hot_dog_bun_box/hot_dog_bun_bundle" instance=ExtResource("16_qwrv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.249698, 0, -1.19209e-07)
+
+[node name="hotdog_bun" parent="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene4/RootNode" index="0"]
+transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_o2vhw")
+
+[node name="Root Scene5" parent="hot_dog_bun_box/hot_dog_bun_bundle" instance=ExtResource("16_qwrv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.338345, 0, -1.19209e-07)
+
+[node name="hotdog_bun" parent="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene5/RootNode" index="0"]
+transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_o2vhw")
+
+[node name="Root Scene6" parent="hot_dog_bun_box/hot_dog_bun_bundle" instance=ExtResource("16_qwrv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.287557, 0.0518383, -1.19209e-07)
+
+[node name="hotdog_bun" parent="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene6/RootNode" index="0"]
+transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_o2vhw")
+
+[node name="Root Scene7" parent="hot_dog_bun_box/hot_dog_bun_bundle" instance=ExtResource("16_qwrv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.197352, 0.0562707, -1.19209e-07)
+
+[node name="hotdog_bun" parent="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene7/RootNode" index="0"]
+transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_o2vhw")
+
+[node name="Root Scene8" parent="hot_dog_bun_box/hot_dog_bun_bundle" instance=ExtResource("16_qwrv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120375, 0.0547, -1.19209e-07)
+
+[node name="hotdog_bun" parent="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene8/RootNode" index="0"]
+transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_o2vhw")
+
+[node name="Root Scene9" parent="hot_dog_bun_box/hot_dog_bun_bundle" instance=ExtResource("16_qwrv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0405557, 0.0561731, -1.19209e-07)
+
+[node name="hotdog_bun" parent="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene9/RootNode" index="0"]
+transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_o2vhw")
 
 [editable path="Kitchen"]
 [editable path="Kitchen/Root Scene"]
@@ -76,3 +273,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.72751, -2.42915)
 [editable path="Kitchen/BOTTOMJBread"]
 [editable path="Kitchen/Root Scene4"]
 [editable path="Kitchen/Door"]
+[editable path="hot_dog_machine"]
+[editable path="hot_dog_box/hot_dog_bundle"]
+[editable path="hot_dog_box/hot_dog_bundle/Root Scene2"]
+[editable path="hot_dog_box/hot_dog_bundle/Root Scene3"]
+[editable path="hot_dog_box/hot_dog_bundle/Root Scene4"]
+[editable path="hot_dog_box/hot_dog_bundle/Root Scene5"]
+[editable path="hot_dog_box/hot_dog_bundle/Root Scene6"]
+[editable path="hot_dog_box/hot_dog_bundle/Root Scene7"]
+[editable path="hot_dog_box/hot_dog_bundle/Root Scene8"]
+[editable path="hot_dog_box/hot_dog_bundle/Root Scene9"]
+[editable path="hot_dog_bun_box/hot_dog_bun_bundle"]
+[editable path="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene2"]
+[editable path="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene3"]
+[editable path="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene4"]
+[editable path="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene5"]
+[editable path="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene6"]
+[editable path="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene7"]
+[editable path="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene8"]
+[editable path="hot_dog_bun_box/hot_dog_bun_bundle/Root Scene9"]
