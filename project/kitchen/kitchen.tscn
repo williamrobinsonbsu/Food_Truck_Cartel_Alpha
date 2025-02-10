@@ -3682,7 +3682,7 @@ modulate = Color(0.764706, 0.764706, 0.764706, 1)
 texture = ExtResource("297_ktcbn")
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0410365, 1.55884, 4.49069)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.402785, 1.55884, 4.49069)
 text = "Click Plate to Place"
 font = ExtResource("172_jj25w")
 font_size = 10
