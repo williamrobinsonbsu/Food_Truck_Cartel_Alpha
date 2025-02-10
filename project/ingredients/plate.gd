@@ -15,7 +15,7 @@ var dog_bun_placed = false
 signal check_my_order
 
 func place(picked_object):
-	var level = get_parent().get_parent().get_parent().name
+	var _level = get_parent().get_parent().get_parent().name
 	if picked_object != null:
 		if picked_object.has_method("name"):
 			if picked_object.name() == "burger" and bottom_bun_placed != true:
