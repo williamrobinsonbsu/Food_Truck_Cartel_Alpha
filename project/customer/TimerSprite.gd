@@ -14,9 +14,9 @@ func _on_customer_timer_started():
 	var curr_scale = self.scale.x
 	
 	while i != -1000:
-		i -= .01
 		await get_tree().create_timer(wait_time).timeout
 		if order_timer.paused == false:
+			i -= .01
 			self.scale.x = curr_scale * i
 			
 			if self.scale.x == curr_scale/2:
@@ -27,3 +27,5 @@ func _on_customer_timer_started():
 				self.modulate = Color.RED
 			elif self.scale.x == 0:
 				self.hide()
+		else:
+			print("yo mr white im hiding rn")

@@ -61,7 +61,7 @@ func _ready():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	npc_name = ""
-	npc_name = _get_npc(npc)
+	npc_name = _get_npc()
 	$AnimationPlayer.play("slide_in")
 	voice.play_string("Here is my order")
 	curr_dialogue = DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "normal")
@@ -250,25 +250,25 @@ func _on_assembly_timer_timeout():
 func _on_voicebox_characters_sounded(characters: String):
 	dialogue.text += characters
 
-func _get_npc(npc):   #update for every new npc
+func _get_npc():   #update for every new npc
 	var path
-	var max
+	var max_val
 	dog.visible = false
 	if level_path == "beach":
-		max = 6
+		max_val = 6
 	elif level_path == "rave_kitchen":
-		max = 3
+		max_val = 3
 	elif level_path == "casino":
-		max = 4
+		max_val = 4
 	elif level_path == "area_51":
-		max = 4
+		max_val = 4
 	elif level_path == "endless":
-		max = 18
+		max_val = 18
 	
 	var rng = RandomNumberGenerator.new()
-	npc = rng.randi_range(0, max)
+	npc = rng.randi_range(0, max_val)
 	while npc == Global.prev_npc:
-		npc = rng.randi_range(0, max)
+		npc = rng.randi_range(0, max_val)
 	
 	print("Curent npc: " + str(npc))
 	print("Previous npc: " + str(Global.prev_npc))
