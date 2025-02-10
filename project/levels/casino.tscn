@@ -50,6 +50,9 @@ current = false
 [node name="hotdog_storage" parent="Kitchen/Root Scene4/RootNode" index="0"]
 transform = Transform3D(29.8825, 0, 0, 0, -4.93629e-06, 42.6893, 0, -41.4086, -5.08895e-06, 3.60718, 0.639189, -1.51821)
 
+[node name="CollisionShape3D" parent="Kitchen/Root Scene4/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.75752, 0, 0, 0, 1, 0, -0.127907, 0.0612797)
+
 [node name="Background" type="Sprite3D" parent="."]
 transform = Transform3D(0.341, 0, 0, 0, 0.35, 0, 0, 0, 0.506, 0, 5.60867, 8.88153)
 texture = ExtResource("2_5o1hu")
@@ -67,10 +70,10 @@ transform = Transform3D(20, 0, 0, 0, -3.66926e-06, 20, 0, -30.78, -2.38419e-06, 
 surface_material_override/0 = SubResource("StandardMaterial3D_yykio")
 
 [node name="Dog_machine" parent="Hot_Dog_Cooker" instance=ExtResource("5_e3p2g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56797, 0.663956, -1.37221)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51314, 0.663956, -0.841654)
 
 [node name="Dog_machine2" parent="Hot_Dog_Cooker" instance=ExtResource("5_e3p2g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53569, 0.654994, -1.62814)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53569, 0.654994, -1.0895)
 
 [node name="Dog_Shelves" parent="." instance=ExtResource("6_eae8k")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.0453476, -0.487459, -0.0523405)
@@ -152,7 +155,7 @@ transform = Transform3D(2.88, 0, 0, 0, -1.39732e-06, 2.88, 0, -11.7216, -3.43323
 material_override = SubResource("StandardMaterial3D_t76uh")
 
 [node name="hot_dog_bun_box" type="StaticBody3D" parent="Dog_Shelves"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56331, 0.521261, -0.773333)
+transform = Transform3D(1.16272, 0, 0, 0, 1, 0, 0, 0, 1, 1.56331, 0.521261, -0.773333)
 script = ExtResource("8_6i6cq")
 metadata/_edit_group_ = true
 
