@@ -14,6 +14,7 @@ var i_want_burger = false
 var npc_name
 var npc = -1
 var curr_dialogue
+var hidden_now = false
 
 @export var level: String
 @export var level_path: String
