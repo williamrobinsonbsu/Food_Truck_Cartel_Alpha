@@ -1,5 +1,7 @@
 extends StaticBody3D
 
+signal timer_started
+
 var i_want_lettuce = false
 var i_want_onion = false
 var i_want_cheese = false
@@ -51,10 +53,10 @@ func _ready():
 	if level == "Beach":
 		if world.starting_counter != 0:
 			$AssemblyTimer.start()
-		else:
-			$OrderTimer.hide()
+			timer_started.emit()
 	else:
 		$AssemblyTimer.start()
+		timer_started.emit()
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	npc_name = ""
@@ -113,11 +115,6 @@ func _ready():
 
 
 func _physics_process(_delta) -> void:
-	if level == "Beach":
-		if world.starting_counter != 0:
-			$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
-	else:
-		$OrderTimer.text = str(int($AssemblyTimer.get_time_left()))
 	#look_at(
 	#	get_viewport().get_camera_3d().global_position,Vector3(0,1,0)
 	#)
