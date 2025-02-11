@@ -1,4 +1,4 @@
-[gd_scene load_steps=474 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=477 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -297,6 +297,8 @@
 [ext_resource type="Texture2D" uid="uid://d1kk10k1pux43" path="res://Textures/DOOR_DefaultMaterial_Roughness.png" id="297_dbgs1"]
 [ext_resource type="PackedScene" uid="uid://qd0p8x48irij" path="res://customer/dog/dog.tscn" id="297_eokpt"]
 [ext_resource type="Texture2D" uid="uid://df2mqdrxs2k2" path="res://Textures/FryPoster.png" id="297_ktcbn"]
+[ext_resource type="PackedScene" uid="uid://d0wsbh7slshqv" path="res://FBXRaw/OutofOrder.fbx" id="298_hi24e"]
+[ext_resource type="Texture2D" uid="uid://bp5ng4kku0m6d" path="res://Textures/OutofOrder_DefaultMaterial_BaseColor.png" id="299_c1r4r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l8cx"]
 metallic = 1.0
@@ -1860,6 +1862,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5pt8q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d665g"]
+albedo_texture = ExtResource("299_c1r4r")
 
 [node name="Kitchen" type="Node3D"]
 
@@ -3982,6 +3987,13 @@ omni_attenuation = 1.31951
 [node name="CopCarSpawn" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 13)
 
+[node name="OutofOrder" parent="." instance=ExtResource("298_hi24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70363, 1.32847, -1.26871)
+
+[node name="OoO_Sign" parent="OutofOrder/RootNode" index="0"]
+transform = Transform3D(1.41722, 1.66199e-06, -13.4172, 17.9874, 3.64606e-06, 1.05714, 2.15091e-06, -23.768, -1.60442e-06, 1.11472, 0.733964, -0.33773)
+material_override = SubResource("StandardMaterial3D_d665g")
+
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]
@@ -4058,3 +4070,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 13)
 [editable path="BOTTOMJBread"]
 [editable path="Root Scene4"]
 [editable path="Door"]
+[editable path="OutofOrder"]

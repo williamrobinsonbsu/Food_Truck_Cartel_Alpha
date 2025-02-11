@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://brrf7e0fpgyae"]
+[gd_scene load_steps=5 format=3 uid="uid://brrf7e0fpgyae"]
 
 [ext_resource type="Script" path="res://intro/intro_scene.gd" id="1_vmv0q"]
+[ext_resource type="Texture2D" uid="uid://cvjo4mxukqobf" path="res://Textures/cutscene_f1.png" id="2_cdl5t"]
+[ext_resource type="FontFile" uid="uid://dmi7bafb802dp" path="res://font/Starshines.otf" id="3_odqo7"]
+[ext_resource type="FontFile" uid="uid://c2ns0mejwetfy" path="res://font/Nice Sugar.ttf" id="3_xciiv"]
 
 [node name="Intro" type="Control"]
 layout_mode = 3
@@ -19,3 +22,78 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 325)
+scale = Vector2(0.601042, 0.594445)
+texture = ExtResource("2_cdl5t")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 129.0
+offset_right = 454.0
+offset_bottom = 162.0
+rotation = -0.427939
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 19
+theme_override_fonts/font = ExtResource("3_odqo7")
+theme_override_font_sizes/font_size = 21
+text = "NOTIFICATIONS"
+
+[node name="Label2" type="Label" parent="Label2"]
+offset_left = -32.2266
+offset_top = 24.8687
+offset_right = 421.773
+offset_bottom = 463.869
+rotation = 0.00909845
+scale = Vector2(0.488488, 0.776901)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 19
+theme_override_fonts/font = ExtResource("3_xciiv")
+theme_override_font_sizes/font_size = 24
+text = "___________________________
+LICENSE RENEWAL/ FOOD LICENSE 
+IS NOW REVOKED 
+Please pay $500 at Lane 346 for 
+renewal.....
+---------------------------------------
+EVICTION NOTICE (PAY BY FRIDAY O
+----------------------------------------
+Text from son Jamie: 
+Hey.. for my birthday, can we
+....maybe
+just have a nice meal
+ like old times ?"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 187.0
+offset_top = 227.0
+offset_right = 959.0
+offset_bottom = 587.0
+rotation = -0.434101
+scale = Vector2(0.5727, 0.897279)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("3_xciiv")
+theme_override_font_sizes/font_size = 20
+text = "LICENSE RENEWAL/ FOOD LICENSE 
+IS NOW REVOKED 
+Please pay $500 at Lane 346 for 
+renewal.....
+---------------------------------------
+EVICTION NOTICE (PAY BY FRIDAY OR
+----------------------------------------
+Text from son Jamie: 
+Hey.. for my birthday, can we
+....maybe
+just have a nice meal
+ like old times ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+visible_ratio = -0.00444444

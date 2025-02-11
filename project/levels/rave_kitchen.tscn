@@ -7,6 +7,16 @@
 
 [node name="Kitchen" parent="." instance=ExtResource("1_5wdmp")]
 
+[node name="OmniLight3D23" type="OmniLight3D" parent="Kitchen"]
+transform = Transform3D(1, 0, 0, 0, 0.999337, 0.0363996, 0, -0.0363996, 0.999337, 2.55602, 1.90054, -0.0995737)
+light_color = Color(0.658824, 0.356863, 0.815686, 1)
+light_energy = 0.717
+light_indirect_energy = 1.755
+light_volumetric_fog_energy = 9.306
+light_specular = 2.27
+omni_range = 3.897
+omni_attenuation = 1.31951
+
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 13.2537)
 texture = ExtResource("2_pxk0b")
@@ -67,3 +77,4 @@ bus = &"Music"
 [editable path="Kitchen/BOTTOMJBread"]
 [editable path="Kitchen/Root Scene4"]
 [editable path="Kitchen/Door"]
+[editable path="Kitchen/OutofOrder"]
