@@ -41,7 +41,7 @@ func _process(_delta):
 func _on_beach_pressed():
 	_play_loading_screen()
 	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://levels/beach.tscn")
+	get_tree().change_scene_to_file("res://intro/intro_scene.tscn")
 	
 
 func _on_beach_mouse_entered():

@@ -2,5 +2,7 @@ extends Control
 
 
 func _ready():
-	await DialogueManager.show_example_dialogue_balloon(load("res://intro/dialogue.dialogue"), "intro").child_exiting_tree
+	var curr = DialogueManager.show_example_dialogue_balloon(load("res://intro/dialogue.dialogue"), "intro")
+	await DialogueManager.dialogue_ended
 	self.hide()
+	get_tree().change_scene_to_file("res://levels/beach.tscn")

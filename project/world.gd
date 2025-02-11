@@ -145,50 +145,60 @@ func _on_new_customer():
 		
 	
 func _on_police():
-	var scene = preload("res://police/police.tscn")
-	var police = scene.instantiate()
-	var i = 0
-	add_child(police)
-	if lane_progression_counter == 1:
-		i = randi()%2
-		police.scale = Vector3(0.1, 0.1, 0.1)
-		if i == 0:
-			police.position = $Far1.position
-		elif i == 1:
-			police.position = $Far2.position
-		else:
-			police.position = $Far3.position
-			police.scale.x *= -1
-	elif lane_progression_counter == 2:
-		i = randi()%2
-		police.scale = Vector3(0.5, 0.5, 0.5)
-		if i == 0:
-			police.position = $Mid1.position
-		elif i == 1:
-			police.position = $Mid2.position
-		else:
-			police.position = $Mid3.position
-			police.scale.x *= -1
+	if lane_progression_counter <= 0:
+		var scene = preload("res://police/police_car.tscn")
+		var car = scene.instantiate()
+		add_child(car)
+		print("car spawned")
+		car.global_rotation.y += 55
+		car.scale.x = -1
+		car.global_position = $"../CopCarSpawn".global_position
 	else:
-		var audio_stream_player := AudioStreamPlayer.new()
-		audio_stream_player.stream = load("res://audio/police_siren.wav")
-		audio_stream_player.volume_db = linear_to_db(0.3)
-		get_parent().add_child(audio_stream_player)
-		audio_stream_player.play()
-		audio_stream_player.finished.connect(func():
-			audio_stream_player.queue_free()
-		)
-		i = randi()%1
-		Global.police_spawns += 1
-		police.scale = Vector3(1, 1, 1)
-		if i == 0:
-			police.position = $Close1.position
-		elif i == 1:
-			police.position = $Close2.position
-		police.catch()
-		cop_catch_timer.start()
-		cop_present.emit(false)
-		get_tree().call_group("customer", "selfhide")
+		var scene = preload("res://police/police.tscn")
+		var police = scene.instantiate()
+		add_child(police)
+		var i = 0
+		if lane_progression_counter == 1:
+			i = randi()%2
+			police.scale = Vector3(0.1, 0.1, 0.1)
+			if i == 0:
+				police.position = $Far1.position
+			elif i == 1:
+				police.position = $Far2.position
+			else:
+				police.position = $Far3.position
+				police.scale.x *= -1
+		elif lane_progression_counter == 2:
+			i = randi()%2
+			police.scale = Vector3(0.5, 0.5, 0.5)
+			if i == 0:
+				police.position = $Mid1.position
+			elif i == 1:
+				police.position = $Mid2.position
+			else:
+				police.position = $Mid3.position
+				police.scale.x *= -1
+		elif lane_progression_counter == 3:
+			var audio_stream_player := AudioStreamPlayer.new()
+			audio_stream_player.stream = load("res://audio/police_siren.wav")
+			audio_stream_player.volume_db = linear_to_db(0.3)
+			get_parent().add_child(audio_stream_player)
+			audio_stream_player.play()
+			audio_stream_player.finished.connect(func():
+				audio_stream_player.queue_free()
+			)
+			i = randi()%1
+			Global.police_spawns += 1
+			police.scale = Vector3(1, 1, 1)
+			if i == 0:
+				police.position = $Close1.position
+			elif i == 1:
+				police.position = $Close2.position
+			police.catch()
+			cop_catch_timer.start()
+			cop_present.emit(false)
+			get_tree().call_group("customer", "selfhide")
+			lane_progression_counter = -1
 		
 
 func policeRate():
@@ -250,7 +260,7 @@ func _on_level_timer_timeout():
 
 	
 func _spawn_police(modifier):
-	if modifier < 1 or modifier > 3:
+	if modifier < 0 or modifier > 3:
 		pass
 	else:
 		cop_catch_timer.stop()
@@ -263,9 +273,8 @@ func _on_cop_timer_timeout():
 	print("Cop Timer Called")
 	get_tree().call_group("police", "despawn")
 	poRate = policeRate()
-	if poRate != 0:
-		_on_police()
-		print(poRate)
+	_on_police()
+	print(poRate)
 	$CopTimer.wait_time = 15
 	$CopTimer.start()
 

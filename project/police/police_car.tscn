@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://8juo4egim5wk"]
+
+[ext_resource type="PackedScene" uid="uid://cbp2m6cg0w7fd" path="res://FBXRaw/cop car.fbx" id="1_pm812"]
+[ext_resource type="Script" path="res://police/police_car.gd" id="1_tm27i"]
+[ext_resource type="Texture2D" uid="uid://baoylwp4kb8hn" path="res://Textures/cop_car_DefaultMaterial_BaseColor2.png" id="2_2vs86"]
+[ext_resource type="Texture2D" uid="uid://b12mk1i0gnwfd" path="res://Textures/cop_car_DefaultMaterial_Roughness.png" id="3_lx0mb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q0iil"]
+albedo_texture = ExtResource("2_2vs86")
+roughness_texture = ExtResource("3_lx0mb")
+
+[sub_resource type="Animation" id="Animation_dqm6n"]
+resource_name = "drive"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root Scene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 16.0646), Vector3(0, 0, -31.1819)]
+}
+
+[sub_resource type="Animation" id="Animation_xsma6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root Scene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 16.0646)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b1grh"]
+_data = {
+"RESET": SubResource("Animation_xsma6"),
+"drive": SubResource("Animation_dqm6n")
+}
+
+[node name="PoliceCar" type="Node3D"]
+script = ExtResource("1_tm27i")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_pm812")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.0646)
+
+[node name="Plane_022" parent="Root Scene/RootNode" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_q0iil")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b1grh")
+}
+
+[editable path="Root Scene"]
