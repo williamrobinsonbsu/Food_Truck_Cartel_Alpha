@@ -206,7 +206,8 @@ func _on_police_here():
 	while i != 100:
 		if police_gone == false:
 			$Control/CatchMeter.value += .1
+			print("oh yeah")
 			i += 1
 		else:
 			return
-		await get_tree().create_timer(.045).timeout
+		await get_tree().create_timer(.04).timeout

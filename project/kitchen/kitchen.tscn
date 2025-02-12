@@ -3991,6 +3991,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70363, 1.32847, -1.26871)
 transform = Transform3D(1.41722, 1.66199e-06, -13.4172, 17.9874, 3.64606e-06, 1.05714, 2.15091e-06, -23.768, -1.60442e-06, 1.11472, 0.733964, -0.33773)
 material_override = SubResource("StandardMaterial3D_d665g")
 
+[connection signal="cop_present" from="Root Scene" to="Player" method="_on_root_scene_cop_present"]
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
 [connection signal="timeout" from="Root Scene/Stove/ActionLabelStove/LabelStoveTimer" to="Root Scene/Stove" method="_on_label_stove_timer_timeout"]
 [connection signal="timeout" from="Root Scene/cutting_board/ActionLabelCuttingBoard/LabelCuttingBoardTimer" to="Root Scene/cutting_board" method="_on_label_cutting_board_timer_timeout"]

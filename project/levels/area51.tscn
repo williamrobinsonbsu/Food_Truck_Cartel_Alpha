@@ -273,6 +273,7 @@ material_override = SubResource("StandardMaterial3D_o2vhw")
 [editable path="Kitchen/BOTTOMJBread"]
 [editable path="Kitchen/Root Scene4"]
 [editable path="Kitchen/Door"]
+[editable path="Kitchen/OutofOrder"]
 [editable path="hot_dog_machine"]
 [editable path="hot_dog_box/hot_dog_bundle"]
 [editable path="hot_dog_box/hot_dog_bundle/Root Scene2"]

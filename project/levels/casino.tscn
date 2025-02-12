@@ -44,9 +44,6 @@ roughness_texture = ExtResource("12_pqc6j")
 
 [node name="Kitchen" parent="." instance=ExtResource("1_21q4g")]
 
-[node name="Camera3D" parent="Kitchen/Player" index="2"]
-current = false
-
 [node name="hotdog_storage" parent="Kitchen/Root Scene4/RootNode" index="0"]
 transform = Transform3D(29.8825, 0, 0, 0, -4.93629e-06, 42.6893, 0, -41.4086, -5.08895e-06, 3.60718, 0.639189, -1.51821)
 
@@ -276,6 +273,7 @@ material_override = SubResource("StandardMaterial3D_sh0kc")
 [editable path="Kitchen/BOTTOMJBread"]
 [editable path="Kitchen/Root Scene4"]
 [editable path="Kitchen/Door"]
+[editable path="Kitchen/OutofOrder"]
 [editable path="Hot_Dog_Cooker"]
 [editable path="Dog_Shelves"]
 [editable path="Dog_Shelves/hot_dog_bundle"]
