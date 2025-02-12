@@ -25,3 +25,7 @@ func _on_quit_pressed():
 func _on_settings_pressed():
 	get_node("Options/CanvasLayer").show()
 	
+
+
+func _on_credits_pressed():
+	pass # Replace with function body.
