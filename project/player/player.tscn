@@ -315,4 +315,5 @@ z_index = 1000
 
 [node name="PauseMenu" parent="Pause" instance=ExtResource("2_xfury")]
 
+[connection signal="police_here" from="." to="." method="_on_police_here"]
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
