@@ -3019,9 +3019,6 @@ wait_time = 15.0
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.22596, 1.06501)
 cam_target = NodePath("../LoseCamMarker")
 
-[node name="Camera3D" parent="Player" index="2"]
-current = true
-
 [node name="CatchMeter" parent="Player/Control" index="1"]
 offset_left = -1.5
 offset_top = 29.0

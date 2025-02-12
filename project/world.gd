@@ -207,8 +207,10 @@ func policeRate():
 	if rand <= .5:
 		if lane_progression_counter < 3:
 			lane_progression_counter += 1
+			print("increase")
 		else:
 			lane_progression_counter = 0
+			print("decrease")
 	
 	return lane_progression_counter
 		
@@ -272,7 +274,7 @@ func _spawn_police(modifier):
 func _on_cop_timer_timeout():
 	print("Cop Timer Called")
 	get_tree().call_group("police", "despawn")
-	poRate = policeRate()
+	lane_progression_counter = policeRate()
 	_on_police()
 	print(poRate)
 	$CopTimer.wait_time = 15

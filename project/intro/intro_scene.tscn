@@ -42,6 +42,7 @@ theme_override_font_sizes/font_size = 21
 text = "NOTIFICATIONS"
 
 [node name="Label2" type="Label" parent="Label2"]
+layout_mode = 0
 offset_left = -32.2266
 offset_top = 24.8687
 offset_right = 421.773
@@ -96,4 +97,5 @@ just have a nice meal
 horizontal_alignment = 1
 vertical_alignment = 1
 text_overrun_behavior = 1
-visible_ratio = -0.00444444
+visible_characters = 0
+visible_ratio = 0.0
