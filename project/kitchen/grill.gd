@@ -62,6 +62,6 @@ func _burn(body):
 		if body != null:
 			body.queue_free())
 
-func _on_grill_top_body_exited(body):
+func _on_grill_top_body_exited(_body):
 	timer.paused = true
 	burn_timer.paused = true
