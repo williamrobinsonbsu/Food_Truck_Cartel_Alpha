@@ -43,8 +43,3 @@ func _on_back_button_pressed():
 	$CanvasLayer.hide()
 	closed.emit()
 	
-
-
-func _on_brightness_value_changed(value):
-	var color = Color(0,0,0,value)
-	$brightness/ColorRect.set_color(color)

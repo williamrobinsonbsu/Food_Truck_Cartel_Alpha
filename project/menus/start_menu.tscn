@@ -247,6 +247,7 @@ theme_override_font_sizes/font_size = 22
 text = "Quit"
 
 [node name="Credits" type="Button" parent="."]
+layout_mode = 0
 offset_left = 502.0
 offset_top = 425.0
 offset_right = 652.0
