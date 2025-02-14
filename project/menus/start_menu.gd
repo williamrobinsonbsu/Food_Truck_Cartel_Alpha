@@ -28,4 +28,4 @@ func _on_settings_pressed():
 
 
 func _on_credits_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://menus/Credits.tscn")

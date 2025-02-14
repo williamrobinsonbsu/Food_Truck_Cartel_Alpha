@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://dowds12a02fuj"]
 
 [node name="Credits" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 132.0
+offset_top = 51.0
+offset_right = 1006.0
+offset_bottom = 504.0
