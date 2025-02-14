@@ -28,12 +28,12 @@ func _on_next_mouse_entered():
 	$CanvasLayer/Resultscreen.texture = load("res://menus/resultscreenclicknext.png")
 
 func _on_next_mouse_exited():
-	$CanvasLayer/Resultscreen.texture = load("res://menus/resultscreen.webp")
+	$CanvasLayer/Resultscreen.texture = load("res://menus/resultscreen.png")
 	
 
 func _on_quit_mouse_entered():
 	$CanvasLayer/Resultscreen.texture = load("res://menus/resultscreenclickquit.png")
 
 func _on_quit_mouse_exited():
-	$CanvasLayer/Resultscreen.texture = load("res://menus/resultscreen.webp")
+	$CanvasLayer/Resultscreen.texture = load("res://menus/resultscreen.png")
 	

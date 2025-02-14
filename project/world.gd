@@ -18,6 +18,7 @@ var goal_score = 50
 @onready var customer_or_cop_timer: Timer = $customer_or_police_spawn_timer
 @onready var cop_catch_timer: Timer = $cop_catch_timer
 @onready var level_timer: Timer = $LevelTimer
+@onready var player: CharacterBody3D = $"../Player"
 
 
 func _ready():
@@ -258,7 +259,9 @@ func _on_level_timer_timeout():
 		
 	
 	await get_tree().create_timer(5).timeout
-	get_tree().change_scene_to_file("res://menus/result_screen.tscn")
+	get_tree().paused = true
+	var scene = preload("res://menus/result_screen.tscn").instantiate()
+	player.add_child(scene)
 
 	
 func _spawn_police(modifier):
