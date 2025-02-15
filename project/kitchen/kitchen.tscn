@@ -3042,10 +3042,10 @@ material_override = SubResource("StandardMaterial3D_3ghn6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00896125, 0, 0)
 
 [node name="CollisionShape3D" parent="order_plate/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.287125, 0.114904, 0.0437484)
+transform = Transform3D(1.3164, 0, 0, 0, 1, 0, 0, 0, 1.08291, 0.0555113, 0.114904, 0.0437486)
 
 [node name="CollisionShape3D" parent="order_plate/StaticBody3D/Area3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00911713, 0.138107, 0.0104065)
+transform = Transform3D(0.980765, 0, 0, 0, 1, 0, 0, 0, 0.998366, -0.00911713, 0.138107, 0.0104065)
 
 [node name="BreadBot" parent="order_plate/bottom_bun/RootNode/Truck/Burger" index="0"]
 material_override = SubResource("StandardMaterial3D_usyyl")
@@ -3291,7 +3291,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240987, 0.66316, 4.18578)
 
 [node name="plate" parent="plate/RootNode" index="0"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.312243, -0.542903, -1.15927)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0334385, -0.542903, -1.15927)
 material_override = SubResource("StandardMaterial3D_8v2fl")
 
 [node name="cabinets" parent="." instance=ExtResource("259_72m0t")]
@@ -3684,7 +3684,7 @@ modulate = Color(0.764706, 0.764706, 0.764706, 1)
 texture = ExtResource("297_ktcbn")
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.402785, 1.55884, 4.49069)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0888625, 1.55884, 4.49069)
 text = "Click Plate to Place"
 font = ExtResource("172_jj25w")
 font_size = 10
