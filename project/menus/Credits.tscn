@@ -1,11 +1,118 @@
-[gd_scene load_steps=3 format=3 uid="uid://dowds12a02fuj"]
+[gd_scene load_steps=14 format=3 uid="uid://dowds12a02fuj"]
 
+[ext_resource type="Script" path="res://menus/Credits.gd" id="1_7mbdv"]
+[ext_resource type="Theme" uid="uid://ftmbu43vi6kk" path="res://theme.tres" id="1_cplhb"]
 [ext_resource type="FontFile" uid="uid://c2ns0mejwetfy" path="res://font/Nice Sugar.ttf" id="1_efyru"]
 [ext_resource type="FontFile" uid="uid://cd4cg0p6lfot2" path="res://font/BLACK BUBBLE.ttf" id="2_t1q0y"]
+[ext_resource type="Texture2D" uid="uid://j4ncepgvk4pr" path="res://menus/parallax_background/parallaxdesert_back.png" id="4_amjql"]
+[ext_resource type="Script" path="res://menus/parallax_background/shadow_layer.gd" id="5_1xwe0"]
+[ext_resource type="Texture2D" uid="uid://cxm3nlno1rv4p" path="res://menus/parallax_background/parallaxdesert_shadow.png" id="6_eoe00"]
+[ext_resource type="Script" path="res://menus/parallax_background/canyon_layer.gd" id="7_ymlst"]
+[ext_resource type="Texture2D" uid="uid://ytam8ak7m3kp" path="res://menus/parallax_background/parallaxdesert_canyonTILED.png" id="8_o41i8"]
+[ext_resource type="Script" path="res://menus/parallax_background/road_layer.gd" id="9_riw73"]
+[ext_resource type="Texture2D" uid="uid://d0asonbclj7oe" path="res://menus/parallax_background/parallaxdesert_weeds.png" id="10_8avfm"]
+[ext_resource type="Texture2D" uid="uid://p4fsvyalndn6" path="res://menus/parallax_background/parallaxdesert_roadTILED.png" id="11_4nr20"]
 
-[node name="Credits" type="Node2D"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hnjb6"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_cplhb")
+script = ExtResource("1_7mbdv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+follow_viewport_enabled = true
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+position = Vector2(697, 299)
+motion_mirroring = Vector2(1400, 0)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2(-697, -299)
+color = Color(0.121569, 0.333333, 0.580392, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_amjql")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+position = Vector2(697, 299)
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1400, 0)
+script = ExtResource("5_1xwe0")
+shadow_speed = -250.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer2"]
+texture_repeat = 2
+position = Vector2(-220, -285)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_eoe00")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 7000, 3500)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+position = Vector2(692, 354)
+motion_mirroring = Vector2(1400, 0)
+script = ExtResource("7_ymlst")
+Canyon_speed = -500.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer3"]
+texture_repeat = 2
+position = Vector2(-228, -355)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_o41i8")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 7000, 3500)
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+position = Vector2(697, 299)
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1400, 700)
+script = ExtResource("9_riw73")
+road_speed = -750.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer5"]
+position = Vector2(459, -9)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_8avfm")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+position = Vector2(697, 299)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1400, 700)
+script = ExtResource("9_riw73")
+road_speed = -750.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer4"]
+texture_repeat = 2
+position = Vector2(-231, -349)
+scale = Vector2(0.2, 0.2)
+texture = SubResource("CompressedTexture2D_hnjb6")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 7000, 3500)
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+position = Vector2(697, 299)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1400, 700)
+script = ExtResource("9_riw73")
+road_speed = -750.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer6"]
+texture_repeat = 2
+position = Vector2(-231, -349)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_4nr20")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 7000, 3500)
 
 [node name="ProgrammingTeamLabel" type="RichTextLabel" parent="CanvasLayer"]
 anchors_preset = 8
@@ -13,12 +120,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -450.0
-offset_top = -259.0
-offset_right = 40.0
-offset_bottom = -25.0
+offset_left = -443.0
+offset_top = -283.0
+offset_right = 47.0
+offset_bottom = -49.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_cplhb")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("1_efyru")
 theme_override_fonts/bold_font = ExtResource("2_t1q0y")
 theme_override_font_sizes/normal_font_size = 18
@@ -46,12 +155,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 130.0
-offset_top = -257.0
-offset_right = 464.0
-offset_bottom = -25.0
+offset_left = 127.0
+offset_top = -281.0
+offset_right = 461.0
+offset_bottom = -49.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("1_efyru")
 theme_override_fonts/bold_font = ExtResource("2_t1q0y")
 theme_override_font_sizes/normal_font_size = 18
@@ -79,19 +189,52 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -164.0
-offset_top = 61.0
-offset_right = 170.0
-offset_bottom = 273.0
+offset_left = -450.0
+offset_top = -14.0
+offset_right = 52.0
+offset_bottom = 299.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_cplhb")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("1_efyru")
 theme_override_fonts/bold_font = ExtResource("2_t1q0y")
-theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/normal_font_size = 14
 theme_override_font_sizes/bold_font_size = 24
 theme_override_font_sizes/italics_font_size = 24
 bbcode_enabled = true
-text = "[b]Sound Credits[/b]"
+text = "[b]Sound Credits[/b]
+
+\"Voxel Revolution\" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+\"Raving Energy (faster)\" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0
+
+\"Boogie Party\" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+\"Study And Relax\" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+"
+fit_content = true
 scroll_active = false
 scroll_following = true
 autowrap_mode = 0
+
+[node name="BackButton" type="Button" parent="CanvasLayer"]
+offset_left = 780.0
+offset_top = 474.0
+offset_right = 875.0
+offset_bottom = 530.0
+theme = ExtResource("1_cplhb")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_t1q0y")
+theme_override_font_sizes/font_size = 21
+text = "Back"
+
+[connection signal="pressed" from="CanvasLayer/BackButton" to="." method="_on_back_button_pressed"]
