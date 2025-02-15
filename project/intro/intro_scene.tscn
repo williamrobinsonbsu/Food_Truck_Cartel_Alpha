@@ -69,7 +69,6 @@ just have a nice meal
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 187.0
 offset_top = 227.0

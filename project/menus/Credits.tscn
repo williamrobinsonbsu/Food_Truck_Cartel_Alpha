@@ -14,8 +14,8 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -450.0
-offset_top = -237.0
-offset_right = -116.0
+offset_top = -259.0
+offset_right = 40.0
 offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -28,10 +28,13 @@ bbcode_enabled = true
 text = "[b]Programming Team[/b]
 
 Tanner Bauserman
+Lead Music Director, Programming Specialist
 
 William Robinson
+Programming Specialist
 
 Jamison Tucker
+Programming Specialist, Quality Assurance Engineer
 "
 scroll_active = false
 scroll_following = true
@@ -44,7 +47,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 130.0
-offset_top = -237.0
+offset_top = -257.0
 offset_right = 464.0
 offset_bottom = -25.0
 grow_horizontal = 2
@@ -58,10 +61,13 @@ bbcode_enabled = true
 text = "[b]Art Team[/b]
 
 Alex McNeill
+Art Director, UI (User Interface) Artist
 
-Ethan Shanon-Spice
+Ethan Shannon-Spice
+Lead 3D Modeler, Texture Artist 
 
 Emma Wiliford
+2D Illustrator, 3D Modeler
 "
 scroll_active = false
 scroll_following = true

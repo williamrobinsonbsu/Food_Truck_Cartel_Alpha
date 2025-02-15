@@ -7,6 +7,102 @@
 
 [node name="Kitchen" parent="." instance=ExtResource("1_5wdmp")]
 
+[node name="CollisionShape3D" parent="Kitchen/order_plate/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0949869, 0.114904, 0.0437486)
+
+[node name="walls" parent="Kitchen/Walls/RootNode" index="0"]
+transform = Transform3D(1.51668, 0, 0, 0, 1.52564, 0, 0, 0, 1.56159, 0.373983, -1.34399, -1.13928)
+
+[node name="Floor" parent="Kitchen/floor/RootNode" index="0"]
+transform = Transform3D(3.12389, 0, 0, 0, 4.99334, 1.98674e-07, 0, -3.76987e-07, 2.63152, 0.285492, -0.229053, 1.54647)
+
+[node name="plate" parent="Kitchen/plate/RootNode" index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.00746757, -0.542903, -1.15927)
+
+[node name="Fridge" parent="Kitchen/Root Scene2/RootNode" index="0"]
+transform = Transform3D(2, 0, 0, 0, 1.43743, 0, 0, 0, 1.49443, 1.07803, -0.194111, 0.541932)
+
+[node name="PattyStacks" parent="Kitchen" index="30"]
+transform = Transform3D(1.07312, 0, 0, 0, 1.05044, 0, 0, 0, 1.05066, -2.66918, 0.859365, -3.09)
+
+[node name="Patty" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="0"]
+transform = Transform3D(9.10475, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.471501, 0.475665, 0.518766)
+
+[node name="Patty2" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="1"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.47853, 0.491053, 0.515683)
+
+[node name="Patty3" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="2"]
+transform = Transform3D(9.10475, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.4715, 0.516065, 0.518766)
+
+[node name="Patty4" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="3"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.505113, 0.51104, 0.512531)
+
+[node name="Patty5" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="4"]
+transform = Transform3D(9.10475, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.636875, 0.467315, 0.518766)
+
+[node name="Patty6" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="5"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.636875, 0.481406, 0.518766)
+
+[node name="Patty7" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="6"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.636875, 0.500219, 0.518766)
+
+[node name="Patty8" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="7"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.692642, 0.51437, 0.527498)
+
+[node name="Patty9" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="8"]
+transform = Transform3D(9.10475, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.787084, 0.462735, 0.524777)
+
+[node name="Patty10" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="9"]
+transform = Transform3D(9.10475, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.787084, 0.494972, 0.524777)
+
+[node name="Patty11" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="10"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.787084, 0.481192, 0.524777)
+
+[node name="Patty12" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="11"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.794414, 0.50587, 0.523587)
+
+[node name="Patty13" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="12"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.580501, 0.475665, 0.392941)
+
+[node name="Patty14" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="13"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.580501, 0.494972, 0.392941)
+
+[node name="Patty15" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="14"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.580501, 0.501386, 0.392941)
+
+[node name="Patty16" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="15"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.5805, 0.524392, 0.392941)
+
+[node name="Patty17" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="16"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.736547, 0.460986, 0.392941)
+
+[node name="Patty18" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="17"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.736255, 0.475112, 0.393095)
+
+[node name="Patty19" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="18"]
+transform = Transform3D(9.10474, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.743432, 0.492207, 0.394096)
+
+[node name="Patty20" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="19"]
+transform = Transform3D(9.10473, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.750254, 0.507469, 0.393855)
+
+[node name="Patty21" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="20"]
+transform = Transform3D(9.10473, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.755913, 0.519978, 0.411417)
+
+[node name="Patty22" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="21"]
+transform = Transform3D(9.10473, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.718452, 0.53735, 0.438934)
+
+[node name="Patty23" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="22"]
+transform = Transform3D(9.10473, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.804749, 0.516227, 0.513966)
+
+[node name="Patty24" parent="Kitchen/PattyStacks/RootNode/Truck/Burger" index="23"]
+transform = Transform3D(9.10473, 0, 0, 0, 1.85536, 0, 0, 0, 9.42806, 0.571685, 0.533459, 0.449927)
+
+[node name="Label3D" parent="Kitchen" index="34"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.158006, 1.69375, 4.49069)
+
+[node name="OoO_Sign" parent="Kitchen/OutofOrder/RootNode" index="0"]
+transform = Transform3D(1.41722, 1.66199e-06, -13.4172, 17.9874, 3.64606e-06, 1.05714, 2.15091e-06, -23.768, -1.60442e-06, 1.11472, 0.629181, -0.48129)
+
 [node name="OmniLight3D23" type="OmniLight3D" parent="Kitchen"]
 transform = Transform3D(1, 0, 0, 0, 0.999337, 0.0363996, 0, -0.0363996, 0.999337, 2.55602, 1.90054, -0.0995737)
 light_color = Color(0.658824, 0.356863, 0.815686, 1)
