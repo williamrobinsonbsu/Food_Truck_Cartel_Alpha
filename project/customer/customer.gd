@@ -66,12 +66,12 @@ func _ready():
 	voice.play_string("Here is my order")
 	curr_dialogue = DialogueManager.show_example_dialogue_balloon(load("res://customer/npcs/" + level_path + "/" + npc_name +"/dialogue.dialogue"), "normal")
 	
-	if level == "Casino" and randf() <= .3:
+	if level == "Casino" or level == "Area51" or level == "Endless" and randf() <= .3:
 		print("I would like a hot dog")
 		order = "hot dog"
 		i_want_hot_dog = true
 		counter += 1
-		order_label.text = "-=+Current Order+=-\n- "+order+ " with: "
+		order_label.text = "-=+Current Order+=-\n- "+order
 	else:
 		print("I would like a burger!")
 		i_want_burger = true
