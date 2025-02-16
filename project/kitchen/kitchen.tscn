@@ -1,4 +1,4 @@
-[gd_scene load_steps=477 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=482 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -299,6 +299,10 @@
 [ext_resource type="Texture2D" uid="uid://df2mqdrxs2k2" path="res://Textures/FryPoster.png" id="297_ktcbn"]
 [ext_resource type="PackedScene" uid="uid://d0wsbh7slshqv" path="res://FBXRaw/OutofOrder.fbx" id="298_hi24e"]
 [ext_resource type="Texture2D" uid="uid://bp5ng4kku0m6d" path="res://Textures/OutofOrder_DefaultMaterial_BaseColor.png" id="299_c1r4r"]
+[ext_resource type="PackedScene" uid="uid://c1ced5sea83oa" path="res://FBXRaw/bell.fbx" id="300_xfitu"]
+[ext_resource type="Texture2D" uid="uid://dbjl77w6buevn" path="res://Textures/bell_DefaultMaterial_BaseColor.png" id="301_ifro3"]
+[ext_resource type="Texture2D" uid="uid://dwd5fpnwq4s53" path="res://Textures/bell_DefaultMaterial_Normal.png" id="302_8c50e"]
+[ext_resource type="Texture2D" uid="uid://cdo1k6aivwbth" path="res://Textures/bell_DefaultMaterial_Roughness.png" id="303_mgyow"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l8cx"]
 metallic = 1.0
@@ -1866,6 +1870,13 @@ shadow_mesh = SubResource("ArrayMesh_5pt8q")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d665g"]
 albedo_texture = ExtResource("299_c1r4r")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x5xl4"]
+albedo_texture = ExtResource("301_ifro3")
+metallic = 0.25
+roughness_texture = ExtResource("303_mgyow")
+normal_enabled = true
+normal_texture = ExtResource("302_8c50e")
+
 [node name="Kitchen" type="Node3D"]
 
 [node name="Root Scene" parent="." groups=["map"] instance=ExtResource("1_kyxpc")]
@@ -3030,6 +3041,9 @@ position = Vector2(11.5, 39.5)
 scale = Vector2(0.103763, 0.102016)
 texture = ExtResource("185_bgorc")
 
+[node name="LevelTimerLabel" parent="Player/Control" index="3"]
+visible = true
+
 [node name="order_plate" parent="." groups=["plate"] instance=ExtResource("190_a410o")]
 transform = Transform3D(1.541, 0, 0, 0, 0.952, 0, 0, 0, 1.5, 0, 1.18726, 4.47593)
 
@@ -3291,7 +3305,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240987, 0.66316, 4.18578)
 
 [node name="plate" parent="plate/RootNode" index="0"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0334385, -0.542903, -1.15927)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0334385, -0.566582, -1.15927)
 material_override = SubResource("StandardMaterial3D_8v2fl")
 
 [node name="cabinets" parent="." instance=ExtResource("259_72m0t")]
@@ -3938,7 +3952,7 @@ omni_range = 0.381611
 omni_attenuation = 1.31951
 
 [node name="OmniLight3D19" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13602, 0.402847, -1.73937)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13602, 0.402847, -1.89312)
 light_color = Color(0.921569, 0.796078, 0.654902, 1)
 light_energy = 0.812
 light_indirect_energy = 0.0
@@ -3990,6 +4004,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70363, 1.32847, -1.26871)
 [node name="OoO_Sign" parent="OutofOrder/RootNode" index="0"]
 transform = Transform3D(1.41722, 1.66199e-06, -13.4172, 17.9874, 3.64606e-06, 1.05714, 2.15091e-06, -23.768, -1.60442e-06, 1.11472, 0.733964, -0.33773)
 material_override = SubResource("StandardMaterial3D_d665g")
+
+[node name="Root Scene5" parent="." instance=ExtResource("300_xfitu")]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, -0.64395, 1.18818, 4.46791)
+
+[node name="bell" parent="Root Scene5/RootNode" index="0"]
+transform = Transform3D(10, 0, 0, 0, 10, 7.54979e-07, 0, -7.54979e-07, 10, 0.0179348, 0, -0.0103474)
+material_override = SubResource("StandardMaterial3D_x5xl4")
+
+[node name="OmniLight3D23" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36264, 1.75902, -1.50562)
+light_color = Color(0.921569, 0.796078, 0.654902, 1)
+light_energy = 0.812
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.67
+light_specular = 1.7
+omni_range = 0.853
+omni_attenuation = 0.105113
+
+[node name="OmniLight3D24" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36264, 1.2566, -0.0792483)
+light_color = Color(0.921569, 0.796078, 0.654902, 1)
+light_energy = 0.812
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.67
+light_specular = 1.7
+omni_range = 0.853
+omni_attenuation = 0.105113
 
 [connection signal="cop_present" from="Root Scene" to="Player" method="_on_root_scene_cop_present"]
 [connection signal="timer" from="Root Scene" to="Root Scene/LevelTimer" method="_on_root_scene_timer"]
@@ -4069,3 +4110,4 @@ material_override = SubResource("StandardMaterial3D_d665g")
 [editable path="Root Scene4"]
 [editable path="Door"]
 [editable path="OutofOrder"]
+[editable path="Root Scene5"]
