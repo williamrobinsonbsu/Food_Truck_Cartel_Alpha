@@ -22,6 +22,8 @@ var goal_score = 50
 
 
 func _ready():
+	get_tree().paused = false
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	MenuMusic.stop()
 	level = str(get_parent().get_parent().name)
 	Global.curr_level = level
@@ -262,6 +264,9 @@ func _on_level_timer_timeout():
 	get_tree().paused = true
 	var scene = preload("res://menus/result_screen.tscn").instantiate()
 	player.add_child(scene)
+	if level == "Area51":
+		Global.end = true
+		print("TRUE!!!!!!!!!!")
 
 	
 func _spawn_police(modifier):

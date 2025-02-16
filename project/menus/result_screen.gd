@@ -1,6 +1,9 @@
 extends Control
 
 
+@export var end := false
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print(Global.end_of_level_money)
@@ -17,7 +20,11 @@ func _process(_delta):
 
 
 func _on_next_pressed():
-	get_tree().change_scene_to_file("res://menus/road_map.tscn")
+	if Global.end == true:
+		print("true!!")
+		get_tree().change_scene_to_file("res://intro/intro_scene.tscn")
+	else:
+		get_tree().change_scene_to_file("res://menus/road_map.tscn")
 
 
 func _on_quit_pressed():

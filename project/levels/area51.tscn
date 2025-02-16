@@ -61,7 +61,7 @@ autoplay = true
 bus = &"Music"
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(-0.3, 0, -2.62268e-08, 0, 0.3, 0, 2.62268e-08, 0, -0.3, 0, 3.32554, 10.9627)
+transform = Transform3D(-0.3, 0, -2.62268e-08, 0, 0.3, 0, 2.62268e-08, 0, -0.3, 0, 3.32554, 9.58348)
 texture = ExtResource("3_5tc67")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]

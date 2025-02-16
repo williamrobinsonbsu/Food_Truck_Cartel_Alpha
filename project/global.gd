@@ -52,6 +52,7 @@ var index := 0
 @export var police_dodges: int = 0
 @export var level_quit: int = 0
 @export var curr_level: String = "no_level"
+@export var end := false
 
 
 func save_data():
