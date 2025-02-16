@@ -1,13 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://63tmm45qswhs"]
+[gd_scene load_steps=3 format=3 uid="uid://63tmm45qswhs"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_x5isd"]
+[ext_resource type="AudioStream" uid="uid://c62nhj608fa3a" path="res://audio/music/Boogie Party.ogg" id="2_co8wf"]
 
 [node name="Endless" type="Node3D"]
 
 [node name="Kitchen" parent="." instance=ExtResource("1_x5isd")]
 
-[node name="Camera3D" parent="Kitchen/Player" index="2"]
-current = false
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_co8wf")
+volume_db = -12.07
+pitch_scale = 0.85
 
 [editable path="Kitchen"]
 [editable path="Kitchen/Root Scene"]
@@ -15,6 +18,9 @@ current = false
 [editable path="Kitchen/Root Scene/cheese_block/cheese2"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese3"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese4"]
+[editable path="Kitchen/Root Scene/FryerBasket"]
+[editable path="Kitchen/Root Scene/FryerBasket/StaticBody3D/Fries"]
+[editable path="Kitchen/Root Scene/FryerBasket/StaticBody3D/Basket"]
 [editable path="Kitchen/Player"]
 [editable path="Kitchen/order_plate"]
 [editable path="Kitchen/order_plate/Root Scene"]
@@ -55,3 +61,6 @@ current = false
 [editable path="Kitchen/PattyStacks"]
 [editable path="Kitchen/TOPBreadStack"]
 [editable path="Kitchen/BOTTOMJBread"]
+[editable path="Kitchen/Root Scene4"]
+[editable path="Kitchen/Door"]
+[editable path="Kitchen/OutofOrder"]
