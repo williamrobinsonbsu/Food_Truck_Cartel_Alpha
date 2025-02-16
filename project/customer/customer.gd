@@ -245,7 +245,14 @@ func _on_assembly_timer_timeout():
 	$".".queue_free()
 	plate._on_clear_plate_clear_plate()
 	clear_plate.reset()
-	
+	var audio_stream_player := AudioStreamPlayer.new()
+	audio_stream_player.stream = load("res://audio/dog_bark.wav")
+	audio_stream_player.bus = "Sound"
+	#audio_stream_player.volume_db = linear_to_db(.3)
+	get_parent().add_child(audio_stream_player)
+	audio_stream_player.play()
+	await get_tree().create_timer(3).timeout
+	audio_stream_player.queue_free()
 
 func _on_voicebox_characters_sounded(characters: String):
 	dialogue.text += characters
