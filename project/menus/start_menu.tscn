@@ -361,12 +361,6 @@ centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 7000, 3500)
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_left = 730.0
-offset_top = 455.0
-offset_right = 770.0
-offset_bottom = 495.0
-
 [node name="Trucj(1)" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(730, 455)
@@ -374,20 +368,17 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_7nq3d")
 
 [node name="Tire01-removebg-preview" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(344, 583)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("13_v4cix")
 
 [node name="Tire02-removebg-preview" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(193, 580)
 rotation = 6.28319
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("14_27e1b")
 
 [node name="TruckBody-removebg-preview" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(244, 521)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("15_d4rwg")
