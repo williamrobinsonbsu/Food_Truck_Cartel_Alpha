@@ -1,5 +1,5 @@
 extends PickedIngredient
-
+var cook := false
 func audio_play_grill():
 	var audio_stream_player := AudioStreamPlayer.new()
 	audio_stream_player.stream = load("res://audio/grill_sizzle.wav")
@@ -13,3 +13,9 @@ func audio_play_grill():
 
 func name():
 	return "hot_dog_raw"
+
+func to_cook():
+	cook = true
+	
+func cooks():
+	return cook
