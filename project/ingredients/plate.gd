@@ -86,6 +86,8 @@ func _on_reset_ingredients():
 	hot_dog_placed = false
 	dog_bun_placed = false
 	tomato_placed = false
+	fries_placed = false
+	soda_placed = false
 
 
 func _on_clear_plate_clear_plate():
@@ -99,6 +101,8 @@ func _on_clear_plate_clear_plate():
 	dog_bun_placed = false
 	tomato_placed = false
 	hot_dog_placed = false
+	fries_placed = false
+	soda_placed = false
 
 
 func _on_area_3d_body_entered(body):

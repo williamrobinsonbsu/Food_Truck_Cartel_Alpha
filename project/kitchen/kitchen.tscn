@@ -1,4 +1,4 @@
-[gd_scene load_steps=482 format=3 uid="uid://6xn3th2ud7em"]
+[gd_scene load_steps=483 format=3 uid="uid://6xn3th2ud7em"]
 
 [ext_resource type="PackedScene" uid="uid://c7euh72m2pkv6" path="res://FBXRaw/Base_EnvironmentModel.fbx" id="1_kyxpc"]
 [ext_resource type="Script" path="res://world.gd" id="2_4aqew"]
@@ -189,6 +189,7 @@
 [ext_resource type="Script" path="res://kitchen/frier.gd" id="185_3n18q"]
 [ext_resource type="Texture2D" uid="uid://b56aq5nq3b4km" path="res://Textures/police scanner tracker.png" id="185_bgorc"]
 [ext_resource type="PackedScene" uid="uid://dvybiyvc3wtj3" path="res://FBXRaw/CheeseSlice.fbx" id="185_qdfto"]
+[ext_resource type="FontFile" uid="uid://bx7dpr2q6beki" path="res://font/Starborn.ttf" id="188_sgrli"]
 [ext_resource type="PackedScene" uid="uid://cywlto4wavxy4" path="res://player/player.tscn" id="189_grvwk"]
 [ext_resource type="PackedScene" uid="uid://tsbefmiro8lh" path="res://ingredients/plate.tscn" id="190_a410o"]
 [ext_resource type="PackedScene" uid="uid://bgl48vx5udmve" path="res://kitchen/grill.tscn" id="192_qqxpb"]
@@ -2977,7 +2978,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115981, 0.305634, 0.0992661
 shape = SubResource("BoxShape3D_5bl88")
 
 [node name="score" type="Label3D" parent="Root Scene/register"]
-transform = Transform3D(-0.287683, 0, -8.74228e-08, 0, 0.256601, 0, 2.515e-08, 0, -1, 0.174429, 0.27251, -0.0265557)
+transform = Transform3D(-0.287683, 0, -8.74228e-08, 0, 0.256601, 0, 2.515e-08, 0, -1, 0.0998473, 0.27251, -0.0265557)
+font = ExtResource("188_sgrli")
 
 [node name="Far1" type="Marker3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.517525, 0.364696, 2.23923)

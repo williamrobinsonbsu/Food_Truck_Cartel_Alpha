@@ -184,7 +184,7 @@ func _on_police():
 		elif lane_progression_counter == 3:
 			var audio_stream_player := AudioStreamPlayer.new()
 			audio_stream_player.stream = load("res://audio/police_siren.wav")
-			audio_stream_player.volume_db = linear_to_db(0.3)
+			audio_stream_player.volume_db = linear_to_db(0.05)
 			get_parent().add_child(audio_stream_player)
 			audio_stream_player.play()
 			audio_stream_player.finished.connect(func():

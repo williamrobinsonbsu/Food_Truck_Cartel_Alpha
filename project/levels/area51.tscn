@@ -54,6 +54,9 @@ roughness_texture = ExtResource("14_7pbmq")
 [node name="CollisionShape3D" parent="Kitchen/order_plate/resetTemp" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699635, 0.0151154, -0.0296967)
 
+[node name="OoO_Sign" parent="Kitchen/OutofOrder/RootNode" index="0"]
+visible = false
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_byeio")
 volume_db = -13.117
@@ -276,6 +279,7 @@ material_override = SubResource("StandardMaterial3D_o2vhw")
 [editable path="Kitchen/Root Scene4"]
 [editable path="Kitchen/Door"]
 [editable path="Kitchen/OutofOrder"]
+[editable path="Kitchen/Root Scene5"]
 [editable path="hot_dog_machine"]
 [editable path="hot_dog_box/hot_dog_bundle"]
 [editable path="hot_dog_box/hot_dog_bundle/Root Scene2"]

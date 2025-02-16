@@ -205,7 +205,10 @@ func _on_police_here():
 	var i = 0
 	while i != 100:
 		if police_gone == false:
-			$Control/CatchMeter.value += .1
+			if Global.curr_level == "Beach":
+				$Control/CatchMeter.value += .1
+			else:
+				$Control/CatchMeter.value += .1
 			print("oh yeah")
 			i += 1
 		else:
