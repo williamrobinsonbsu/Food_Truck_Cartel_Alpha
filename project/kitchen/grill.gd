@@ -42,7 +42,7 @@ func _on_grill_top_body_entered(body):
 			#body.add_smoke()
 			if body.is_smoking == false:
 				timer.paused = false
-				timer.start(1)
+				timer.start(5)
 				timer.timeout.connect(func():
 					if body != null:
 						body.add_smoke()
@@ -57,7 +57,7 @@ func _on_grill_top_body_entered(body):
 		
 func _burn(body):
 	burn_timer.paused = false
-	burn_timer.start(1)
+	burn_timer.start(5)
 	burn_timer.timeout.connect(func():
 		if body != null:
 			body.queue_free())
