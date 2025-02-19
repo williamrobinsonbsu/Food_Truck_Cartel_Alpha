@@ -225,7 +225,14 @@ func _on_check_my_order():
 		
 	get_node("/root/" + level + "/Kitchen/Root Scene/register/score").text = "$" + str(world.score)
 	get_node("/root/" + level + "/Kitchen/order_plate/resetTemp").set_collision_mask_value(1, false)
-	await get_tree().create_timer(3).timeout
+	
+	await DialogueManager.dialogue_ended
+	
+	if world.starting_counter == 1 and Global.curr_level == "Beach":
+		DialogueManager.show_example_dialogue_balloon(load("res://customer/police.dialogue"), "Blondie")
+	
+	await DialogueManager.dialogue_ended
+	
 	get_node("/root/" + level + "/Kitchen/order_plate/resetTemp").set_collision_mask_value(1, true)
 		
 	
@@ -276,6 +283,9 @@ func _get_npc():   #update for every new npc
 	npc = rng.randi_range(0, max_val)
 	while npc == Global.prev_npc:
 		npc = rng.randi_range(0, max_val)
+	
+	if world.starting_counter == 0 and level_path == "beach":
+		npc = 0
 	
 	print("Curent npc: " + str(npc))
 	print("Previous npc: " + str(Global.prev_npc))
