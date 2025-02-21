@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://3die8n2p2fmb" path="res://Textures/hotdog_standardSurface1_BaseColor.png" id="3_0bwgw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c2bbm"]
+size = Vector3(1.98633, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ax8s5"]
 albedo_texture = ExtResource("3_0bwgw")
@@ -15,7 +16,7 @@ albedo_texture = ExtResource("3_0bwgw")
 script = ExtResource("1_20m23")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.413015, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.0563965, 0.413015, 0)
 shape = SubResource("BoxShape3D_c2bbm")
 
 [node name="CookedPatty" type="Marker3D" parent="."]
