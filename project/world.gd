@@ -34,6 +34,7 @@ func _ready():
 	
 	if level == "Beach":
 		diff_modifier = 1
+		
 	elif level == "RaveKitchen":
 		diff_modifier = 1.25
 	elif level == "Area51":
@@ -96,7 +97,10 @@ func shutter_door_control():
 			get_node("/root/" + level + "/Kitchen/Player/Control/DayIcon").show()
 			get_node("/root/" + level + "/Kitchen/Player/DayTimer").start()
 			$LevelTimer.start()
-			$CopTimer.start()
+			if level == "Beach":
+				pass
+			else:
+				$CopTimer.start()
 			timer.emit()
 			starting_counter += 1
 		can_police_catch_player = true
@@ -136,6 +140,9 @@ func _customer_or_cop():
 func _on_new_customer():
 	#print("Your score is: ")
 	#print(score)
+	if starting_counter == 1 and level == "Beach":
+		$CopTimer.start()
+		print("Now we begin the game!!!")
 	var scene = preload("res://customer/customer.tscn")
 	var customer = scene.instantiate()
 	customer.level = level

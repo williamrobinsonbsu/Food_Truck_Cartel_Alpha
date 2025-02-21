@@ -1,6 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://clxomiblgj3cf"]
-
-[ext_resource type="PackedScene" uid="uid://cgcipdclwxm77" path="res://menus/burger boy1.glb" id="1_j8jrd"]
+[gd_scene load_steps=4 format=3 uid="uid://clxomiblgj3cf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_swnhi"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -24,23 +22,5 @@ environment = SubResource("Environment_tsn1l")
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="burger boy1" parent="." instance=ExtResource("1_j8jrd")]
-
-[node name="truck1" parent="burger boy1" index="0"]
-transform = Transform3D(1.54016e-09, -0.0204, 8.91712e-10, 0, -8.91712e-10, -0.0204, 0.0204, 1.54016e-09, -6.73224e-17, -2.35406, 0.31, -1.43416)
-
-[node name="tire4" parent="burger boy1/truck1" index="1"]
-transform = Transform3D(0.959019, -7.56753e-05, 0.283342, -2.75655e-05, 1, 0.000360382, -0.283342, -0.000353423, 0.959019, -33.3333, -99.9004, 2.13384)
-
-[node name="tire4_001" parent="burger boy1/truck1" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.999968, 0.00800541, 0, -0.00800541, 0.999968, 54.7952, -99.9001, 2.13384)
-
-[node name="AnimationPlayer" parent="burger boy1" index="6"]
-autoplay = "truck1Action"
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.0888073, 0, -0.996049, 0, 1, 0, 0.996049, 0, 0.0888073, -4.97919, 0.845864, -0.902862)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-[editable path="burger boy1"]

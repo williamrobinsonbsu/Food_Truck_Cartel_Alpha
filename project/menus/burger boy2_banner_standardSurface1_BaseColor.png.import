@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djh6lhierwwot"
-path.s3tc="res://.godot/imported/burger boy1_banner_standardSurface1_BaseColor.png-00ab99a7e0fa2cbf045960cd5498581a.s3tc.ctex"
+uid="uid://bj7hfk6g80580"
+path.s3tc="res://.godot/imported/burger boy2_banner_standardSurface1_BaseColor.png-34049b78aa7cb0dfaa216dc297bce363.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://menus/burger boy1_banner_standardSurface1_BaseColor.png"
-dest_files=["res://.godot/imported/burger boy1_banner_standardSurface1_BaseColor.png-00ab99a7e0fa2cbf045960cd5498581a.s3tc.ctex"]
+source_file="res://menus/burger boy2_banner_standardSurface1_BaseColor.png"
+dest_files=["res://.godot/imported/burger boy2_banner_standardSurface1_BaseColor.png-34049b78aa7cb0dfaa216dc297bce363.s3tc.ctex"]
 
 [params]
 

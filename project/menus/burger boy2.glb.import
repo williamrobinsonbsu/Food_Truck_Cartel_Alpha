@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cgcipdclwxm77"
-path="res://.godot/imported/burger boy1.glb-566c127b3ae3ec86a1c0e4befc26aa5c.scn"
+uid="uid://bfi2nlvni0y8g"
+path="res://.godot/imported/burger boy2.glb-7aaa0c9bee6ffaf49de23cef9a6c57c3.scn"
 
 [deps]
 
-source_file="res://menus/burger boy1.glb"
-dest_files=["res://.godot/imported/burger boy1.glb-566c127b3ae3ec86a1c0e4befc26aa5c.scn"]
+source_file="res://menus/burger boy2.glb"
+dest_files=["res://.godot/imported/burger boy2.glb-7aaa0c9bee6ffaf49de23cef9a6c57c3.scn"]
 
 [params]
 
@@ -32,10 +32,10 @@ import_script/path=""
 _subresources={
 "animations": {
 "tire4Action": {
-"save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://menus/tire4Action.res",
-"settings/loop_mode": 0,
+"save_to_file/enabled": false,
+"save_to_file/keep_custom_tracks": "",
+"save_to_file/path": "",
+"settings/loop_mode": 1,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
 "slice_1/name": "",
@@ -1831,10 +1831,10 @@ _subresources={
 "slices/amount": 0
 },
 "tire4_001Action": {
-"save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://menus/tire4_001Action.res",
-"settings/loop_mode": 0,
+"save_to_file/enabled": false,
+"save_to_file/keep_custom_tracks": "",
+"save_to_file/path": "",
+"settings/loop_mode": 1,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
 "slice_1/name": "",
@@ -3630,10 +3630,10 @@ _subresources={
 "slices/amount": 0
 },
 "truck1Action": {
-"save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://menus/truck1Action.res",
-"settings/loop_mode": 0,
+"save_to_file/enabled": false,
+"save_to_file/keep_custom_tracks": "",
+"save_to_file/path": "",
+"settings/loop_mode": 1,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
 "slice_1/name": "",
