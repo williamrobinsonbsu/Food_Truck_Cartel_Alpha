@@ -2950,7 +2950,7 @@ wait_time = 0.1
 
 [node name="customer" type="Marker3D" parent="Root Scene"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.254, 2.24698)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.200589, 2.28839)
 
 [node name="front1" type="StaticBody3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02869, 0, 1.57523)
@@ -2982,22 +2982,22 @@ transform = Transform3D(-0.287683, 0, -8.74228e-08, 0, 0.256601, 0, 2.515e-08, 0
 font = ExtResource("188_sgrli")
 
 [node name="Far1" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.517525, 0.364696, 2.23923)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.517525, 0.364696, 2.63107)
 
 [node name="Far2" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.664241, 0.53206, 2.23446)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.664241, 0.53206, 2.6263)
 
 [node name="Far3" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.479449, 0.364696, 2.23425)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.479449, 0.364696, 2.62609)
 
 [node name="Mid1" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.594754, 0.273232, 2.20019)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.594754, 0.273232, 2.36104)
 
 [node name="Mid2" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.273232, 2.20019)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.273232, 2.36104)
 
 [node name="Mid3" type="Marker3D" parent="Root Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.280331, 0.273232, 2.20019)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.280331, 0.273232, 2.36104)
 
 [node name="Close1" type="Marker3D" parent="Root Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.290214, 2.09713)

@@ -225,20 +225,19 @@ func _on_check_my_order():
 		
 	get_node("/root/" + level + "/Kitchen/Root Scene/register/score").text = "$" + str(world.score)
 	get_node("/root/" + level + "/Kitchen/order_plate/resetTemp").set_collision_mask_value(1, false)
+	$AssemblyTimer.paused = true
+	$TimerSprite.hide()
 	
 	await DialogueManager.dialogue_ended
 	
 	if world.starting_counter == 1 and Global.curr_level == "Beach":
 		DialogueManager.show_example_dialogue_balloon(load("res://customer/police.dialogue"), "Blondie")
-	
-	await DialogueManager.dialogue_ended
+		await DialogueManager.dialogue_ended
 	
 	get_node("/root/" + level + "/Kitchen/order_plate/resetTemp").set_collision_mask_value(1, true)
 		
 	
 	get_tree().call_group("map", "_spawn_new_customer_or_cop")
-	if world.lane_progression_counter != 3:
-		get_tree().call_group("police", "despawn")
 	$".".queue_free()
 		
 
