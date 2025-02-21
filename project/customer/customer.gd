@@ -49,7 +49,7 @@ func _ready():
 	if Global.curr_level == "Area51":
 		texture.scale = texture.scale*.7
 	else:
-		texture.scale = texture.scale*.9
+		texture.scale = texture.scale*.8
 	$AssemblyTimer.wait_time = $AssemblyTimer.wait_time / world.diff_modifier
 	if level == "Beach":
 		if world.starting_counter != 0:
