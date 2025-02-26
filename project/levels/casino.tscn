@@ -232,7 +232,6 @@ transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 
 material_override = SubResource("StandardMaterial3D_sh0kc")
 
 [editable path="Kitchen"]
-[editable path="Kitchen/Root Scene"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese2"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese3"]
