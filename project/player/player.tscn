@@ -157,11 +157,16 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -2.0
-offset_right = 2.0
+offset_left = -115.5
+offset_right = 115.5
 offset_bottom = 27.0
 grow_horizontal = 2
 theme = ExtResource("12_lb053")
+min_value = -100.0
+max_value = 0.0
+value = -100.0
+allow_lesser = true
+show_percentage = false
 
 [node name="DayIcon" type="Sprite2D" parent="Control"]
 position = Vector2(88, 61)

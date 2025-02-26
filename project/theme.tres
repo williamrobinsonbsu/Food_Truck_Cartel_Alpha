@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=11 format=3 uid="uid://ftmbu43vi6kk"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://ftmbu43vi6kk"]
 
 [ext_resource type="FontFile" uid="uid://c2ns0mejwetfy" path="res://font/Nice Sugar.ttf" id="1_prqpg"]
 
@@ -81,6 +81,12 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryt4i"]
+bg_color = Color(0.94902, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07q6q"]
+bg_color = Color(1, 0.172549, 0, 1)
+
 [resource]
 default_font = ExtResource("1_prqpg")
 Button/colors/font_focus_color = Color(0.662745, 0.290196, 0.65098, 1)
@@ -101,3 +107,5 @@ MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_ryt4i")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_07q6q")

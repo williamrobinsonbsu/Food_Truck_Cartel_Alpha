@@ -12,6 +12,7 @@ const SPEED = 5.0
 @onready var hand := $Camera3D/Hand
 @onready var loading_screen: Control = $LoadingScreen
 @onready var camera: Camera3D = $Camera3D
+@onready var gauge = $Control/CatchMeter
 
 var index = 1
 var tex_array = [load("res://player/Day_Beginning.png"),load("res://player/Day_Mid.png"),load("res://player/Day_Late.png"),load("res://player/Day_End.png")]
@@ -200,17 +201,3 @@ func _on_root_scene_cop_present(gone):
 	if gone == false:
 		police_here.emit()
 
-
-func _on_police_here():
-	var i = 0
-	while i != 100:
-		if police_gone == false:
-			if Global.curr_level == "Beach":
-				$Control/CatchMeter.value += .1
-			else:
-				$Control/CatchMeter.value += .1
-			print("oh yeah")
-			i += 1
-		else:
-			return
-		await get_tree().create_timer(.04).timeout

@@ -14,6 +14,7 @@ var shutter_door_close = false
 var can_police_catch_player = false
 var poRate = 0
 var goal_score = 50
+var cop_present_bool = true
 
 @onready var customer_or_cop_timer: Timer = $customer_or_police_spawn_timer
 @onready var cop_catch_timer: Timer = $cop_catch_timer
@@ -28,10 +29,6 @@ func _ready():
 	level = str(get_parent().get_parent().name)
 	Global.curr_level = level
 	print(level)
-	get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = 0
-	var value = get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value
-	print(value)
-	
 	if level == "Beach":
 		diff_modifier = 1
 		
@@ -83,6 +80,9 @@ func _physics_process(_delta: float) -> void:
 		level_timer.paused = true
 		level_timer.start(1)
 		level_timer.paused = false
+		
+	if cop_present_bool == false:
+		player.gauge.value = $cop_catch_timer.time_left*-20
 		
 func shutter_door_control():
 	Global.shutter += 1
@@ -239,7 +239,7 @@ func _on_police_catch_timer_timeout():
 	elif can_police_catch_player == false:
 		cop_present.emit(true)
 		Global.police_dodges += 1
-		get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = 0	
+		get_node("/root/" + level + "/Kitchen/Player/Control/CatchMeter").value = -100
 		get_tree().call_group("police", "despawn")
 		get_tree().call_group("customer", "selfshow")
 
@@ -305,3 +305,7 @@ func _on_area_3d_body_entered(body):
 func _on_area_3d_body_exited(body):
 	if body.has_method("cancel_despawn"):
 		body.cancel_despawn()
+
+
+func _on_cop_present(gone):
+	cop_present_bool = gone
