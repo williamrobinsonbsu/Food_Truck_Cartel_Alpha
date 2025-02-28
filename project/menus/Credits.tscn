@@ -29,7 +29,6 @@ theme = ExtResource("1_cplhb")
 script = ExtResource("1_7mbdv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
 follow_viewport_enabled = true
@@ -379,6 +378,7 @@ text = "Sounds Used"
 label_settings = SubResource("LabelSettings_3h8ht")
 
 [node name="EngineLicCanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="License" parent="EngineLicCanvasLayer" instance=ExtResource("13_use7k")]
 
