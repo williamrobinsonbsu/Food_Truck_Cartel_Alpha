@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dowds12a02fuj"]
+[gd_scene load_steps=17 format=3 uid="uid://dowds12a02fuj"]
 
 [ext_resource type="Script" path="res://menus/Credits.gd" id="1_7mbdv"]
 [ext_resource type="Theme" uid="uid://ftmbu43vi6kk" path="res://theme.tres" id="1_cplhb"]
@@ -12,8 +12,15 @@
 [ext_resource type="Script" path="res://menus/parallax_background/road_layer.gd" id="9_riw73"]
 [ext_resource type="Texture2D" uid="uid://d0asonbclj7oe" path="res://menus/parallax_background/parallaxdesert_weeds.png" id="10_8avfm"]
 [ext_resource type="Texture2D" uid="uid://p4fsvyalndn6" path="res://menus/parallax_background/parallaxdesert_roadTILED.png" id="11_4nr20"]
+[ext_resource type="PackedScene" uid="uid://bajsx1uncg3l5" path="res://menus/license.tscn" id="13_use7k"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hnjb6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jbxkl"]
+font_size = 46
+
+[sub_resource type="LabelSettings" id="LabelSettings_3h8ht"]
+font_size = 46
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -22,6 +29,7 @@ theme = ExtResource("1_cplhb")
 script = ExtResource("1_7mbdv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
 follow_viewport_enabled = true
@@ -203,7 +211,7 @@ theme_override_font_sizes/normal_font_size = 14
 theme_override_font_sizes/bold_font_size = 24
 theme_override_font_sizes/italics_font_size = 24
 bbcode_enabled = true
-text = "[b]Sound Credits[/b]
+text = "[b]Music Credits[/b]
 
 \"Voxel Revolution\" Kevin MacLeod (incompetech.com)
 Licensed under Creative Commons: By Attribution 4.0 License
@@ -221,8 +229,8 @@ http://creativecommons.org/licenses/by/4.0/
 Licensed under Creative Commons: By Attribution 4.0 License
 http://creativecommons.org/licenses/by/4.0/
 
-Bell, Candle Damper, A (H4n).wav by InspectorJ -- 
-https://freesound.org/s/411088/ -- License: Attribution 4.0"
+Beach Ambiance: https://pixabay.com/sound-effects/beach-ambiance-16328/
+By YourFriendJesse (Freesound) via Pixabay"
 fit_content = true
 scroll_active = false
 scroll_following = true
@@ -239,12 +247,154 @@ theme_override_fonts/font = ExtResource("2_t1q0y")
 theme_override_font_sizes/font_size = 21
 text = "Back"
 
+[node name="LicenseButton" type="Button" parent="CanvasLayer"]
+offset_left = 462.0
+offset_top = 567.0
+offset_right = 576.0
+offset_bottom = 623.0
+theme = ExtResource("1_cplhb")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_t1q0y")
+theme_override_font_sizes/font_size = 21
+text = "Extra"
+
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 604.0
 offset_top = 448.0
 offset_right = 1063.0
 offset_bottom = 546.0
-text = "Copyright (c) Tanner Bauserman, William Robinson, Jamison Tucker, Alex McNeill, Ethan Shanon-Spice, Emma Willford"
+theme = ExtResource("1_cplhb")
+text = "Copyright © 2025 Tanner Bauserman, William Robinson, Jamison Tucker, Alex McNeill, Ethan Shanon-Spice, Emma Willford"
 autowrap_mode = 2
 
+[node name="LicenseCanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="LincenseLabel" type="Label" parent="LicenseCanvasLayer"]
+offset_left = 145.0
+offset_top = 1.0
+offset_right = 383.0
+offset_bottom = 65.0
+theme = ExtResource("1_cplhb")
+text = "Licenses
+"
+label_settings = SubResource("LabelSettings_jbxkl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LicenseCanvasLayer"]
+offset_left = 3.0
+offset_top = 83.0
+offset_right = 637.0
+offset_bottom = 934.0
+scale = Vector2(0.9, 0.9)
+theme = ExtResource("1_cplhb")
+bbcode_enabled = true
+text = "Copyright © 2014-present Godot Engine contributors.
+Copyright © 2007-2014 Juan Linietsky, Ariel Manzur.
+godotengine.org/license
+License: Expat
+
+Godot Animal Crossing VoiceBox
+Copyright © 2020 Matt March
+https://github.com/mattmarch/ACVoicebox?tab=MIT-1-ov-file
+License: MIT
+
+
+Dialogue Manager
+Copyright © 2022-present Nathan Hoad and 
+Dialogue Manager contributors.
+https://github.com/nathanhoad/godot_dialogue_manager?tab=MIT-1-ov-file
+License: MIT
+
+
+"
+fit_content = true
+scroll_active = false
+scroll_following = true
+autowrap_mode = 0
+
+[node name="SoundCreditLabel" type="RichTextLabel" parent="LicenseCanvasLayer"]
+offset_left = 578.0
+offset_top = 83.0
+offset_right = 1212.0
+offset_bottom = 934.0
+scale = Vector2(0.95, 0.95)
+theme = ExtResource("1_cplhb")
+bbcode_enabled = true
+text = "Bell, Candle Damper, A (H4n).wav by 
+InspectorJ -- https://freesound.org/s/411088/ -- License: Attribution 4.0
+
+dog_bark_cao_latido - Felipe RuizBRX11.wav by
+ eitabyte -- https://freesound.org/s/448723/ -- License: Attribution 4.0
+
+Pan Frying Chicken: 
+https://pixabay.com/sound-effects/pan-frying-chicken-46760/
+By parkersenk (Freesound) via Pixabay
+
+Glass Clink: 
+https://pixabay.com/sound-effects/glass-clink-57538/ 
+By Trainscough5407 (Freesound) via Pixabay
+
+Rustling of chips bag: 
+https://pixabay.com/sound-effects/rustling-of-chips-bag-100788/ 
+By AndersHolm (Freesound) via Pixabay
+
+Metal Door Slam: 
+https://pixabay.com/sound-effects/metal-door-slam-172172/
+By SoundReality via Pixabay"
+fit_content = true
+scroll_active = false
+scroll_following = true
+autowrap_mode = 0
+
+[node name="EngineLicenseButton" type="Button" parent="LicenseCanvasLayer"]
+offset_left = 457.0
+offset_top = 562.0
+offset_right = 571.0
+offset_bottom = 618.0
+theme = ExtResource("1_cplhb")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_t1q0y")
+theme_override_font_sizes/font_size = 21
+text = "Engine
+Licenses"
+
+[node name="LicenseBackButton" type="Button" parent="LicenseCanvasLayer"]
+offset_left = 469.0
+offset_top = 490.0
+offset_right = 564.0
+offset_bottom = 546.0
+theme = ExtResource("1_cplhb")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_t1q0y")
+theme_override_font_sizes/font_size = 21
+text = "Back"
+
+[node name="Label" type="Label" parent="LicenseCanvasLayer"]
+offset_left = 712.0
+offset_top = 10.0
+offset_right = 752.0
+offset_bottom = 33.0
+theme = ExtResource("1_cplhb")
+text = "Sounds Used"
+label_settings = SubResource("LabelSettings_3h8ht")
+
+[node name="EngineLicCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="License" parent="EngineLicCanvasLayer" instance=ExtResource("13_use7k")]
+
+[node name="EngineBackButton" type="Button" parent="EngineLicCanvasLayer"]
+offset_left = 119.0
+offset_right = 214.0
+offset_bottom = 56.0
+scale = Vector2(0.6, 0.6)
+theme = ExtResource("1_cplhb")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_t1q0y")
+theme_override_font_sizes/font_size = 21
+text = "Back"
+
 [connection signal="pressed" from="CanvasLayer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/LicenseButton" to="." method="_on_license_button_pressed"]
+[connection signal="pressed" from="LicenseCanvasLayer/EngineLicenseButton" to="." method="_on_engine_license_button_pressed"]
+[connection signal="pressed" from="LicenseCanvasLayer/LicenseBackButton" to="." method="_on_license_back_button_pressed"]
+[connection signal="pressed" from="EngineLicCanvasLayer/EngineBackButton" to="." method="_on_engine_back_button_pressed"]

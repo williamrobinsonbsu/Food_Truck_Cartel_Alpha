@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bajsx1uncg3l5"]
+
+[ext_resource type="Script" path="res://menus/license.gd" id="1_ov7sh"]
+[ext_resource type="Theme" uid="uid://ftmbu43vi6kk" path="res://theme.tres" id="2_ris22"]
+
+[node name="License" type="SplitContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ris22")
+script = ExtResource("1_ov7sh")
+
+[node name="Tree" type="Tree" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+vertical_scroll_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+vertical_alignment = 1
+
+[connection signal="item_selected" from="Tree" to="." method="_on_tree_item_selected"]
