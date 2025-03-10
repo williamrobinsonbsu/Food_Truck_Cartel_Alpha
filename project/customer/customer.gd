@@ -71,12 +71,12 @@ func _ready():
 		order = "hot dog"
 		i_want_hot_dog = true
 		counter += 1
-		order_label.text = "-=+Current Order+=-\n- "+order
+		order_label.text = "Current Order\n- "+order
 	else:
 		print("I would like a burger!")
 		i_want_burger = true
 		order = "burger"
-		order_label.text = "-=+Current Order+=-\n- "+order+ " with: "
+		order_label.text = "Current Order\n- "+order+ " with: "
 	if randf() <= .50 and i_want_burger == true:
 		i_want_lettuce = true
 		counter += 1
