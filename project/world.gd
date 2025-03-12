@@ -25,7 +25,7 @@ var cop_present_bool = true
 func _ready():
 	get_tree().paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	MenuMusic.stop()
+	MenuMusic.stream_paused = true
 	level = str(get_parent().get_parent().name)
 	Global.curr_level = level
 	print(level)

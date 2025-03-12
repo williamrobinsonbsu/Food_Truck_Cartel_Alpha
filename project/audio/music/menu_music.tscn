@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bul2bu7sqtpvq" path="res://audio/music/Study And Relax.ogg" id="1_l72ji"]
 
 [node name="Menu_music" type="AudioStreamPlayer"]
+process_mode = 3
 stream = ExtResource("1_l72ji")
 autoplay = true
 bus = &"Music"
