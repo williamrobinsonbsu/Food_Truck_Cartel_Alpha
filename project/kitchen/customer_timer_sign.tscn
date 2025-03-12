@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnj0udc2iial0"]
+
+[ext_resource type="Script" path="res://kitchen/customer_timer_sign.gd" id="1_oim2p"]
+[ext_resource type="PackedScene" uid="uid://c7nnlrf2dan5t" path="res://FBXRaw/Timer_Sign (1).fbx" id="1_tcwig"]
+[ext_resource type="Texture2D" uid="uid://dkmiuhpib6iem" path="res://Textures/Timer_Sign_DefaultMaterial_BaseColor (1).png" id="2_mw3oy"]
+[ext_resource type="Texture2D" uid="uid://c12hipm1jjllp" path="res://Textures/Timer_Sign_DefaultMaterial_Normal (1).png" id="3_jacia"]
+[ext_resource type="Texture2D" uid="uid://caekvrd1gkaif" path="res://Textures/Timer_Sign_DefaultMaterial_Roughness (1).png" id="4_psjnw"]
+[ext_resource type="FontFile" uid="uid://c2ns0mejwetfy" path="res://font/Nice Sugar.ttf" id="6_atgmj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ducjt"]
+albedo_texture = ExtResource("2_mw3oy")
+roughness_texture = ExtResource("4_psjnw")
+normal_enabled = true
+normal_texture = ExtResource("3_jacia")
+
+[node name="CustomerTimerSign" type="Node3D"]
+script = ExtResource("1_oim2p")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_tcwig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.505276, 0)
+
+[node name="Plane_033" parent="Root Scene/RootNode" index="0"]
+transform = Transform3D(10, 0, 0, 0, 10, -4.37114e-07, 0, 4.37114e-07, 10, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_ducjt")
+
+[node name="Label" type="Label3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.615504, 0.00896475)
+modulate = Color(0.662745, 0.662745, 0.662745, 1)
+text = "60"
+font = ExtResource("6_atgmj")
+
+[editable path="Root Scene"]

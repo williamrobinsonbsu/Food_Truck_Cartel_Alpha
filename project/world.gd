@@ -20,6 +20,7 @@ var cop_present_bool = true
 @onready var cop_catch_timer: Timer = $cop_catch_timer
 @onready var level_timer: Timer = $LevelTimer
 @onready var player: CharacterBody3D = $"../Player"
+@onready var timer_sign: Node3D = $"../CustomerTimerSign"
 
 
 func _ready():
@@ -149,6 +150,7 @@ func _on_new_customer():
 	customer.level_path = level.to_snake_case()
 	print(customer.level_path)
 	add_child(customer)
+	timer_sign.customer = customer
 	customer.position = %customer.position
 	if level == "Area51":
 		customer.position.y += .15

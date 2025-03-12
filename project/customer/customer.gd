@@ -226,7 +226,6 @@ func _on_check_my_order():
 	get_node("/root/" + level + "/Kitchen/Root Scene/register/score").text = "$" + str(world.score)
 	get_node("/root/" + level + "/Kitchen/order_plate/resetTemp").set_collision_mask_value(1, false)
 	$AssemblyTimer.paused = true
-	$TimerSprite.hide()
 	
 	await DialogueManager.dialogue_ended
 	

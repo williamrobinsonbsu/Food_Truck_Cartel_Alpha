@@ -1,10 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cuqr3ppkwg1gj"]
+[gd_scene load_steps=10 format=3 uid="uid://cuqr3ppkwg1gj"]
 
 [ext_resource type="Script" path="res://customer/customer.gd" id="1_u5n8i"]
 [ext_resource type="PackedScene" uid="uid://cj1qcw81lh2l5" path="res://audio/ACVoicebox.tscn" id="2_ve2d7"]
-[ext_resource type="Texture2D" uid="uid://dhrm314j1rvuw" path="res://customer/image.png" id="3_854fc"]
 [ext_resource type="Texture2D" uid="uid://dwkgl11dkcsm8" path="res://customer/Timer.png" id="4_slnak"]
-[ext_resource type="Script" path="res://customer/TimerSprite.gd" id="4_wvhlk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vifeq"]
 transparency = 1
@@ -79,12 +77,6 @@ billboard = 2
 [node name="ACVoicebox" parent="." instance=ExtResource("2_ve2d7")]
 bus = &"Sound"
 
-[node name="TimerSprite" type="Sprite3D" parent="."]
-transform = Transform3D(-0.5, 0, 7.54979e-08, 0, 0.5, 0, -7.54979e-08, 0, -0.5, 0.462817, 0.595465, -0.100711)
-billboard = 2
-texture = ExtResource("3_854fc")
-script = ExtResource("4_wvhlk")
-
 [node name="OrderTimer" type="Label3D" parent="."]
 transform = Transform3D(0.750102, 0, 8.74228e-08, 0, 1, 0, 6.5576e-08, 0, -1, 0.433471, 0.595465, -0.100711)
 visible = false
@@ -95,5 +87,4 @@ transform = Transform3D(-0.00663413, 0, -2.26494e-09, 0, 0.015, 0, 1.00173e-09, 
 visible = false
 texture = ExtResource("4_slnak")
 
-[connection signal="timer_started" from="." to="TimerSprite" method="_on_customer_timer_started"]
 [connection signal="timeout" from="AssemblyTimer" to="." method="_on_assembly_timer_timeout"]
