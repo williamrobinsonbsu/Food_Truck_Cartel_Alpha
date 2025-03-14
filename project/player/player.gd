@@ -183,12 +183,6 @@ func lose_off():
 	lose_state = false
 
 
-func _on_day_timer_timeout():
-	while index < 4:
-		$Control/DayIcon.set_texture(tex_array[index])
-		index += 1
-
-
 func _on_root_scene_end_of_level():
 	is_done = true
 	velocity = Vector3.ZERO
