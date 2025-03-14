@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://63tmm45qswhs"]
+[gd_scene load_steps=18 format=3 uid="uid://63tmm45qswhs"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_x5isd"]
-[ext_resource type="AudioStream" uid="uid://c62nhj608fa3a" path="res://audio/music/Boogie Party.ogg" id="2_co8wf"]
 [ext_resource type="Script" path="res://kitchen/hot_dog_box.gd" id="3_80l43"]
 [ext_resource type="PackedScene" uid="uid://daotgg4on0oip" path="res://FBXRaw/HOTDOG_mACHINE.fbx" id="3_mcu7e"]
 [ext_resource type="PackedScene" uid="uid://dfed862ec223c" path="res://FBXRaw/hotdog.fbx" id="4_e1dwf"]
@@ -38,11 +37,6 @@ albedo_texture = ExtResource("4_f1dco")
 [node name="Endless" type="Node3D"]
 
 [node name="Kitchen" parent="." instance=ExtResource("1_x5isd")]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_co8wf")
-volume_db = -12.07
-pitch_scale = 0.85
 
 [node name="hot_dog_box" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.87384, 0.213858, -1.89278)
@@ -202,7 +196,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51314, 0.663956, -0.841654)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53569, 0.654994, -1.0895)
 
 [editable path="Kitchen"]
-[editable path="Kitchen/Root Scene"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese2"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese3"]
@@ -253,6 +246,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53569, 0.654994, -1.0895)
 [editable path="Kitchen/Root Scene4"]
 [editable path="Kitchen/Door"]
 [editable path="Kitchen/OutofOrder"]
+[editable path="Kitchen/Root Scene5"]
 [editable path="hot_dog_box/hot_dog_bundle"]
 [editable path="hot_dog_box/hot_dog_bundle/Root Scene2"]
 [editable path="hot_dog_box/hot_dog_bundle/Root Scene3"]

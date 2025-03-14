@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b26xnprpqn041"]
+[gd_scene load_steps=3 format=3 uid="uid://b26xnprpqn041"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_5wdmp"]
 [ext_resource type="Texture2D" uid="uid://dnb74k7qrwbmn" path="res://levels/rave_background.png" id="2_pxk0b"]
-[ext_resource type="AudioStream" uid="uid://btmrhm5at7p8f" path="res://audio/music/Raving Energy (faster).ogg" id="3_tki7l"]
 
 [node name="RaveKitchen" type="Node3D"]
 
@@ -83,7 +82,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.1580
 [node name="OoO_Sign" parent="Kitchen/OutofOrder/RootNode" index="0"]
 transform = Transform3D(1.41722, 1.66199e-06, -13.4172, 17.9874, 3.64606e-06, 1.05714, 2.15091e-06, -23.768, -1.60442e-06, 1.11472, 0.629181, -0.48129)
 
-[node name="OmniLight3D23" type="OmniLight3D" parent="Kitchen"]
+[node name="OmniLight3D25" type="OmniLight3D" parent="Kitchen"]
 transform = Transform3D(1, 0, 0, 0, 0.999337, 0.0363996, 0, -0.0363996, 0.999337, 2.55602, 1.90054, -0.0995737)
 light_color = Color(0.658824, 0.356863, 0.815686, 1)
 light_energy = 0.717
@@ -97,14 +96,7 @@ omni_attenuation = 1.31951
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 13.2537)
 texture = ExtResource("2_pxk0b")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite3D"]
-stream = ExtResource("3_tki7l")
-volume_db = -7.192
-autoplay = true
-bus = &"Music"
-
 [editable path="Kitchen"]
-[editable path="Kitchen/Root Scene"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese2"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese3"]
@@ -155,3 +147,4 @@ bus = &"Music"
 [editable path="Kitchen/Root Scene4"]
 [editable path="Kitchen/Door"]
 [editable path="Kitchen/OutofOrder"]
+[editable path="Kitchen/Root Scene5"]

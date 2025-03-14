@@ -1,7 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://ev4ls1tgjigw"]
+[gd_scene load_steps=23 format=3 uid="uid://ev4ls1tgjigw"]
 
 [ext_resource type="PackedScene" uid="uid://6xn3th2ud7em" path="res://kitchen/kitchen.tscn" id="1_30eag"]
-[ext_resource type="AudioStream" uid="uid://dis1q5ulqtvd2" path="res://audio/music/Voxel Revolution.ogg" id="2_byeio"]
 [ext_resource type="Texture2D" uid="uid://bou83a746u7r" path="res://levels/area51-background.png" id="3_5tc67"]
 [ext_resource type="PackedScene" uid="uid://daotgg4on0oip" path="res://FBXRaw/HOTDOG_mACHINE.fbx" id="3_pv0ac"]
 [ext_resource type="Texture2D" uid="uid://cixs1sq5cyscv" path="res://Textures/HOTDOG_mACHINE_standardSurface1_BaseColor.png" id="4_33owl"]
@@ -56,12 +55,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0699635, 0.0151154, -0.0296
 
 [node name="OoO_Sign" parent="Kitchen/OutofOrder/RootNode" index="0"]
 visible = false
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_byeio")
-volume_db = -13.117
-autoplay = true
-bus = &"Music"
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-0.3, 0, -2.62268e-08, 0, 0.3, 0, 2.62268e-08, 0, -0.3, 0, 3.32554, 9.58348)
@@ -228,7 +221,6 @@ transform = Transform3D(4, 0, 0, 0, -1.12057e-06, 10, 0, -9.4, -1.19209e-06, 0, 
 material_override = SubResource("StandardMaterial3D_o2vhw")
 
 [editable path="Kitchen"]
-[editable path="Kitchen/Root Scene"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese2"]
 [editable path="Kitchen/Root Scene/cheese_block/cheese3"]
