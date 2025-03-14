@@ -5,7 +5,7 @@ extends Control
 func _ready():
 	if MenuMusic.stream_paused == true:
 		MenuMusic.play_music()
-	#pass
+	LevelMusic.bus = "Music"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

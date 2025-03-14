@@ -26,6 +26,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Global="*res://global.gd"
 MenuMusic="*res://audio/music/menu_music.tscn"
 UiSoundPlayer="*res://autoloads/UISoundPlayer.gd"
+LevelMusic="*res://audio/music/level_music.tscn"
 
 [dialogue_manager]
 

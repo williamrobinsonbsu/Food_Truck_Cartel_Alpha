@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://celv7lemm62l0"]
+
+[node name="Level_music" type="AudioStreamPlayer"]
+process_mode = 4
+volume_db = -7.564
+bus = &"Music"

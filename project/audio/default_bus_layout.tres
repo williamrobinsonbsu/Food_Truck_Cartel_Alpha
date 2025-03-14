@@ -1,4 +1,9 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://bbso6f6acgrny"]
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://bbso6f6acgrny"]
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_nvcif"]
+resource_name = "LowPassFilter"
+resonance = 0.8
+db = 2
 
 [resource]
 bus/1/name = &"Music"
@@ -13,3 +18,11 @@ bus/2/mute = false
 bus/2/bypass_fx = false
 bus/2/volume_db = 0.0
 bus/2/send = &"Master"
+bus/3/name = &"Muffled"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = &"Master"
+bus/3/effect/0/effect = SubResource("AudioEffectLowPassFilter_nvcif")
+bus/3/effect/0/enabled = true

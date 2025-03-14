@@ -32,15 +32,25 @@ func _ready():
 	print(level)
 	if level == "Beach":
 		diff_modifier = 1
-		
+		LevelMusic.stream = load("res://audio/music/beach-ambiance-16328.ogg")
+		LevelMusic.play()
 	elif level == "RaveKitchen":
 		diff_modifier = 1.25
+		LevelMusic.stream = load("res://audio/music/Raving Energy (faster).ogg")
+		LevelMusic.play()
 	elif level == "Area51":
 		diff_modifier = 1.75
+		LevelMusic.stream = load("res://audio/music/Voxel Revolution.ogg")
+		LevelMusic.play()
 	elif level == "Casino":
 		diff_modifier = 1.5
+		LevelMusic.stream = load("res://audio/music/Boogie Party.ogg")
+		LevelMusic.pitch_scale = .9
+		LevelMusic.play()
 	elif level == "Endless":
 		diff_modifier = 2.0
+		LevelMusic.stream = load("res://audio/music/Boogie Party.ogg")
+		LevelMusic.play()
 		level_timer.paused = true
 		#get_node("/root/" + level + "/Kitchen/Root Scene/hot_dog_box").show()
 		#get_node("/root/" + level + "/Kitchen/Dog_machine").show()

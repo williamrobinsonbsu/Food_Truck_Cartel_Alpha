@@ -125,6 +125,7 @@ func _physics_process(_delta):
 	
 	if Input.is_action_just_pressed("pause"):
 		#pause_clicked.emit()
+		LevelMusic.bus = "Muffled"
 		get_tree().paused = true
 		$Pause/PauseMenu.show_pause_menu()
 		await $Pause/PauseMenu.dismissed
